@@ -11,3 +11,7 @@
 | CTA image | `Get-Expert-Watch-Repair-You-Can-Trust-CTA.jpg` |
 
 The article explains how a watch dial is removed during a full service, the components revealed beneath it, the risks of poor technique, the correct process for removal and reassembly, and when dial removal is necessary. It contains two specification tables, six FAQs, a workshop call-to-action, and source links that will be converted to matching internal site routes where available.
+
+## Infographic presentation correction
+
+The source infographic has a 1100 × 733 composition. Its original fixed 16:8.2 container with `object-fit: cover` cropped the top and bottom of the graphic. The migrated article now uses a responsive full-width image with `height: auto` and `object-fit: contain`, preserving all four process panels and their edge content.
