@@ -2,6 +2,11 @@ import type { MetadataRoute } from "next";
 
 const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://itsabouttime-psi.vercel.app").replace(/\/$/, "");
 
+const articleDates: Record<string, string> = {
+  "/benrus-watches-its-about-time/": "2026-08-04T14:46:06+00:00",
+  "/what-happens-inside-watch-dial-comes-off/": "2026-08-04T13:10:09+00:00"
+};
+
 const routes = [
   "",
   "/watch-repairs/",
@@ -12,14 +17,15 @@ const routes = [
   "/benrus-ultra-deep/",
   "/bulova-repair/",
   "/dial-refinishing-vs-replacement/",
-  "/benrus-watches-its-about-time/"
+  "/benrus-watches-its-about-time/",
+  "/what-happens-inside-watch-dial-comes-off/"
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return routes.map((route) => ({
     url: `${siteUrl}${route}`,
-    lastModified: route === "/benrus-watches-its-about-time/" ? new Date("2026-08-04T14:46:06+00:00") : new Date(),
-    changeFrequency: route === "/benrus-watches-its-about-time/" ? "monthly" : "weekly",
-    priority: route === "" ? 1 : route === "/benrus-watches-its-about-time/" ? 0.8 : 0.7
+    lastModified: new Date(articleDates[route] ?? new Date()),
+    changeFrequency: articleDates[route] ? "monthly" : "weekly",
+    priority: route === "" ? 1 : articleDates[route] ? 0.8 : 0.7
   }));
 }
