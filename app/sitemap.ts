@@ -4,7 +4,10 @@ const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://itsabouttime-psi.v
 
 const articleDates: Record<string, string> = {
   "/benrus-watches-its-about-time/": "2026-08-04T14:46:06+00:00",
-  "/what-happens-inside-watch-dial-comes-off/": "2026-08-04T13:10:09+00:00"
+  "/what-happens-inside-watch-dial-comes-off/": "2026-08-04T13:10:09+00:00",
+  "/dial-refinishing-vs-dial-replacement/": "2026-08-04T13:06:41+00:00",
+  "/best-38mm-watches/": "2026-08-03T22:13:26+00:00",
+  "/distinctive-features-that-make-the-benrus-sky-chief-a-collectible/": "2026-08-03T20:56:38+00:00"
 };
 
 const routes = [
@@ -17,8 +20,11 @@ const routes = [
   "/benrus-ultra-deep/",
   "/bulova-repair/",
   "/dial-refinishing-vs-replacement/",
+  "/dial-refinishing-vs-dial-replacement/",
   "/benrus-watches-its-about-time/",
-  "/what-happens-inside-watch-dial-comes-off/"
+  "/what-happens-inside-watch-dial-comes-off/",
+  "/best-38mm-watches/",
+  "/distinctive-features-that-make-the-benrus-sky-chief-a-collectible/"
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

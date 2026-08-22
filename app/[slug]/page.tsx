@@ -66,6 +66,71 @@ const articleSeo: Record<string, ArticleSeo> = {
       ["What is the difference between dial feet and dial screws?", "Dial feet are small metal pins on the back of the dial that fit into holes on the movement’s main plate. Dial screws, or sometimes a sliding lever, hold those feet in place and keep the dial precisely positioned."],
       ["Why does my watch keep stopping months after a service?", "Intermittent stopping after service can have several causes. One common one is dust contamination introduced while the dial or case back was open. Even a single fiber or particle can interfere with a gear tooth or balance-wheel pivot."]
     ]
+  },
+  "dial-refinishing-vs-dial-replacement": {
+    title: "Dial Refinishing vs. Replacement | Johns Creek Watch Repair",
+    headline: "Dial Refinishing vs. Dial Replacement: How to Know Which One Your Watch Needs",
+    description: "Learn when a watch dial should be refinished, replaced, or preserved, including the impact of water damage, originality, and collectible value.",
+    path: "/dial-refinishing-vs-dial-replacement/",
+    image: "/assets/articles/dial-refinishing-comparison.png",
+    imageWidth: 1200,
+    imageHeight: 675,
+    imageAlt: "Watchmaker comparing a patina-aged Omega dial with a factory-fresh replacement dial",
+    publishedTime: "2026-07-07T00:00:00-04:00",
+    modifiedTime: "2026-08-04T13:06:41+00:00",
+    section: "Watch Repair",
+    keywords: ["dial refinishing", "dial replacement", "watch dial repair", "vintage watch dial", "Johns Creek watch repair"],
+    faqs: [
+      ["What is the difference between dial refinishing and dial replacement?", "Refinishing restores the existing dial surface; replacement removes it and installs a new component. The right option depends on the type and extent of damage."],
+      ["Does refinishing a watch dial reduce its value?", "It can, especially on vintage or collectible watches where the original dial is a major driver of value. For modern daily-wear watches, a well-done refinishing job can improve appearance and usability."],
+      ["Can water-damaged watch dials be refinished?", "Sometimes, but only when damage is limited to surface discoloration. Severe oxidation, pitting, or corrosion into the base metal usually requires dial replacement."],
+      ["Should I refinish the dial on my vintage watch?", "In most collector-market contexts, no. Original dials, even those showing age and patina, are typically the most valued component of a vintage watch."],
+      ["How long does dial refinishing or replacement take?", "Refinishing often takes two to four weeks, while replacement timing depends on parts availability and manufacturer lead times."],
+      ["Can any watchmaker refinish a dial?", "No. Dial refinishing is a distinct specialty requiring specific equipment, printing plates, paint formulations, and font libraries beyond standard movement repair tools."]
+    ]
+  },
+  "best-38mm-watches": {
+    title: "10 Best 38mm Watches for Every Style and Budget | IAT",
+    headline: "10 Best 38mm Watches for Every Style and Budget",
+    description: "Compare ten current 38mm watches by price, movement, fit, water resistance, and purpose, from accessible automatics to luxury chronographs.",
+    path: "/best-38mm-watches/",
+    image: "/assets/articles/best-38mm-hamilton-khaki-field.png",
+    imageWidth: 1200,
+    imageHeight: 800,
+    imageAlt: "Hamilton Khaki Field 38mm watch on a textured outdoor surface",
+    publishedTime: "2026-08-03T00:00:00-04:00",
+    modifiedTime: "2026-08-03T22:13:26+00:00",
+    section: "Watch Brands",
+    keywords: ["best 38mm watches", "38mm watch", "Hamilton Khaki Field 38mm", "Omega Aqua Terra 38mm", "compact watches"],
+    faqs: [
+      ["Is 38mm a good watch size?", "A 38mm case is a versatile watch size for many wrists because it balances visible wrist presence with manageable proportions."],
+      ["What wrist size fits a 38mm watch?", "A 38mm watch often fits wrists between about 6 and 7.5 inches, but lug-to-lug length and wrist shape matter more than circumference alone."],
+      ["Do 38mm watches look too small on men?", "A 38mm watch does not automatically look too small because case shape, dial opening, and lug length influence visual presence."],
+      ["Are 38mm watches suitable for women?", "A 38mm watch can be an excellent choice for women who prefer a noticeable sports or everyday watch."],
+      ["Which 38mm watch is best for daily wear?", "The Omega Aqua Terra is a strong luxury all-purpose option; the Seiko SRPK29 is an accessible choice, and the Certina DS Action Diver suits swimming and durability priorities."],
+      ["What should I check before buying a 38mm watch?", "Check lug-to-lug length, thickness, weight, movement, water resistance, and bracelet or strap fit before buying."]
+    ]
+  },
+  "distinctive-features-that-make-the-benrus-sky-chief-a-collectible": {
+    title: "Benrus Sky Chief Features: A Collector’s Guide | IAT",
+    headline: "5 Distinctive Features That Make the Benrus Sky Chief a Collector’s Treasure",
+    description: "Explore the Swiss movements, aviation-inspired design, collector value, and authenticity checks that define the vintage Benrus Sky Chief.",
+    path: "/distinctive-features-that-make-the-benrus-sky-chief-a-collectible/",
+    image: "/assets/articles/benrus-sky-chief-collector-hero.jpg",
+    imageWidth: 2560,
+    imageHeight: 1440,
+    imageAlt: "Benrus Sky Chief watch on a leather folio with vintage aviation documents",
+    publishedTime: "2026-07-22T00:00:00-04:00",
+    modifiedTime: "2026-08-03T20:56:38+00:00",
+    section: "Benrus",
+    keywords: ["Benrus Sky Chief", "vintage Benrus watches", "Benrus Sky Chief value", "Benrus Swiss movement", "collectible watches"],
+    faqs: [
+      ["What movement does the Benrus Sky Chief use?", "The Benrus Sky Chief commonly uses Swiss-made movements from A. Schild or FHF, typically configured with 17 jewels."],
+      ["How much is a Benrus Sky Chief worth today?", "A Benrus Sky Chief typically sells for between $150 and $600 at auction, depending on condition, dial originality, case material, and whether the movement is running."],
+      ["What are the dial variants of the Benrus Sky Chief?", "The Sky Chief has multiple dial configurations across its production run, including variations in numeral styles, marker shapes, and dial colors."],
+      ["How do I identify an authentic Benrus Sky Chief?", "Examine the caseback for reference numbers and material markings, request movement photos, and compare the caliber number with a reputable movement database."
+      ]
+    ]
   }
 };
 
