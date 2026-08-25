@@ -6,6 +6,8 @@ const articleDates: Record<string, string> = {
   "/benrus-legacy/": "2026-08-25T00:00:00+00:00",
   "/benrus-ultra-deep/": "2026-08-25T00:00:00+00:00",
   "/bulova-repair/": "2026-08-25T00:00:00+00:00",
+  "/benrus-dtu-2a-watch-review/": "2026-08-03T20:56:01+00:00",
+  "/best-field-watches-everyday-wear/": "2026-08-03T20:55:21+00:00",
   "/best-seiko-watches-to-buy/": "2026-08-03T20:56:15+00:00",
   "/benrus-watches-its-about-time/": "2026-08-04T14:46:06+00:00",
   "/what-happens-inside-watch-dial-comes-off/": "2026-08-04T13:10:09+00:00",
@@ -29,6 +31,8 @@ const routes = [
   "/benrus-watches-its-about-time/",
   "/what-happens-inside-watch-dial-comes-off/",
   "/best-38mm-watches/",
+  "/benrus-dtu-2a-watch-review/",
+  "/best-field-watches-everyday-wear/",
   "/best-seiko-watches-to-buy/",
   "/distinctive-features-that-make-the-benrus-sky-chief-a-collectible/"
 ];

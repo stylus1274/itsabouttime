@@ -78,6 +78,49 @@ const articleSeo: Record<string, ArticleSeo> = {
       ["What happens if my watch fails a pressure test?", "A failed test usually means a worn gasket or seal, an easy and inexpensive fix if caught early. A watchmaker should quote replacement before doing any work and check for internal moisture at the same time."]
     ]
   },
+  "benrus-dtu-2a-watch-review": {
+    title: "Benrus DTU-2A/P Field Watch Review | It’s About Time",
+    headline: "Benrus DTU-2A/P: The Vietnam-Era Field Watch That Earned Its Place in 2026",
+    description: "Read our Benrus DTU-2A/P review, covering its military history, 34mm field-watch proportions, ETA movement, specifications, and collector appeal.",
+    path: "/benrus-dtu-2a-watch-review/",
+    image: "/assets/articles/benrus-dtu-2ap-lifestyle.jpg",
+    imageWidth: 1200,
+    imageHeight: 800,
+    imageAlt: "Benrus DTU-2A/P military field watch on a brown bund strap",
+    publishedTime: "2026-06-18T00:00:00-04:00",
+    modifiedTime: "2026-08-03T20:56:01+00:00",
+    section: "Field Watches",
+    keywords: ["Benrus DTU-2A/P review", "Benrus field watch", "Vietnam-era field watch", "ETA 2671", "Benrus watches Johns Creek"],
+    faqs: [
+      ["What does DTU-2A/P stand for?", "DTU-2A/P stands for Department Technical Unit, 2nd Amendment, Army/Personnel. It is the U.S. military designation for the field-watch specification issued under MIL-W-3818B in 1962, which Benrus fulfilled for soldiers serving in Vietnam."],
+      ["Is the Benrus DTU-2A/P a good everyday watch?", "Yes. Its 34mm case, automatic movement, 100-meter water resistance and tool-watch construction make it a capable daily wearer. Buyers who need a larger case or a date display may prefer another model, but the DTU-2A/P is designed for practical, unobtrusive use."],
+      ["How does the DTU-2A/P compare to the Hamilton Khaki Field?", "Both have field-watch heritage. The Hamilton Khaki Field Mechanical generally offers a longer power reserve at a lower price, while the Benrus carries a more specific documented military history and adds a sapphire crystal with anti-reflective coating."],
+      ["Can I get the DTU-2A/P serviced locally?", "Yes. The ETA 2671 is a well-supported Swiss caliber with broad parts availability. It’s About Time Inc. handles contemporary and vintage watch service and can advise on service intervals and movement maintenance."],
+      ["Where can I buy the Benrus DTU-2A/P in Atlanta?", "It’s About Time Inc. carries Benrus watches including the DTU-2A/P. Visit the Johns Creek showroom to see it in person or contact the team about current availability."]
+    ]
+  },
+  "best-field-watches-everyday-wear": {
+    title: "Best Field Watches for Everyday Wear | It’s About Time",
+    headline: "Best Field Watches for Everyday Wear",
+    description: "Explore the best field watches for everyday wear, with practical buying guidance on case size, movements, water resistance, and standout options at every budget.",
+    path: "/best-field-watches-everyday-wear/",
+    image: "/assets/articles/hamilton-khaki-field-mechanical-watch.webp",
+    imageWidth: 1200,
+    imageHeight: 675,
+    imageAlt: "Hamilton Khaki Field Mechanical watch with green NATO-style strap",
+    publishedTime: "2026-05-15T00:00:00-04:00",
+    modifiedTime: "2026-08-03T20:55:21+00:00",
+    section: "Field Watches",
+    keywords: ["best field watches", "field watches for everyday wear", "Hamilton Khaki Field", "Benrus DTU-2A/P", "field watch guide"],
+    faqs: [
+      ["What makes a watch a field watch?", "A field watch is defined by a highly legible dial built for quick reading in any light. Large Arabic numerals, minimal clutter, luminous hands and markers, and a compact case all trace back to military timepieces designed for soldiers who needed the time at a glance."],
+      ["Are field watches good for everyday wear?", "Yes. Field watches are among the most versatile categories for daily use. Their clean design works with business casual, outdoor activity and everything in between, while their durable construction holds up to regular wear."],
+      ["What is the difference between a field watch and a dive watch?", "A field watch prioritizes legibility and a slim, wearable case. A dive watch focuses on underwater use with rotating bezels, screw-down crowns and higher water resistance. Both can be rugged, but a field watch is the more versatile daily choice for many people."],
+      ["Should I get an automatic or quartz field watch?", "Quartz is the better choice for low maintenance and consistent accuracy with minimal attention. Automatics need regular wear or a winder to stay running, but many buyers value their mechanical craftsmanship enough to accept that tradeoff."],
+      ["How often does a field watch need service?", "Most automatic field watches benefit from service every three to five years as a general guideline, although interval needs vary by movement and usage. Check the documentation for your specific model and consult a qualified watchmaker when in doubt."],
+      ["Does It’s About Time Inc. service field watches?", "Yes. It’s About Time Inc. services field watches from several manufacturers, including Hamilton, Seiko and Citizen. Contact the team or visit the workshop to discuss a particular model."]
+    ]
+  },
   "best-seiko-watches-to-buy": {
     title: "Best Seiko Watches to Buy in 2026 | It’s About Time",
     headline: "Best Seiko Watches to Buy in 2026: From $179 to $1,000 and Beyond",
