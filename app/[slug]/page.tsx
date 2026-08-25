@@ -19,10 +19,87 @@ type ArticleSeo = {
   modifiedTime: string;
   section: string;
   keywords: string[];
-  faqs: readonly Faq[];
+  faqs?: readonly Faq[];
 };
 
 const articleSeo: Record<string, ArticleSeo> = {
+  "benrus-legacy": {
+    title: "Benrus Watches: History, Collecting & Repair | It’s About Time",
+    headline: "Exploring the Legacy and Craftsmanship of Benrus Watches",
+    description: "Explore Benrus watch history, military models, collecting guidance, and specialist repair in Johns Creek, Georgia.",
+    path: "/benrus-legacy/",
+    image: "/assets/benrus-military.jpg",
+    imageWidth: 1915,
+    imageHeight: 821,
+    imageAlt: "WWII soldier with a field radio beside a vintage Benrus military field watch",
+    publishedTime: "2026-08-22T00:00:00-04:00",
+    modifiedTime: "2026-08-25T00:00:00-04:00",
+    section: "Watch Brands",
+    keywords: ["Benrus watches", "vintage Benrus", "Benrus military watches", "Benrus watch repair", "Johns Creek watch repair"],
+    faqs: [
+      ["What is the history of Benrus watches?", "Benrus was founded in 1921 by Benjamin Lazrus in New York City and grew into one of the top American watch brands by the 1950s. The company supplied field and dive watches to the U.S. military through several decades before falling quiet in the mid-1970s. The name has since been revived under new ownership."],
+      ["Are Benrus watches worth anything today?", "Everyday vintage models often trade between roughly $300 and $1,500, while original military-issue pieces, especially the Type I and Type II dive watches, can command significantly more at auction. Condition, originality, and provenance drive the value."],
+      ["How do I identify a vintage Benrus watch model?", "Start with the case back, which usually carries a model reference number you can match against collector catalogs and databases. Dial layout, case shape, and movement caliber help confirm it."],
+      ["How do I find replacement parts or get a Benrus watch repaired?", "Because many parts are no longer manufactured, vintage Benrus repair calls for a watchmaker experienced with older movements who can source period-correct components or carefully fabricate them. A qualified independent workshop is usually the best first step." ]
+    ]
+  },
+  "benrus-ultra-deep": {
+    title: "Benrus Ultra-Deep Dive Watch | It’s About Time",
+    headline: "Benrus Ultra-Deep Dive Watch",
+    description: "Explore the Benrus Ultra-Deep dive watch, including its technical details, condition review, and availability at our Johns Creek showroom.",
+    path: "/benrus-ultra-deep/",
+    image: "/assets/benrus-ultra-deep.png",
+    imageWidth: 1440,
+    imageHeight: 1440,
+    imageAlt: "Benrus Ultra-Deep dive watch with black dial and steel bracelet",
+    publishedTime: "2026-08-22T00:00:00-04:00",
+    modifiedTime: "2026-08-25T00:00:00-04:00",
+    section: "Watch Brands",
+    keywords: ["Benrus Ultra-Deep", "Benrus dive watch", "vintage dive watch", "Benrus watches", "Johns Creek watch showroom"]
+  },
+  "bulova-repair": {
+    title: "Bulova Watch Repair in Johns Creek, GA | It’s About Time",
+    headline: "5 Signs Your Bulova Watch Needs Repair",
+    description: "Learn the warning signs your Bulova watch needs repair and get expert battery, pressure-testing, and movement service in Johns Creek, GA.",
+    path: "/bulova-repair/",
+    image: "/assets/blog-bulova-skeleton.png",
+    imageWidth: 2048,
+    imageHeight: 1152,
+    imageAlt: "Bulova rose-gold skeleton automatic watch",
+    publishedTime: "2026-08-22T00:00:00-04:00",
+    modifiedTime: "2026-08-25T00:00:00-04:00",
+    section: "Watch Repair",
+    keywords: ["Bulova watch repair", "Bulova repair Johns Creek", "Bulova battery replacement", "watch pressure testing", "watch repair Georgia"],
+    faqs: [
+      ["How often should I service my Bulova watch?", "Mechanical Bulova watches generally benefit from a full service every 3 to 5 years, including cleaning, fresh lubrication, and movement adjustment. Quartz models need less frequent attention but should have the battery replaced every 1 to 2 years."],
+      ["Does a battery replacement void my watch's water resistance?", "Not on its own, but opening the case does reset water resistance to unknown until it is pressure tested again. A proper battery service should include a fresh gasket and a test."],
+      ["Can I repair my Bulova watch at home?", "Basic tasks like swapping a leather strap or cleaning the case exterior are fine at home. Anything involving the movement, crystal, crown, or case seals should go to a professional."],
+      ["How much does Bulova watch repair cost?", "A battery replacement typically runs $20 to $50. Crystal replacement and seal work generally fall in the $75 to $150 range. A complete movement overhaul can range from $200 to $500 or more depending on complexity."],
+      ["What happens if my watch fails a pressure test?", "A failed test usually means a worn gasket or seal, an easy and inexpensive fix if caught early. A watchmaker should quote replacement before doing any work and check for internal moisture at the same time."]
+    ]
+  },
+  "best-seiko-watches-to-buy": {
+    title: "Best Seiko Watches to Buy in 2026 | It’s About Time",
+    headline: "Best Seiko Watches to Buy in 2026: From $179 to $1,000 and Beyond",
+    description: "From the $179 Seiko 5 to the Alpinist and Grand Seiko, explore the best Seiko watches in 2026 by price and purpose at It’s About Time.",
+    path: "/best-seiko-watches-to-buy/",
+    image: "/assets/articles/seiko-prospex-alpinist-buying-guide.webp",
+    imageWidth: 1200,
+    imageHeight: 600,
+    imageAlt: "Seiko Prospex Alpinist SPB121J1 field watch with internal compass bezel",
+    publishedTime: "2026-07-02T00:00:00-04:00",
+    modifiedTime: "2026-08-03T20:56:15+00:00",
+    section: "Luxury Watches",
+    keywords: ["best Seiko watches", "Seiko watches 2026", "Seiko Prospex Alpinist", "Seiko 5 Sports", "Seiko dealer Johns Creek"],
+    faqs: [
+      ["Are Seiko watches worth buying?", "Yes. Seiko manufactures its own movements, which gives it a quality-control and serviceability advantage over competitors at similar price points. Its in-house production, broad price range and strong enthusiast community make Seiko a defensible purchase at many budgets."],
+      ["What is the best Seiko watch for the money?", "For many buyers, the Seiko Prospex Alpinist SPB121J1 represents the strongest value because it combines 200 meters of water resistance, an internal compass bezel and the 6R35 movement with a 70-hour power reserve for around $750. At lower price points, the Seiko 5 Sports SRPD51 is a standard recommendation at approximately $179."],
+      ["How long do Seiko movements last?", "Seiko automatic movements, particularly the 4R and 6R calibers, are known for long service intervals and broad parts availability. With proper care and periodic service, often every three to five years for a daily wearer, a Seiko movement can last decades."],
+      ["Can I get my Seiko serviced locally in Atlanta?", "Yes. It’s About Time Inc. provides Seiko watch repair and service at its Johns Creek location. Our watchmakers work with the full range of Seiko calibers, from the entry-level 4R series to higher-specification 6R movements."],
+      ["Is Seiko an authorized dealer brand at It’s About Time Inc.?", "Yes. It’s About Time Inc. is an authorized Seiko dealer serving the Atlanta metro area from its Johns Creek showroom. Purchasing through an authorized dealer helps ensure a valid warranty and properly sourced product."],
+      ["What is the difference between Seiko and Grand Seiko?", "Grand Seiko is Seiko’s high-end luxury division, operating largely as its own brand with distinct movements and pricing that begins around $2,000 and extends far higher. Its finishing standards, including Zaratsu polishing on cases and hands, compete with the best Swiss manufacturers."]
+    ]
+  },
   "benrus-watches-its-about-time": {
     title: "Benrus Watches at It’s About Time | Johns Creek, GA",
     headline: "It’s About Time Inc. Now Carries Benrus Watches",
@@ -136,40 +213,42 @@ const articleSeo: Record<string, ArticleSeo> = {
 
 function makeArticleSchema(article: ArticleSeo) {
   const articleUrl = `${siteUrl}${article.path}`;
-  return {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "BlogPosting",
-        "@id": `${articleUrl}#article`,
-        mainEntityOfPage: { "@type": "WebPage", "@id": articleUrl },
-        headline: article.headline,
-        description: article.description,
-        image: [`${siteUrl}${article.image}`],
-        datePublished: article.publishedTime,
-        dateModified: article.modifiedTime,
-        author: { "@type": "Organization", name: "It’s About Time Inc." },
-        publisher: {
-          "@type": "Organization",
-          name: "It’s About Time Inc.",
-          logo: { "@type": "ImageObject", url: `${siteUrl}/assets/logo.png` }
-        },
-        articleSection: article.section,
-        keywords: article.keywords,
-        inLanguage: "en-US",
-        url: articleUrl
+  const graph: Array<Record<string, unknown>> = [
+    {
+      "@type": "BlogPosting",
+      "@id": `${articleUrl}#article`,
+      mainEntityOfPage: { "@type": "WebPage", "@id": articleUrl },
+      headline: article.headline,
+      description: article.description,
+      image: [`${siteUrl}${article.image}`],
+      datePublished: article.publishedTime,
+      dateModified: article.modifiedTime,
+      author: { "@type": "Organization", name: "It’s About Time Inc." },
+      publisher: {
+        "@type": "Organization",
+        name: "It’s About Time Inc.",
+        logo: { "@type": "ImageObject", url: `${siteUrl}/assets/logo.png` }
       },
-      {
-        "@type": "FAQPage",
-        "@id": `${articleUrl}#faq`,
-        mainEntity: article.faqs.map(([name, text]) => ({
-          "@type": "Question",
-          name,
-          acceptedAnswer: { "@type": "Answer", text }
-        }))
-      }
-    ]
-  };
+      articleSection: article.section,
+      keywords: article.keywords,
+      inLanguage: "en-US",
+      url: articleUrl
+    }
+  ];
+
+  if (article.faqs?.length) {
+    graph.push({
+      "@type": "FAQPage",
+      "@id": `${articleUrl}#faq`,
+      mainEntity: article.faqs.map(([name, text]) => ({
+        "@type": "Question",
+        name,
+        acceptedAnswer: { "@type": "Answer", text }
+      }))
+    });
+  }
+
+  return { "@context": "https://schema.org", "@graph": graph };
 }
 
 export function generateStaticParams() {

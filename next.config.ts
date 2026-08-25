@@ -11,7 +11,9 @@ const nextConfig: NextConfig = {
       { source: "/benrus-legacy.html", destination: "/benrus-legacy", permanent: true },
       { source: "/benrus-ultra-deep.html", destination: "/benrus-ultra-deep", permanent: true },
       { source: "/bulova-repair.html", destination: "/bulova-repair", permanent: true },
-      { source: "/dial-refinishing-vs-replacement.html", destination: "/dial-refinishing-vs-replacement", permanent: true }
+      { source: "/dial-refinishing-vs-replacement.html", destination: "/dial-refinishing-vs-dial-replacement", permanent: true },
+      { source: "/dial-refinishing-vs-replacement", destination: "/dial-refinishing-vs-dial-replacement", permanent: true },
+      { source: "/dial-refinishing-vs-replacement/", destination: "/dial-refinishing-vs-dial-replacement", permanent: true }
     ];
   }
 };
