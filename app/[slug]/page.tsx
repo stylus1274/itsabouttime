@@ -99,6 +99,49 @@ const articleSeo: Record<string, ArticleSeo> = {
       ["Where can I buy the Benrus DTU-2A/P in Atlanta?", "It’s About Time Inc. carries Benrus watches including the DTU-2A/P. Visit the Johns Creek showroom to see it in person or contact the team about current availability."]
     ]
   },
+  "10-luxury-dive-watches-everyday-wear": {
+    title: "Best Luxury Dive Watches (That Aren’t the Submariner) | It’s About Time",
+    headline: "10 Luxury Dive Watches for Everyday Wear (That Aren’t the Submariner)",
+    description: "The Submariner is great, but serious collectors know there is more. Explore 10 distinctive luxury dive watches worth wearing every day in 2026.",
+    path: "/10-luxury-dive-watches-everyday-wear/",
+    image: "/assets/articles/dive-iwc-aquatimer-hero.png",
+    imageWidth: 1445,
+    imageHeight: 912,
+    imageAlt: "IWC Aquatimer Automatic luxury dive watch on a wrist",
+    publishedTime: "2026-05-05T00:00:00-04:00",
+    modifiedTime: "2026-08-03T20:55:06+00:00",
+    section: "Dive Watches",
+    keywords: ["luxury dive watches", "best dive watches 2026", "IWC Aquatimer", "Oris Aquis Calibre 400", "Grand Seiko dive watch"],
+    faqs: [
+      ["What makes a luxury dive watch suitable for everyday wear?", "Everyday wearability comes from more than a depth rating. Look for a manageable case size, reasonable thickness, strong legibility, a useful movement reserve and a bracelet or strap that sits comfortably for long periods."],
+      ["Do luxury dive watches need pressure testing?", "Yes. Water resistance can decline over time as seals age, and pressure testing is especially important after any case opening for service, a battery or a crystal replacement."],
+      ["Is ISO 6425 certification important?", "ISO 6425 indicates a watch has met formal dive-watch requirements, including water resistance, bezel functionality, legibility and resistance to shock and magnetism. It is a useful standard, though personal wearability still depends on dimensions and fit."],
+      ["Which dive watch on this list has the longest power reserve?", "The Breitling Superocean Heritage B31 offers a 100-hour reserve. The Oris Calibre 400 follows with five days, while the Rado Powermatic 80 offers about 80 hours."],
+      ["Can a watchmaker service a luxury dive watch locally?", "It’s About Time Inc. provides professional watch repair and service in Johns Creek. Contact the workshop to discuss a specific brand, movement and water-resistance test requirement."]
+    ]
+  },
+  "cartier-watch-battery-replacement": {
+    title: "Cartier Watch Battery Replacement | Johns Creek, GA | It’s About Time",
+    headline: "Cartier Watch Battery Replacement by Certified Watchmakers",
+    description: "Cartier battery replacement at It’s About Time Inc. WOSTEP-certified watchmakers, in-house service, gasket inspection, and pressure testing. Walk-ins welcome.",
+    path: "/cartier-watch-battery-replacement/",
+    image: "/assets/articles/cartier-battery-replacement-hero.png",
+    imageWidth: 1024,
+    imageHeight: 765,
+    imageAlt: "Cartier watches prepared for professional battery replacement service",
+    publishedTime: "2026-08-03T20:54:53+00:00",
+    modifiedTime: "2026-08-03T20:54:53+00:00",
+    section: "Watch Service",
+    keywords: ["Cartier watch battery replacement", "Cartier battery service Johns Creek", "Cartier watch repair", "watch pressure testing", "WOSTEP certified watchmaker"],
+    faqs: [
+      ["Can a dead battery damage a Cartier watch?", "Yes. If an old battery is left in too long and leaks, it can damage the movement and turn a routine service into a more serious repair. If your Cartier has stopped, have it inspected promptly."],
+      ["How long does a Cartier battery replacement take?", "Turnaround depends on the model and what inspection reveals. The workshop will provide a clear timeframe after evaluating the watch and its service needs."],
+      ["Can I mail my Cartier watch in for battery replacement?", "Yes. Customers who cannot visit Johns Creek can discuss mail-in service with the workshop. All work is handled in-house using the same care as an in-store service."],
+      ["Can any watch shop replace a Cartier battery?", "Not every shop should. Cartier watches require careful case handling, the correct tools and attention to the gasket and seal. A watch-focused repair shop is generally a safer choice than a general jewelry counter or mall kiosk."],
+      ["How much does Cartier watch battery replacement cost?", "Cost depends on the model, gasket condition and whether pressure testing or additional service is required. The workshop provides a clear price before work begins."],
+      ["Does a Cartier watch need pressure testing after a battery replacement?", "If the watch is water resistant or exposed to moisture, pressure testing is recommended after the case has been opened. The gasket may need inspection or replacement at the same time."]
+    ]
+  },
   "best-field-watches-everyday-wear": {
     title: "Best Field Watches for Everyday Wear | It’s About Time",
     headline: "Best Field Watches for Everyday Wear",
