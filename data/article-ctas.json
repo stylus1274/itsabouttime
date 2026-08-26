@@ -20,7 +20,11 @@
     "secondaryLabel": "Call Our Specialists",
     "primaryHref": "/watch-sales/",
     "secondaryHref": "tel:+17704429854",
-    "benefits": ["Curated entry-level luxury watches", "In-person, no-pressure guidance", "Johns Creek showroom"]
+    "benefits": [
+      "Curated entry-level luxury watches",
+      "In-person, no-pressure guidance",
+      "Johns Creek showroom"
+    ]
   },
   "how-to-adjust-your-watch-strap-or-bracelet-for-a-perfect-fit": {
     "type": "repair",
@@ -65,5 +69,89 @@
     "secondaryLabel": "View All Services",
     "primaryHref": "/watch-repairs/",
     "secondaryHref": "/watch-repairs/"
+  },
+  "where-to-buy-genuine-luminox-watches-in-atlanta-a-shoppers-guide": {
+    "type": "specialist",
+    "placement": 0.4,
+    "eyebrow": "Atlanta's Authorized Dealer",
+    "headline": "Visit Our Johns Creek Showroom",
+    "description": "Experience the rugged durability of the Luminox Navy SEAL collection in person. Consult with our experts to find the perfect model for your lifestyle.",
+    "buttonLabel": "View Our Showroom",
+    "secondaryLabel": "Call Us Now",
+    "primaryHref": "/watch-sales/",
+    "secondaryHref": "tel:770-442-9854",
+    "benefits": [
+      "100% Authentic Inventory",
+      "Official Manufacturer Warranty",
+      "Expert In-Store Fitting"
+    ]
+  },
+  "common-repairs-for-hamilton-watches": {
+    "type": "repair",
+    "placement": 0.4,
+    "eyebrow": "Expert Hamilton Servicing",
+    "headline": "Restore Your Hamilton to Peak Performance",
+    "description": "Visit our Johns Creek showroom for a professional repair consultation to ensure your Hamilton timepiece receives the specialized care it deserves.",
+    "buttonLabel": "View Repair Services",
+    "secondaryLabel": "Call: 770-442-9854",
+    "primaryHref": "/watch-repairs/",
+    "secondaryHref": "tel:+17704429854",
+    "benefits": [
+      "Genuine Hamilton Parts",
+      "Master Technicians",
+      "Pressure Testing Included",
+      "Quick Turnaround"
+    ]
+  },
+  "nomos-authorized-watch-repair-atlanta": {
+    "type": "repair",
+    "placement": 0.4,
+    "eyebrow": "Expert NOMOS Service",
+    "headline": "Restore Your NOMOS Timepiece",
+    "description": "Visit our Johns Creek showroom to speak with our certified watchmakers about your NOMOS timepiece’s specific needs.",
+    "buttonLabel": "View Repair Services",
+    "secondaryLabel": "Call (770) 442-9854",
+    "primaryHref": "/watch-repairs/",
+    "secondaryHref": "tel:+17704429854",
+    "benefits": [
+      "Certified Technicians",
+      "Original NOMOS Parts",
+      "Precision Timing & Regulation",
+      "Water Resistance Testing"
+    ]
+  },
+  "how-often-should-an-omega-be-serviced": {
+    "type": "repair",
+    "placement": 0.4,
+    "eyebrow": "Professional Omega Maintenance",
+    "headline": "Keep Your Omega Performing at Its Best",
+    "description": "Trust our master watchmakers for precision Omega servicing and repairs. From battery replacements to full mechanical overhauls, we ensure your timepiece maintains its value and accuracy.",
+    "buttonLabel": "View Repair Services",
+    "secondaryLabel": "Call (770) 442-9854",
+    "primaryHref": "/watch-repairs/",
+    "secondaryHref": "tel:+17704429854",
+    "benefits": [
+      "Authorized Master Watchmakers",
+      "Genuine Omega Parts & Components",
+      "Complimentary Case & Bracelet Refinishing",
+      "Water Resistance Pressure Testing"
+    ]
+  },
+  "citizen-watches-repair-atlanta": {
+    "type": "repair",
+    "placement": 0.4,
+    "eyebrow": "Certified Citizen Service",
+    "headline": "Expert Citizen Watch Repair in Atlanta",
+    "description": "Our certified watchmakers specialize in restoring Citizen timepieces, including Eco-Drive models, to their original factory performance.",
+    "buttonLabel": "View Repair Services",
+    "secondaryLabel": "Call (770) 476-2006",
+    "primaryHref": "/watch-repairs/",
+    "secondaryHref": "tel:7704762006",
+    "benefits": [
+      "Certified Watchmakers",
+      "Genuine Citizen Parts",
+      "Eco-Drive Specialists",
+      "Water Resistance Testing"
+    ]
   }
 }
