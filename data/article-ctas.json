@@ -405,5 +405,85 @@
       "In-House Repairs",
       "Over 20 Years Experience"
     ]
+  },
+  "expert-rado-watch-repair-services-in-nashville": {
+    "type": "repair",
+    "placement": 0.4,
+    "eyebrow": "Expert Rado Service",
+    "headline": "Restore Your Rado With Specialist Care",
+    "description": "Restore the precision and luster of your Rado timepiece with expert Swiss movement servicing and ceramic restoration from Nashville’s luxury watch specialists.",
+    "buttonLabel": "Get Rado Repair Services",
+    "secondaryLabel": "Call Our Experts",
+    "primaryHref": "/watch-repairs/",
+    "secondaryHref": "tel:+17704429854",
+    "benefits": [
+      "Certified Swiss movement expertise",
+      "Genuine Rado ceramic replacement parts",
+      "Comprehensive water-resistance testing"
+    ]
+  },
+  "professional-breitling-watch-service-nashville": {
+    "type": "repair",
+    "placement": 0.4,
+    "eyebrow": "Professional Breitling Service",
+    "headline": "Professional Breitling Service & Repair",
+    "description": "Ensure your Breitling timepiece receives the precision care it deserves with a comprehensive diagnostic and professional restoration from our specialist workshop.",
+    "buttonLabel": "Start Your Repair",
+    "secondaryLabel": "Call for Details",
+    "primaryHref": "/watch-repairs/",
+    "secondaryHref": "tel:+17704429854",
+    "benefits": [
+      "Genuine manufacturer-grade parts",
+      "Secure mail-in service with tracking",
+      "Expert diagnostic and restoration"
+    ]
+  },
+  "longines-watch-repair-atlanta": {
+    "type": "repair",
+    "placement": 0.4,
+    "eyebrow": "Specialist Longines Care",
+    "headline": "Protect Your Longines Precision",
+    "description": "Ensure your Longines timepiece receives the precision care it deserves with our specialized Swiss watch repair services in Atlanta.",
+    "buttonLabel": "Request Repair",
+    "secondaryLabel": "Call Now",
+    "primaryHref": "/watch-repairs/",
+    "secondaryHref": "tel:+17704429854",
+    "benefits": [
+      "Certified Swiss watch technicians",
+      "Detailed diagnostic estimates",
+      "Precision movement maintenance"
+    ]
+  },
+  "baume-mercier-watch-overhaul-atlanta": {
+    "type": "repair",
+    "placement": 0.4,
+    "eyebrow": "Baume & Mercier Overhaul",
+    "headline": "Restore Precision and Elegance",
+    "description": "Restore your Baume & Mercier’s precision and elegance with a comprehensive mechanical overhaul from our expert Swiss watch technicians.",
+    "buttonLabel": "View Repair Services",
+    "secondaryLabel": "Call Now",
+    "primaryHref": "/watch-repairs/",
+    "secondaryHref": "tel:+17704429854",
+    "benefits": [
+      "Expert Swiss watch technicians",
+      "Factory-standard mechanical tune-up",
+      "Restored water resistance and seals"
+    ]
+  },
+  "rolex-watch-service-center-near-me-atlanta": {
+    "placement": 0.4,
+    "type": "repair",
+    "eyebrow": "Rolex Service Expertise",
+    "headline": "Protect Your Rolex for the Long Term",
+    "description": "Ensure the precision and longevity of your Rolex with a professional overhaul and service from Atlanta's trusted experts.",
+    "buttonLabel": "View Repair Services",
+    "secondaryLabel": "Call Our Specialists",
+    "primaryHref": "/watch-repairs/",
+    "secondaryHref": "tel:+17704429854",
+    "benefits": [
+      "Certified Rolex Service Specialists",
+      "Genuine Parts & Tools",
+      "Comprehensive Performance Testing"
+    ]
   }
 }
