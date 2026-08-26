@@ -153,5 +153,89 @@
       "Eco-Drive Specialists",
       "Water Resistance Testing"
     ]
+  },
+  "repair-humidity-watch-damage": {
+    "type": "repair",
+    "placement": 0.4,
+    "eyebrow": "Expert Watch Service",
+    "headline": "Restore Your Timepiece Today",
+    "description": "Stop moisture from damaging your luxury watch. Our certified watchmakers provide professional humidity damage inspection and restoration.",
+    "buttonLabel": "Request a Repair Estimate",
+    "secondaryLabel": "Call 770-442-9854",
+    "primaryHref": "/watch-repairs/",
+    "secondaryHref": "tel:+17704429854",
+    "benefits": [
+      "Certified Watchmakers",
+      "Original Manufacturer Parts",
+      "Water Resistance Testing",
+      "Free Estimates"
+    ]
+  },
+  "humidity-watch-damage-signs": {
+    "type": "repair",
+    "placement": 0.4,
+    "eyebrow": "Professional Watch Care",
+    "headline": "Protect Your Timepiece from Moisture Damage",
+    "description": "Don't let humidity ruin your luxury watch. Our expert technicians provide professional seal inspections and pressure tests to ensure your watch remains water-resistant.",
+    "buttonLabel": "View Repair Services",
+    "secondaryLabel": "Call Our Experts",
+    "primaryHref": "/watch-repairs/",
+    "secondaryHref": "tel:+18005550199",
+    "benefits": [
+      "Expert Seal Inspection",
+      "Professional Pressure Testing",
+      "Certified Luxury Watch Technicians",
+      "Fast Turnaround Times"
+    ]
+  },
+  "can-baume-mercier-watches-be-repaired": {
+    "type": "repair",
+    "placement": 0.4,
+    "eyebrow": "Expert Swiss Watch Service",
+    "headline": "Professional Baume & Mercier Repair",
+    "description": "Ensure your Baume & Mercier timepiece receives the expert precision and care it deserves with our certified watchmakers.",
+    "buttonLabel": "View Repair Services",
+    "secondaryLabel": "Call Our Workshop",
+    "primaryHref": "/watch-repairs/",
+    "secondaryHref": "tel:770-442-9854",
+    "benefits": [
+      "Certified Technicians",
+      "Genuine Parts",
+      "12-Month Warranty",
+      "Free Estimates"
+    ]
+  },
+  "expert-luxury-watch-repair-and-restoration-for-vintage-timepieces": {
+    "type": "repair",
+    "placement": 0.4,
+    "eyebrow": "Expert Restoration",
+    "headline": "Restore Your Vintage Timepiece to Its Original Brilliance",
+    "description": "Trust our master watchmakers for expert repair and restoration of your most treasured luxury watches.",
+    "buttonLabel": "Request a Repair Quote",
+    "secondaryLabel": "Call Our Specialists",
+    "primaryHref": "/watch-repairs/",
+    "secondaryHref": "tel:770-442-9854",
+    "benefits": [
+      "Master Watchmakers",
+      "Original Parts Sourcing",
+      "2-Year Warranty"
+    ]
+  },
+  "luxury-watch-repair-preserving-value": {
+    "type": "repair",
+    "placement": 0.4,
+    "eyebrow": "Expert Service",
+    "headline": "Preserve Your Timepiece's Legacy",
+    "description": "Schedule a professional watch repair consultation at our Johns Creek location to maintain your watch's precision and value.",
+    "buttonLabel": "Schedule Repair",
+    "secondaryLabel": "Call Now",
+    "primaryHref": "/watch-repairs/",
+    "secondaryHref": "tel:+17704429854",
+    "benefits": [
+      "Certified Master Watchmakers",
+      "Genuine Brand Parts",
+      "Warranty Preservation",
+      "Transparent Estimates"
+    ]
   }
 }
