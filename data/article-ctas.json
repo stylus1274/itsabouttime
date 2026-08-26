@@ -13,13 +13,14 @@
   "how-to-start-a-luxury-watch-collection-without-breaking-the-bank": {
     "type": "specialist",
     "placement": 0.4,
-    "eyebrow": "Expert Guidance",
-    "headline": "Start Your Collection Today",
-    "description": "Schedule a showroom visit to explore our curated selection of entry-level luxury timepieces and receive personalized guidance for your first collection piece.",
-    "buttonLabel": "Book a Visit",
-    "secondaryLabel": "Contact Specialist",
+    "eyebrow": "Explore in Person",
+    "headline": "Start Your Collection with Confidence",
+    "description": "Stop by our Johns Creek showroom to explore a curated selection of entry-level luxury timepieces and get friendly, in-person guidance as you choose your first collection piece.",
+    "buttonLabel": "Explore the Showroom",
+    "secondaryLabel": "Call Our Specialists",
     "primaryHref": "/watch-sales/",
-    "secondaryHref": "tel:+17704429854"
+    "secondaryHref": "tel:+17704429854",
+    "benefits": ["Curated entry-level luxury watches", "In-person, no-pressure guidance", "Johns Creek showroom"]
   },
   "how-to-adjust-your-watch-strap-or-bracelet-for-a-perfect-fit": {
     "type": "repair",
