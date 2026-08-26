@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { SiteContent } from "@/components/SiteContent";
+import { SiteContent, type ArticleCta } from "@/components/SiteContent";
+import articleCtas from "@/data/article-ctas.json";
 import { getPage, slugs } from "@/lib/content";
 
 const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://itsabouttime-psi.vercel.app").replace(/\/$/, "");
@@ -533,11 +534,12 @@ export default async function ConvertedPage({ params }: { params: Promise<{ slug
   const { slug } = await params;
   const page = getPage(slug);
   if (!page) notFound();
+  const cta = (articleCtas as Record<string, ArticleCta>)[slug];
   const article = articleSeo[slug];
 
   return (
     <>
-      <SiteContent title={page.title} html={page.html} />
+      <SiteContent title={page.title} html={page.html} cta={cta} />
       {article && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(makeArticleSchema(article)) }} />}
     </>
   );

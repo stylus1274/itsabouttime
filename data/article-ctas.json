@@ -1,0 +1,68 @@
+{
+  "watch-repair-or-replace-atlanta": {
+    "type": "repair",
+    "placement": 0.4,
+    "eyebrow": "Before you decide",
+    "headline": "Get a specialist’s opinion before you replace it.",
+    "description": "A professional assessment can reveal whether a targeted repair will restore the watch you already own—and what that repair will cost—before you spend on a replacement.",
+    "buttonLabel": "Get a Free Repair Estimate",
+    "secondaryLabel": "Or call 770-442-9854",
+    "primaryHref": "/watch-repairs/",
+    "secondaryHref": "tel:+17704429854"
+  },
+  "how-to-start-a-luxury-watch-collection-without-breaking-the-bank": {
+    "type": "specialist",
+    "placement": 0.4,
+    "eyebrow": "Expert Guidance",
+    "headline": "Start Your Collection Today",
+    "description": "Schedule a showroom visit to explore our curated selection of entry-level luxury timepieces and receive personalized guidance for your first collection piece.",
+    "buttonLabel": "Book a Visit",
+    "secondaryLabel": "Contact Specialist",
+    "primaryHref": "/watch-sales/",
+    "secondaryHref": "tel:+17704429854"
+  },
+  "how-to-adjust-your-watch-strap-or-bracelet-for-a-perfect-fit": {
+    "type": "repair",
+    "placement": 0.4,
+    "eyebrow": "Professional Sizing",
+    "headline": "Get the Perfect Fit Today",
+    "description": "Schedule a professional watch sizing consultation to ensure your timepiece fits perfectly and securely without risking damage from DIY adjustments.",
+    "buttonLabel": "Schedule Sizing",
+    "secondaryLabel": "View Repair Services",
+    "primaryHref": "/watch-repairs/",
+    "secondaryHref": "/watch-repairs/"
+  },
+  "why-luminox-watches-are-so-popular": {
+    "type": "specialist",
+    "placement": 0.4,
+    "eyebrow": "Expert Guidance",
+    "headline": "Find Your Perfect Luminox",
+    "description": "Schedule a specialist guidance session today to find the perfect Luminox model for your demanding lifestyle or ensure your current timepiece remains mission-ready with our expert maintenance services.",
+    "buttonLabel": "Book Specialist",
+    "secondaryLabel": "Browse Collection",
+    "primaryHref": "/watch-sales/",
+    "secondaryHref": "/watch-sales/"
+  },
+  "seiko-watch-repair-in-atlanta": {
+    "type": "repair",
+    "placement": 0.4,
+    "eyebrow": "Expert Seiko Service",
+    "headline": "Get a Professional Seiko Repair Estimate",
+    "description": "Ensure your Seiko timepiece maintains its precision and value with specialized maintenance from our expert artisans in Johns Creek.",
+    "buttonLabel": "Request Estimate",
+    "secondaryLabel": "Call a Specialist",
+    "primaryHref": "/watch-repairs/",
+    "secondaryHref": "tel:+17704429854"
+  },
+  "can-your-citizen-watch-be-restored-johns-creek-ga": {
+    "type": "repair",
+    "placement": 0.4,
+    "eyebrow": "Professional Watch Care",
+    "headline": "Restore Your Citizen Timepiece",
+    "description": "Schedule a professional Citizen watch diagnostic today to receive a detailed repair estimate and restore your timepiece’s precision.",
+    "buttonLabel": "Get Repair Estimate",
+    "secondaryLabel": "View All Services",
+    "primaryHref": "/watch-repairs/",
+    "secondaryHref": "/watch-repairs/"
+  }
+}
