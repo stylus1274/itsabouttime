@@ -485,5 +485,85 @@
       "Genuine Parts & Tools",
       "Comprehensive Performance Testing"
     ]
+  },
+  "baume-and-mercier-watches-and-repairs": {
+    "type": "repair",
+    "placement": 0.4,
+    "eyebrow": "Baume & Mercier Expertise",
+    "headline": "Protect Your Baume & Mercier’s Precision",
+    "description": "Ensure your Baume & Mercier maintains its precision and value with expert care from our certified Swiss watch specialists.",
+    "buttonLabel": "Get Repair Estimate",
+    "secondaryLabel": "Call (770) 442-9854",
+    "primaryHref": "/watch-repairs/",
+    "secondaryHref": "tel:+17704429854",
+    "benefits": [
+      "Genuine Baume & Mercier Parts",
+      "Factory-Trained Technicians",
+      "Nationwide Secure Shipping"
+    ]
+  },
+  "hamilton-watch-repair-in-nashville": {
+    "type": "repair",
+    "placement": 0.4,
+    "eyebrow": "Expert Hamilton Repair",
+    "headline": "Restore Hamilton Precision and Performance",
+    "description": "Restore the precision and performance of your Hamilton timepiece with expert Swiss-grade maintenance and authentic component replacement services.",
+    "buttonLabel": "Start Your Repair",
+    "secondaryLabel": "Call Us",
+    "primaryHref": "/watch-repairs/",
+    "secondaryHref": "tel:+17704429854",
+    "benefits": [
+      "Expert Swiss-grade maintenance",
+      "Authentic component replacement",
+      "Precision and performance restoration"
+    ]
+  },
+  "jlc-watch-service-signs-nashville": {
+    "type": "repair",
+    "placement": 0.4,
+    "eyebrow": "Jaeger-LeCoultre Service",
+    "headline": "Protect Your JLC’s Mechanical Integrity",
+    "description": "Preserve the mechanical integrity and long-term value of your Jaeger-LeCoultre timepiece with expert Swiss-certified technical maintenance.",
+    "buttonLabel": "Request Repair",
+    "secondaryLabel": "Call Us",
+    "primaryHref": "/watch-repairs/",
+    "secondaryHref": "tel:+17704429854",
+    "benefits": [
+      "Swiss-certified technical maintenance",
+      "Preserve mechanical integrity",
+      "Maintain long-term value"
+    ]
+  },
+  "cartier-watch-repair-in-nashville": {
+    "type": "repair",
+    "placement": 0.4,
+    "eyebrow": "Cartier Repair Expertise",
+    "headline": "Preserve Your Cartier’s Heritage",
+    "description": "Ensure your Cartier timepiece maintains its legendary precision and heritage with a comprehensive movement service performed by our certified in-house watchmakers.",
+    "buttonLabel": "View Repair Services",
+    "secondaryLabel": "Call Now",
+    "primaryHref": "/watch-repairs/",
+    "secondaryHref": "tel:+17704429854",
+    "benefits": [
+      "Certified In-House Watchmakers",
+      "Genuine OEM Parts Only",
+      "Comprehensive Water Resistance Testing"
+    ]
+  },
+  "tag-heuer-watch-repair-in-nashville": {
+    "type": "repair",
+    "placement": 0.4,
+    "eyebrow": "TAG Heuer Service",
+    "headline": "Give Your TAG Heuer Specialist Care",
+    "description": "Ensure your Tag Heuer receives the specialized attention it deserves with a comprehensive factory-spec maintenance and diagnostic evaluation.",
+    "buttonLabel": "View Repair Services",
+    "secondaryLabel": "Call Our Experts",
+    "primaryHref": "/watch-repairs/",
+    "secondaryHref": "tel:+17704429854",
+    "benefits": [
+      "Factory-spec maintenance and diagnostic evaluation",
+      "Certified water resistance testing",
+      "Precision Swiss movement calibration"
+    ]
   }
 }
