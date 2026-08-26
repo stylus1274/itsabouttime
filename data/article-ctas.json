@@ -565,5 +565,85 @@
       "Certified water resistance testing",
       "Precision Swiss movement calibration"
     ]
+  },
+  "jlc-watch-repair-in-atlanta-precision-service-for-a-prestigious-timepiece": {
+    "placement": 0.4,
+    "type": "repair",
+    "eyebrow": "JLC Precision Service",
+    "headline": "Expert Jaeger-LeCoultre Repair in Atlanta",
+    "description": "Restore your prestigious timepiece to factory-level performance with our specialized Swiss micro-mechanics expertise and on-site service.",
+    "buttonLabel": "Schedule Repair",
+    "secondaryLabel": "Call 770-442-9854",
+    "primaryHref": "/watch-repairs/",
+    "secondaryHref": "tel:+17704429854",
+    "benefits": [
+      "On-site Swiss-certified technicians",
+      "Genuine JLC-specific parts and lubricants",
+      "Comprehensive timing and water-resistance testing"
+    ]
+  },
+  "rolex-watch-repair-in-atlanta": {
+    "placement": 0.4,
+    "type": "repair",
+    "eyebrow": "Certified Rolex Service",
+    "headline": "Precision Rolex Repair in Atlanta",
+    "description": "Ensure your Rolex maintains its value and accuracy. Our Swiss-trained technicians provide expert servicing with genuine parts and a comprehensive warranty.",
+    "buttonLabel": "Book Service",
+    "secondaryLabel": "Call (770) 442-9854",
+    "primaryHref": "/watch-repairs/",
+    "secondaryHref": "tel:+17704429854",
+    "benefits": [
+      "Swiss-Trained Certified Technicians",
+      "100% Genuine Rolex Components",
+      "Comprehensive Service Warranty"
+    ]
+  },
+  "how-often-should-you-service-a-nomos-watch": {
+    "placement": 0.4,
+    "type": "repair",
+    "primaryHref": "/watch-repairs/",
+    "secondaryHref": "tel:+17704429854",
+    "eyebrow": "Expert Nomos Service",
+    "headline": "Keep Your Nomos Running with German Precision",
+    "description": "Our certified horologists provide professional movement cleaning, authentic part replacement, and rigorous testing for your Nomos timepiece.",
+    "buttonLabel": "Schedule Repair",
+    "secondaryLabel": "Call (770) 442-9854",
+    "benefits": [
+      "Expert local care in Atlanta",
+      "Authentic Nomos parts",
+      "Precision timing and pressure checking"
+    ]
+  },
+  "citizen-aqualand-vs-promaster-which-dive-watch-is-right-for-you": {
+    "type": "showroom",
+    "placement": 0.4,
+    "primaryHref": "/watch-sales/",
+    "secondaryHref": "tel:+17704429854",
+    "eyebrow": "EXPLORE CITIZEN",
+    "headline": "Find Your Perfect Citizen Dive Watch",
+    "description": "Visit our Johns Creek showroom to compare the Aqualand and Promaster series in person. Our experts will help you find the ideal timepiece for your next underwater adventure.",
+    "buttonLabel": "Browse Citizen Watches",
+    "secondaryLabel": "Call (770) 442-9854",
+    "benefits": [
+      "Authorized Citizen Dealer",
+      "Expert In-Person Comparison",
+      "Comprehensive Dive Watch Selection"
+    ]
+  },
+  "finding-a-seiko-prospex-authorized-dealer-in-atlanta-what-you-need-to-know": {
+    "type": "showroom",
+    "placement": 0.4,
+    "eyebrow": "Authorized Seiko Dealer",
+    "headline": "Explore the Seiko Prospex Collection in Atlanta",
+    "description": "Visit our Johns Creek showroom to experience the legendary durability and precision of Seiko Prospex timepieces in person. Our experts are ready to help you find the perfect model.",
+    "buttonLabel": "View Collection",
+    "secondaryLabel": "Call Us",
+    "primaryHref": "/watch-sales/",
+    "secondaryHref": "tel:+17704429854",
+    "benefits": [
+      "Guaranteed Authenticity",
+      "Full Manufacturer Warranty",
+      "Expert Guidance & Service"
+    ]
   }
 }
