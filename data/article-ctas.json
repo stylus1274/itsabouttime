@@ -237,5 +237,89 @@
       "Warranty Preservation",
       "Transparent Estimates"
     ]
+  },
+  "authorized-vs-local-watch-repair-johns-creek": {
+    "type": "repair",
+    "placement": 0.4,
+    "eyebrow": "Certified Watch Service",
+    "headline": "Protect Your Investment with Certified Repairs",
+    "description": "Ensure your luxury watch receives the expert care it deserves. Our Johns Creek workshop uses genuine parts and brand-certified protocols.",
+    "buttonLabel": "Request Repair Estimate",
+    "secondaryLabel": "Call Our Experts",
+    "primaryHref": "/watch-repairs/",
+    "secondaryHref": "tel:+17706675300",
+    "benefits": [
+      "Brand-Certified Technicians",
+      "Genuine OEM Parts",
+      "Warranty Protection",
+      "Specialized Equipment"
+    ]
+  },
+  "omega-seamaster-battery-replacement-atlanta": {
+    "type": "repair",
+    "placement": 0.4,
+    "eyebrow": "Expert Omega Care",
+    "headline": "Restore Your Omega Seamaster's Precision",
+    "description": "Ensure your timepiece remains water-resistant and functional with a professional battery replacement and pressure test.",
+    "buttonLabel": "Request Repair Estimate",
+    "secondaryLabel": "Call 770-442-9854",
+    "primaryHref": "/watch-repairs/",
+    "secondaryHref": "tel:770-442-9854",
+    "benefits": [
+      "Genuine Omega Parts",
+      "Professional Pressure Testing",
+      "Experienced Technicians",
+      "Service Guarantee"
+    ]
+  },
+  "authorized-omega-watch-repair-johns-creek-ga": {
+    "type": "repair",
+    "placement": 0.4,
+    "eyebrow": "EXPERT OMEGA CARE",
+    "headline": "Restore Your Omega with Precision",
+    "description": "Our certified watchmakers use genuine parts and specialized diagnostic equipment to keep your Omega performing at its best.",
+    "buttonLabel": "Request Repair Estimate",
+    "secondaryLabel": "Call 770-442-9854",
+    "primaryHref": "/watch-repairs/",
+    "secondaryHref": "tel:+17704429854",
+    "benefits": [
+      "Authorized Omega Service Center",
+      "Genuine Parts & Specialized Tools",
+      "Certified Co-Axial Technicians",
+      "Professional Refinishing"
+    ]
+  },
+  "top-5-signs-your-tag-heuer-watch-needs-professional-servicing-in-nashville": {
+    "type": "repair",
+    "placement": 0.4,
+    "eyebrow": "Professional Watch Care",
+    "headline": "Expert TAG Heuer Servicing & Repair",
+    "description": "Schedule a professional TAG Heuer repair consultation today to ensure your timepiece receives the expert care it needs to maintain its precision and value.",
+    "buttonLabel": "Request Repair Estimate",
+    "secondaryLabel": "Call (770) 442-9854",
+    "primaryHref": "/watch-repairs/",
+    "secondaryHref": "tel:+17704429854",
+    "benefits": [
+      "Certified TAG Heuer Diagnostics",
+      "Precision Regulation & Overhauls",
+      "Moisture Resealing & Pressure Testing",
+      "Secure Mail-in Service for Nashville"
+    ]
+  },
+  "is-it-worth-getting-a-watch-repaired-atlanta": {
+    "type": "repair",
+    "placement": 0.4,
+    "eyebrow": "Expert Watch Repair",
+    "headline": "Professional Watch Service in Atlanta",
+    "description": "From luxury overhauls to simple battery replacements, our master watchmakers in Johns Creek provide the precision care your timepiece deserves.",
+    "buttonLabel": "View Repair Services",
+    "secondaryLabel": "Call (770) 442-9854",
+    "primaryHref": "/watch-repairs/",
+    "secondaryHref": "tel:7704429854",
+    "benefits": [
+      "Master Watchmakers on Site",
+      "Luxury Brand Specialists",
+      "Johns Creek Showroom"
+    ]
   }
 }
