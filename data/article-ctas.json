@@ -321,5 +321,89 @@
       "Luxury Brand Specialists",
       "Johns Creek Showroom"
     ]
+  },
+  "buying-hamilton-watches-in-atlanta-authorized-vs-unauthorized": {
+    "type": "specialist",
+    "placement": 0.4,
+    "eyebrow": "Authorized Hamilton Retailer",
+    "headline": "Visit Our Johns Creek Showroom",
+    "description": "Experience the quality of authentic Hamilton timepieces firsthand. Browse our curated selection and get expert advice from our specialists.",
+    "buttonLabel": "Explore Our Collection",
+    "secondaryLabel": "Contact a Specialist",
+    "primaryHref": "/watch-sales/",
+    "secondaryHref": "/contact/",
+    "benefits": [
+      "Authorized Dealer Warranty",
+      "Authenticity Guaranteed",
+      "Expert In-House Support"
+    ]
+  },
+  "luxury-watch-repair-atlanta": {
+    "type": "repair",
+    "placement": 0.4,
+    "eyebrow": "Atlanta's Premier Watch Service",
+    "headline": "Restore Your Timepiece to Factory Perfection",
+    "description": "From routine maintenance to complex mechanical overhauls, our certified watchmakers provide the precision care your luxury watch deserves.",
+    "buttonLabel": "View Repair Services",
+    "secondaryLabel": "Call 770-442-9854",
+    "primaryHref": "/watch-repairs/",
+    "secondaryHref": "tel:7704429854",
+    "benefits": [
+      "Certified Master Watchmakers",
+      "Genuine Manufacturer Parts",
+      "12-24 Month Service Warranty",
+      "State-of-the-Art Diagnostics"
+    ]
+  },
+  "where-to-get-watch-repaired-in-atlanta": {
+    "type": "repair",
+    "placement": 0.4,
+    "eyebrow": "Expert Watch Repair",
+    "headline": "Restore Your Timepiece's Precision",
+    "description": "Schedule a professional watch repair consultation with our certified technicians to restore your timepiece's precision and performance.",
+    "buttonLabel": "View Repair Services",
+    "secondaryLabel": "Call (770) 442-9854",
+    "primaryHref": "/watch-repairs/",
+    "secondaryHref": "tel:+17704429854",
+    "benefits": [
+      "Certified Technicians",
+      "Brand Expertise",
+      "Genuine Parts",
+      "Secure Handling"
+    ]
+  },
+  "the-dos-and-donts-of-watch-storage": {
+    "type": "repair",
+    "placement": 0.4,
+    "eyebrow": "Protect Your Investment",
+    "headline": "Professional Watch Care & Repair",
+    "description": "Is your watch showing signs of wear or running irregularly? Our master watchmakers provide expert maintenance and repairs to keep your timepiece in peak condition.",
+    "buttonLabel": "View Repair Services",
+    "secondaryLabel": "Call Us Now",
+    "primaryHref": "/watch-repairs/",
+    "secondaryHref": "tel:+17704429854",
+    "benefits": [
+      "Expert movement checks",
+      "Professional battery replacement",
+      "Precision demagnetization",
+      "Complimentary repair estimates"
+    ]
+  },
+  "tag-heuer-watch-repair-in-johns-creek-its-about-time-inc": {
+    "type": "repair",
+    "placement": 0.4,
+    "eyebrow": "Expert Tag Heuer Service",
+    "headline": "Authorized Tag Heuer Repair in Johns Creek",
+    "description": "Trust your luxury timepiece to our certified watchmakers. We use genuine parts and provide personalized service for every Tag Heuer owner.",
+    "buttonLabel": "View Repair Services",
+    "secondaryLabel": "Call (770) 442-9854",
+    "primaryHref": "/watch-repairs/",
+    "secondaryHref": "tel:7704429854",
+    "benefits": [
+      "Genuine Tag Heuer Parts",
+      "Certified Watchmakers",
+      "In-House Repairs",
+      "Over 20 Years Experience"
+    ]
   }
 }
