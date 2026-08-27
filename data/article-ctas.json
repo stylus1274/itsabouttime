@@ -989,5 +989,85 @@
       "Expertise in All Cartier Models Including Tank and Santos"
     ],
     "type": "repair"
+  },
+  "legacy-and-craftsmanship-of-benrus-watches": {
+    "type": "showroom",
+    "placement": 0.4,
+    "eyebrow": "Discover the Legacy",
+    "headline": "Authentic Vintage Benrus Collection",
+    "description": "Explore our curated selection of vintage Benrus timepieces, from military field watches to elegant mid-century dress pieces.",
+    "buttonLabel": "View Collection",
+    "secondaryLabel": "Call for Inquiries",
+    "primaryHref": "/watch-sales/",
+    "secondaryHref": "tel:+17704429854",
+    "benefits": [
+      "Expertly Authenticated Timepieces",
+      "Rich American Military Heritage",
+      "Precision Mid-Century Craftsmanship"
+    ]
+  },
+  "taking-rolex-to-unauthorized-jeweler-costs-more": {
+    "type": "/watch-repairs/",
+    "placement": 0.4,
+    "eyebrow": "Rolex Service Specialists",
+    "headline": "Protect Your Investment with Expert Care",
+    "description": "If your Rolex is due for service, or something feels off, don't wait. Our certified experts use genuine parts and specialized tools to restore your timepiece to factory standards.",
+    "buttonLabel": "Contact Our Experts",
+    "secondaryLabel": "Call 770-442-9854",
+    "primaryHref": "/watch-repairs/",
+    "secondaryHref": "tel:+17704429854",
+    "benefits": [
+      "Genuine Rolex Parts",
+      "Certified Master Watchmakers",
+      "Precision Diagnostic Process"
+    ]
+  },
+  "5-signs-your-bulova-watch-needs-repair": {
+    "type": "repair",
+    "placement": 0.4,
+    "eyebrow": "Master Watch Repair",
+    "headline": "Restore Your Bulova Watch",
+    "description": "Our experienced technicians provide expert repairs and maintenance to keep your timepiece running perfectly for years to come.",
+    "buttonLabel": "View Repair Services",
+    "secondaryLabel": "Call Our Experts",
+    "primaryHref": "/watch-repairs/",
+    "secondaryHref": "tel:+17704429854",
+    "benefits": [
+      "Expert Technicians",
+      "Precision Overhauls",
+      "Quality Maintenance"
+    ]
+  },
+  "popular-hamilton-watches-under-1000": {
+    "placement": 0.4,
+    "eyebrow": "Hamilton Watch Sales",
+    "headline": "Find Your Perfect Hamilton Watch in Atlanta",
+    "description": "Explore our curated selection of Hamilton timepieces under $1000 at our Johns Creek showroom. Authentic Swiss quality meets American style.",
+    "buttonLabel": "View Collection",
+    "secondaryLabel": "Call Us Now",
+    "primaryHref": "/watch-sales/",
+    "secondaryHref": "tel:+17704429854",
+    "benefits": [
+      "Authentic Swiss-made movements",
+      "80-hour power reserve on most models",
+      "Expert local support in Johns Creek"
+    ],
+    "type": "showroom"
+  },
+  "the-most-common-repairs-for-longines-watches-and-how-we-fix-them": {
+    "type": "repair",
+    "placement": 0.4,
+    "eyebrow": "Expert Longines Service",
+    "headline": "Restore Your Longines to Factory Standards",
+    "description": "From movement calibration to water resistance testing, our master watchmakers provide the precision care your timepiece deserves.",
+    "buttonLabel": "View Repair Services",
+    "secondaryLabel": "Call Us Now",
+    "primaryHref": "/watch-repairs/",
+    "secondaryHref": "tel:+17704429854",
+    "benefits": [
+      "Genuine Longines Parts",
+      "Swiss-Trained Technicians",
+      "Water Resistance Guaranteed"
+    ]
   }
 }
