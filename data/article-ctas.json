@@ -957,5 +957,37 @@
     "buttonLabel": "Request a Repair Quote",
     "secondaryLabel": "770-442-9854",
     "type": "repair"
+  },
+  "g-shock-watch-repair": {
+    "placement": 0.4,
+    "eyebrow": "G-Shock Repair Specialists",
+    "headline": "Restore the Resilience of Your G-Shock",
+    "description": "Professional repair and maintenance for your rugged timepiece. Our certified watchmakers ensure your G-Shock continues to withstand any impact.",
+    "buttonLabel": "View Repair Services",
+    "secondaryLabel": "Call Us",
+    "primaryHref": "/watch-repairs/",
+    "secondaryHref": "tel:+17704429854",
+    "benefits": [
+      "Certified WOSTEP Watchmakers",
+      "Free Professional Diagnosis",
+      "100% Guaranteed Workmanship"
+    ],
+    "type": "repair"
+  },
+  "cartier-watch-rep-and-services": {
+    "placement": 0.4,
+    "eyebrow": "Authorized Cartier Service",
+    "headline": "Expert Care for Your Cartier Timepiece",
+    "description": "Trust our WOSTEP-certified technicians for meticulous Cartier repairs using genuine parts and specialized tools.",
+    "buttonLabel": "View Repair Services",
+    "secondaryLabel": "Call 770-442-9854",
+    "primaryHref": "/watch-repairs/",
+    "secondaryHref": "tel:+17704429854",
+    "benefits": [
+      "Authorized Cartier Watch Service and Repair Center",
+      "Access to Genuine Cartier Parts and Specialized Tools",
+      "Expertise in All Cartier Models Including Tank and Santos"
+    ],
+    "type": "repair"
   }
 }
