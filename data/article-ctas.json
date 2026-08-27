@@ -1069,5 +1069,85 @@
       "Swiss-Trained Technicians",
       "Water Resistance Guaranteed"
     ]
+  },
+  "authorized-tag-heuer-repair": {
+    "type": "/watch-repairs/",
+    "placement": 0.4,
+    "eyebrow": "Authorized TAG Heuer Service",
+    "headline": "Expert Care for Your TAG Heuer Timepiece",
+    "description": "Keep your watch performing at its best with professional servicing, genuine parts, and expert calibration.",
+    "buttonLabel": "Get Free Estimate",
+    "secondaryLabel": "Call Now",
+    "primaryHref": "https://itsabouttimeinc.com/repair-form/",
+    "secondaryHref": "tel:+17704429854",
+    "benefits": [
+      "Genuine TAG Heuer Parts",
+      "Certified Watchmakers",
+      "Water Resistance Testing"
+    ]
+  },
+  "why-citizen-eco-drive-watches-are-the-perfect-everyday-timepiece": {
+    "type": "showroom",
+    "placement": 0.4,
+    "eyebrow": "Explore Our Collection",
+    "headline": "Find Your Perfect Citizen Eco-Drive",
+    "description": "Browse our extensive selection of authentic Citizen timepieces at It's About Time Inc. in Cumming, GA.",
+    "buttonLabel": "Shop Citizen Watches",
+    "secondaryLabel": "Call for Availability",
+    "primaryHref": "/watch-sales/",
+    "secondaryHref": "tel:+17704429854",
+    "benefits": [
+      "Authorized Citizen Retailer",
+      "Expert Advice & Full Warranty",
+      "Latest Models in Stock"
+    ]
+  },
+  "g-shock-watch-repair-common-problems-fixes": {
+    "placement": 0.4,
+    "eyebrow": "Expert G-Shock Service",
+    "headline": "Restore Your Watch's Rugged Performance",
+    "description": "From battery replacements to water resistance testing, our certified technicians ensure your G-Shock is ready for any adventure.",
+    "buttonLabel": "Get Your Repair Estimate",
+    "secondaryLabel": "Call (770) 442-9854",
+    "primaryHref": "/watch-repairs/",
+    "secondaryHref": "tel:+17704429854",
+    "benefits": [
+      "Genuine Replacement Parts",
+      "Professional Pressure Testing",
+      "Certified Technical Expertise"
+    ],
+    "type": "repair"
+  },
+  "choose-vintage-rolex-restoration-vs-modern-servicing": {
+    "type": "repair",
+    "placement": 0.4,
+    "eyebrow": "Expert Rolex Care",
+    "headline": "Restore Your Vintage Rolex to Its Former Glory",
+    "description": "Our master watchmakers specialize in both vintage restoration and modern servicing, ensuring your timepiece remains a treasure for generations.",
+    "buttonLabel": "Get a Free Estimate",
+    "secondaryLabel": "Call Us Now",
+    "primaryHref": "/watch-repairs/",
+    "secondaryHref": "tel:+17704429854",
+    "benefits": [
+      "Master Watchmakers",
+      "Genuine Rolex Parts",
+      "Free Repair Estimates"
+    ]
+  },
+  "tag-heuer-watch-service-atlanta": {
+    "placement": 0.4,
+    "eyebrow": "Expert Atlanta Watchmaking",
+    "headline": "Professional TAG Heuer Service & Repair",
+    "description": "Trust our certified watchmakers to restore your TAG Heuer timepiece using genuine parts and brand-approved techniques.",
+    "buttonLabel": "Get Your Estimate",
+    "secondaryLabel": "Call 770-442-9854",
+    "primaryHref": "/watch-repairs/",
+    "secondaryHref": "tel:+17704429854",
+    "benefits": [
+      "Genuine TAG Heuer Parts",
+      "Manufacturer-Level Quality",
+      "Certified Swiss Watch Experts"
+    ],
+    "type": "repair"
   }
 }
