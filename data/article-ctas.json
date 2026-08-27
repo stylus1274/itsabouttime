@@ -645,5 +645,124 @@
       "Full Manufacturer Warranty",
       "Expert Guidance & Service"
     ]
+  },
+  "watch-sizing-bracelet-adjustments-in-atlanta": {
+    "placement": 0.4,
+    "eyebrow": "Watch sizing",
+    "headline": "Precision Bracelet Adjustments While You Wait",
+    "description": "Ensure your timepiece fits perfectly with our professional same-day resizing services for all luxury watch brands.",
+    "labels": [
+      "View Our Repair Services",
+      "Call Us Now"
+    ],
+    "hrefs": [
+      "/watch-repairs/",
+      "tel:+17704429854"
+    ],
+    "benefits": [
+      "Same-day service while you wait",
+      "Expert handling for luxury brands like Rolex & Omega",
+      "Precision tools to prevent scratches or damage"
+    ],
+    "primaryHref": "/watch-repairs/",
+    "secondaryHref": "tel:+17704429854",
+    "buttonLabel": "View Our Repair Services",
+    "secondaryLabel": "Call Us Now",
+    "type": "repair"
+  },
+  "5-luxury-brand-watches-youve-never-heard-of": {
+    "placement": 0.4,
+    "type": "showroom",
+    "eyebrow": "Discover Rare Timepieces at Our Showroom",
+    "headline": "Visit Our Showroom",
+    "description": "Browse our curated selection of rare and independent luxury timepieces at our Johns Creek boutique.",
+    "labels": [
+      "Explore Collection",
+      "Call Now"
+    ],
+    "hrefs": [
+      "/watch-sales/",
+      "tel:+17704429854"
+    ],
+    "benefits": [
+      "Exclusive Rare Brands",
+      "Expert Horological Staff",
+      "Authorized Service Support"
+    ],
+    "primaryHref": "/watch-sales/",
+    "secondaryHref": "tel:+17704429854",
+    "buttonLabel": "Explore Collection",
+    "secondaryLabel": "Call Now"
+  },
+  "water-damage-and-watches-key-insights": {
+    "placement": 0.4,
+    "eyebrow": "Expert Watch Repair",
+    "headline": "Protect Your Timepiece From Internal Corrosion",
+    "description": "Don't let moisture destroy your investment. Our expert technicians specialize in water damage restoration and precision pressure testing.",
+    "labels": [
+      "View Watch Repair Services",
+      "Call Us"
+    ],
+    "hrefs": [
+      "/watch-repairs/",
+      "tel:+17704429854"
+    ],
+    "benefits": [
+      "Professional assessment of internal moisture",
+      "Precision cleaning and rust removal",
+      "Certified pressure testing and seal replacement"
+    ],
+    "primaryHref": "/watch-repairs/",
+    "secondaryHref": "tel:+17704429854",
+    "buttonLabel": "View Watch Repair Services",
+    "secondaryLabel": "Call Us",
+    "type": "repair"
+  },
+  "redefining-modern-watchmaking-for-enthusiasts": {
+    "placement": 0.4,
+    "eyebrow": "Luxury Watch Showroom",
+    "headline": "Experience Orion Watches at Our Johns Creek Boutique",
+    "description": "Discover the craftsmanship and innovation of Orion Watches, a celebrated microbrand now available at our Johns Creek location. Visit us to explore the collection in person.",
+    "labels": [
+      "Explore the Collection",
+      "Call Us"
+    ],
+    "hrefs": [
+      "/watch-sales/",
+      "tel:+17704429854"
+    ],
+    "benefits": [
+      "Authorized Orion Watches Retailer",
+      "Exclusive Microbrand Selection",
+      "Expert Personalized Consultations"
+    ],
+    "primaryHref": "/watch-sales/",
+    "secondaryHref": "tel:+17704429854",
+    "buttonLabel": "Explore the Collection",
+    "secondaryLabel": "Call Us",
+    "type": "showroom"
+  },
+  "emergency-watch-repair-and-restoration-in-atlanta": {
+    "placement": 0.4,
+    "eyebrow": "Emergency Repair Services",
+    "headline": "Expert Emergency Watch Repair and Restoration",
+    "description": "Don't let a damaged timepiece wait. Get expert restoration with express turnaround and after-hours support.",
+    "labels": [
+      "View Repair Services"
+    ],
+    "hrefs": [
+      "/watch-repairs/",
+      "tel:+17704429854"
+    ],
+    "benefits": [
+      "Express service for urgent repairs",
+      "After-hours availability in Atlanta",
+      "Expert restoration for luxury brands"
+    ],
+    "primaryHref": "/watch-repairs/",
+    "secondaryHref": "tel:+17704429854",
+    "buttonLabel": "View Repair Services",
+    "secondaryLabel": "Call Our Specialists",
+    "type": "repair"
   }
 }
