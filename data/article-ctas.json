@@ -764,5 +764,85 @@
     "buttonLabel": "View Repair Services",
     "secondaryLabel": "Call Our Specialists",
     "type": "repair"
+  },
+  "becoming-an-authorized-jaeger-lecoultre-workshop": {
+    "placement": 0.4,
+    "eyebrow": "Authorized JLC Workshop",
+    "headline": "Expert Jaeger-LeCoultre In-House Service",
+    "description": "Our Johns Creek boutique is now officially authorized to provide elite-level service for your JLC timepieces using genuine parts and specialized tools.",
+    "buttonLabel": "Explore Repair Services",
+    "secondaryLabel": "Call 770-442-9854",
+    "primaryHref": "/watch-repairs/",
+    "secondaryHref": "tel:+17704429854",
+    "benefits": [
+      "Level 30 & 40 Elite Certification",
+      "Genuine JLC Spare Parts Access",
+      "Specialized Factory-Grade Tools"
+    ],
+    "type": "repair"
+  },
+  "why-winter-is-the-perfect-time-to-get-your-watch-repaired": {
+    "placement": 0.4,
+    "eyebrow": "Seasonal Maintenance",
+    "headline": "Ensure Your Watch Performs Flawlessly",
+    "description": "Winter is the perfect time to ensure your timepiece is in peak condition. Our expert technicians provide comprehensive service for all luxury brands.",
+    "buttonLabel": "Start Your Repair",
+    "secondaryLabel": "Call +1 770-442-9854",
+    "primaryHref": "/watch-repairs/",
+    "secondaryHref": "tel:+17704429854",
+    "benefits": [
+      "Expert diagnostics for all luxury brands",
+      "Waterproofing and seal checks for seasonal protection",
+      "Fast turnaround during the winter season"
+    ],
+    "type": "repair"
+  },
+  "understanding-dial-crown-and-crystal-repairs": {
+    "placement": 0.4,
+    "eyebrow": "Watch Restoration & Repair",
+    "headline": "Restore Your Timepiece to Original Perfection",
+    "description": "Ensure your luxury watch performs flawlessly with professional dial, crown, and crystal repairs from our certified technicians.",
+    "buttonLabel": "Explore Repair Services",
+    "secondaryLabel": "Call (770) 442-9854",
+    "primaryHref": "/watch-repairs/",
+    "secondaryHref": "tel:+17704429854",
+    "benefits": [
+      "Certified Swiss Watch Technicians",
+      "Genuine Replacement Parts",
+      "Comprehensive Water Resistance Testing"
+    ],
+    "type": "repair"
+  },
+  "can-rolex-glass-be-scratched": {
+    "placement": 0.4,
+    "eyebrow": "Professional Rolex Crystal Service",
+    "headline": "Restore Your Luxury Watch to Flawless Condition",
+    "description": "Whether your Rolex features vintage acrylic or modern sapphire crystal, our expert technicians provide precision repairs and genuine replacements to restore its original brilliance.",
+    "buttonLabel": "Explore Watch Repair Services",
+    "secondaryLabel": "Call (770) 442-9854",
+    "primaryHref": "/watch-repairs/",
+    "secondaryHref": "tel:+17704429854",
+    "benefits": [
+      "Genuine Replacement Parts",
+      "Expert In-House Technicians",
+      "Precision Scratch Removal"
+    ],
+    "type": "repair"
+  },
+  "top-5-reasons-to-trust-its-about-time-inc-for-your-tag-heuer-watch-repair-in-atlanta": {
+    "placement": 0.4,
+    "eyebrow": "Expert TAG Heuer Care",
+    "headline": "Ensure Your TAG Heuer Performs Perfectly",
+    "description": "Trust your luxury timepiece to Atlanta's certified experts for precision repairs using only genuine parts.",
+    "buttonLabel": "View Watch Repair Options",
+    "secondaryLabel": "Call Now",
+    "primaryHref": "/watch-repairs/",
+    "secondaryHref": "tel:+17704429854",
+    "benefits": [
+      "Certified TAG Heuer Specialists",
+      "Genuine Factory Parts Only",
+      "Comprehensive Quality Testing"
+    ],
+    "type": "repair"
   }
 }
