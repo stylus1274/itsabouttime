@@ -844,5 +844,118 @@
       "Comprehensive Quality Testing"
     ],
     "type": "repair"
+  },
+  "best-watch-jewellery-repair-near-me": {
+    "placement": 0.4,
+    "eyebrow": "Repair Services",
+    "headline": "Expert Repairs for Your Valued Timepieces",
+    "description": "Explore Our Repair Services",
+    "labels": [
+      "Explore Our Repair Services",
+      "Call Us"
+    ],
+    "hrefs": [
+      "/watch-repairs/",
+      "tel:+17704429854"
+    ],
+    "benefits": [
+      "Professional Repairs Maintain Value",
+      "Comprehensive Knowledge and Expertise",
+      "Quality Parts and Tools"
+    ],
+    "primaryHref": "/watch-repairs/",
+    "secondaryHref": "tel:+17704429854",
+    "buttonLabel": "Explore Our Repair Services",
+    "secondaryLabel": "Call Us",
+    "type": "repair"
+  },
+  "best-microbrand-watches": {
+    "category": "showroom",
+    "placement": 0.4,
+    "eyebrow": "Explore Our Curated Collection of Luxury Watches",
+    "headline": "Visit Our Showroom",
+    "description": "Discover a unique selection of microbrand and luxury timepieces at our Johns Creek location. Our experts are here to help you find the perfect addition to your collection.",
+    "labels": [
+      "Explore Our Curated Collection",
+      "Call Us"
+    ],
+    "hrefs": [
+      "/watch-sales/",
+      "tel:+17704429854"
+    ],
+    "benefits": [
+      "Exclusive limited-edition pieces",
+      "Direct-to-consumer value",
+      "Expert curation and service"
+    ],
+    "primaryHref": "/watch-sales/",
+    "secondaryHref": "tel:+17704429854",
+    "buttonLabel": "Explore Our Curated Collection",
+    "secondaryLabel": "Call Us",
+    "type": "showroom"
+  },
+  "watch-repair-services": {
+    "placement": 0.4,
+    "eyebrow": "Expert Watch Restoration",
+    "headline": "Restore Your Luxury Timepiece Today",
+    "description": "Ensure your investment lasts a lifetime with professional maintenance from Atlanta's premier watch specialists.",
+    "buttonLabel": "Explore Our Repair Services",
+    "secondaryLabel": "Call Us Now",
+    "primaryHref": "/watch-repairs/",
+    "secondaryHref": "tel:+17704429854",
+    "benefits": [
+      "Certified Watch Specialists",
+      "Expertise in Luxury Brands",
+      "Over 45 Years of Experience"
+    ],
+    "type": "repair"
+  },
+  "bulova-watch-repair": {
+    "eyebrow": "Bulova",
+    "headline": "Restore Your Timepiece to Factory Standards",
+    "description": "Get Your Repair Estimate",
+    "labels": [
+      "Get Your Repair Estimate",
+      "Call +1 (770) 442-9854"
+    ],
+    "hrefs": [
+      "/watch-repairs/",
+      "tel:+17704429854"
+    ],
+    "benefits": [
+      "Expert Bulova Specialists",
+      "WOSTEP Certified Artisans",
+      "Precise Factory Standard Repairs"
+    ],
+    "placement": 0.4,
+    "primaryHref": "/watch-repairs/",
+    "secondaryHref": "tel:+17704429854",
+    "buttonLabel": "Get Your Repair Estimate",
+    "secondaryLabel": "Call +1 (770) 442-9854",
+    "type": "repair"
+  },
+  "luminox-watch-repair": {
+    "eyebrow": "Restore Your Watch to Factory Standards",
+    "headline": "Request a Repair Quote",
+    "description": "Explore Our Repair Services",
+    "placement": 0.4,
+    "labels": [
+      "Request a Repair Quote",
+      "770-442-9854"
+    ],
+    "hrefs": [
+      "/watch-repairs/",
+      "tel:+17704429854"
+    ],
+    "benefits": [
+      "3 Generations of Expert Watchmakers",
+      "42+ Years of Professional Experience",
+      "WOSTEP Swiss Certified Technicians"
+    ],
+    "primaryHref": "/watch-repairs/",
+    "secondaryHref": "tel:+17704429854",
+    "buttonLabel": "Request a Repair Quote",
+    "secondaryLabel": "770-442-9854",
+    "type": "repair"
   }
 }
