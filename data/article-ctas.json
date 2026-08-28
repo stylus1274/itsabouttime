@@ -1229,5 +1229,85 @@
       "Local Johns Creek Service"
     ],
     "type": "repair"
+  },
+  "omega-watch-repair-service": {
+    "placement": 0.4,
+    "eyebrow": "Precision Omega Care",
+    "headline": "Expert Omega Repair in Atlanta",
+    "description": "Our certified watchmakers use factory-level tools and genuine parts to restore your Seamaster, Speedmaster, or vintage Omega to its peak performance.",
+    "buttonLabel": "Request Your Estimate",
+    "secondaryLabel": "Speak with a Specialist",
+    "primaryHref": "/watch-repairs/",
+    "secondaryHref": "tel:+17704429854",
+    "benefits": [
+      "Certified Omega Watchmakers",
+      "Genuine Factory Parts",
+      "1-Year Service Warranty"
+    ],
+    "type": "repair"
+  },
+  "luxury-watch-repair-faqs-atlanta-ga": {
+    "type": "/watch-repairs/",
+    "placement": 0.4,
+    "eyebrow": "Expert Watch Restoration",
+    "headline": "Trust Your Timepiece to Atlanta's Finest Technicians",
+    "description": "From mechanical overhauls to simple battery replacements, our certified experts ensure your luxury watch retains its precision and value.",
+    "buttonLabel": "Get a Free Estimate",
+    "secondaryLabel": "Call Us Now",
+    "primaryHref": "/watch-repairs/",
+    "secondaryHref": "tel:+17704429854",
+    "benefits": [
+      "Certified Master Technicians",
+      "Genuine Replacement Parts",
+      "Transparent Pricing & Warranty"
+    ]
+  },
+  "how-to-find-a-rolex-watch-service-center-near-you": {
+    "type": "repair",
+    "placement": 0.4,
+    "eyebrow": "Expert Rolex Maintenance",
+    "headline": "Protect Your Investment with Certified Rolex Service",
+    "description": "Ensure your Rolex remains a timeless masterpiece. Our certified technicians provide comprehensive care, from ultrasonic cleaning to precision calibration.",
+    "buttonLabel": "Get My Repair Quote",
+    "secondaryLabel": "Call Our Experts",
+    "primaryHref": "/watch-repairs/",
+    "secondaryHref": "tel:+17704429854",
+    "benefits": [
+      "Rolex-Certified Technicians",
+      "Authorized Parts & Full Overhaul",
+      "Water Resistance & Pressure Testing"
+    ]
+  },
+  "5-signs-its-time-to-replace-your-watch-battery": {
+    "type": "/watch-repairs/",
+    "placement": 0.4,
+    "eyebrow": "Professional Watch Care",
+    "headline": "Expert Watch Battery Replacement",
+    "description": "Don't let a dead battery damage your timepiece. Our experts provide precision replacement for luxury and everyday watches.",
+    "buttonLabel": "View Repair Services",
+    "secondaryLabel": "Call Now",
+    "primaryHref": "/watch-repairs/",
+    "secondaryHref": "tel:+17704429854",
+    "benefits": [
+      "Fast & Professional Service",
+      "Luxury Brand Expertise",
+      "Leakage Prevention"
+    ]
+  },
+  "rolex-watch-repair-turnaround-time-atlanta-ga": {
+    "placement": 0.4,
+    "eyebrow": "Professional Rolex Service",
+    "headline": "Expert Rolex Watch Repair in Atlanta",
+    "description": "Ready to restore your timepiece with precision and care? Our experienced technicians handle everything from simple tune-ups to full mechanical overhauls. Let us bring your watch back to life.",
+    "buttonLabel": "Get a Free Estimate",
+    "secondaryLabel": "Call Us Now",
+    "primaryHref": "/watch-repairs/",
+    "secondaryHref": "tel:+17704429854",
+    "benefits": [
+      "Certified Technicians",
+      "Genuine Rolex Parts",
+      "Transparent Timelines"
+    ],
+    "type": "repair"
   }
 }
