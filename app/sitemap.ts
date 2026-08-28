@@ -129,7 +129,6 @@ export const routes = [
   "",
   "/watch-repairs/",
   "/watch-sales/",
-  "/sell-your-luxury-watch/",
   "/our-workshop/",
   "/blog/",
   "/benrus-legacy/",
