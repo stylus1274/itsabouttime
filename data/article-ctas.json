@@ -1149,5 +1149,85 @@
       "Certified Swiss Watch Experts"
     ],
     "type": "repair"
+  },
+  "cartier-watch-repair-faqs-atlanta-ga": {
+    "placement": 0.4,
+    "eyebrow": "Expert Watch Service",
+    "headline": "Restore Your Cartier Timepiece",
+    "description": "Get certified, precision service with honest pricing and a fast turnaround at our Johns Creek location.",
+    "buttonLabel": "Get Free Estimate",
+    "secondaryLabel": "Call Now",
+    "primaryHref": "/watch-repairs/",
+    "secondaryHref": "tel:+17704429854",
+    "benefits": [
+      "Certified Cartier Technicians",
+      "Genuine Spare Parts",
+      "Precision Testing & Quality Checks"
+    ],
+    "type": "repair"
+  },
+  "common-watch-problems-and-how-we-fix-them": {
+    "placement": 0.4,
+    "eyebrow": "Expert Watch Repair",
+    "headline": "Restore Your Timepiece Today",
+    "description": "From simple battery replacements to complex mechanical overhauls, our experienced technicians in Johns Creek provide the precision care your watch deserves.",
+    "buttonLabel": "View Repair Services",
+    "secondaryLabel": "Call Us Now",
+    "primaryHref": "/watch-repairs/",
+    "secondaryHref": "tel:+17704429854",
+    "benefits": [
+      "Certified Technicians",
+      "Premium Parts",
+      "Transparent Pricing"
+    ],
+    "type": "repair"
+  },
+  "how-to-find-a-rolex-watch-service-center-near-you-in-nashville": {
+    "type": "repair",
+    "placement": 0.4,
+    "eyebrow": "Expert Rolex Service",
+    "headline": "Restore Your Rolex to Perfection",
+    "description": "Professional maintenance and repair for your luxury timepiece by certified technicians.",
+    "buttonLabel": "View Repair Services",
+    "secondaryLabel": "Call Us Now",
+    "primaryHref": "/watch-repairs/",
+    "secondaryHref": "tel:+17704429854",
+    "benefits": [
+      "Genuine Rolex Parts",
+      "Swiss-Grade Equipment",
+      "Insured Mail-In Service"
+    ]
+  },
+  "should-i-take-my-watch-repairs-to-a-jewelry-store": {
+    "placement": 0.4,
+    "eyebrow": "Professional Watch Repair",
+    "headline": "Trust Your Timepiece to Experts",
+    "description": "Our certified watchmakers use specialized tools and original parts to ensure your watch performs like new.",
+    "buttonLabel": "Get a Free Estimate",
+    "secondaryLabel": "Call Us Now",
+    "primaryHref": "/watch-repairs/",
+    "secondaryHref": "tel:+17704429854",
+    "benefits": [
+      "Expert Watchmakers with Extensive Experience",
+      "Original Manufacturer Parts Guaranteed",
+      "Free Estimates on All Repairs"
+    ],
+    "type": "repair"
+  },
+  "nomos-watch-repair-johns-creek": {
+    "placement": 0.4,
+    "eyebrow": "Expert NOMOS Care",
+    "headline": "Restore Your NOMOS Timepiece",
+    "description": "Get certified local repair for your Tangente, Metro, or Club watch with genuine parts and pressure testing.",
+    "buttonLabel": "Get Repair Estimate",
+    "secondaryLabel": "Call Our Workshop",
+    "primaryHref": "https://itsabouttimeinc.com/repair-form/",
+    "secondaryHref": "tel:+17704429854",
+    "benefits": [
+      "Certified Watchmakers",
+      "Genuine NOMOS Parts",
+      "Local Johns Creek Service"
+    ],
+    "type": "repair"
   }
 }
