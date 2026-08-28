@@ -1309,5 +1309,55 @@
       "Transparent Timelines"
     ],
     "type": "repair"
+  },
+  "common-cartier-watch-problems-chamblee": {
+    "type": "repair",
+    "href": "/watch-repairs/",
+    "placement": 0.4,
+    "eyebrow": "Expert Cartier Care",
+    "headline": "Restore Your Cartier to Perfection",
+    "description": "Don't let mechanical or cosmetic issues diminish the value of your Cartier timepiece. Our master watchmakers provide precision repairs and authentic parts.",
+    "buttonLabel": "Get a Free Estimate",
+    "secondaryLabel": "Call Us Now",
+    "primaryHref": "/watch-repairs/",
+    "secondaryHref": "tel:+17704429854",
+    "benefits": [
+      "Authentic Cartier Parts & Precision Tools",
+      "Expert Master Watchmakers with Decades of Experience",
+      "Comprehensive Warranty on All Cartier Repairs"
+    ]
+  },
+  "history-of-watch-repair-atlanta-ga": {
+    "type": "repair",
+    "href": "/watch-repairs/",
+    "placement": 0.4,
+    "eyebrow": "Master Watch Restoration",
+    "headline": "Expert Watch Repair in Atlanta",
+    "description": "Restore your timepiece's precision with our master watchmakers. We blend centuries of tradition with modern technology to ensure your watch runs flawlessly.",
+    "buttonLabel": "Get a Free Estimate",
+    "secondaryLabel": "Call (770) 442-9854",
+    "primaryHref": "/watch-repairs/",
+    "secondaryHref": "tel:+17704429854",
+    "benefits": [
+      "Certified Master Watchmakers",
+      "Authentic Replacement Parts",
+      "Free Estimates & Fast Turnaround"
+    ]
+  },
+  "rolex-watch-repair-faq-atlanta-ga": {
+    "type": "repair",
+    "placement": 0.4,
+    "eyebrow": "Expert Rolex Service",
+    "headline": "Restore Your Rolex to Perfection",
+    "description": "Get professional, certified Rolex watch repairs in Atlanta with transparent pricing and warranty protection.",
+    "buttonLabel": "Request Repair Estimate",
+    "secondaryLabel": "Call Us Now",
+    "primaryHref": "/watch-repairs/",
+    "secondaryHref": "tel:+17704429854",
+    "benefits": [
+      "Genuine Rolex Parts",
+      "Certified Technicians",
+      "Warranty Protection"
+    ]
   }
 }
