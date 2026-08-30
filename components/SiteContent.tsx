@@ -108,6 +108,7 @@ export function SiteContent({ title, html, cta }: Props) {
     const chatRoot = root.querySelector<HTMLElement>("[data-chat-root]");
     const cleanups: Array<() => void> = [];
 
+
     const contactForm = root.querySelector<HTMLFormElement>("[data-contact-form]");
     if (contactForm) {
       const contactStatus = contactForm.querySelector<HTMLElement>("[data-contact-form-status]");

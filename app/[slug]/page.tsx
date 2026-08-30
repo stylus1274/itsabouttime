@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { notFound } from "next/navigation";
 import { SiteContent, type ArticleCta } from "@/components/SiteContent";
 import articleCtas from "@/data/article-ctas.json";
@@ -601,6 +602,7 @@ export default async function ConvertedPage({ params }: { params: Promise<{ slug
   return (
     <>
       <SiteContent title={page.title} html={page.html} cta={cta} />
+      {slug === "watch-repairs" && <Script src="https://embed.typeform.com/next/embed.js" strategy="afterInteractive" />}
       {article && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(makeArticleSchema(article)) }} />}
       {slug === "contact" && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(makeContactSchema()) }} />}
     </>
