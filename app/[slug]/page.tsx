@@ -453,6 +453,46 @@ const articleSeo: Record<string, ArticleSeo> = {
   }
 };
 
+function makeContactSchema() {
+  const pageUrl = `${siteUrl}/contact/`;
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ContactPage",
+        "@id": `${pageUrl}#contact`,
+        url: pageUrl,
+        name: "Contact It’s About Time",
+        description: "Contact It’s About Time for watch repair, service, and showroom assistance in Johns Creek, Georgia."
+      },
+      {
+        "@type": "LocalBusiness",
+        "@id": `${pageUrl}#business`,
+        name: "It’s About Time Inc.",
+        url: siteUrl,
+        telephone: "+1-770-442-9854",
+        email: "itsabouttimeperimeter@gmail.com",
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: "11300 Medlock Bridge Rd, Suite 300",
+          addressLocality: "Johns Creek",
+          addressRegion: "GA",
+          postalCode: "30097",
+          addressCountry: "US"
+        },
+        openingHoursSpecification: [
+          {
+            "@type": "OpeningHoursSpecification",
+            dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            opens: "10:00",
+            closes: "18:00"
+          }
+        ]
+      }
+    ]
+  };
+}
+
 function makeArticleSchema(article: ArticleSeo) {
   const articleUrl = `${siteUrl}${article.path}`;
   const graph: Array<Record<string, unknown>> = [
@@ -526,6 +566,27 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     };
   }
 
+  if (slug === "contact") {
+    return {
+      title: { absolute: "Contact It’s About Time | Johns Creek Watch Repair & Sales" },
+      description: "Contact It’s About Time in Johns Creek for watch repair, expert service, showroom questions, and collection assistance.",
+      alternates: { canonical: "/contact/" },
+      robots: { index: true, follow: true },
+      openGraph: {
+        type: "website",
+        url: "/contact/",
+        siteName: "It’s About Time",
+        title: "Contact It’s About Time | Johns Creek Watch Repair & Sales",
+        description: "Contact It’s About Time in Johns Creek for watch repair, expert service, showroom questions, and collection assistance."
+      },
+      twitter: {
+        card: "summary",
+        title: "Contact It’s About Time | Johns Creek Watch Repair & Sales",
+        description: "Contact It’s About Time in Johns Creek for watch repair, expert service, showroom questions, and collection assistance."
+      }
+    };
+  }
+
   const page = getPage(slug);
   return page ? { title: page.title } : { title: "Page Not Found" };
 }
@@ -541,6 +602,7 @@ export default async function ConvertedPage({ params }: { params: Promise<{ slug
     <>
       <SiteContent title={page.title} html={page.html} cta={cta} />
       {article && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(makeArticleSchema(article)) }} />}
+      {slug === "contact" && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(makeContactSchema()) }} />}
     </>
   );
 }

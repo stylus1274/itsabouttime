@@ -107,6 +107,29 @@ export function SiteContent({ title, html, cta }: Props) {
 
     const chatRoot = root.querySelector<HTMLElement>("[data-chat-root]");
     const cleanups: Array<() => void> = [];
+
+    const contactForm = root.querySelector<HTMLFormElement>("[data-contact-form]");
+    if (contactForm) {
+      const contactStatus = contactForm.querySelector<HTMLElement>("[data-contact-form-status]");
+      const onContactSubmit = (event: SubmitEvent) => {
+        event.preventDefault();
+        const name = contactForm.querySelector<HTMLInputElement>("[data-contact-name]")?.value.trim() ?? "";
+        const phone = contactForm.querySelector<HTMLInputElement>("[data-contact-phone]")?.value.trim() ?? "";
+        const email = contactForm.querySelector<HTMLInputElement>("[data-contact-email]")?.value.trim() ?? "";
+        const topic = contactForm.querySelector<HTMLInputElement>("[data-contact-topic]")?.value.trim() ?? "";
+        const message = contactForm.querySelector<HTMLTextAreaElement>("[data-contact-message]")?.value.trim() ?? "";
+        if (!name || !email || !message) {
+          if (contactStatus) contactStatus.textContent = "Please include your name, email address, and message.";
+          return;
+        }
+        const subject = topic ? `Website inquiry: ${topic}` : "Website inquiry";
+        const body = [`Name: ${name}`, `Email: ${email}`, `Phone: ${phone || "Not provided"}`, `Topic: ${topic || "General inquiry"}`, "", "Message:", message].join("\n");
+        if (contactStatus) contactStatus.textContent = "Opening your email app with your message included…";
+        window.location.href = `mailto:itsabouttimeperimeter@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      };
+      contactForm.addEventListener("submit", onContactSubmit);
+      cleanups.push(() => contactForm.removeEventListener("submit", onContactSubmit));
+    }
     if (chatRoot) {
       const panel = chatRoot.querySelector<HTMLElement>("[data-chat-panel]");
       const toggle = chatRoot.querySelector<HTMLButtonElement>("[data-chat-toggle]");
