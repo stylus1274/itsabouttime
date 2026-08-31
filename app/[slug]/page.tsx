@@ -494,6 +494,37 @@ function makeContactSchema() {
   };
 }
 
+function makeRepairSubmissionSchema() {
+  const pageUrl = `${siteUrl}/watch-submission-form/`;
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": `${pageUrl}#webpage`,
+        url: pageUrl,
+        name: "Submit a Watch Repair Request | It’s About Time",
+        description: "Submit a watch repair request to It’s About Time in Johns Creek, Georgia for an in-house assessment and next-step guidance.",
+        isPartOf: { "@id": `${siteUrl}/#website` }
+      },
+      {
+        "@type": "Service",
+        "@id": `${pageUrl}#service`,
+        name: "Watch Repair Submission",
+        description: "Repair request intake for watch battery service, mechanical service, restoration, and related watch repairs.",
+        provider: {
+          "@type": "LocalBusiness",
+          name: "It’s About Time Inc.",
+          telephone: "+1-770-442-9854",
+          email: "itsabouttimeperimeter@gmail.com"
+        },
+        areaServed: { "@type": "City", name: "Johns Creek" },
+        url: pageUrl
+      }
+    ]
+  };
+}
+
 function makeArticleSchema(article: ArticleSeo) {
   const articleUrl = `${siteUrl}${article.path}`;
   const graph: Array<Record<string, unknown>> = [
@@ -567,6 +598,30 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     };
   }
 
+  if (slug === "watch-submission-form") {
+    return {
+      title: { absolute: "Submit a Watch Repair Request | It’s About Time" },
+      description: "Submit your watch repair request to It’s About Time in Johns Creek. Share the brand, issue, and service needed for clear next-step guidance.",
+      keywords: ["watch repair request", "submit watch repair", "mail-in watch repair", "watch repair Johns Creek", "watch repair form"],
+      alternates: { canonical: "/watch-submission-form/" },
+      robots: { index: true, follow: true },
+      openGraph: {
+        type: "website",
+        url: "/watch-submission-form/",
+        siteName: "It’s About Time",
+        title: "Submit a Watch Repair Request | It’s About Time",
+        description: "Share your watch details and receive clear next-step guidance from It’s About Time in Johns Creek.",
+        images: [{ url: "/assets/pages/watch-submission-workbench.jpg", width: 1024, height: 684, alt: "It’s About Time watchmaker working at the repair bench" }]
+      },
+      twitter: {
+        card: "summary_large_image",
+        title: "Submit a Watch Repair Request | It’s About Time",
+        description: "Share your watch details and receive clear next-step guidance from It’s About Time in Johns Creek.",
+        images: ["/assets/pages/watch-submission-workbench.jpg"]
+      }
+    };
+  }
+
   if (slug === "contact") {
     return {
       title: { absolute: "Contact It’s About Time | Johns Creek Watch Repair & Sales" },
@@ -605,6 +660,7 @@ export default async function ConvertedPage({ params }: { params: Promise<{ slug
       {slug === "watch-repairs" && <Script src="https://embed.typeform.com/next/embed.js" strategy="afterInteractive" />}
       {article && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(makeArticleSchema(article)) }} />}
       {slug === "contact" && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(makeContactSchema()) }} />}
+      {slug === "watch-submission-form" && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(makeRepairSubmissionSchema()) }} />}
     </>
   );
 }
