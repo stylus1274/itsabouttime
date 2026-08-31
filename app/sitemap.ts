@@ -133,6 +133,7 @@ export const routes = [
   "/repair-form/",
   "/workshop/",
   "/rolex-repair-atlanta/",
+  "/rolex-bracelet-stretch-repair/",
   "/our-workshop/",
   "/blog/",
   "/benrus-legacy/",

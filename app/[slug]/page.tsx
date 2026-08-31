@@ -608,6 +608,52 @@ function makeRolexRepairAtlantaSchema() {
   };
 }
 
+function makeRolexBraceletStretchSchema() {
+  const pageUrl = `${siteUrl}/rolex-bracelet-stretch-repair/`;
+  const faqItems = [
+    ["Can Rolex bracelet stretch be fixed?", "In many cases, yes. The bracelet should be inspected first to determine whether tightening, repair, cleaning, or replacement makes sense."],
+    ["Is Rolex bracelet stretch actually metal stretching?", "Usually, no. Looseness develops as links, pins, screws, and connection points wear over time."],
+    ["Should I keep wearing a loose Rolex bracelet?", "It is better to have it inspected because a loose bracelet can continue to wear and may make the watch feel less secure."],
+    ["Can I mail in my Rolex bracelet for repair?", "Possibly. Contact the shop first, then follow the recommended shipping steps if mail-in service is appropriate."],
+    ["How long does Rolex bracelet stretch repair take?", "Timing depends on condition and whether the bracelet needs tightening, cleaning, repair, or replacement parts. The workshop provides an estimated timeline after inspection."],
+    ["Does It’s About Time Inc. handle other Rolex services?", "Yes. The workshop also offers Rolex battery replacement, repair, and service beyond bracelet wear."]
+  ] as const;
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": `${pageUrl}#webpage`,
+        url: pageUrl,
+        name: "Rolex Bracelet Stretch Repair in Johns Creek, GA | It’s About Time",
+        description: "Rolex bracelet stretch repair in Johns Creek, including inspection, tightening, clasp and link assessment, repair guidance, and mail-in options.",
+        primaryImageOfPage: `${siteUrl}/assets/pages/rolex-bracelet-stretch-repair.png`,
+        isPartOf: { "@id": `${siteUrl}/#website` }
+      },
+      {
+        "@type": "Service",
+        "@id": `${pageUrl}#service`,
+        name: "Rolex Bracelet Stretch Repair",
+        description: "Rolex bracelet inspection, tightening guidance, clasp and link assessment, repair, cleaning, and replacement recommendations in Johns Creek.",
+        provider: {
+          "@type": "ProfessionalService",
+          name: "It’s About Time Inc.",
+          telephone: "+1-770-442-9854",
+          address: { "@type": "PostalAddress", streetAddress: "11300 Medlock Bridge Rd, Suite 300", addressLocality: "Johns Creek", addressRegion: "GA", postalCode: "30097", addressCountry: "US" }
+        },
+        areaServed: { "@type": "City", name: "Johns Creek" },
+        serviceType: ["Rolex bracelet repair", "Rolex bracelet stretch inspection", "Rolex clasp repair", "Rolex bracelet adjustment"],
+        url: pageUrl
+      },
+      {
+        "@type": "FAQPage",
+        "@id": `${pageUrl}#faq`,
+        mainEntity: faqItems.map(([name, text]) => ({ "@type": "Question", name, acceptedAnswer: { "@type": "Answer", text } }))
+      }
+    ]
+  };
+}
+
 function makeArticleSchema(article: ArticleSeo) {
   const articleUrl = `${siteUrl}${article.path}`;
   const graph: Array<Record<string, unknown>> = [
@@ -729,6 +775,30 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     };
   }
 
+  if (slug === "rolex-bracelet-stretch-repair") {
+    return {
+      title: { absolute: "Rolex Bracelet Stretch Repair in Johns Creek, GA | It’s About Time" },
+      description: "Rolex bracelet stretch repair in Johns Creek. Get expert inspection of loose bracelets, clasps, links, pins, end links, tightening options, and clear repair guidance.",
+      keywords: ["Rolex bracelet stretch repair", "Rolex bracelet repair Johns Creek", "Rolex bracelet tightening", "Rolex clasp repair", "Rolex link repair"],
+      alternates: { canonical: "/rolex-bracelet-stretch-repair/" },
+      robots: { index: true, follow: true },
+      openGraph: {
+        type: "website",
+        url: "/rolex-bracelet-stretch-repair/",
+        siteName: "It’s About Time",
+        title: "Rolex Bracelet Stretch Repair in Johns Creek, GA | It’s About Time",
+        description: "Expert inspection and repair guidance for loose, worn, or stretched Rolex bracelets.",
+        images: [{ url: "/assets/pages/rolex-bracelet-stretch-repair.png", width: 800, height: 800, alt: "Steel Rolex bracelet and clasp prepared for specialist bracelet repair" }]
+      },
+      twitter: {
+        card: "summary_large_image",
+        title: "Rolex Bracelet Stretch Repair in Johns Creek, GA | It’s About Time",
+        description: "Expert inspection and repair guidance for loose, worn, or stretched Rolex bracelets.",
+        images: ["/assets/pages/rolex-bracelet-stretch-repair.png"]
+      }
+    };
+  }
+
   if (slug === "rolex-repair-atlanta") {
     return {
       title: { absolute: "Rolex Watch Repair Atlanta | It’s About Time" },
@@ -794,6 +864,7 @@ export default async function ConvertedPage({ params }: { params: Promise<{ slug
       {slug === "repair-form" && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(makeRepairFormSchema()) }} />}
       {slug === "workshop" && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(makeWorkshopSchema()) }} />}
       {slug === "rolex-repair-atlanta" && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(makeRolexRepairAtlantaSchema()) }} />}
+      {slug === "rolex-bracelet-stretch-repair" && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(makeRolexBraceletStretchSchema()) }} />}
     </>
   );
 }
