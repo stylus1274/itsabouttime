@@ -625,7 +625,7 @@ function makeBatteryReplacementServiceSchema(slug: "watch-battery-replacement-at
   };
 }
 
-function makeLocalWatchRepairSchema(slug: "watch-repair-atlanta" | "watch-repair-in-dunwoody" | "watch-repair-buford") {
+function makeLocalWatchRepairSchema(slug: "watch-repair-atlanta" | "watch-repair-in-dunwoody" | "watch-repair-buford" | "watch-repair-alpharetta" | "watch-repair-buckhead" | "watch-repair-suwanee") {
   const configurations = {
     "watch-repair-atlanta": {
       title: "Watch Repair in Atlanta, GA | It’s About Time",
@@ -668,6 +668,30 @@ function makeLocalWatchRepairSchema(slug: "watch-repair-atlanta" | "watch-repair
         ["What types of watches do you service?", "We work on everyday, luxury, mechanical, quartz, and vintage watches, including restoration work when it is appropriate for the condition of the timepiece."],
         ["Do you repair water or humidity damage?", "Yes. We provide resealing and water-resistance attention, and we can assess and restore watches affected by moisture or humidity damage."]
       ]
+    },
+    "watch-repair-alpharetta": {
+      title: "Watch Repair in Alpharetta, GA | It’s About Time",
+      description: "Professional watch repair for Alpharetta customers, completed in the Johns Creek workshop for luxury, mechanical, quartz, vintage, and everyday watches.",
+      image: "/assets/pages/watch-repair-alpharetta.jpg",
+      area: "Alpharetta",
+      serviceType: ["Watch repair", "Luxury watch repair", "Watch restoration", "Water-damage repair"],
+      faqs: [["How long does watch repair take?", "Most standard repairs are completed within 7–14 business days, while smaller services may be completed faster."], ["Do you offer a warranty on watch repair services?", "Yes. Repairs include warranty coverage on parts and labor."], ["Can I mail my watch in for repair if I live in Alpharetta?", "Yes. Start the repair form, then use the recommended shipping guidance for secure mail-in service."], ["What types of watches do you service?", "We work on everyday, luxury, mechanical, quartz, and vintage watches."], ["Do you repair water or humidity damage?", "Yes. We assess moisture damage and provide the appropriate resealing and restoration."]]
+    },
+    "watch-repair-buckhead": {
+      title: "Watch Repair in Buckhead, GA | It’s About Time",
+      description: "Professional watch repair for Buckhead customers, completed in the Johns Creek workshop for luxury, mechanical, quartz, vintage, and everyday watches.",
+      image: "/assets/pages/watch-repair-buckhead.jpg",
+      area: "Buckhead",
+      serviceType: ["Watch repair", "Luxury watch repair", "Watch restoration", "Water-damage repair"],
+      faqs: [["How long does watch repair take?", "Most standard repairs are completed within 7–14 business days, while smaller services may be completed faster."], ["Do you offer a warranty on watch repair services?", "Yes. Repairs include warranty coverage on parts and labor."], ["Can I mail my watch in for repair if I live in Buckhead?", "Yes. Start the repair form, then use the recommended shipping guidance for secure mail-in service."], ["What types of watches do you service?", "We work on everyday, luxury, mechanical, quartz, and vintage watches."], ["Do you repair water or humidity damage?", "Yes. We assess moisture damage and provide the appropriate resealing and restoration."]]
+    },
+    "watch-repair-suwanee": {
+      title: "Watch Repair in Suwanee, GA | It’s About Time",
+      description: "Professional watch repair for Suwanee customers, completed in the Johns Creek workshop for luxury, mechanical, quartz, vintage, and everyday watches.",
+      image: "/assets/pages/watch-repair-suwanee.jpg",
+      area: "Suwanee",
+      serviceType: ["Watch repair", "Luxury watch repair", "Watch restoration", "Water-damage repair"],
+      faqs: [["How long does watch repair take?", "Most standard repairs are completed within 7–14 business days, while smaller services may be completed faster."], ["Do you offer a warranty on watch repair services?", "Yes. Repairs include warranty coverage on parts and labor."], ["Can I mail my watch in for repair if I live in Suwanee?", "Yes. Start the repair form, then use the recommended shipping guidance for secure mail-in service."], ["What types of watches do you service?", "We work on everyday, luxury, mechanical, quartz, and vintage watches."], ["Do you repair water or humidity damage?", "Yes. We assess moisture damage and provide the appropriate resealing and restoration."]]
     }
   } as const;
   const config = configurations[slug];
@@ -888,7 +912,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const localRepairMetadata = {
     "watch-repair-atlanta": { title: "Watch Repair in Atlanta, GA | It’s About Time", description: "Professional watch repair serving Atlanta from the Johns Creek workshop for luxury, mechanical, quartz, vintage, and everyday watches.", keywords: ["watch repair Atlanta", "luxury watch repair Atlanta", "watch restoration Atlanta", "watch repair Johns Creek"], image: "/assets/pages/watch-repair-atlanta.jpg", imageWidth: 2560, imageHeight: 1460, alt: "Tag Heuer Aquaracer watch worn on a wrist" },
     "watch-repair-in-dunwoody": { title: "Watch Repair in Dunwoody, GA | It’s About Time", description: "Professional watch repair for Dunwoody customers, completed in the Johns Creek workshop for luxury, mechanical, quartz, vintage, and everyday watches.", keywords: ["watch repair Dunwoody", "luxury watch repair Dunwoody", "watch repair near Dunwoody", "watch restoration Johns Creek"], image: "/assets/pages/watch-repair-dunwoody.jpg", imageWidth: 1800, imageHeight: 1200, alt: "Rolex Explorer watch and bracelet on a black background" },
-    "watch-repair-buford": { title: "Watch Repair in Buford, GA | It’s About Time", description: "Professional watch repair for Buford customers, completed in the Johns Creek workshop for luxury, mechanical, quartz, vintage, and everyday watches.", keywords: ["watch repair Buford", "luxury watch repair Buford", "watch repair near Buford", "watch restoration Johns Creek"], image: "/assets/pages/watch-repair-buford.jpg", imageWidth: 2400, imageHeight: 1602, alt: "Customer receiving watch service at the It’s About Time showroom counter" }
+    "watch-repair-buford": { title: "Watch Repair in Buford, GA | It’s About Time", description: "Professional watch repair for Buford customers, completed in the Johns Creek workshop for luxury, mechanical, quartz, vintage, and everyday watches.", keywords: ["watch repair Buford", "luxury watch repair Buford", "watch repair near Buford", "watch restoration Johns Creek"], image: "/assets/pages/watch-repair-buford.jpg", imageWidth: 2400, imageHeight: 1602, alt: "Customer receiving watch service at the It’s About Time showroom counter" },
+    "watch-repair-alpharetta": { title: "Watch Repair in Alpharetta, GA | It’s About Time", description: "Professional watch repair for Alpharetta customers, completed in the Johns Creek workshop for luxury, mechanical, quartz, vintage, and everyday watches.", keywords: ["watch repair Alpharetta", "luxury watch repair Alpharetta", "watch repair near Alpharetta", "watch restoration Johns Creek"], image: "/assets/pages/watch-repair-alpharetta.jpg", imageWidth: 450, imageHeight: 450, alt: "Close-up of a watch movement, balance assembly, gears, and precision service tools" },
+    "watch-repair-buckhead": { title: "Watch Repair in Buckhead, GA | It’s About Time", description: "Professional watch repair for Buckhead customers, completed in the Johns Creek workshop for luxury, mechanical, quartz, vintage, and everyday watches.", keywords: ["watch repair Buckhead", "luxury watch repair Buckhead", "watch repair near Buckhead", "watch restoration Johns Creek"], image: "/assets/pages/watch-repair-buckhead.jpg", imageWidth: 1200, imageHeight: 1176, alt: "Gold Rolex chronograph with a cream dial on a dark leather strap" },
+    "watch-repair-suwanee": { title: "Watch Repair in Suwanee, GA | It’s About Time", description: "Professional watch repair for Suwanee customers, completed in the Johns Creek workshop for luxury, mechanical, quartz, vintage, and everyday watches.", keywords: ["watch repair Suwanee", "luxury watch repair Suwanee", "watch repair near Suwanee", "watch restoration Johns Creek"], image: "/assets/pages/watch-repair-suwanee.jpg", imageWidth: 1200, imageHeight: 800, alt: "Close-up of an Omega Constellation watch on a stainless-steel bracelet" }
   } as const;
   if (slug in localRepairMetadata) {
     const page = localRepairMetadata[slug as keyof typeof localRepairMetadata];
@@ -1022,7 +1049,7 @@ export default async function ConvertedPage({ params }: { params: Promise<{ slug
       {slug === "rolex-bracelet-stretch-repair" && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(makeRolexBraceletStretchSchema()) }} />}
       {(slug === "luxury-watch-strap-band-replacement" || slug === "watch-band-repair" || slug === "watch-band-replacement") && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(makeWatchBandServiceSchema(slug)) }} />}
       {(slug === "watch-battery-replacement-atlanta" || slug === "watch-battery-replacement-buford" || slug === "watch-battery-replacement-in-alpharetta") && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(makeBatteryReplacementServiceSchema(slug)) }} />}
-      {(slug === "watch-repair-atlanta" || slug === "watch-repair-in-dunwoody" || slug === "watch-repair-buford") && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(makeLocalWatchRepairSchema(slug)) }} />}
+      {(slug === "watch-repair-atlanta" || slug === "watch-repair-in-dunwoody" || slug === "watch-repair-buford" || slug === "watch-repair-alpharetta" || slug === "watch-repair-buckhead" || slug === "watch-repair-suwanee") && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(makeLocalWatchRepairSchema(slug)) }} />}
     </>
   );
 }
