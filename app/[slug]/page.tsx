@@ -608,6 +608,42 @@ function makeRolexRepairAtlantaSchema() {
   };
 }
 
+function makeWatchBandServiceSchema(slug: "luxury-watch-strap-band-replacement" | "watch-band-repair" | "watch-band-replacement") {
+  const configurations = {
+    "luxury-watch-strap-band-replacement": {
+      title: "Luxury Watch Strap and Band Replacement in Atlanta, GA | It’s About Time",
+      description: "Luxury watch strap and band replacement in Johns Creek for leather, alligator, rubber, NATO, nylon, and metal bracelets, with professional fitting and mail-in options.",
+      image: "/assets/pages/luxury-watch-strap-band-replacement.png",
+      serviceType: ["Luxury watch strap replacement", "Watch band replacement", "Watch bracelet sizing", "Strap fitting"],
+      questions: ["Can you replace the strap on any watch brand?", "Do you use genuine or aftermarket straps?", "How long does a strap replacement take?", "My bracelet is stretched. Can it be repaired, or does it need to be replaced?", "Do I need an appointment?", "Can I mail my watch in for strap replacement?"]
+    },
+    "watch-band-repair": {
+      title: "Watch Band Repair in Johns Creek, GA | It’s About Time",
+      description: "Watch band repair in Johns Creek, including clasp assessment, bracelet and link repair guidance, pin and spring-bar inspection, sizing, and mail-in options.",
+      image: "/assets/pages/watch-band-repair-workshop.jpg",
+      serviceType: ["Watch band repair", "Bracelet repair", "Watch clasp repair", "Watch band sizing"],
+      questions: ["Can you repair a stretched watch bracelet?", "Can you fix a broken clasp?", "Can you replace missing pins or spring bars?", "Do I need an appointment for watch band repair?", "How long does watch band repair take?", "Can I mail my watch in?"]
+    },
+    "watch-band-replacement": {
+      title: "Watch Band Replacement in Johns Creek, GA | It’s About Time",
+      description: "Watch band replacement in Johns Creek for leather, alligator, rubber, NATO, nylon, and metal bracelets, with professional fitting for luxury and everyday watches.",
+      image: "/assets/pages/watch-band-replacement-leather.jpg",
+      serviceType: ["Watch band replacement", "Leather watch strap replacement", "Watch bracelet replacement", "Watch strap fitting"],
+      questions: ["Can you replace the band on any watch?", "Do you offer genuine replacement straps?", "Can you replace a leather strap while I wait?", "Can you replace a metal watch bracelet?", "Do I need an appointment?", "Can I mail in a watch for band replacement?"]
+    }
+  } as const;
+  const config = configurations[slug];
+  const pageUrl = `${siteUrl}/${slug}/`;
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      { "@type": "WebPage", "@id": `${pageUrl}#webpage`, url: pageUrl, name: config.title, description: config.description, primaryImageOfPage: `${siteUrl}${config.image}`, isPartOf: { "@id": `${siteUrl}/#website` } },
+      { "@type": "Service", "@id": `${pageUrl}#service`, name: config.serviceType[0], description: config.description, provider: { "@type": "ProfessionalService", name: "It’s About Time Inc.", telephone: "+1-770-442-9854", address: { "@type": "PostalAddress", streetAddress: "11300 Medlock Bridge Rd, Suite 300", addressLocality: "Johns Creek", addressRegion: "GA", postalCode: "30097", addressCountry: "US" } }, areaServed: { "@type": "City", name: "Johns Creek" }, serviceType: config.serviceType, url: pageUrl },
+      { "@type": "FAQPage", "@id": `${pageUrl}#faq`, mainEntity: config.questions.map(name => ({ "@type": "Question", name, acceptedAnswer: { "@type": "Answer", text: "Contact our Johns Creek workshop for a personalized evaluation, timing, and clear next-step guidance." } })) }
+    ]
+  };
+}
+
 function makeRolexBraceletStretchSchema() {
   const pageUrl = `${siteUrl}/rolex-bracelet-stretch-repair/`;
   const faqItems = [
@@ -775,6 +811,21 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     };
   }
 
+  const watchBandMetadata = {
+    "luxury-watch-strap-band-replacement": { title: "Luxury Watch Strap and Band Replacement in Atlanta, GA | It’s About Time", description: "Luxury watch strap and band replacement in Johns Creek for leather, alligator, rubber, NATO, nylon, and metal bracelets with professional in-house fitting.", keywords: ["luxury watch strap replacement Atlanta", "watch band replacement Johns Creek", "watch bracelet fitting", "leather watch strap replacement"], image: "/assets/pages/luxury-watch-strap-band-replacement.png", imageWidth: 1024, imageHeight: 765, alt: "A selection of luxury watch straps and bracelets" },
+    "watch-band-repair": { title: "Watch Band Repair in Johns Creek, GA | It’s About Time", description: "Watch band repair in Johns Creek, including clasp, link, pin, spring-bar, bracelet stretch, and sizing guidance from certified watchmakers.", keywords: ["watch band repair Johns Creek", "watch clasp repair", "watch bracelet repair", "watch link repair"], image: "/assets/pages/watch-band-repair-workshop.jpg", imageWidth: 1024, imageHeight: 684, alt: "Certified watchmaker completing an in-house repair" },
+    "watch-band-replacement": { title: "Watch Band Replacement in Johns Creek, GA | It’s About Time", description: "Watch band replacement in Johns Creek for luxury and everyday watches, including leather, alligator, rubber, NATO, nylon, and metal bracelet options.", keywords: ["watch band replacement Johns Creek", "watch strap replacement", "leather watch strap replacement", "watch bracelet replacement"], image: "/assets/pages/watch-band-replacement-leather.jpg", imageWidth: 1024, imageHeight: 576, alt: "Dress watch fitted with a dark leather replacement strap" }
+  } as const;
+  if (slug in watchBandMetadata) {
+    const page = watchBandMetadata[slug as keyof typeof watchBandMetadata];
+    return {
+      title: { absolute: page.title }, description: page.description, keywords: [...page.keywords],
+      alternates: { canonical: `/${slug}/` }, robots: { index: true, follow: true },
+      openGraph: { type: "website", url: `/${slug}/`, siteName: "It’s About Time", title: page.title, description: page.description, images: [{ url: page.image, width: page.imageWidth, height: page.imageHeight, alt: page.alt }] },
+      twitter: { card: "summary_large_image", title: page.title, description: page.description, images: [page.image] }
+    };
+  }
+
   if (slug === "rolex-bracelet-stretch-repair") {
     return {
       title: { absolute: "Rolex Bracelet Stretch Repair in Johns Creek, GA | It’s About Time" },
@@ -865,6 +916,7 @@ export default async function ConvertedPage({ params }: { params: Promise<{ slug
       {slug === "workshop" && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(makeWorkshopSchema()) }} />}
       {slug === "rolex-repair-atlanta" && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(makeRolexRepairAtlantaSchema()) }} />}
       {slug === "rolex-bracelet-stretch-repair" && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(makeRolexBraceletStretchSchema()) }} />}
+      {(slug === "luxury-watch-strap-band-replacement" || slug === "watch-band-repair" || slug === "watch-band-replacement") && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(makeWatchBandServiceSchema(slug)) }} />}
     </>
   );
 }
