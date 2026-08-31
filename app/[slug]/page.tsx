@@ -625,7 +625,7 @@ function makeBatteryReplacementServiceSchema(slug: "watch-battery-replacement-at
   };
 }
 
-function makeLocalWatchRepairSchema(slug: "watch-repair-atlanta" | "watch-repair-in-dunwoody" | "watch-repair-buford" | "watch-repair-alpharetta" | "watch-repair-buckhead" | "watch-repair-suwanee") {
+function makeLocalWatchRepairSchema(slug: "watch-repair-atlanta" | "watch-repair-in-dunwoody" | "watch-repair-buford" | "watch-repair-alpharetta" | "watch-repair-buckhead" | "watch-repair-suwanee" | "watch-repair-peachtree-corners" | "watch-repair-cumming" | "watch-repair-chamblee") {
   const configurations = {
     "watch-repair-atlanta": {
       title: "Watch Repair in Atlanta, GA | It’s About Time",
@@ -692,6 +692,30 @@ function makeLocalWatchRepairSchema(slug: "watch-repair-atlanta" | "watch-repair
       area: "Suwanee",
       serviceType: ["Watch repair", "Luxury watch repair", "Watch restoration", "Water-damage repair"],
       faqs: [["How long does watch repair take?", "Most standard repairs are completed within 7–14 business days, while smaller services may be completed faster."], ["Do you offer a warranty on watch repair services?", "Yes. Repairs include warranty coverage on parts and labor."], ["Can I mail my watch in for repair if I live in Suwanee?", "Yes. Start the repair form, then use the recommended shipping guidance for secure mail-in service."], ["What types of watches do you service?", "We work on everyday, luxury, mechanical, quartz, and vintage watches."], ["Do you repair water or humidity damage?", "Yes. We assess moisture damage and provide the appropriate resealing and restoration."]]
+    },
+    "watch-repair-peachtree-corners": {
+      title: "Watch Repair in Peachtree Corners, GA | It’s About Time",
+      description: "Professional watch repair for Peachtree Corners customers, completed in the Johns Creek workshop for luxury, modern, mechanical, quartz, and vintage watches.",
+      image: "/assets/pages/watch-repair-peachtree-corners.jpg",
+      area: "Peachtree Corners",
+      serviceType: ["Watch repair", "Luxury watch repair", "Watch restoration", "Water-damage repair"],
+      faqs: [["How long does watch repair take?", "Most standard repairs are completed within 7–14 business days, while smaller services may be completed faster."], ["Do you offer a warranty on watch repair services?", "Yes. Repairs include warranty coverage on parts and labor."], ["Can I mail my watch in for repair if I live in Peachtree Corners?", "Yes. Start the repair form, then use the recommended shipping guidance for secure mail-in service."], ["What types of watches do you service?", "We service modern, luxury, mechanical, quartz, and vintage watches."], ["Do you repair water or humidity damage?", "Yes. We assess moisture damage and provide the appropriate resealing and restoration."]]
+    },
+    "watch-repair-cumming": {
+      title: "Watch Repair in Cumming, GA | It’s About Time",
+      description: "Professional watch repair for Cumming customers, completed in the Johns Creek workshop for luxury, mechanical, quartz, vintage, and everyday watches.",
+      image: "/assets/pages/watch-repair-cumming.jpg",
+      area: "Cumming",
+      serviceType: ["Watch repair", "Luxury watch repair", "Watch restoration", "Water-damage repair"],
+      faqs: [["How long does watch repair take?", "Most standard repairs are completed within 7–14 business days, while smaller services may be completed faster."], ["Do you offer a warranty on watch repair services?", "Yes. Repairs include warranty coverage on parts and labor."], ["Can I mail my watch in for repair if I live in Cumming?", "Yes. Start the repair form, then use the recommended shipping guidance for secure mail-in service."], ["What types of watches do you service?", "We work on everyday, luxury, mechanical, quartz, and vintage watches."], ["Do you repair water or humidity damage?", "Yes. We assess moisture damage and provide the appropriate resealing and restoration."]]
+    },
+    "watch-repair-chamblee": {
+      title: "Watch Repair in Chamblee, GA | It’s About Time",
+      description: "Professional watch repair for Chamblee customers, completed in the Johns Creek workshop for luxury, mechanical, quartz, vintage, and everyday watches.",
+      image: "/assets/pages/watch-repair-chamblee.jpg",
+      area: "Chamblee",
+      serviceType: ["Watch repair", "Luxury watch repair", "Watch restoration", "Water-damage repair"],
+      faqs: [["How long does watch repair take?", "Most standard repairs are completed within 7–14 business days, while smaller services may be completed faster."], ["Do you offer a warranty on watch repair services?", "Yes. Repairs include warranty coverage on parts and labor."], ["Can I mail my watch in for repair if I live in Chamblee?", "Yes. Start the repair form, then use the recommended shipping guidance for secure mail-in service."], ["What types of watches do you service?", "We work on everyday, luxury, mechanical, quartz, and vintage watches."], ["Do you repair water or humidity damage?", "Yes. We assess moisture damage and provide the appropriate resealing and restoration."]]
     }
   } as const;
   const config = configurations[slug];
@@ -915,7 +939,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     "watch-repair-buford": { title: "Watch Repair in Buford, GA | It’s About Time", description: "Professional watch repair for Buford customers, completed in the Johns Creek workshop for luxury, mechanical, quartz, vintage, and everyday watches.", keywords: ["watch repair Buford", "luxury watch repair Buford", "watch repair near Buford", "watch restoration Johns Creek"], image: "/assets/pages/watch-repair-buford.jpg", imageWidth: 2400, imageHeight: 1602, alt: "Customer receiving watch service at the It’s About Time showroom counter" },
     "watch-repair-alpharetta": { title: "Watch Repair in Alpharetta, GA | It’s About Time", description: "Professional watch repair for Alpharetta customers, completed in the Johns Creek workshop for luxury, mechanical, quartz, vintage, and everyday watches.", keywords: ["watch repair Alpharetta", "luxury watch repair Alpharetta", "watch repair near Alpharetta", "watch restoration Johns Creek"], image: "/assets/pages/watch-repair-alpharetta.jpg", imageWidth: 450, imageHeight: 450, alt: "Close-up of a watch movement, balance assembly, gears, and precision service tools" },
     "watch-repair-buckhead": { title: "Watch Repair in Buckhead, GA | It’s About Time", description: "Professional watch repair for Buckhead customers, completed in the Johns Creek workshop for luxury, mechanical, quartz, vintage, and everyday watches.", keywords: ["watch repair Buckhead", "luxury watch repair Buckhead", "watch repair near Buckhead", "watch restoration Johns Creek"], image: "/assets/pages/watch-repair-buckhead.jpg", imageWidth: 1200, imageHeight: 1176, alt: "Gold Rolex chronograph with a cream dial on a dark leather strap" },
-    "watch-repair-suwanee": { title: "Watch Repair in Suwanee, GA | It’s About Time", description: "Professional watch repair for Suwanee customers, completed in the Johns Creek workshop for luxury, mechanical, quartz, vintage, and everyday watches.", keywords: ["watch repair Suwanee", "luxury watch repair Suwanee", "watch repair near Suwanee", "watch restoration Johns Creek"], image: "/assets/pages/watch-repair-suwanee.jpg", imageWidth: 1200, imageHeight: 800, alt: "Close-up of an Omega Constellation watch on a stainless-steel bracelet" }
+    "watch-repair-suwanee": { title: "Watch Repair in Suwanee, GA | It’s About Time", description: "Professional watch repair for Suwanee customers, completed in the Johns Creek workshop for luxury, mechanical, quartz, vintage, and everyday watches.", keywords: ["watch repair Suwanee", "luxury watch repair Suwanee", "watch repair near Suwanee", "watch restoration Johns Creek"], image: "/assets/pages/watch-repair-suwanee.jpg", imageWidth: 1200, imageHeight: 800, alt: "Close-up of an Omega Constellation watch on a stainless-steel bracelet" },
+    "watch-repair-peachtree-corners": { title: "Watch Repair in Peachtree Corners, GA | It’s About Time", description: "Top-tier watch repair for Peachtree Corners owners, completed in the Johns Creek workshop for modern and luxury timepieces.", keywords: ["watch repair Peachtree Corners", "luxury watch repair Peachtree Corners", "watch repair near Peachtree Corners", "watch restoration Johns Creek"], image: "/assets/pages/watch-repair-peachtree-corners.jpg", imageWidth: 900, imageHeight: 350, alt: "Watchmaker carefully adjusting the hands of a dark luxury chronograph" },
+    "watch-repair-cumming": { title: "Watch Repair in Cumming, GA | It’s About Time", description: "Professional watch repair for Cumming customers, including battery service, strap adjustments, overhauls, and restoration from the Johns Creek workshop.", keywords: ["watch repair Cumming", "luxury watch repair Cumming", "watch repair near Cumming", "watch restoration Johns Creek"], image: "/assets/pages/watch-repair-cumming.jpg", imageWidth: 819, imageHeight: 1024, alt: "Two-tone luxury watch resting on textured dark fabric" },
+    "watch-repair-chamblee": { title: "Watch Repair in Chamblee, GA | It’s About Time", description: "Professional watch repair for Chamblee customers, including battery service, refinishing, overhauls, and restoration from the Johns Creek workshop.", keywords: ["watch repair Chamblee", "luxury watch repair Chamblee", "watch repair near Chamblee", "watch restoration Johns Creek"], image: "/assets/pages/watch-repair-chamblee.jpg", imageWidth: 700, imageHeight: 466, alt: "Customer and specialist examining a watch during an in-person service consultation" }
   } as const;
   if (slug in localRepairMetadata) {
     const page = localRepairMetadata[slug as keyof typeof localRepairMetadata];
@@ -1049,7 +1076,7 @@ export default async function ConvertedPage({ params }: { params: Promise<{ slug
       {slug === "rolex-bracelet-stretch-repair" && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(makeRolexBraceletStretchSchema()) }} />}
       {(slug === "luxury-watch-strap-band-replacement" || slug === "watch-band-repair" || slug === "watch-band-replacement") && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(makeWatchBandServiceSchema(slug)) }} />}
       {(slug === "watch-battery-replacement-atlanta" || slug === "watch-battery-replacement-buford" || slug === "watch-battery-replacement-in-alpharetta") && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(makeBatteryReplacementServiceSchema(slug)) }} />}
-      {(slug === "watch-repair-atlanta" || slug === "watch-repair-in-dunwoody" || slug === "watch-repair-buford" || slug === "watch-repair-alpharetta" || slug === "watch-repair-buckhead" || slug === "watch-repair-suwanee") && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(makeLocalWatchRepairSchema(slug)) }} />}
+      {(slug === "watch-repair-atlanta" || slug === "watch-repair-in-dunwoody" || slug === "watch-repair-buford" || slug === "watch-repair-alpharetta" || slug === "watch-repair-buckhead" || slug === "watch-repair-suwanee" || slug === "watch-repair-peachtree-corners" || slug === "watch-repair-cumming" || slug === "watch-repair-chamblee") && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(makeLocalWatchRepairSchema(slug)) }} />}
     </>
   );
 }
