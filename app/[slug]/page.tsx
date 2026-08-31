@@ -494,8 +494,8 @@ function makeContactSchema() {
   };
 }
 
-function makeWatchSubmissionSchema() {
-  const pageUrl = `${siteUrl}/watch-submission-form/`;
+function makeRepairFormSchema() {
+  const pageUrl = `${siteUrl}/repair-form/`;
   return {
     "@context": "https://schema.org",
     "@graph": [
@@ -598,16 +598,16 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     };
   }
 
-  if (slug === "watch-submission-form") {
+  if (slug === "repair-form") {
     return {
       title: { absolute: "Sell Your Luxury Watch | It’s About Time" },
       description: "Submit your luxury watch details to It’s About Time in Johns Creek and begin an informed, no-obligation selling conversation.",
       keywords: ["sell luxury watch", "sell watch Johns Creek", "watch purchase inquiry", "sell Rolex Atlanta", "luxury watch valuation"],
-      alternates: { canonical: "/watch-submission-form/" },
+      alternates: { canonical: "/repair-form/" },
       robots: { index: true, follow: true },
       openGraph: {
         type: "website",
-        url: "/watch-submission-form/",
+        url: "/repair-form/",
         siteName: "It’s About Time",
         title: "Sell Your Luxury Watch | It’s About Time",
         description: "Submit your luxury watch details and begin an informed selling conversation with It’s About Time in Johns Creek.",
@@ -657,10 +657,10 @@ export default async function ConvertedPage({ params }: { params: Promise<{ slug
   return (
     <>
       <SiteContent title={page.title} html={page.html} cta={cta} />
-      {["watch-repairs", "watch-submission-form"].includes(slug) && <Script src="https://embed.typeform.com/next/embed.js" strategy="afterInteractive" />}
+      {["watch-repairs", "repair-form"].includes(slug) && <Script src="https://embed.typeform.com/next/embed.js" strategy="afterInteractive" />}
       {article && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(makeArticleSchema(article)) }} />}
       {slug === "contact" && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(makeContactSchema()) }} />}
-      {slug === "watch-submission-form" && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(makeWatchSubmissionSchema()) }} />}
+      {slug === "repair-form" && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(makeRepairFormSchema()) }} />}
     </>
   );
 }
