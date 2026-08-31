@@ -494,7 +494,7 @@ function makeContactSchema() {
   };
 }
 
-function makeRepairSubmissionSchema() {
+function makeWatchSubmissionSchema() {
   const pageUrl = `${siteUrl}/watch-submission-form/`;
   return {
     "@context": "https://schema.org",
@@ -503,15 +503,15 @@ function makeRepairSubmissionSchema() {
         "@type": "WebPage",
         "@id": `${pageUrl}#webpage`,
         url: pageUrl,
-        name: "Submit a Watch Repair Request | It’s About Time",
-        description: "Submit a watch repair request to It’s About Time in Johns Creek, Georgia for an in-house assessment and next-step guidance.",
+        name: "Sell Your Luxury Watch | It’s About Time",
+        description: "Submit luxury-watch details to It’s About Time in Johns Creek, Georgia to begin an informed selling conversation.",
         isPartOf: { "@id": `${siteUrl}/#website` }
       },
       {
         "@type": "Service",
         "@id": `${pageUrl}#service`,
-        name: "Watch Repair Submission",
-        description: "Repair request intake for watch battery service, mechanical service, restoration, and related watch repairs.",
+        name: "Luxury Watch Purchase Inquiry",
+        description: "Luxury-watch purchase inquiry for owners who want to submit watch details and begin an informed selling conversation.",
         provider: {
           "@type": "LocalBusiness",
           name: "It’s About Time Inc.",
@@ -600,23 +600,23 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   if (slug === "watch-submission-form") {
     return {
-      title: { absolute: "Submit a Watch Repair Request | It’s About Time" },
-      description: "Submit your watch repair request to It’s About Time in Johns Creek. Share the brand, issue, and service needed for clear next-step guidance.",
-      keywords: ["watch repair request", "submit watch repair", "mail-in watch repair", "watch repair Johns Creek", "watch repair form"],
+      title: { absolute: "Sell Your Luxury Watch | It’s About Time" },
+      description: "Submit your luxury watch details to It’s About Time in Johns Creek and begin an informed, no-obligation selling conversation.",
+      keywords: ["sell luxury watch", "sell watch Johns Creek", "watch purchase inquiry", "sell Rolex Atlanta", "luxury watch valuation"],
       alternates: { canonical: "/watch-submission-form/" },
       robots: { index: true, follow: true },
       openGraph: {
         type: "website",
         url: "/watch-submission-form/",
         siteName: "It’s About Time",
-        title: "Submit a Watch Repair Request | It’s About Time",
-        description: "Share your watch details and receive clear next-step guidance from It’s About Time in Johns Creek.",
+        title: "Sell Your Luxury Watch | It’s About Time",
+        description: "Submit your luxury watch details and begin an informed selling conversation with It’s About Time in Johns Creek.",
         images: [{ url: "/assets/pages/watch-submission-workbench.jpg", width: 1024, height: 684, alt: "It’s About Time watchmaker working at the repair bench" }]
       },
       twitter: {
         card: "summary_large_image",
-        title: "Submit a Watch Repair Request | It’s About Time",
-        description: "Share your watch details and receive clear next-step guidance from It’s About Time in Johns Creek.",
+        title: "Sell Your Luxury Watch | It’s About Time",
+        description: "Submit your luxury watch details and begin an informed selling conversation with It’s About Time in Johns Creek.",
         images: ["/assets/pages/watch-submission-workbench.jpg"]
       }
     };
@@ -657,10 +657,10 @@ export default async function ConvertedPage({ params }: { params: Promise<{ slug
   return (
     <>
       <SiteContent title={page.title} html={page.html} cta={cta} />
-      {slug === "watch-repairs" && <Script src="https://embed.typeform.com/next/embed.js" strategy="afterInteractive" />}
+      {["watch-repairs", "watch-submission-form"].includes(slug) && <Script src="https://embed.typeform.com/next/embed.js" strategy="afterInteractive" />}
       {article && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(makeArticleSchema(article)) }} />}
       {slug === "contact" && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(makeContactSchema()) }} />}
-      {slug === "watch-submission-form" && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(makeRepairSubmissionSchema()) }} />}
+      {slug === "watch-submission-form" && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(makeWatchSubmissionSchema()) }} />}
     </>
   );
 }

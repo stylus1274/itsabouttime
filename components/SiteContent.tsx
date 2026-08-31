@@ -131,44 +131,6 @@ export function SiteContent({ title, html, cta }: Props) {
       contactForm.addEventListener("submit", onContactSubmit);
       cleanups.push(() => contactForm.removeEventListener("submit", onContactSubmit));
     }
-    const repairSubmissionForm = root.querySelector<HTMLFormElement>("[data-repair-submission-form]");
-    if (repairSubmissionForm) {
-      const repairStatus = repairSubmissionForm.querySelector<HTMLElement>("[data-repair-submission-status]");
-      const onRepairSubmission = (event: SubmitEvent) => {
-        event.preventDefault();
-        const getValue = (selector: string) => repairSubmissionForm.querySelector<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>(selector)?.value.trim() ?? "";
-        const name = getValue("[data-repair-name]");
-        const phone = getValue("[data-repair-phone]");
-        const email = getValue("[data-repair-email]");
-        const brand = getValue("[data-repair-brand]");
-        const model = getValue("[data-repair-model]");
-        const service = getValue("[data-repair-service]");
-        const details = getValue("[data-repair-details]");
-        if (!name || !phone || !email || !brand || !service || !details) {
-          if (repairStatus) repairStatus.textContent = "Please complete each required field before preparing your repair request.";
-          return;
-        }
-        const subject = `Watch repair request: ${brand}${model ? ` ${model}` : ""}`;
-        const body = [
-          "Watch Repair Submission",
-          "",
-          `Name: ${name}`,
-          `Phone: ${phone}`,
-          `Email: ${email}`,
-          `Watch brand: ${brand}`,
-          `Model / reference: ${model || "Not provided"}`,
-          `Requested service: ${service}`,
-          "",
-          "Issue details:",
-          details,
-        ].join("\n");
-        if (repairStatus) repairStatus.textContent = "Opening your email app with your repair details included…";
-        window.location.href = `mailto:itsabouttimeperimeter@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-      };
-      repairSubmissionForm.addEventListener("submit", onRepairSubmission);
-      cleanups.push(() => repairSubmissionForm.removeEventListener("submit", onRepairSubmission));
-    }
-
     if (chatRoot) {
       const panel = chatRoot.querySelector<HTMLElement>("[data-chat-panel]");
       const toggle = chatRoot.querySelector<HTMLButtonElement>("[data-chat-toggle]");
