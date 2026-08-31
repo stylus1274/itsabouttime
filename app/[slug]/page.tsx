@@ -560,6 +560,54 @@ function makeWorkshopSchema() {
   };
 }
 
+function makeRolexRepairAtlantaSchema() {
+  const pageUrl = `${siteUrl}/rolex-repair-atlanta/`;
+  const faqItems = [
+    ["How much does Rolex repair cost?", "Rolex repair costs vary depending on the issue. We evaluate the watch first and recommend only the work that is needed."],
+    ["How long does Rolex repair take?", "Timing depends on the service, parts, and complexity. Some battery services can be completed the same day, while movement repairs and full servicing may take longer."],
+    ["Do you use genuine Rolex parts?", "We use high-quality parts that meet original specifications and explain exactly what the watch needs during evaluation."],
+    ["Do I need pressure testing after service on my Rolex?", "Pressure testing should be performed whenever the case is opened for applicable service, such as crown, crystal, Oysterquartz battery, or movement work."],
+    ["Can I walk in, or do I need an appointment?", "Walk-ins are welcome at the Johns Creek location, and customers can call ahead with service questions."],
+    ["Is it worth repairing a Rolex?", "In most cases, proper repair or service helps maintain both performance and long-term value."],
+    ["What if I am not sure what is wrong with my Rolex?", "The workshop will inspect the watch and explain what is happening before recommending service."],
+    ["Can I mail my Rolex in for repair?", "Yes. Customers who cannot visit Johns Creek can mail a Rolex for evaluation and service after receiving clear shipping instructions."]
+  ] as const;
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": `${pageUrl}#webpage`,
+        url: pageUrl,
+        name: "Rolex Watch Repair Atlanta | It’s About Time",
+        description: "Rolex watch repair in Johns Creek serving the Atlanta area, including diagnostics, movement repair, pressure testing, crystal repair, and bracelet service.",
+        primaryImageOfPage: `${siteUrl}/assets/pages/rolex-repair-atlanta-hero.jpg`,
+        isPartOf: { "@id": `${siteUrl}/#website` }
+      },
+      {
+        "@type": "Service",
+        "@id": `${pageUrl}#service`,
+        name: "Rolex Watch Repair",
+        description: "In-house Rolex watch repair, diagnostics, movement service, pressure testing, crystal repair, and bracelet adjustment in Johns Creek serving Atlanta.",
+        provider: {
+          "@type": "ProfessionalService",
+          name: "It’s About Time Inc.",
+          telephone: "+1-770-442-9854",
+          address: { "@type": "PostalAddress", streetAddress: "11300 Medlock Bridge Rd, Suite 300", addressLocality: "Johns Creek", addressRegion: "GA", postalCode: "30097", addressCountry: "US" }
+        },
+        areaServed: [{ "@type": "City", name: "Johns Creek" }, { "@type": "City", name: "Atlanta" }],
+        serviceType: ["Rolex watch repair", "Rolex movement service", "Rolex pressure testing", "Rolex bracelet repair"],
+        url: pageUrl
+      },
+      {
+        "@type": "FAQPage",
+        "@id": `${pageUrl}#faq`,
+        mainEntity: faqItems.map(([name, text]) => ({ "@type": "Question", name, acceptedAnswer: { "@type": "Answer", text } }))
+      }
+    ]
+  };
+}
+
 function makeArticleSchema(article: ArticleSeo) {
   const articleUrl = `${siteUrl}${article.path}`;
   const graph: Array<Record<string, unknown>> = [
@@ -681,6 +729,30 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     };
   }
 
+  if (slug === "rolex-repair-atlanta") {
+    return {
+      title: { absolute: "Rolex Watch Repair Atlanta | It’s About Time" },
+      description: "Certified Rolex watch repair in Johns Creek serving Atlanta. Get in-house diagnostics, movement repair, pressure testing, crystal service, bracelet repair, and a clear estimate.",
+      keywords: ["Rolex repair Atlanta", "Rolex watch repair Johns Creek", "Rolex pressure testing", "Rolex bracelet repair", "Rolex service near Atlanta"],
+      alternates: { canonical: "/rolex-repair-atlanta/" },
+      robots: { index: true, follow: true },
+      openGraph: {
+        type: "website",
+        url: "/rolex-repair-atlanta/",
+        siteName: "It’s About Time",
+        title: "Rolex Watch Repair Atlanta | It’s About Time",
+        description: "Certified in-house Rolex repair in Johns Creek serving the Atlanta area.",
+        images: [{ url: "/assets/pages/rolex-repair-atlanta-hero.jpg", width: 1200, height: 800, alt: "Rolex watch collection used as the source visual for Rolex repair service" }]
+      },
+      twitter: {
+        card: "summary_large_image",
+        title: "Rolex Watch Repair Atlanta | It’s About Time",
+        description: "Certified in-house Rolex repair in Johns Creek serving the Atlanta area.",
+        images: ["/assets/pages/rolex-repair-atlanta-hero.jpg"]
+      }
+    };
+  }
+
   if (slug === "contact") {
     return {
       title: { absolute: "Contact It’s About Time | Johns Creek Watch Repair & Sales" },
@@ -721,6 +793,7 @@ export default async function ConvertedPage({ params }: { params: Promise<{ slug
       {slug === "contact" && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(makeContactSchema()) }} />}
       {slug === "repair-form" && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(makeRepairFormSchema()) }} />}
       {slug === "workshop" && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(makeWorkshopSchema()) }} />}
+      {slug === "rolex-repair-atlanta" && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(makeRolexRepairAtlantaSchema()) }} />}
     </>
   );
 }
