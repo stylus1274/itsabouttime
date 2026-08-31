@@ -547,10 +547,10 @@ function makeWorkshopSchema() {
         telephone: "+1-770-442-9854",
         address: {
           "@type": "PostalAddress",
-          streetAddress: "10945 State Bridge Rd, Suite 401",
+          streetAddress: "11300 Medlock Bridge Rd, Suite 300",
           addressLocality: "Johns Creek",
           addressRegion: "GA",
-          postalCode: "30022",
+          postalCode: "30097",
           addressCountry: "US"
         },
         areaServed: { "@type": "City", name: "Johns Creek" },
