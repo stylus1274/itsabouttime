@@ -608,6 +608,23 @@ function makeRolexRepairAtlantaSchema() {
   };
 }
 
+function makeBatteryReplacementServiceSchema(slug: "watch-battery-replacement-atlanta" | "watch-battery-replacement-buford" | "watch-battery-replacement-in-alpharetta") {
+  const configurations = {
+    "watch-battery-replacement-atlanta": { name: "Watch Battery Replacement in Atlanta, GA", description: "Professional watch battery replacement serving Atlanta from Johns Creek for luxury, vintage, waterproof, sport, and everyday watches.", image: "/assets/pages/watch-battery-replacement-atlanta.jpg", area: "Atlanta" },
+    "watch-battery-replacement-buford": { name: "Watch Battery Replacement for Buford, GA", description: "Professional watch battery replacement for Buford customers, completed in Johns Creek for luxury, vintage, waterproof, sport, digital, and everyday watches.", image: "/assets/pages/watch-battery-replacement-buford.jpg", area: "Buford" },
+    "watch-battery-replacement-in-alpharetta": { name: "Watch Battery Replacement for Alpharetta, GA", description: "Professional watch battery replacement for Alpharetta customers, fulfilled in Johns Creek for luxury, vintage, waterproof, and everyday watches.", image: "/assets/pages/watch-battery-replacement-alpharetta.jpg", area: "Alpharetta" }
+  } as const;
+  const config = configurations[slug];
+  const pageUrl = `${siteUrl}/${slug}/`;
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      { "@type": "WebPage", "@id": `${pageUrl}#webpage`, url: pageUrl, name: config.name, description: config.description, primaryImageOfPage: `${siteUrl}${config.image}`, isPartOf: { "@id": `${siteUrl}/#website` } },
+      { "@type": "Service", "@id": `${pageUrl}#service`, name: config.name, description: config.description, provider: { "@type": "ProfessionalService", name: "It’s About Time Inc.", telephone: "+1-770-442-9854", address: { "@type": "PostalAddress", streetAddress: "11300 Medlock Bridge Rd, Suite 300", addressLocality: "Johns Creek", addressRegion: "GA", postalCode: "30097", addressCountry: "US" } }, areaServed: { "@type": "City", name: config.area }, serviceType: ["Watch battery replacement", "Luxury watch battery replacement", "Water-resistant watch battery service"], url: pageUrl }
+    ]
+  };
+}
+
 function makeWatchBandServiceSchema(slug: "luxury-watch-strap-band-replacement" | "watch-band-repair" | "watch-band-replacement") {
   const configurations = {
     "luxury-watch-strap-band-replacement": {
@@ -811,6 +828,21 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     };
   }
 
+  const batteryMetadata = {
+    "watch-battery-replacement-atlanta": { title: "Watch Battery Replacement in Atlanta, GA | It’s About Time", description: "Professional watch battery replacement serving Atlanta from Johns Creek for luxury, vintage, waterproof, sport, and everyday watches.", keywords: ["watch battery replacement Atlanta", "same day watch battery Atlanta", "luxury watch battery replacement", "waterproof watch battery"], image: "/assets/pages/watch-battery-replacement-atlanta.jpg", imageWidth: 1500, imageHeight: 1000, alt: "Watchmaker holding a new watch battery with tweezers" },
+    "watch-battery-replacement-buford": { title: "Watch Battery Replacement Buford, GA | It’s About Time", description: "Watch battery replacement for Buford customers, completed by certified watchmakers in Johns Creek for luxury, vintage, waterproof, sport, and everyday watches.", keywords: ["watch battery replacement Buford", "same day watch battery Buford", "watch repair Buford", "luxury watch battery"], image: "/assets/pages/watch-battery-replacement-buford.jpg", imageWidth: 1800, imageHeight: 693, alt: "Collection of watches and watchmaking tools on a repair bench" },
+    "watch-battery-replacement-in-alpharetta": { title: "Watch Battery Replacement in Alpharetta, GA | It’s About Time", description: "Watch battery replacement for Alpharetta customers, completed by certified watchmakers in Johns Creek for luxury, vintage, waterproof, and everyday watches.", keywords: ["watch battery replacement Alpharetta", "same day watch battery Alpharetta", "watch repair Alpharetta", "waterproof watch battery"], image: "/assets/pages/watch-battery-replacement-alpharetta.jpg", imageWidth: 1024, imageHeight: 684, alt: "Watchmaker performing careful service at an illuminated workbench" }
+  } as const;
+  if (slug in batteryMetadata) {
+    const page = batteryMetadata[slug as keyof typeof batteryMetadata];
+    return {
+      title: { absolute: page.title }, description: page.description, keywords: [...page.keywords],
+      alternates: { canonical: `/${slug}/` }, robots: { index: true, follow: true },
+      openGraph: { type: "website", url: `/${slug}/`, siteName: "It’s About Time", title: page.title, description: page.description, images: [{ url: page.image, width: page.imageWidth, height: page.imageHeight, alt: page.alt }] },
+      twitter: { card: "summary_large_image", title: page.title, description: page.description, images: [page.image] }
+    };
+  }
+
   const watchBandMetadata = {
     "luxury-watch-strap-band-replacement": { title: "Luxury Watch Strap and Band Replacement in Atlanta, GA | It’s About Time", description: "Luxury watch strap and band replacement in Johns Creek for leather, alligator, rubber, NATO, nylon, and metal bracelets with professional in-house fitting.", keywords: ["luxury watch strap replacement Atlanta", "watch band replacement Johns Creek", "watch bracelet fitting", "leather watch strap replacement"], image: "/assets/pages/luxury-watch-strap-band-replacement.png", imageWidth: 1024, imageHeight: 765, alt: "A selection of luxury watch straps and bracelets" },
     "watch-band-repair": { title: "Watch Band Repair in Johns Creek, GA | It’s About Time", description: "Watch band repair in Johns Creek, including clasp, link, pin, spring-bar, bracelet stretch, and sizing guidance from certified watchmakers.", keywords: ["watch band repair Johns Creek", "watch clasp repair", "watch bracelet repair", "watch link repair"], image: "/assets/pages/watch-band-repair-workshop.jpg", imageWidth: 1024, imageHeight: 684, alt: "Certified watchmaker completing an in-house repair" },
@@ -917,6 +949,7 @@ export default async function ConvertedPage({ params }: { params: Promise<{ slug
       {slug === "rolex-repair-atlanta" && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(makeRolexRepairAtlantaSchema()) }} />}
       {slug === "rolex-bracelet-stretch-repair" && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(makeRolexBraceletStretchSchema()) }} />}
       {(slug === "luxury-watch-strap-band-replacement" || slug === "watch-band-repair" || slug === "watch-band-replacement") && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(makeWatchBandServiceSchema(slug)) }} />}
+      {(slug === "watch-battery-replacement-atlanta" || slug === "watch-battery-replacement-buford" || slug === "watch-battery-replacement-in-alpharetta") && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(makeBatteryReplacementServiceSchema(slug)) }} />}
     </>
   );
 }
