@@ -131,6 +131,7 @@ export const routes = [
   "/watch-sales/",
   "/contact/",
   "/repair-form/",
+  "/workshop/",
   "/our-workshop/",
   "/blog/",
   "/benrus-legacy/",

@@ -525,6 +525,41 @@ function makeRepairFormSchema() {
   };
 }
 
+function makeWorkshopSchema() {
+  const pageUrl = `${siteUrl}/workshop/`;
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": `${pageUrl}#webpage`,
+        url: pageUrl,
+        name: "Watch Repairs & Our Workshop | It’s About Time",
+        description: "Explore the in-house Johns Creek workshop at It’s About Time, including watch repair, restoration, diagnostics, and repair estimates.",
+        isPartOf: { "@id": `${siteUrl}/#website` }
+      },
+      {
+        "@type": "ProfessionalService",
+        "@id": `${pageUrl}#workshop`,
+        name: "It’s About Time Watch Repair Workshop",
+        url: pageUrl,
+        description: "In-house watch repair and restoration workshop offering diagnostics, movement service, water-resistance testing, case care, and vintage watch repair.",
+        telephone: "+1-770-442-9854",
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: "10945 State Bridge Rd, Suite 401",
+          addressLocality: "Johns Creek",
+          addressRegion: "GA",
+          postalCode: "30022",
+          addressCountry: "US"
+        },
+        areaServed: { "@type": "City", name: "Johns Creek" },
+        serviceType: ["Watch repair", "Watch restoration", "Mechanical watch service", "Water-resistance testing", "Watch diagnostics"]
+      }
+    ]
+  };
+}
+
 function makeArticleSchema(article: ArticleSeo) {
   const articleUrl = `${siteUrl}${article.path}`;
   const graph: Array<Record<string, unknown>> = [
@@ -622,6 +657,30 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     };
   }
 
+  if (slug === "workshop") {
+    return {
+      title: { absolute: "Watch Repairs & Our Workshop | It’s About Time" },
+      description: "Explore It’s About Time’s Johns Creek watch repair workshop for diagnostics, movement service, restoration, water-resistance testing, and free repair estimates.",
+      keywords: ["watch repair workshop Johns Creek", "Atlanta watch repair", "watch restoration", "WOSTEP watchmaker", "mechanical watch service"],
+      alternates: { canonical: "/workshop/" },
+      robots: { index: true, follow: true },
+      openGraph: {
+        type: "website",
+        url: "/workshop/",
+        siteName: "It’s About Time",
+        title: "Watch Repairs & Our Workshop | It’s About Time",
+        description: "Explore It’s About Time’s in-house Johns Creek workshop for watch repair, restoration, diagnostics, and service estimates.",
+        images: [{ url: "/assets/pages/workshop-movement.jpg", width: 2028, height: 2048, alt: "Mechanical watch movement in progress at the It’s About Time workshop" }]
+      },
+      twitter: {
+        card: "summary_large_image",
+        title: "Watch Repairs & Our Workshop | It’s About Time",
+        description: "Explore It’s About Time’s in-house Johns Creek workshop for watch repair, restoration, diagnostics, and service estimates.",
+        images: ["/assets/pages/workshop-movement.jpg"]
+      }
+    };
+  }
+
   if (slug === "contact") {
     return {
       title: { absolute: "Contact It’s About Time | Johns Creek Watch Repair & Sales" },
@@ -661,6 +720,7 @@ export default async function ConvertedPage({ params }: { params: Promise<{ slug
       {article && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(makeArticleSchema(article)) }} />}
       {slug === "contact" && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(makeContactSchema()) }} />}
       {slug === "repair-form" && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(makeRepairFormSchema()) }} />}
+      {slug === "workshop" && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(makeWorkshopSchema()) }} />}
     </>
   );
 }
