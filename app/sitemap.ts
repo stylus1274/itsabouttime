@@ -149,6 +149,7 @@ export const routes = [
   "/watch-repair-peachtree-corners/",
   "/watch-repair-cumming/",
   "/watch-repair-chamblee/",
+  "/watch-repair-brookhaven/",
   "/our-workshop/",
   "/blog/",
   "/benrus-legacy/",
