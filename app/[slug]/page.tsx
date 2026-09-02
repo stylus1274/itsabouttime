@@ -625,6 +625,31 @@ function makeBatteryReplacementServiceSchema(slug: "watch-battery-replacement-at
   };
 }
 
+function makeOmegaWatchRepairSchema(slug: "omega-watch-repair-atlanta" | "omega-watch-repair-peachtree-corners" | "omega-watch-repair-alpharetta") {
+  const configurations = {
+    "omega-watch-repair-atlanta": { name: "Omega Watch Repair in Atlanta, GA", description: "Expert Omega watch repair serving Atlanta from the Johns Creek workshop, including certified movement service, genuine-part replacement, restoration, and water-resistance attention.", image: "/assets/pages/omega-watch-repair-atlanta.jpg", area: "Atlanta" },
+    "omega-watch-repair-peachtree-corners": { name: "Omega Watch Repair in Peachtree Corners, GA", description: "Expert Omega watch repair for Peachtree Corners collectors, completed in the Johns Creek workshop with authentic Omega components, precise servicing, restoration, and water-resistance attention.", image: "/assets/pages/omega-watch-repair-peachtree-corners.jpg", area: "Peachtree Corners" },
+    "omega-watch-repair-alpharetta": { name: "Omega Watch Repair in Alpharetta, GA", description: "Expert Omega watch repair for Alpharetta collectors, completed in the Johns Creek workshop with certified movement service, genuine-part replacement, restoration, and water-resistance attention.", image: "/assets/pages/omega-watch-repair-alpharetta.jpg", area: "Alpharetta" }
+  } as const;
+  const config = configurations[slug];
+  const pageUrl = siteUrl + "/" + slug + "/";
+  const faqs = [
+    ["How long does Omega watch repair take?", "Most Omega repairs are completed within 7–14 business days, depending on the complexity of the service."],
+    ["Do you use genuine Omega parts?", "Yes. We use authentic Omega parts to help your watch maintain its value, precision, and reliability."],
+    ["Is there a warranty on Omega watch repairs?", "Yes. Omega repairs include warranty coverage on both parts and labor for added peace of mind."],
+    ["Can I mail my Omega watch to you for repair?", "Yes. Complete the repair form for instructions on securely mailing your timepiece to the workshop."],
+    ["Do you service vintage Omega models?", "Yes. Our certified watchmakers have the expertise to restore and maintain both modern and vintage Omega watches."]
+  ] as const;
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      { "@type": "WebPage", "@id": pageUrl + "#webpage", url: pageUrl, name: config.name, description: config.description, primaryImageOfPage: siteUrl + config.image, isPartOf: { "@id": siteUrl + "/#website" } },
+      { "@type": "Service", "@id": pageUrl + "#service", name: config.name, description: config.description, provider: { "@type": "ProfessionalService", name: "It’s About Time Inc.", telephone: "+1-770-442-9854", address: { "@type": "PostalAddress", streetAddress: "11300 Medlock Bridge Rd, Suite 300", addressLocality: "Johns Creek", addressRegion: "GA", postalCode: "30097", addressCountry: "US" } }, areaServed: { "@type": "City", name: config.area }, serviceType: ["Omega watch repair", "Omega movement service", "Omega watch restoration", "Omega water-resistance testing"], url: pageUrl },
+      { "@type": "FAQPage", "@id": pageUrl + "#faq", mainEntity: faqs.map(([name, text]) => ({ "@type": "Question", name, acceptedAnswer: { "@type": "Answer", text } })) }
+    ]
+  };
+}
+
 function makeLocalWatchRepairSchema(slug: "watch-repair-atlanta" | "watch-repair-in-dunwoody" | "watch-repair-buford" | "watch-repair-alpharetta" | "watch-repair-buckhead" | "watch-repair-suwanee" | "watch-repair-peachtree-corners" | "watch-repair-cumming" | "watch-repair-chamblee" | "watch-repair-brookhaven") {
   const configurations = {
     "watch-repair-atlanta": {
@@ -951,7 +976,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     "watch-repair-peachtree-corners": { title: "Watch Repair in Peachtree Corners, GA | It’s About Time", description: "Top-tier watch repair for Peachtree Corners owners, completed in the Johns Creek workshop for modern and luxury timepieces.", keywords: ["watch repair Peachtree Corners", "luxury watch repair Peachtree Corners", "watch repair near Peachtree Corners", "watch restoration Johns Creek"], image: "/assets/pages/watch-repair-peachtree-corners.jpg", imageWidth: 900, imageHeight: 350, alt: "Watchmaker carefully adjusting the hands of a dark luxury chronograph" },
     "watch-repair-cumming": { title: "Watch Repair in Cumming, GA | It’s About Time", description: "Professional watch repair for Cumming customers, including battery service, strap adjustments, overhauls, and restoration from the Johns Creek workshop.", keywords: ["watch repair Cumming", "luxury watch repair Cumming", "watch repair near Cumming", "watch restoration Johns Creek"], image: "/assets/pages/watch-repair-cumming.jpg", imageWidth: 819, imageHeight: 1024, alt: "Two-tone luxury watch resting on textured dark fabric" },
     "watch-repair-chamblee": { title: "Watch Repair in Chamblee, GA | It’s About Time", description: "Professional watch repair for Chamblee customers, including battery service, refinishing, overhauls, and restoration from the Johns Creek workshop.", keywords: ["watch repair Chamblee", "luxury watch repair Chamblee", "watch repair near Chamblee", "watch restoration Johns Creek"], image: "/assets/pages/watch-repair-chamblee.jpg", imageWidth: 700, imageHeight: 466, alt: "Customer and specialist examining a watch during an in-person service consultation" },
-    "watch-repair-brookhaven": { title: "Watch Repair in Brookhaven, GA | It’s About Time", description: "Expert watch repair for Brookhaven customers, completed in the Johns Creek workshop for luxury, mechanical, quartz, vintage, and everyday watches.", keywords: ["watch repair Brookhaven", "luxury watch repair Brookhaven", "watch repair near Brookhaven", "watch restoration Johns Creek"], image: "/assets/pages/watch-repair-brookhaven.jpg", imageWidth: 1000, imageHeight: 691, alt: "Hamilton Khaki automatic watch used as the legacy Brookhaven watch repair source visual" }
+    "watch-repair-brookhaven": { title: "Watch Repair in Brookhaven, GA | It’s About Time", description: "Expert watch repair for Brookhaven customers, completed in the Johns Creek workshop for luxury, mechanical, quartz, vintage, and everyday watches.", keywords: ["watch repair Brookhaven", "luxury watch repair Brookhaven", "watch repair near Brookhaven", "watch restoration Johns Creek"], image: "/assets/pages/watch-repair-brookhaven.jpg", imageWidth: 1000, imageHeight: 691, alt: "Hamilton Khaki automatic watch used as the legacy Brookhaven watch repair source visual" },
+    "omega-watch-repair-atlanta": { title: "Omega Watch Repair in Atlanta, GA | It’s About Time", description: "Expert Omega watch repair serving Atlanta from the Johns Creek workshop, including movement service, genuine-part replacement, restoration, and water-resistance attention.", keywords: ["Omega watch repair Atlanta", "Omega repair Atlanta", "Omega movement service Atlanta", "Omega restoration Atlanta"], image: "/assets/pages/omega-watch-repair-atlanta.jpg", imageWidth: 1200, imageHeight: 791, alt: "Blue-dial Omega chronograph on bracelet from the legacy Atlanta Omega repair page" },
+    "omega-watch-repair-peachtree-corners": { title: "Omega Watch Repair in Peachtree Corners, GA | It’s About Time", description: "Expert Omega watch repair for Peachtree Corners collectors, completed in the Johns Creek workshop with authentic Omega components, precise servicing, restoration, and water-resistance attention.", keywords: ["Omega watch repair Peachtree Corners", "Omega repair near Peachtree Corners", "Omega movement service", "Omega restoration Johns Creek"], image: "/assets/pages/omega-watch-repair-peachtree-corners.jpg", imageWidth: 1200, imageHeight: 900, alt: "Omega Seamaster on brown leather strap from the legacy Peachtree Corners Omega repair page" },
+    "omega-watch-repair-alpharetta": { title: "Omega Watch Repair in Alpharetta, GA | It’s About Time", description: "Expert Omega watch repair for Alpharetta collectors, completed in the Johns Creek workshop with certified movement service, genuine-part replacement, restoration, and water-resistance attention.", keywords: ["Omega watch repair Alpharetta", "Omega repair near Alpharetta", "Omega movement service Alpharetta", "Omega restoration Johns Creek"], image: "/assets/pages/omega-watch-repair-alpharetta.jpg", imageWidth: 640, imageHeight: 640, alt: "Omega Genève Chronometer dial from the legacy Alpharetta Omega repair page" }
   } as const;
   if (slug in localRepairMetadata) {
     const page = localRepairMetadata[slug as keyof typeof localRepairMetadata];
@@ -1086,6 +1114,7 @@ export default async function ConvertedPage({ params }: { params: Promise<{ slug
       {(slug === "luxury-watch-strap-band-replacement" || slug === "watch-band-repair" || slug === "watch-band-replacement") && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(makeWatchBandServiceSchema(slug)) }} />}
       {(slug === "watch-battery-replacement-atlanta" || slug === "watch-battery-replacement-buford" || slug === "watch-battery-replacement-in-alpharetta") && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(makeBatteryReplacementServiceSchema(slug)) }} />}
       {(slug === "watch-repair-atlanta" || slug === "watch-repair-in-dunwoody" || slug === "watch-repair-buford" || slug === "watch-repair-alpharetta" || slug === "watch-repair-buckhead" || slug === "watch-repair-suwanee" || slug === "watch-repair-peachtree-corners" || slug === "watch-repair-cumming" || slug === "watch-repair-chamblee" || slug === "watch-repair-brookhaven") && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(makeLocalWatchRepairSchema(slug)) }} />}
+      {(slug === "omega-watch-repair-atlanta" || slug === "omega-watch-repair-peachtree-corners" || slug === "omega-watch-repair-alpharetta") && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(makeOmegaWatchRepairSchema(slug)) }} />}
     </>
   );
 }
