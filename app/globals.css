@@ -10,3 +10,68 @@ button, input { font: inherit; }
 @media (max-width: 1320px) { [data-hd] [data-phone-label] { display: none !important; } }
 @media (max-width: 1180px) { [data-hd] nav { display: none !important; } }
 @media (max-width: 640px) { [data-hd] > div { padding: 18px 20px !important; } [data-hd] a:last-child { padding: 12px 15px !important; font-size: 11px !important; } }
+
+/* Shared CTA controls used inside migrated legacy page content. */
+a.btn-dark,
+a.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 46px;
+  padding: 13px 20px;
+  border-radius: 2px;
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: .13em;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background-color .18s ease, border-color .18s ease, color .18s ease, transform .18s ease;
+}
+
+a.btn-dark {
+  background: #1a1a1a;
+  border: 1px solid #1a1a1a;
+  color: #ffffff !important;
+}
+
+a.btn-outline {
+  background: #f7f5f1;
+  border: 1px solid #1a1a1a;
+  color: #1a1a1a !important;
+}
+
+a.btn-dark:hover,
+a.btn-dark:focus-visible {
+  background: #413d35;
+  border-color: #413d35;
+  color: #ffffff !important;
+}
+
+a.btn-outline:hover,
+a.btn-outline:focus-visible {
+  background: #e4ddce;
+  border-color: #1a1a1a;
+  color: #1a1a1a !important;
+}
+
+a.btn-dark:active,
+a.btn-outline:active {
+  transform: scale(.98);
+}
+
+a.btn-dark:focus-visible,
+a.btn-outline:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 3px;
+}
+
+@media (max-width: 640px) {
+  a.btn-dark,
+  a.btn-outline {
+    width: 100%;
+  }
+}
