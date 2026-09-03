@@ -772,6 +772,45 @@ function makeCartierServiceSchema(slug: "expert-cartier-watch-repair-in-atlanta"
   };
 }
 
+function makeFinalRepairWorkshopSchema(slug: "atlanta-watch-service-center-workshop-duluth" | "expert-rolex-watch-repair-buford" | "watch-battery-replacement-in-suwanee-ga") {
+  const configurations = {
+    "atlanta-watch-service-center-workshop-duluth": {
+      name: "In-House Watch Service Center Serving Duluth, GA",
+      description: "Factory-grade in-house watch service for Duluth-area owners from the Johns Creek workshop, including complimentary diagnostics, certified watchmaking, authorized-service experience, and careful repair or restoration.",
+      image: "/assets/pages/atlanta-watch-service-center-workshop-duluth-hero.jpg",
+      area: "Duluth",
+      serviceType: ["In-house watch repair", "Luxury watch service", "Watch restoration", "Watch diagnostics", "Water-resistance testing"],
+      faqs: [["What types of watches do you service?", "The workshop services luxury, mechanical, vintage, quartz, and everyday watches, from routine battery work to complex overhauls."], ["Do you offer complimentary diagnostics?", "Yes. The service-center page offers a complimentary evaluation so the team can identify the issue and explain the recommended scope."], ["Do you use genuine parts?", "The workshop uses Swiss-quality tools and authentic manufacturer-sourced parts when available and appropriate for the repair."], ["Is there warranty coverage?", "Most services include two-year coverage. The source page also notes lifetime guarantees on battery replacements."], ["Can I bring in my watch or submit it online?", "Both options are available. Visit the Johns Creek workshop or begin with the online repair form."]]
+    },
+    "expert-rolex-watch-repair-buford": {
+      name: "Professional Rolex Watch Repair for Buford, GA",
+      description: "Specialist Rolex repair for Buford owners from the Johns Creek workshop, including movement overhaul, polishing, water-resistance testing, crystal replacement, and crown or stem repair.",
+      image: "/assets/pages/expert-rolex-watch-repair-buford-hero.png",
+      area: "Buford",
+      serviceType: ["Rolex watch repair", "Rolex movement overhaul", "Rolex water-resistance testing", "Rolex crystal replacement", "Rolex crown and stem repair"],
+      faqs: [["How often should a Rolex be serviced?", "The source page recommends service every three to five years, depending on use, condition, and water-resistance needs."], ["Can you repair a Rolex that is not running?", "Yes. Movement repair and overhaul are among the specialist services described on the legacy page."], ["Do you test water resistance?", "Yes. The workshop tests and reseals watches when appropriate to help restore moisture protection."], ["Can a scratched Rolex be polished?", "Polishing and cleaning are available to address scratches and blemishes while respecting the watch’s finish."], ["Where is the workshop?", "The source positions service for Buford owners while repairs are handled at the Johns Creek workshop."]]
+    },
+    "watch-battery-replacement-in-suwanee-ga": {
+      name: "Watch Battery Replacement for Suwanee, GA",
+      description: "Professional watch battery replacement for Suwanee owners from the Johns Creek workshop, with premium batteries, careful handling for luxury, vintage, sport, digital, and everyday watches, and same-day options where appropriate.",
+      image: "/assets/pages/watch-battery-replacement-in-suwanee-ga-hero.jpg",
+      area: "Suwanee",
+      serviceType: ["Watch battery replacement", "Luxury watch battery service", "Watch battery diagnostics", "Water-resistant watch battery service"],
+      faqs: [["Can you replace batteries in luxury watches?", "Yes. The source page describes careful battery replacement for luxury models as well as everyday watches."], ["Do you offer same-day battery replacement?", "Most battery replacements can be completed the same day, subject to the watch and workshop workload."], ["What types of watches do you handle?", "The workshop services vintage, luxury, sport, digital, and everyday watches."], ["Can you help with waterproof watches?", "Waterproof models receive special care to protect delicate components and preserve the watch’s seal where appropriate."], ["Do you offer more than battery replacement?", "Yes. The certified team also provides repair, restoration, and service support for watches that need more detailed work."]]
+    }
+  } as const;
+  const config = configurations[slug];
+  const pageUrl = siteUrl + "/" + slug + "/";
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      { "@type": "WebPage", "@id": pageUrl + "#webpage", url: pageUrl, name: config.name, description: config.description, primaryImageOfPage: siteUrl + config.image, isPartOf: { "@id": siteUrl + "/#website" } },
+      { "@type": "Service", "@id": pageUrl + "#service", name: config.name, description: config.description, provider: { "@type": "ProfessionalService", name: "It’s About Time Inc.", telephone: "+1-770-442-9854", address: { "@type": "PostalAddress", streetAddress: "11300 Medlock Bridge Rd, Suite 300", addressLocality: "Johns Creek", addressRegion: "GA", postalCode: "30097", addressCountry: "US" } }, areaServed: { "@type": "City", name: config.area }, serviceType: config.serviceType, url: pageUrl },
+      { "@type": "FAQPage", "@id": pageUrl + "#faq", mainEntity: config.faqs.map(([name, text]) => ({ "@type": "Question", name, acceptedAnswer: { "@type": "Answer", text } })) }
+    ]
+  };
+}
+
 function makeLocalWatchRepairSchema(slug: "watch-repair-atlanta" | "watch-repair-in-dunwoody" | "watch-repair-buford" | "watch-repair-alpharetta" | "watch-repair-buckhead" | "watch-repair-suwanee" | "watch-repair-peachtree-corners" | "watch-repair-cumming" | "watch-repair-chamblee" | "watch-repair-brookhaven") {
   const configurations = {
     "watch-repair-atlanta": {
@@ -1089,6 +1128,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   }
 
   const localRepairMetadata = {
+    "atlanta-watch-service-center-workshop-duluth": { title: "In-House Watch Service Center Serving Duluth, GA | It’s About Time", description: "Factory-grade in-house watch service serving Duluth from the Johns Creek workshop, including complimentary diagnostics, certified repair, restoration, and water-resistance attention.", keywords: ["watch service Duluth", "watch repair Duluth", "Atlanta watch service center", "certified watchmaker Johns Creek"], image: "/assets/pages/atlanta-watch-service-center-workshop-duluth-hero.jpg", imageWidth: 2400, imageHeight: 1602, alt: "Watchmaker performing precision service at the It’s About Time workshop" },
+    "expert-rolex-watch-repair-buford": { title: "Professional Rolex Watch Repair in Buford, GA | It’s About Time", description: "Specialist Rolex watch repair for Buford owners from the Johns Creek workshop, including movement overhaul, polishing, water-resistance testing, crystal replacement, and crown or stem repair.", keywords: ["Rolex watch repair Buford", "Rolex service Buford", "Rolex movement overhaul", "Rolex water resistance testing"], image: "/assets/pages/expert-rolex-watch-repair-buford-hero.png", imageWidth: 1000, imageHeight: 691, alt: "Rolex watch from the legacy Buford Rolex repair page" },
+    "watch-battery-replacement-in-suwanee-ga": { title: "Watch Battery Replacement in Suwanee, GA | It’s About Time", description: "Professional watch battery replacement for Suwanee owners from the Johns Creek workshop, with premium batteries and careful service for luxury, vintage, sport, digital, and everyday watches.", keywords: ["watch battery replacement Suwanee", "same day watch battery Suwanee", "luxury watch battery service", "watch repair Suwanee"], image: "/assets/pages/watch-battery-replacement-in-suwanee-ga-hero.jpg", imageWidth: 700, imageHeight: 467, alt: "Watchmaker replacing a battery from the legacy Suwanee battery-service page" },
     "watch-repair-atlanta": { title: "Watch Repair in Atlanta, GA | It’s About Time", description: "Professional watch repair serving Atlanta from the Johns Creek workshop for luxury, mechanical, quartz, vintage, and everyday watches.", keywords: ["watch repair Atlanta", "luxury watch repair Atlanta", "watch restoration Atlanta", "watch repair Johns Creek"], image: "/assets/pages/watch-repair-atlanta.jpg", imageWidth: 2560, imageHeight: 1460, alt: "Tag Heuer Aquaracer watch worn on a wrist" },
     "watch-repair-in-dunwoody": { title: "Watch Repair in Dunwoody, GA | It’s About Time", description: "Professional watch repair for Dunwoody customers, completed in the Johns Creek workshop for luxury, mechanical, quartz, vintage, and everyday watches.", keywords: ["watch repair Dunwoody", "luxury watch repair Dunwoody", "watch repair near Dunwoody", "watch restoration Johns Creek"], image: "/assets/pages/watch-repair-dunwoody.jpg", imageWidth: 1800, imageHeight: 1200, alt: "Rolex Explorer watch and bracelet on a black background" },
     "watch-repair-buford": { title: "Watch Repair in Buford, GA | It’s About Time", description: "Professional watch repair for Buford customers, completed in the Johns Creek workshop for luxury, mechanical, quartz, vintage, and everyday watches.", keywords: ["watch repair Buford", "luxury watch repair Buford", "watch repair near Buford", "watch restoration Johns Creek"], image: "/assets/pages/watch-repair-buford.jpg", imageWidth: 2400, imageHeight: 1602, alt: "Customer receiving watch service at the It’s About Time showroom counter" },
@@ -1256,6 +1298,7 @@ export default async function ConvertedPage({ params }: { params: Promise<{ slug
       {["watch-repairs", "repair-form"].includes(slug) && <Script src="https://embed.typeform.com/next/embed.js" strategy="afterInteractive" />}
       {article && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(makeArticleSchema(article)) }} />}
       {slug === "contact" && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(makeContactSchema()) }} />}
+      {(slug === "atlanta-watch-service-center-workshop-duluth" || slug === "expert-rolex-watch-repair-buford" || slug === "watch-battery-replacement-in-suwanee-ga") && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(makeFinalRepairWorkshopSchema(slug as "atlanta-watch-service-center-workshop-duluth" | "expert-rolex-watch-repair-buford" | "watch-battery-replacement-in-suwanee-ga")) }} />}
       {slug === "repair-form" && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(makeRepairFormSchema()) }} />}
       {slug === "workshop" && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(makeWorkshopSchema()) }} />}
       {slug === "rolex-repair-atlanta" && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(makeRolexRepairAtlantaSchema()) }} />}
