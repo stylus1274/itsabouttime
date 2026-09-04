@@ -503,6 +503,35 @@ function makeRepairFormSchema() {
   };
 }
 
+function makeLegalPageSchema(slug: "disclaimer" | "privacy-policy" | "refund_returns") {
+  const config = {
+    disclaimer: {
+      name: "Disclaimer | It’s About Time",
+      description: "Important legal information about use of the It’s About Time website, including limitations, external links, professional-advice notice, and Rolex affiliation disclosure."
+    },
+    "privacy-policy": {
+      name: "Privacy Policy | It’s About Time",
+      description: "Learn how It’s About Time collects, uses, discloses, retains, and protects information when you use the website."
+    },
+    refund_returns: {
+      name: "Refund and Returns Policy | It’s About Time",
+      description: "Read the legacy It’s About Time refund, return, exchange, shipping, and watch-service policy information."
+    }
+  }[slug];
+  const pageUrl = siteUrl + "/" + slug + "/";
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": pageUrl + "#webpage",
+    url: pageUrl,
+    name: config.name,
+    description: config.description,
+    isPartOf: { "@id": siteUrl + "/#website" },
+    about: { "@type": "Organization", name: "It’s About Time Inc." },
+    inLanguage: "en-US"
+  };
+}
+
 function makeWorkshopSchema() {
   const pageUrl = `${siteUrl}/workshop/`;
   return {
@@ -1148,6 +1177,39 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     };
   }
 
+  if (slug === "disclaimer") {
+    return {
+      title: { absolute: "Disclaimer | It’s About Time" },
+      description: "Important legal information about use of the It’s About Time website, including limitations, external links, professional-advice notice, and Rolex affiliation disclosure.",
+      keywords: ["It’s About Time disclaimer", "watch repair disclaimer", "Rolex affiliation disclaimer"],
+      alternates: { canonical: "/disclaimer/" },
+      robots: { index: true, follow: true },
+      openGraph: { type: "website", url: "/disclaimer/", siteName: "It’s About Time", title: "Disclaimer | It’s About Time", description: "Important legal information about using the It’s About Time website." },
+      twitter: { card: "summary", title: "Disclaimer | It’s About Time", description: "Important legal information about using the It’s About Time website." }
+    };
+  }
+  if (slug === "privacy-policy") {
+    return {
+      title: { absolute: "Privacy Policy | It’s About Time" },
+      description: "Learn how It’s About Time collects, uses, discloses, retains, and protects information when you use the website.",
+      keywords: ["It’s About Time privacy policy", "watch store privacy policy", "website data privacy"],
+      alternates: { canonical: "/privacy-policy/" },
+      robots: { index: true, follow: true },
+      openGraph: { type: "website", url: "/privacy-policy/", siteName: "It’s About Time", title: "Privacy Policy | It’s About Time", description: "How It’s About Time collects, uses, and protects website information." },
+      twitter: { card: "summary", title: "Privacy Policy | It’s About Time", description: "How It’s About Time collects, uses, and protects website information." }
+    };
+  }
+  if (slug === "refund_returns") {
+    return {
+      title: { absolute: "Refund and Returns Policy | It’s About Time" },
+      description: "Read the legacy It’s About Time refund, return, exchange, shipping, and watch-service policy information.",
+      keywords: ["It’s About Time refund policy", "watch return policy", "watch service return policy"],
+      alternates: { canonical: "/refund_returns/" },
+      robots: { index: true, follow: true },
+      openGraph: { type: "website", url: "/refund_returns/", siteName: "It’s About Time", title: "Refund and Returns Policy | It’s About Time", description: "Refund, return, exchange, shipping, and watch-service policy information." },
+      twitter: { card: "summary", title: "Refund and Returns Policy | It’s About Time", description: "Refund, return, exchange, shipping, and watch-service policy information." }
+    };
+  }
   if (slug === "workshop") {
     return {
       title: { absolute: "Watch Repairs & Our Workshop | It’s About Time" },
@@ -1347,6 +1409,7 @@ export default async function ConvertedPage({ params }: { params: Promise<{ slug
       {(slug === "panerai-certified-watchmakers" || slug === "rado-authorized-workshop-and-watchmakers" || slug === "baume-and-mercier-watches") && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(makeSpecialistBrandServiceSchema(slug)) }} />}
       {slug === "watch-blogs" && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(makeWatchBlogsSchema()) }} />}
       {slug === "watch-submission-form" && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(makeWatchSubmissionFormSchema()) }} />}
+      {["disclaimer", "privacy-policy", "refund_returns"].includes(slug) && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(makeLegalPageSchema(slug as "disclaimer" | "privacy-policy" | "refund_returns")) }} />}
       {slug === "repair-form" && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(makeRepairFormSchema()) }} />}
       {slug === "workshop" && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(makeWorkshopSchema()) }} />}
       {slug === "rolex-repair-atlanta" && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(makeRolexRepairAtlantaSchema()) }} />}
