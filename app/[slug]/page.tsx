@@ -4,25 +4,13 @@ import { notFound } from "next/navigation";
 import { SiteContent, type ArticleCta } from "@/components/SiteContent";
 import articleCtas from "@/data/article-ctas.json";
 import { getPage, slugs } from "@/lib/content";
+import { articleDates } from "@/app/sitemap";
+import { dedicatedSchemaSlugs, makeFallbackArticleSeo, makeFallbackPageMetadata, makeGenericPageSchema, normalizeSeoHeadings, type FallbackArticleSeo } from "@/lib/seo-fallback";
 
 const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://itsabouttime-psi.vercel.app").replace(/\/$/, "");
 
 type Faq = readonly [name: string, answer: string];
-type ArticleSeo = {
-  title: string;
-  headline: string;
-  description: string;
-  path: string;
-  image: string;
-  imageWidth: number;
-  imageHeight: number;
-  imageAlt: string;
-  publishedTime: string;
-  modifiedTime: string;
-  section: string;
-  keywords: string[];
-  faqs?: readonly Faq[];
-};
+type ArticleSeo = FallbackArticleSeo;
 
 const articleSeo: Record<string, ArticleSeo> = {
   "benrus-legacy": {
@@ -836,10 +824,6 @@ function makeCartierServiceSchema(slug: "expert-cartier-watch-repair-in-atlanta"
 
 function makeFinalRepairWorkshopSchema(slug: "atlanta-watch-service-center-workshop-duluth" | "expert-rolex-watch-repair-buford" | "watch-battery-replacement-in-suwanee-ga") {
   const configurations = {
-    "panerai-certified-watchmakers": { title: "Certified Panerai Watchmakers in Johns Creek, GA | It’s About Time", description: "Specialist Panerai repair and maintenance in Johns Creek, including movement service, case refinishing, seal care, and water-resistance attention.", keywords: ["Panerai watch repair Johns Creek", "Panerai service Georgia", "Panerai movement service", "Panerai water resistance testing"], image: "/assets/pages/panerai-certified-watchmakers-hero.jpg", imageWidth: 542, imageHeight: 629, alt: "Panerai Luminor Marina from the legacy certified watchmakers page" },
-    "rado-authorized-workshop-and-watchmakers": { title: "Rado Authorized Dealer and Watchmakers Johns Creek, GA | It’s About Time", description: "Explore authentic Rado watches in Johns Creek, including Captain Cook, True Square, Centrix, HyperChrome, and DiaStar collections with personal showroom guidance.", keywords: ["Rado watches Johns Creek", "Rado authorized dealer Georgia", "Rado Captain Cook", "Rado ceramic watches"], image: "/assets/pages/rado-authorized-workshop-and-watchmakers-hero.jpg", imageWidth: 542, imageHeight: 629, alt: "Rado watch from the legacy authorized workshop and watchmakers page" },
-    "baume-and-mercier-watches": { title: "Baume & Mercier Watches in Johns Creek, GA | It’s About Time", description: "Explore Baume & Mercier watches in Johns Creek, including the Riviera collection, with personal in-store guidance and lasting watchmaking support.", keywords: ["Baume and Mercier watches Johns Creek", "Baume Mercier Riviera", "Swiss watch dealer Georgia", "Baume Mercier dealer"], image: "/assets/pages/baume-and-mercier-watches-hero.jpg", imageWidth: 912, imageHeight: 912, alt: "Baume & Mercier watch from the legacy Baume and Mercier page" },
-    "watch-blogs": { title: "Watch Blogs, Repair Guides & Collecting Notes | It’s About Time", description: "Read watch repair guides, collecting notes, brand stories, and care insights from the It’s About Time team in Johns Creek.", keywords: ["watch blog", "watch repair guides", "watch collecting notes", "Johns Creek watchmaker"], image: "/assets/articles/dial-refinishing-comparison.png", imageWidth: 1200, imageHeight: 675, alt: "Watch dial refinishing comparison from an It’s About Time repair guide" },
     "atlanta-watch-service-center-workshop-duluth": {
       name: "In-House Watch Service Center Serving Duluth, GA",
       description: "Factory-grade in-house watch service for Duluth-area owners from the Johns Creek workshop, including complimentary diagnostics, certified watchmaking, authorized-service experience, and careful repair or restoration.",
@@ -1077,7 +1061,7 @@ function makeArticleSchema(article: ArticleSeo) {
       mainEntityOfPage: { "@type": "WebPage", "@id": articleUrl },
       headline: article.headline,
       description: article.description,
-      image: [`${siteUrl}${article.image}`],
+      ...(article.image ? { image: [`${siteUrl}${article.image}`] } : {}),
       datePublished: article.publishedTime,
       dateModified: article.modifiedTime,
       author: { "@type": "Organization", name: "It’s About Time Inc." },
@@ -1114,7 +1098,8 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
-  const article = articleSeo[slug];
+  const page = getPage(slug);
+  const article = articleSeo[slug] ?? (page && articleDates[`/${slug}/`] ? makeFallbackArticleSeo(slug, page, articleDates[`/${slug}/`]) : null);
   if (article) {
     return {
       title: { absolute: article.title },
@@ -1130,13 +1115,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
         description: article.description,
         publishedTime: article.publishedTime,
         modifiedTime: article.modifiedTime,
-        images: [{ url: article.image, width: article.imageWidth, height: article.imageHeight, alt: article.imageAlt }]
+        images: article.image ? [{ url: article.image, width: article.imageWidth, height: article.imageHeight, alt: article.imageAlt }] : undefined
       },
       twitter: {
-        card: "summary_large_image",
+        card: article.image ? "summary_large_image" : "summary",
         title: article.title,
         description: article.description,
-        images: [article.image]
+        images: article.image ? [article.image] : undefined
       }
     };
   }
@@ -1235,6 +1220,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   }
 
   const localRepairMetadata = {
+    "panerai-certified-watchmakers": { title: "Certified Panerai Watchmakers in Johns Creek, GA | It’s About Time", description: "Specialist Panerai repair and maintenance in Johns Creek, including movement service, case refinishing, seal care, and water-resistance attention.", keywords: ["Panerai watch repair Johns Creek", "Panerai service Georgia", "Panerai movement service", "Panerai water resistance testing"], image: "/assets/pages/panerai-certified-watchmakers-hero.jpg", imageWidth: 542, imageHeight: 629, alt: "Panerai Luminor Marina from the certified watchmakers page" },
+    "rado-authorized-workshop-and-watchmakers": { title: "Rado Authorized Dealer and Watchmakers Johns Creek, GA | It’s About Time", description: "Explore authentic Rado watches in Johns Creek, including Captain Cook, True Square, Centrix, HyperChrome, and DiaStar collections with personal showroom guidance.", keywords: ["Rado watches Johns Creek", "Rado authorized dealer Georgia", "Rado Captain Cook", "Rado ceramic watches"], image: "/assets/pages/rado-authorized-workshop-and-watchmakers-hero.jpg", imageWidth: 542, imageHeight: 629, alt: "Rado watch from the authorized workshop and watchmakers page" },
+    "baume-and-mercier-watches": { title: "Baume & Mercier Watches in Johns Creek, GA | It’s About Time", description: "Explore Baume & Mercier watches in Johns Creek, including the Riviera collection, with personal in-store guidance and lasting watchmaking support.", keywords: ["Baume and Mercier watches Johns Creek", "Baume Mercier Riviera", "Swiss watch dealer Georgia", "Baume Mercier dealer"], image: "/assets/pages/baume-and-mercier-watches-hero.jpg", imageWidth: 912, imageHeight: 912, alt: "Baume & Mercier watch from the Baume and Mercier page" },
+    "watch-blogs": { title: "Watch Blogs, Repair Guides & Collecting Notes | It’s About Time", description: "Read watch repair guides, collecting notes, brand stories, and care insights from the It’s About Time team in Johns Creek.", keywords: ["watch blog", "watch repair guides", "watch collecting notes", "Johns Creek watchmaker"], image: "/assets/articles/dial-refinishing-comparison.png", imageWidth: 1200, imageHeight: 675, alt: "Watch dial refinishing comparison from an It’s About Time repair guide" },
     "atlanta-watch-service-center-workshop-duluth": { title: "In-House Watch Service Center Serving Duluth, GA | It’s About Time", description: "Factory-grade in-house watch service serving Duluth from the Johns Creek workshop, including complimentary diagnostics, certified repair, restoration, and water-resistance attention.", keywords: ["watch service Duluth", "watch repair Duluth", "Atlanta watch service center", "certified watchmaker Johns Creek"], image: "/assets/pages/atlanta-watch-service-center-workshop-duluth-hero.jpg", imageWidth: 2400, imageHeight: 1602, alt: "Watchmaker performing precision service at the It’s About Time workshop" },
     "expert-rolex-watch-repair-buford": { title: "Professional Rolex Watch Repair in Buford, GA | It’s About Time", description: "Specialist Rolex watch repair for Buford owners from the Johns Creek workshop, including movement overhaul, polishing, water-resistance testing, crystal replacement, and crown or stem repair.", keywords: ["Rolex watch repair Buford", "Rolex service Buford", "Rolex movement overhaul", "Rolex water resistance testing"], image: "/assets/pages/expert-rolex-watch-repair-buford-hero.png", imageWidth: 1000, imageHeight: 691, alt: "Rolex watch from the legacy Buford Rolex repair page" },
     "watch-battery-replacement-in-suwanee-ga": { title: "Watch Battery Replacement in Suwanee, GA | It’s About Time", description: "Professional watch battery replacement for Suwanee owners from the Johns Creek workshop, with premium batteries and careful service for luxury, vintage, sport, digital, and everyday watches.", keywords: ["watch battery replacement Suwanee", "same day watch battery Suwanee", "luxury watch battery service", "watch repair Suwanee"], image: "/assets/pages/watch-battery-replacement-in-suwanee-ga-hero.jpg", imageWidth: 700, imageHeight: 467, alt: "Watchmaker replacing a battery from the legacy Suwanee battery-service page" },
@@ -1388,8 +1377,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     };
   }
 
-  const page = getPage(slug);
-  return page ? { title: page.title } : { title: "Page Not Found" };
+  return page ? makeFallbackPageMetadata(slug, page) : { title: "Page Not Found" };
 }
 
 export default async function ConvertedPage({ params }: { params: Promise<{ slug: string }> }) {
@@ -1397,11 +1385,13 @@ export default async function ConvertedPage({ params }: { params: Promise<{ slug
   const page = getPage(slug);
   if (!page) notFound();
   const cta = (articleCtas as Record<string, ArticleCta>)[slug];
-  const article = articleSeo[slug];
+  const article = articleSeo[slug] ?? (articleDates[`/${slug}/`] ? makeFallbackArticleSeo(slug, page, articleDates[`/${slug}/`]) : null);
+  const renderedHtml = normalizeSeoHeadings(slug, page.html);
 
   return (
     <>
-      <SiteContent title={page.title} html={page.html} cta={cta} />
+      <SiteContent title={page.title} html={renderedHtml} cta={cta} />
+      {!article && !dedicatedSchemaSlugs.has(slug) && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(makeGenericPageSchema(siteUrl, slug, page)) }} />}
       {["watch-repairs", "repair-form", "watch-submission-form"].includes(slug) && <Script src="https://embed.typeform.com/next/embed.js" strategy="afterInteractive" />}
       {article && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(makeArticleSchema(article)) }} />}
       {slug === "contact" && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(makeContactSchema()) }} />}

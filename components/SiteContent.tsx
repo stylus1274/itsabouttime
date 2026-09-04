@@ -73,7 +73,6 @@ export function SiteContent({ title, html, cta }: Props) {
   const rootRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    document.title = title;
     const root = rootRef.current;
     if (!root) return;
     insertMidArticleCta(root, cta);

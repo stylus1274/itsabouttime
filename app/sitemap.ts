@@ -305,7 +305,6 @@ export const routes = [
   "/foggy-watch-face-causes/",
   "/top-10-luxury-watch-brands-2026/",
   "/10-luxury-dive-watches-everyday-wear/",
-  "/cartier-watch-battery-replacement/",
   "/benrus-dtu-2a-watch-review/",
   "/best-field-watches-everyday-wear/",
   "/best-seiko-watches-to-buy/",
