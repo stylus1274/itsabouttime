@@ -666,6 +666,39 @@ function makeCoreWatchSalesSchema(slug: "brands-we-carry" | "buy-premium-watches
   return { "@context": "https://schema.org", "@graph": graph };
 }
 
+function makeSpecialistBrandServiceSchema(slug: "panerai-certified-watchmakers" | "rado-authorized-workshop-and-watchmakers" | "baume-and-mercier-watches") {
+  const configurations = {
+    "panerai-certified-watchmakers": { name: "Certified Panerai Watchmakers in Johns Creek, GA", description: "Specialist Panerai repair and maintenance from certified watchmakers in Johns Creek, including mechanical service, case refinishing, seal care, and water-resistance attention.", image: "/assets/pages/panerai-certified-watchmakers-hero.jpg", type: "service", serviceType: ["Panerai watch repair", "Panerai movement service", "Panerai case refinishing", "Panerai water-resistance testing"] },
+    "rado-authorized-workshop-and-watchmakers": { name: "Rado Authorized Dealer and Watchmakers in Johns Creek, GA", description: "Explore authentic Rado watches at It’s About Time in Johns Creek, including high-tech ceramic, Captain Cook, True Square, Centrix, HyperChrome, and DiaStar collections.", image: "/assets/pages/rado-authorized-workshop-and-watchmakers-hero.jpg", type: "store", serviceType: [] },
+    "baume-and-mercier-watches": { name: "Baume & Mercier Watches in Johns Creek, GA", description: "Explore Baume & Mercier watches in Johns Creek, including the Riviera collection, with personal in-store guidance and ongoing care from a local watchmaking team.", image: "/assets/pages/baume-and-mercier-watches-hero.jpg", type: "store", serviceType: [] }
+  } as const;
+  const config = configurations[slug];
+  const pageUrl = siteUrl + "/" + slug + "/";
+  const graph: Record<string, unknown>[] = [
+    { "@type": "WebPage", "@id": pageUrl + "#webpage", url: pageUrl, name: config.name, description: config.description, primaryImageOfPage: siteUrl + config.image, isPartOf: { "@id": siteUrl + "/#website" } }
+  ];
+  if (config.type === "service") graph.push({ "@type": "Service", "@id": pageUrl + "#service", name: config.name, description: config.description, provider: { "@type": "ProfessionalService", name: "It’s About Time Inc.", telephone: "+1-770-442-9854", address: { "@type": "PostalAddress", streetAddress: "11300 Medlock Bridge Rd, Suite 300", addressLocality: "Johns Creek", addressRegion: "GA", postalCode: "30097", addressCountry: "US" } }, areaServed: { "@type": "City", name: "Johns Creek" }, serviceType: config.serviceType, url: pageUrl });
+  if (config.type === "store") graph.push({ "@type": "Store", "@id": pageUrl + "#store", name: "It’s About Time Inc.", description: "Curated watch showroom and specialist watchmaking team in Johns Creek, GA.", telephone: "+1-770-442-9854", url: pageUrl, image: siteUrl + config.image, address: { "@type": "PostalAddress", streetAddress: "11300 Medlock Bridge Rd, Suite 300", addressLocality: "Johns Creek", addressRegion: "GA", postalCode: "30097", addressCountry: "US" }, areaServed: { "@type": "City", name: "Johns Creek" } });
+  return { "@context": "https://schema.org", "@graph": graph };
+}
+
+function makeWatchBlogsSchema() {
+  const pageUrl = siteUrl + "/watch-blogs/";
+  return { "@context": "https://schema.org", "@graph": [
+    { "@type": "CollectionPage", "@id": pageUrl + "#webpage", url: pageUrl, name: "Watch Blogs | It’s About Time", description: "Watch guides, repair insights, collecting notes, and brand stories from the It’s About Time team in Johns Creek.", primaryImageOfPage: siteUrl + "/assets/articles/dial-refinishing-comparison.png", isPartOf: { "@id": siteUrl + "/#website" } },
+    { "@type": "ItemList", "@id": pageUrl + "#articles", name: "It’s About Time Watch Blogs", itemListOrder: "https://schema.org/ItemListOrderDescending", url: pageUrl }
+  ] };
+}
+
+function makeWatchSubmissionFormSchema() {
+  const pageUrl = siteUrl + "/watch-submission-form/";
+  const description = "Submit luxury watch details to begin an informed, no-obligation valuation and selling conversation with certified watchmakers at It’s About Time in Johns Creek.";
+  return { "@context": "https://schema.org", "@graph": [
+    { "@type": "WebPage", "@id": pageUrl + "#webpage", url: pageUrl, name: "Watch Submission Form | It’s About Time", description, primaryImageOfPage: siteUrl + "/assets/watchmaker-portrait.jpg", isPartOf: { "@id": siteUrl + "/#website" } },
+    { "@type": "Service", "@id": pageUrl + "#service", name: "Luxury Watch Valuation and Submission", description, provider: { "@type": "ProfessionalService", name: "It’s About Time Inc.", telephone: "+1-770-442-9854", address: { "@type": "PostalAddress", streetAddress: "11300 Medlock Bridge Rd, Suite 300", addressLocality: "Johns Creek", addressRegion: "GA", postalCode: "30097", addressCountry: "US" } }, serviceType: ["Luxury watch valuation", "Luxury watch purchase inquiry"], areaServed: { "@type": "City", name: "Johns Creek" }, url: pageUrl, potentialAction: { "@type": "ContactAction", target: pageUrl, name: "Submit watch details" } }
+  ] };
+}
+
 function makeAtlantaBrandDealerSchema(slug: "hamilton-watches-at-its-about-time-inc-authorized-dealer-in-atlanta" | "luminox-watches-at-its-about-time-inc-authorized-dealer-atlanta" | "seiko-watches-at-its-about-time-inc-authorized-dealer-atlanta") {
   const configurations = {
     "hamilton-watches-at-its-about-time-inc-authorized-dealer-in-atlanta": { brand: "Hamilton", name: "Hamilton Watches Authorized Dealer in Atlanta, GA", description: "Explore authentic Hamilton watches in Atlanta at It’s About Time, including Khaki Field, Jazzmaster, sport, dress, and specialty models with manufacturer warranty coverage.", image: "/assets/pages/hamilton-authorized-dealer-atlanta.jpg" },
@@ -774,6 +807,10 @@ function makeCartierServiceSchema(slug: "expert-cartier-watch-repair-in-atlanta"
 
 function makeFinalRepairWorkshopSchema(slug: "atlanta-watch-service-center-workshop-duluth" | "expert-rolex-watch-repair-buford" | "watch-battery-replacement-in-suwanee-ga") {
   const configurations = {
+    "panerai-certified-watchmakers": { title: "Certified Panerai Watchmakers in Johns Creek, GA | It’s About Time", description: "Specialist Panerai repair and maintenance in Johns Creek, including movement service, case refinishing, seal care, and water-resistance attention.", keywords: ["Panerai watch repair Johns Creek", "Panerai service Georgia", "Panerai movement service", "Panerai water resistance testing"], image: "/assets/pages/panerai-certified-watchmakers-hero.jpg", imageWidth: 542, imageHeight: 629, alt: "Panerai Luminor Marina from the legacy certified watchmakers page" },
+    "rado-authorized-workshop-and-watchmakers": { title: "Rado Authorized Dealer and Watchmakers Johns Creek, GA | It’s About Time", description: "Explore authentic Rado watches in Johns Creek, including Captain Cook, True Square, Centrix, HyperChrome, and DiaStar collections with personal showroom guidance.", keywords: ["Rado watches Johns Creek", "Rado authorized dealer Georgia", "Rado Captain Cook", "Rado ceramic watches"], image: "/assets/pages/rado-authorized-workshop-and-watchmakers-hero.jpg", imageWidth: 542, imageHeight: 629, alt: "Rado watch from the legacy authorized workshop and watchmakers page" },
+    "baume-and-mercier-watches": { title: "Baume & Mercier Watches in Johns Creek, GA | It’s About Time", description: "Explore Baume & Mercier watches in Johns Creek, including the Riviera collection, with personal in-store guidance and lasting watchmaking support.", keywords: ["Baume and Mercier watches Johns Creek", "Baume Mercier Riviera", "Swiss watch dealer Georgia", "Baume Mercier dealer"], image: "/assets/pages/baume-and-mercier-watches-hero.jpg", imageWidth: 912, imageHeight: 912, alt: "Baume & Mercier watch from the legacy Baume and Mercier page" },
+    "watch-blogs": { title: "Watch Blogs, Repair Guides & Collecting Notes | It’s About Time", description: "Read watch repair guides, collecting notes, brand stories, and care insights from the It’s About Time team in Johns Creek.", keywords: ["watch blog", "watch repair guides", "watch collecting notes", "Johns Creek watchmaker"], image: "/assets/articles/dial-refinishing-comparison.png", imageWidth: 1200, imageHeight: 675, alt: "Watch dial refinishing comparison from an It’s About Time repair guide" },
     "atlanta-watch-service-center-workshop-duluth": {
       name: "In-House Watch Service Center Serving Duluth, GA",
       description: "Factory-grade in-house watch service for Duluth-area owners from the Johns Creek workshop, including complimentary diagnostics, certified watchmaking, authorized-service experience, and careful repair or restoration.",
@@ -1099,6 +1136,18 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     };
   }
 
+  if (slug === "watch-submission-form") {
+    return {
+      title: { absolute: "Watch Submission Form | It’s About Time" },
+      description: "Submit luxury watch details to It’s About Time in Johns Creek for an informed, no-obligation valuation and selling conversation.",
+      keywords: ["watch submission form", "sell luxury watch Johns Creek", "luxury watch valuation", "sell watch Georgia"],
+      alternates: { canonical: "/watch-submission-form/" },
+      robots: { index: true, follow: true },
+      openGraph: { type: "website", url: "/watch-submission-form/", siteName: "It’s About Time", title: "Watch Submission Form | It’s About Time", description: "Submit luxury watch details and begin an informed selling conversation with It’s About Time in Johns Creek.", images: [{ url: "/assets/watchmaker-portrait.jpg", width: 1601, height: 1596, alt: "It’s About Time watchmaker at the workshop bench" }] },
+      twitter: { card: "summary_large_image", title: "Watch Submission Form | It’s About Time", description: "Submit luxury watch details and begin an informed selling conversation with It’s About Time in Johns Creek.", images: ["/assets/watchmaker-portrait.jpg"] }
+    };
+  }
+
   if (slug === "workshop") {
     return {
       title: { absolute: "Watch Repairs & Our Workshop | It’s About Time" },
@@ -1291,10 +1340,13 @@ export default async function ConvertedPage({ params }: { params: Promise<{ slug
   return (
     <>
       <SiteContent title={page.title} html={page.html} cta={cta} />
-      {["watch-repairs", "repair-form"].includes(slug) && <Script src="https://embed.typeform.com/next/embed.js" strategy="afterInteractive" />}
+      {["watch-repairs", "repair-form", "watch-submission-form"].includes(slug) && <Script src="https://embed.typeform.com/next/embed.js" strategy="afterInteractive" />}
       {article && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(makeArticleSchema(article)) }} />}
       {slug === "contact" && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(makeContactSchema()) }} />}
       {(slug === "atlanta-watch-service-center-workshop-duluth" || slug === "expert-rolex-watch-repair-buford" || slug === "watch-battery-replacement-in-suwanee-ga") && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(makeFinalRepairWorkshopSchema(slug as "atlanta-watch-service-center-workshop-duluth" | "expert-rolex-watch-repair-buford" | "watch-battery-replacement-in-suwanee-ga")) }} />}
+      {(slug === "panerai-certified-watchmakers" || slug === "rado-authorized-workshop-and-watchmakers" || slug === "baume-and-mercier-watches") && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(makeSpecialistBrandServiceSchema(slug)) }} />}
+      {slug === "watch-blogs" && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(makeWatchBlogsSchema()) }} />}
+      {slug === "watch-submission-form" && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(makeWatchSubmissionFormSchema()) }} />}
       {slug === "repair-form" && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(makeRepairFormSchema()) }} />}
       {slug === "workshop" && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(makeWorkshopSchema()) }} />}
       {slug === "rolex-repair-atlanta" && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(makeRolexRepairAtlantaSchema()) }} />}
