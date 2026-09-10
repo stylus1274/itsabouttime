@@ -107,6 +107,118 @@ export function SiteContent({ title, html, cta }: Props) {
     const chatRoot = root.querySelector<HTMLElement>("[data-chat-root]");
     const cleanups: Array<() => void> = [];
 
+    const mobileStyleSnapshots = new Map<HTMLElement, Map<string, { value: string; priority: string }>>();
+    const setMobileStyle = (element: HTMLElement, property: string, value: string) => {
+      if (!mobileStyleSnapshots.has(element)) mobileStyleSnapshots.set(element, new Map());
+      const snapshot = mobileStyleSnapshots.get(element)!;
+      if (!snapshot.has(property)) snapshot.set(property, { value: element.style.getPropertyValue(property), priority: element.style.getPropertyPriority(property) });
+      element.style.setProperty(property, value, "important");
+    };
+    const restoreMobileStyles = () => mobileStyleSnapshots.forEach((properties, element) => {
+      properties.forEach((snapshot, property) => {
+        if (snapshot.value) element.style.setProperty(property, snapshot.value, snapshot.priority);
+        else element.style.removeProperty(property);
+      });
+      mobileStyleSnapshots.delete(element);
+    });
+    const applyMobileLayout = () => {
+      if (window.innerWidth > 700) {
+        restoreMobileStyles();
+        return;
+      }
+      root.querySelectorAll<HTMLElement>('section[style*="grid-template-columns"], main [style*="grid-template-columns"], footer [style*="grid-template-columns"]').forEach((element) => {
+        setMobileStyle(element, "grid-template-columns", "minmax(0, 1fr)");
+        setMobileStyle(element, "gap", "24px");
+      });
+      root.querySelectorAll<HTMLElement>('section [style*="flex-wrap:nowrap"], main [style*="flex-wrap:nowrap"]').forEach((element) => setMobileStyle(element, "flex-wrap", "wrap"));
+      const hero = root.querySelector<HTMLElement>("#top");
+      if (hero) {
+        setMobileStyle(hero, "display", "block");
+        setMobileStyle(hero, "min-height", "auto");
+        const heroCopy = hero.firstElementChild as HTMLElement | null;
+        const heroImage = hero.lastElementChild as HTMLElement | null;
+        if (heroCopy) {
+          setMobileStyle(heroCopy, "padding", "44px 20px 28px");
+          setMobileStyle(heroCopy, "align-items", "stretch");
+        }
+        if (heroImage && heroImage !== heroCopy) setMobileStyle(heroImage, "min-height", "320px");
+        hero.querySelectorAll<HTMLElement>("h1").forEach((heading) => setMobileStyle(heading, "font-size", "clamp(48px, 15vw, 68px)"));
+        hero.querySelectorAll<HTMLElement>("p").forEach((paragraph) => {
+          setMobileStyle(paragraph, "font-size", "18px");
+          setMobileStyle(paragraph, "line-height", "1.55");
+        });
+      }
+    };
+    const mobileTableWrappers = new Map<HTMLTableElement, HTMLDivElement>();
+    const restoreMobileTables = () => mobileTableWrappers.forEach((wrapper, table) => {
+      wrapper.parentNode?.insertBefore(table, wrapper);
+      wrapper.remove();
+      mobileTableWrappers.delete(table);
+    });
+    const applyMobileTables = () => {
+      if (window.innerWidth > 700) {
+        restoreMobileTables();
+        return;
+      }
+      root.querySelectorAll<HTMLTableElement>("table").forEach((table) => {
+        if (mobileTableWrappers.has(table)) return;
+        const wrapper = document.createElement("div");
+        wrapper.className = "mobile-table-scroll";
+        wrapper.tabIndex = 0;
+        wrapper.setAttribute("role", "region");
+        wrapper.setAttribute("aria-label", "Scrollable data table");
+        table.parentNode?.insertBefore(wrapper, table);
+        wrapper.appendChild(table);
+        mobileTableWrappers.set(table, wrapper);
+      });
+    };
+    applyMobileLayout();
+    applyMobileTables();
+    window.addEventListener("resize", applyMobileLayout, { passive: true });
+    window.addEventListener("resize", applyMobileTables, { passive: true });
+    cleanups.push(() => window.removeEventListener("resize", applyMobileLayout));
+    cleanups.push(() => window.removeEventListener("resize", applyMobileTables));
+    cleanups.push(restoreMobileStyles);
+    cleanups.push(restoreMobileTables);
+
+    const header = root.querySelector<HTMLElement>("[data-hd]");
+    const desktopNav = header?.querySelector<HTMLElement>(":scope > div > nav");
+    const headerActions = header?.querySelector<HTMLElement>(":scope > div > div:last-child");
+    if (header && desktopNav && headerActions && !header.querySelector(".mobile-nav-toggle")) {
+      const mobileNav = document.createElement("nav");
+      mobileNav.className = "mobile-site-nav";
+      mobileNav.id = "site-mobile-nav";
+      mobileNav.setAttribute("aria-label", "Mobile navigation");
+      mobileNav.setAttribute("data-open", "false");
+      mobileNav.innerHTML = desktopNav.innerHTML;
+
+      const toggle = document.createElement("button");
+      toggle.type = "button";
+      toggle.className = "mobile-nav-toggle";
+      toggle.setAttribute("aria-controls", mobileNav.id);
+      toggle.setAttribute("aria-expanded", "false");
+      toggle.setAttribute("aria-label", "Open site navigation");
+      toggle.innerHTML = '<span aria-hidden="true"></span>';
+      headerActions.classList.add("site-header-actions");
+      headerActions.insertBefore(toggle, headerActions.firstChild);
+      header.appendChild(mobileNav);
+
+      const setMobileNavOpen = (open: boolean) => {
+        mobileNav.setAttribute("data-open", String(open));
+        mobileNav.style.setProperty("display", open ? "grid" : "none", "important");
+        toggle.setAttribute("aria-expanded", String(open));
+        toggle.setAttribute("aria-label", open ? "Close site navigation" : "Open site navigation");
+      };
+      const onToggle = () => setMobileNavOpen(toggle.getAttribute("aria-expanded") !== "true");
+      const onMobileNavClick = () => setMobileNavOpen(false);
+      const onResize = () => { if (window.innerWidth > 1180) setMobileNavOpen(false); };
+      toggle.addEventListener("click", onToggle);
+      mobileNav.addEventListener("click", onMobileNavClick);
+      window.addEventListener("resize", onResize, { passive: true });
+      cleanups.push(() => toggle.removeEventListener("click", onToggle));
+      cleanups.push(() => mobileNav.removeEventListener("click", onMobileNavClick));
+      cleanups.push(() => window.removeEventListener("resize", onResize));
+    }
 
     const contactForm = root.querySelector<HTMLFormElement>("[data-contact-form]");
     if (contactForm) {
@@ -193,5 +305,5 @@ export function SiteContent({ title, html, cta }: Props) {
     };
   }, [html, title, cta]);
 
-  return <div ref={rootRef} dangerouslySetInnerHTML={{ __html: html }} />;
+  return <div data-site-content ref={rootRef} dangerouslySetInnerHTML={{ __html: html }} />;
 }

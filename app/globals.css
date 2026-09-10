@@ -8,8 +8,139 @@ button, input { font: inherit; }
 
 /* The homepage navigation is the canonical site header on every route. */
 @media (max-width: 1320px) { [data-hd] [data-phone-label] { display: none !important; } }
-@media (max-width: 1180px) { [data-hd] nav { display: none !important; } }
-@media (max-width: 640px) { [data-hd] > div { padding: 18px 20px !important; } [data-hd] a:last-child { padding: 12px 15px !important; font-size: 11px !important; } }
+@media (max-width: 1180px) {
+  [data-hd] > div > nav { display: none !important; }
+  [data-hd] .mobile-nav-toggle { display: inline-flex !important; }
+}
+@media (max-width: 640px) {
+  [data-hd] > div { padding: 14px 16px !important; gap: 10px !important; }
+  [data-hd] > div > a img { height: 25px !important; }
+  [data-hd] .site-header-actions { gap: 10px !important; }
+  [data-hd] .site-header-actions > a[href*="repair-form"] { padding: 12px 13px !important; font-size: 10px !important; }
+}
+
+.mobile-nav-toggle {
+  display: none;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 1px solid #1a1a1a;
+  border-radius: 2px;
+  background: #f7f5f1;
+  color: #1a1a1a;
+  cursor: pointer;
+}
+
+.mobile-nav-toggle span,
+.mobile-nav-toggle::before,
+.mobile-nav-toggle::after {
+  content: "";
+  display: block;
+  width: 17px;
+  height: 1.5px;
+  background: currentColor;
+}
+
+.mobile-nav-toggle span { position: relative; }
+.mobile-nav-toggle::before { position: absolute; transform: translateY(-6px); }
+.mobile-nav-toggle::after { position: absolute; transform: translateY(6px); }
+.mobile-nav-toggle[aria-expanded="true"] span { background: transparent; }
+.mobile-nav-toggle[aria-expanded="true"]::before { transform: rotate(45deg); }
+.mobile-nav-toggle[aria-expanded="true"]::after { transform: rotate(-45deg); }
+
+.mobile-site-nav {
+  display: none;
+  position: absolute;
+  inset: 100% 0 auto;
+  z-index: 70;
+  grid-template-columns: 1fr;
+  background: #f7f5f1;
+  border-top: 1px solid #d9d4ca;
+  border-bottom: 1px solid #d9d4ca;
+  box-shadow: 0 14px 28px rgba(26, 26, 26, .12);
+}
+
+.mobile-site-nav[data-open="true"] { display: grid; }
+.mobile-site-nav a {
+  display: block;
+  padding: 17px 20px;
+  border-bottom: 1px solid #e4dfd5;
+  color: #1a1a1a;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.mobile-site-nav a:last-child { border-bottom: 0; }
+.mobile-site-nav a:focus-visible,
+.mobile-site-nav a:hover { background: #ebe6dc; outline: none; }
+
+/* Content migrated from legacy layouts often specifies desktop grids inline. Collapse only page-content grids on small screens. */
+@media (max-width: 700px) {
+  [data-site-content] { overflow-x: clip; }
+  [data-site-content] main [style*="grid-template-columns"],
+  [data-site-content] section[style*="grid-template-columns"],
+  [data-site-content] section [style*="grid-template-columns"],
+  [data-site-content] footer [style*="grid-template-columns"] {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 24px !important;
+  }
+  [data-site-content] main [style*="display:flex"][style*="flex-wrap:nowrap"],
+  [data-site-content] section [style*="display:flex"][style*="flex-wrap:nowrap"] {
+    flex-wrap: wrap !important;
+  }
+  [data-site-content] main > section[style*="padding"],
+  [data-site-content] main > div > section[style*="padding"],
+  [data-site-content] > section[style*="padding"] {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+  [data-site-content] section figure,
+  [data-site-content] section iframe,
+  [data-site-content] main figure,
+  [data-site-content] main iframe { max-width: 100% !important; }
+  [data-site-content] section [style*="min-width"],
+  [data-site-content] main [style*="min-width"] { min-width: 0 !important; }
+  [data-site-content] #top {
+    grid-template-columns: minmax(0, 1fr) !important;
+    min-height: auto !important;
+  }
+  [data-site-content] #top > div {
+    align-items: stretch !important;
+    padding: 44px 20px 28px !important;
+  }
+  [data-site-content] #top h1 { font-size: clamp(48px, 15vw, 68px) !important; }
+  [data-site-content] #top p { font-size: 18px !important; line-height: 1.55 !important; }
+  [data-site-content] #top > div:last-child { min-height: 320px !important; }
+
+  .mobile-table-scroll {
+    width: 100%;
+    max-width: 100%;
+    margin: 24px 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    border: 1px solid #ddd8ce;
+    border-radius: 3px;
+  }
+  .mobile-table-scroll > table {
+    width: max-content !important;
+    min-width: 100%;
+    margin: 0 !important;
+  }
+  .mobile-table-scroll:focus-visible {
+    outline: 3px solid #b08d57;
+    outline-offset: 3px;
+  }
+}
+
+@media (min-width: 701px) {
+  .mobile-table-scroll { overflow: visible; }
+}
 
 /* Shared CTA controls used inside migrated legacy page content. */
 a.btn-dark,
