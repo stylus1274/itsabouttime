@@ -169,7 +169,7 @@ export function makeGenericPageSchema(siteUrl: string, slug: string, page: Conte
 export function normalizeSeoHeadings(slug: string, html: string) {
   const formHeadings: Record<string, string> = {
     "watch-repairs": "Watch Repair Form",
-    "repair-form": "Sell Your Luxury Watch",
+    "repair-form": "Watch Repair Form",
     "watch-submission-form": "Sell Your Watch"
   };
   const formHeading = formHeadings[slug];
@@ -177,7 +177,7 @@ export function normalizeSeoHeadings(slug: string, html: string) {
     const label = slug === "watch-repairs" ? "Start a watch repair" : formHeading;
     return html
       .replace('<section id="top" aria-label="Start a watch repair"', `<section id="top" aria-label="${label}"`)
-      .replace('<div style="min-height:600px;border:1px solid #E4E0D9;', `<h1 style="margin:0 0 22px;font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(34px,4vw,48px);line-height:1.08;color:#1A1A1A;">${formHeading}</h1><div style="min-height:600px;border:1px solid #E4E0D9;`);
+      .replace(/<div style="min-height:\d+px;border:1px solid #E4E0D9;/, (container) => `<h1 style="margin:0 0 22px;font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(34px,4vw,48px);line-height:1.08;color:#1A1A1A;">${formHeading}</h1>${container}`);
   }
 
   if (["nomos-watch-repair-johns-creek", "authorized-tag-heuer-repair", "tag-heuer-watch-service-atlanta"].includes(slug)) {

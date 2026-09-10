@@ -469,15 +469,15 @@ function makeRepairFormSchema() {
         "@type": "WebPage",
         "@id": `${pageUrl}#webpage`,
         url: pageUrl,
-        name: "Sell Your Luxury Watch | It’s About Time",
-        description: "Submit luxury-watch details to It’s About Time in Johns Creek, Georgia to begin an informed selling conversation.",
+        name: "Watch Repair Form | It’s About Time",
+        description: "Start a watch repair request with It’s About Time in Johns Creek, Georgia and share the details our certified watchmakers need to help.",
         isPartOf: { "@id": `${siteUrl}/#website` }
       },
       {
         "@type": "Service",
         "@id": `${pageUrl}#service`,
-        name: "Luxury Watch Purchase Inquiry",
-        description: "Luxury-watch purchase inquiry for owners who want to submit watch details and begin an informed selling conversation.",
+        name: "Watch Repair Intake",
+        description: "Watch repair intake for owners requesting service, diagnostics, restoration, battery replacement, or water-resistance testing.",
         provider: {
           "@type": "LocalBusiness",
           name: "It’s About Time Inc.",
@@ -1141,24 +1141,24 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   if (slug === "repair-form") {
     return {
-      title: { absolute: "Sell Your Luxury Watch | It’s About Time" },
-      description: "Submit your luxury watch details to It’s About Time in Johns Creek and begin an informed, no-obligation selling conversation.",
-      keywords: ["sell luxury watch", "sell watch Johns Creek", "watch purchase inquiry", "sell Rolex Atlanta", "luxury watch valuation"],
+      title: { absolute: "Watch Repair Form | It’s About Time" },
+      description: "Start a watch repair request with It’s About Time in Johns Creek for expert diagnostics, service, restoration, battery replacement, and more.",
+      keywords: ["watch repair form", "watch repair Johns Creek", "start watch repair", "luxury watch repair", "watch service request"],
       alternates: { canonical: "/repair-form/" },
       robots: { index: true, follow: true },
       openGraph: {
         type: "website",
         url: "/repair-form/",
         siteName: "It’s About Time",
-        title: "Sell Your Luxury Watch | It’s About Time",
-        description: "Submit your luxury watch details and begin an informed selling conversation with It’s About Time in Johns Creek.",
-        images: [{ url: "/assets/pages/watch-submission-workbench.jpg", width: 1024, height: 684, alt: "It’s About Time watchmaker working at the repair bench" }]
+        title: "Watch Repair Form | It’s About Time",
+        description: "Start a repair request and share the details our certified watchmakers need to help in Johns Creek.",
+        images: [{ url: "/assets/watchmaker-portrait.jpg", width: 1601, height: 1596, alt: "It’s About Time watchmaker working at the repair bench" }]
       },
       twitter: {
         card: "summary_large_image",
-        title: "Sell Your Luxury Watch | It’s About Time",
-        description: "Submit your luxury watch details and begin an informed selling conversation with It’s About Time in Johns Creek.",
-        images: ["/assets/pages/watch-submission-workbench.jpg"]
+        title: "Watch Repair Form | It’s About Time",
+        description: "Start a repair request and share the details our certified watchmakers need to help in Johns Creek.",
+        images: ["/assets/watchmaker-portrait.jpg"]
       }
     };
   }
