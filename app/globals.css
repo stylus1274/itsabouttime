@@ -109,8 +109,6 @@ button, input { font: inherit; }
 /* Content migrated from legacy layouts often specifies desktop grids inline. Collapse only page-content grids on small screens. */
 @media (max-width: 700px) {
   [data-site-content] { overflow-x: clip; }
-  /* A fixed launcher can cover page controls as visitors scroll on small screens; preserve live chat on desktop and remove the mobile obstruction. */
-  [data-site-content] [data-chat-root] { display: none !important; }
   [data-site-content] main [style*="grid-template-columns"],
   [data-site-content] section[style*="grid-template-columns"],
   [data-site-content] section [style*="grid-template-columns"],
@@ -165,6 +163,11 @@ button, input { font: inherit; }
     outline: 3px solid #b08d57;
     outline-offset: 3px;
   }
+}
+
+@media (max-width: 1180px) {
+  /* The navigation is collapsed in this range; remove the fixed chat launcher so it cannot cover page controls on phones, tablets, or compact laptops. */
+  [data-site-content] [data-chat-root] { display: none !important; }
 }
 
 @media (min-width: 701px) {
