@@ -167,7 +167,7 @@ button, input { font: inherit; }
 
 @media (max-width: 1180px) {
   /* The navigation is collapsed in this range; remove the fixed chat launcher so it cannot cover page controls on phones, tablets, or compact laptops. */
-  [data-site-content] [data-chat-root] { display: none !important; }
+  [data-chat-root] { display: none !important; }
 }
 
 @media (min-width: 701px) {
