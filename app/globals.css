@@ -14,7 +14,8 @@ button, input { font: inherit; }
 }
 /* The navigation collapses below 1180px; compact the header on phone-width viewports rather than retaining the desktop padding and CTA scale. */
 @media (max-width: 760px) {
-  [data-hd] > div {
+  [data-hd] > div,
+  [data-site-content] .contact-site-shell header[data-hd] > div {
     grid-template-columns: minmax(0, 1fr) auto !important;
     padding: 12px 14px !important;
     gap: 10px !important;
@@ -32,7 +33,8 @@ button, input { font: inherit; }
 }
 
 @media (max-width: 360px) {
-  [data-hd] > div { padding: 10px 12px !important; gap: 8px !important; }
+  [data-hd] > div,
+  [data-site-content] .contact-site-shell header[data-hd] > div { padding: 10px 12px !important; gap: 8px !important; }
   [data-hd] > div > a img { height: 20px !important; }
   [data-hd] .site-header-actions { gap: 6px !important; }
   [data-hd] .mobile-nav-toggle { width: 36px !important; height: 36px !important; }
