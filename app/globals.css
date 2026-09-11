@@ -82,6 +82,8 @@ button, input { font: inherit; }
 /* Content migrated from legacy layouts often specifies desktop grids inline. Collapse only page-content grids on small screens. */
 @media (max-width: 700px) {
   [data-site-content] { overflow-x: clip; }
+  /* The conversion pages provide a full embedded intake form; keep the floating chat widget from obscuring its controls on phones. */
+  [data-site-content][data-mobile-chat-suppressed="true"] [data-chat-root] { display: none !important; }
   [data-site-content] main [style*="grid-template-columns"],
   [data-site-content] section[style*="grid-template-columns"],
   [data-site-content] section [style*="grid-template-columns"],

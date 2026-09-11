@@ -71,6 +71,7 @@ function replyFor(message: string) {
 
 export function SiteContent({ title, html, cta }: Props) {
   const rootRef = useRef<HTMLDivElement>(null);
+  const isMobileChatSuppressedConversionPage = /data-tf-live="(?:01JG1WQE1DWSDV5R9XDWD3PJRW|01KREH6BX2SN5A0Y490YPMRKR8)"/.test(html);
 
   useEffect(() => {
     const root = rootRef.current;
@@ -305,5 +306,5 @@ export function SiteContent({ title, html, cta }: Props) {
     };
   }, [html, title, cta]);
 
-  return <div data-site-content ref={rootRef} dangerouslySetInnerHTML={{ __html: html }} />;
+  return <div data-site-content data-mobile-chat-suppressed={isMobileChatSuppressedConversionPage ? "true" : undefined} ref={rootRef} dangerouslySetInnerHTML={{ __html: html }} />;
 }
