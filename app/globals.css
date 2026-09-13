@@ -241,7 +241,8 @@ a.btn-outline:focus-visible {
 
 /* Phone-only homepage hero simplification: retain trust badges on tablet and desktop. */
 @media (max-width: 760px) {
-  [data-home-hero-trust-badges] {
+  [data-home-hero-trust-badges],
+  [data-home-hero-description] {
     display: none !important;
   }
 }
