@@ -238,3 +238,10 @@ a.btn-outline:focus-visible {
     width: 100%;
   }
 }
+
+/* Phone-only homepage hero simplification: retain trust badges on tablet and desktop. */
+@media (max-width: 760px) {
+  [data-home-hero-trust-badges] {
+    display: none !important;
+  }
+}
