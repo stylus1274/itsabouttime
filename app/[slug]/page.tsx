@@ -438,7 +438,6 @@ function makeContactSchema() {
         name: "It’s About Time Inc.",
         url: siteUrl,
         telephone: "+1-770-442-9854",
-        email: "itsabouttimeperimeter@gmail.com",
         address: {
           "@type": "PostalAddress",
           streetAddress: "11300 Medlock Bridge Rd, Suite 300",
@@ -482,7 +481,6 @@ function makeRepairFormSchema() {
           "@type": "LocalBusiness",
           name: "It’s About Time Inc.",
           telephone: "+1-770-442-9854",
-          email: "itsabouttimeperimeter@gmail.com"
         },
         areaServed: { "@type": "City", name: "Johns Creek" },
         url: pageUrl
