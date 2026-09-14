@@ -7,6 +7,27 @@ img { max-width: 100%; }
 button, input { font: inherit; }
 
 /* The homepage navigation is the canonical site header on every route. */
+/* Legacy page shells used overflow-x:hidden, which makes them the nearest scroll container and prevents their inline sticky headers from sticking to the document. Clip horizontal overflow without creating that scroll container. */
+[data-site-content] > div:has(> header[data-hd]) {
+  overflow-x: clip !important;
+  overflow-y: visible !important;
+}
+
+/* Keep the existing shared header in view throughout each page. The scroll state supplies an opaque, high-contrast surface only after content moves behind it. */
+[data-hd] {
+  position: sticky !important;
+  top: 0;
+  z-index: 100 !important;
+  isolation: isolate;
+}
+
+[data-hd][data-scrolled="true"] {
+  background: rgba(247, 245, 241, .97) !important;
+  border-bottom-color: #d9d4ca !important;
+  box-shadow: 0 8px 20px rgba(26, 26, 26, .08);
+  backdrop-filter: blur(12px);
+}
+
 @media (max-width: 1320px) { [data-hd] [data-phone-label] { display: none !important; } }
 @media (max-width: 1180px) {
   [data-hd] > div > nav { display: none !important; }

@@ -182,6 +182,11 @@ export function SiteContent({ title, html, cta }: Props) {
     cleanups.push(restoreMobileTables);
 
     const header = root.querySelector<HTMLElement>("[data-hd]");
+    const updateHeaderScrollState = () => header?.setAttribute("data-scrolled", String(window.scrollY > 8));
+    updateHeaderScrollState();
+    window.addEventListener("scroll", updateHeaderScrollState, { passive: true });
+    cleanups.push(() => window.removeEventListener("scroll", updateHeaderScrollState));
+
     const desktopNav = header?.querySelector<HTMLElement>(":scope > div > nav");
     const headerActions = header?.querySelector<HTMLElement>(":scope > div > div:last-child");
     if (header && desktopNav && headerActions && !header.querySelector(".mobile-nav-toggle")) {
