@@ -127,6 +127,7 @@ const defaultLastModified = new Date("2026-08-25T00:00:00+00:00");
 export const routes = [
   "",
   "/watch-repairs/",
+  "/watch-services/",
   "/watch-sales/",
   "/contact/",
   "/repair-form/",

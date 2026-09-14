@@ -192,7 +192,7 @@ export function normalizeSeoHeadings(slug: string, html: string) {
 }
 
 export const dedicatedSchemaSlugs = new Set([
-  "contact", "repair-form", "watch-submission-form", "disclaimer", "privacy-policy", "refund_returns", "workshop", "rolex-repair-atlanta", "rolex-bracelet-stretch-repair", "watch-blogs",
+  "watch-services", "contact", "repair-form", "watch-submission-form", "disclaimer", "privacy-policy", "refund_returns", "workshop", "rolex-repair-atlanta", "rolex-bracelet-stretch-repair", "watch-blogs",
   "atlanta-watch-service-center-workshop-duluth", "expert-rolex-watch-repair-buford", "watch-battery-replacement-in-suwanee-ga",
   "panerai-certified-watchmakers", "rado-authorized-workshop-and-watchmakers", "baume-and-mercier-watches",
   "luxury-watch-strap-band-replacement", "watch-band-repair", "watch-band-replacement",

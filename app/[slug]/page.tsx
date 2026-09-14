@@ -850,6 +850,26 @@ function makeFinalRepairWorkshopSchema(slug: "expert-rolex-watch-repair-buford" 
   };
 }
 
+
+function makeWatchServicesSchema() {
+  const pageUrl = `${siteUrl}/watch-services/`;
+  const description = "Explore watch repair, maintenance, certified brand service, curated watch sales, watch valuations, walk-in showroom guidance, and nationwide repair support from It’s About Time in Johns Creek.";
+  const faqs = [
+    ["What Watch Services Does It’s About Time Offer?", "It’s About Time provides watch repair, maintenance, battery and crystal service, water-resistance attention, restoration, certified brand service, curated watch sales, and watch-selling guidance."],
+    ["Can I Start a Watch Repair Online?", "Yes. Use the repair form to share the basic details, then the team can recommend a suitable next step."],
+    ["Do You Sell Watches and Help With Watch Valuations?", "Yes. Visit the showroom to explore curated watches for sale, or use the watch-submission form to begin a selling or valuation conversation."],
+    ["Can Customers Outside Johns Creek Use Your Services?", "Yes. Contact the workshop or begin a repair request to discuss insured shipping support and appropriate next steps."],
+  ] as const;
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      { "@type": "WebPage", "@id": `${pageUrl}#webpage`, url: pageUrl, name: "Watch Services in Johns Creek, GA | It’s About Time", description, primaryImageOfPage: `${siteUrl}/assets/watchmaker-portrait.jpg`, isPartOf: { "@id": `${siteUrl}/#website` }, inLanguage: "en-US" },
+      { "@type": "Service", "@id": `${pageUrl}#service`, name: "Watch Services", description, provider: { "@type": "ProfessionalService", name: "It’s About Time Inc.", telephone: "+1-770-442-9854", address: { "@type": "PostalAddress", streetAddress: "11300 Medlock Bridge Rd, Suite 300", addressLocality: "Johns Creek", addressRegion: "GA", postalCode: "30097", addressCountry: "US" } }, areaServed: { "@type": "AdministrativeArea", name: "Atlanta Metropolitan Area" }, serviceType: ["Watch repair", "Watch maintenance", "Watch battery replacement", "Watch crystal service", "Watch restoration", "Luxury watch sales", "Watch valuation"], url: pageUrl },
+      { "@type": "FAQPage", "@id": `${pageUrl}#faq`, mainEntity: faqs.map(([name, text]) => ({ "@type": "Question", name, acceptedAnswer: { "@type": "Answer", text } })) }
+    ]
+  };
+}
+
 function makeAboutPageSchema() {
   const pageUrl = `${siteUrl}/atlanta-watch-service-center-workshop-duluth/`;
   return {
@@ -1237,6 +1257,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     "rado-authorized-workshop-and-watchmakers": { title: "Rado Authorized Dealer and Watchmakers Johns Creek, GA | It’s About Time", description: "Explore authentic Rado watches in Johns Creek, including Captain Cook, True Square, Centrix, HyperChrome, and DiaStar collections with personal showroom guidance.", keywords: ["Rado watches Johns Creek", "Rado authorized dealer Georgia", "Rado Captain Cook", "Rado ceramic watches"], image: "/assets/pages/rado-authorized-workshop-and-watchmakers-hero.jpg", imageWidth: 542, imageHeight: 629, alt: "Rado watch from the authorized workshop and watchmakers page" },
     "baume-and-mercier-watches": { title: "Baume & Mercier Watches in Johns Creek, GA | It’s About Time", description: "Explore Baume & Mercier watches in Johns Creek, including the Riviera collection, with personal in-store guidance and lasting watchmaking support.", keywords: ["Baume and Mercier watches Johns Creek", "Baume Mercier Riviera", "Swiss watch dealer Georgia", "Baume Mercier dealer"], image: "/assets/pages/baume-and-mercier-watches-hero.jpg", imageWidth: 912, imageHeight: 912, alt: "Baume & Mercier watch from the Baume and Mercier page" },
     "watch-blogs": { title: "Watch Blogs, Repair Guides & Collecting Notes | It’s About Time", description: "Read watch repair guides, collecting notes, brand stories, and care insights from the It’s About Time team in Johns Creek.", keywords: ["watch blog", "watch repair guides", "watch collecting notes", "Johns Creek watchmaker"], image: "/assets/articles/dial-refinishing-comparison.png", imageWidth: 1200, imageHeight: 675, alt: "Watch dial refinishing comparison from an It’s About Time repair guide" },
+    "watch-services": { title: "Watch Services in Johns Creek, GA | It’s About Time", description: "Explore watch repair, maintenance, certified brand service, curated watch sales, watch valuations, walk-in showroom guidance, and nationwide repair support from It’s About Time in Johns Creek.", keywords: ["watch services Johns Creek", "watch repair and maintenance", "luxury watch service Georgia", "watch valuation", "watch showroom Johns Creek"], image: "/assets/watchmaker-portrait.jpg", imageWidth: 1601, imageHeight: 1596, alt: "It’s About Time watchmaker completing precision service at the bench" },
     "atlanta-watch-service-center-workshop-duluth": { title: "About It’s About Time | Johns Creek Watchmakers", description: "Learn about It’s About Time Inc., a Johns Creek destination for expert watch repair, service, restoration, and curated watch sales.", keywords: ["About It’s About Time", "Johns Creek watchmakers", "Atlanta watch repair", "luxury watch service", "watch showroom Johns Creek"], image: "/assets/pages/atlanta-watch-service-center-workshop-duluth-hero.jpg", imageWidth: 2400, imageHeight: 1602, alt: "It’s About Time watchmaker completing precision service in Johns Creek" },
     "expert-rolex-watch-repair-buford": { title: "Professional Rolex Watch Repair in Buford, GA | It’s About Time", description: "Specialist Rolex watch repair for Buford owners from the Johns Creek workshop, including movement overhaul, polishing, water-resistance testing, crystal replacement, and crown or stem repair.", keywords: ["Rolex watch repair Buford", "Rolex service Buford", "Rolex movement overhaul", "Rolex water resistance testing"], image: "/assets/pages/expert-rolex-watch-repair-buford-hero.png", imageWidth: 1000, imageHeight: 691, alt: "Rolex watch from the legacy Buford Rolex repair page" },
     "watch-battery-replacement-in-suwanee-ga": { title: "Watch Battery Replacement in Suwanee, GA | It’s About Time", description: "Professional watch battery replacement for Suwanee owners from the Johns Creek workshop, with premium batteries and careful service for luxury, vintage, sport, digital, and everyday watches.", keywords: ["watch battery replacement Suwanee", "same day watch battery Suwanee", "luxury watch battery service", "watch repair Suwanee"], image: "/assets/pages/watch-battery-replacement-in-suwanee-ga-hero.jpg", imageWidth: 700, imageHeight: 467, alt: "Watchmaker replacing a battery from the legacy Suwanee battery-service page" },
@@ -1407,6 +1428,7 @@ export default async function ConvertedPage({ params }: { params: Promise<{ slug
       {!article && !dedicatedSchemaSlugs.has(slug) && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(makeGenericPageSchema(siteUrl, slug, page)) }} />}
       {["watch-repairs", "repair-form", "watch-submission-form"].includes(slug) && <Script src="https://embed.typeform.com/next/embed.js" strategy="afterInteractive" />}
       {article && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(makeArticleSchema(article)) }} />}
+      {slug === "watch-services" && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(makeWatchServicesSchema()) }} />}
       {slug === "contact" && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(makeContactSchema()) }} />}
       {(slug === "expert-rolex-watch-repair-buford" || slug === "watch-battery-replacement-in-suwanee-ga") && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(makeFinalRepairWorkshopSchema(slug as "expert-rolex-watch-repair-buford" | "watch-battery-replacement-in-suwanee-ga")) }} />}
       {slug === "atlanta-watch-service-center-workshop-duluth" && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(makeAboutPageSchema()) }} />}
