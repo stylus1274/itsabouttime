@@ -29,6 +29,12 @@ button, input { font: inherit; }
 }
 
 @media (max-width: 1320px) { [data-hd] [data-phone-label] { display: none !important; } }
+/* Accommodate the additional desktop destination until the established compact/mobile menu breakpoint takes over. */
+@media (min-width: 1181px) and (max-width: 1320px) {
+  [data-hd] > div { padding-left: 20px !important; padding-right: 20px !important; gap: 14px !important; }
+  [data-hd] > div > nav { gap: 20px !important; }
+  [data-hd] > div > nav > a { font-size: 13px !important; letter-spacing: .11em !important; }
+}
 @media (max-width: 1180px) {
   [data-hd] > div > nav { display: none !important; }
   [data-hd] .mobile-nav-toggle { display: inline-flex !important; }
