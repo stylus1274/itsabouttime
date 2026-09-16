@@ -167,7 +167,7 @@ button, input { font: inherit; }
     align-items: stretch !important;
     padding: 44px 20px 28px !important;
   }
-  [data-site-content] #top h1 { font-size: clamp(48px, 15vw, 68px) !important; }
+  [data-site-content] #top h1 { font-size: clamp(44px, calc(15vw - 4px), 64px) !important; }
   [data-site-content] #top p { font-size: 18px !important; line-height: 1.55 !important; }
   [data-site-content] #top > div:last-child { min-height: 320px !important; }
 
