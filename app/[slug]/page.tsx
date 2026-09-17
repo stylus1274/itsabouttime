@@ -440,7 +440,7 @@ function makeContactSchema() {
         telephone: "+1-770-442-9854",
         address: {
           "@type": "PostalAddress",
-          streetAddress: "11300 Medlock Bridge Rd, Suite 300",
+          streetAddress: "11300 Medlock Bridge Rd #300",
           addressLocality: "Johns Creek",
           addressRegion: "GA",
           postalCode: "30097",
@@ -540,7 +540,7 @@ function makeWorkshopSchema() {
         telephone: "+1-770-442-9854",
         address: {
           "@type": "PostalAddress",
-          streetAddress: "11300 Medlock Bridge Rd, Suite 300",
+          streetAddress: "11300 Medlock Bridge Rd #300",
           addressLocality: "Johns Creek",
           addressRegion: "GA",
           postalCode: "30097",
@@ -586,7 +586,7 @@ function makeRolexRepairAtlantaSchema() {
           "@type": "ProfessionalService",
           name: "It’s About Time Inc.",
           telephone: "+1-770-442-9854",
-          address: { "@type": "PostalAddress", streetAddress: "11300 Medlock Bridge Rd, Suite 300", addressLocality: "Johns Creek", addressRegion: "GA", postalCode: "30097", addressCountry: "US" }
+          address: { "@type": "PostalAddress", streetAddress: "11300 Medlock Bridge Rd #300", addressLocality: "Johns Creek", addressRegion: "GA", postalCode: "30097", addressCountry: "US" }
         },
         areaServed: [{ "@type": "City", name: "Johns Creek" }, { "@type": "City", name: "Atlanta" }],
         serviceType: ["Rolex watch repair", "Rolex movement service", "Rolex pressure testing", "Rolex bracelet repair"],
@@ -613,7 +613,7 @@ function makeBatteryReplacementServiceSchema(slug: "watch-battery-replacement-at
     "@context": "https://schema.org",
     "@graph": [
       { "@type": "WebPage", "@id": `${pageUrl}#webpage`, url: pageUrl, name: config.name, description: config.description, primaryImageOfPage: `${siteUrl}${config.image}`, isPartOf: { "@id": `${siteUrl}/#website` } },
-      { "@type": "Service", "@id": `${pageUrl}#service`, name: config.name, description: config.description, provider: { "@type": "ProfessionalService", name: "It’s About Time Inc.", telephone: "+1-770-442-9854", address: { "@type": "PostalAddress", streetAddress: "11300 Medlock Bridge Rd, Suite 300", addressLocality: "Johns Creek", addressRegion: "GA", postalCode: "30097", addressCountry: "US" } }, areaServed: { "@type": "City", name: config.area }, serviceType: ["Watch battery replacement", "Luxury watch battery replacement", "Water-resistant watch battery service"], url: pageUrl }
+      { "@type": "Service", "@id": `${pageUrl}#service`, name: config.name, description: config.description, provider: { "@type": "ProfessionalService", name: "It’s About Time Inc.", telephone: "+1-770-442-9854", address: { "@type": "PostalAddress", streetAddress: "11300 Medlock Bridge Rd #300", addressLocality: "Johns Creek", addressRegion: "GA", postalCode: "30097", addressCountry: "US" } }, areaServed: { "@type": "City", name: config.area }, serviceType: ["Watch battery replacement", "Luxury watch battery replacement", "Water-resistant watch battery service"], url: pageUrl }
     ]
   };
 }
@@ -637,7 +637,7 @@ function makeOmegaWatchRepairSchema(slug: "omega-watch-repair-atlanta" | "omega-
     "@context": "https://schema.org",
     "@graph": [
       { "@type": "WebPage", "@id": pageUrl + "#webpage", url: pageUrl, name: config.name, description: config.description, primaryImageOfPage: siteUrl + config.image, isPartOf: { "@id": siteUrl + "/#website" } },
-      { "@type": "Service", "@id": pageUrl + "#service", name: config.name, description: config.description, provider: { "@type": "ProfessionalService", name: "It’s About Time Inc.", telephone: "+1-770-442-9854", address: { "@type": "PostalAddress", streetAddress: "11300 Medlock Bridge Rd, Suite 300", addressLocality: "Johns Creek", addressRegion: "GA", postalCode: "30097", addressCountry: "US" } }, areaServed: { "@type": "City", name: config.area }, serviceType: ["Omega watch repair", "Omega movement service", "Omega watch restoration", "Omega water-resistance testing"], url: pageUrl },
+      { "@type": "Service", "@id": pageUrl + "#service", name: config.name, description: config.description, provider: { "@type": "ProfessionalService", name: "It’s About Time Inc.", telephone: "+1-770-442-9854", address: { "@type": "PostalAddress", streetAddress: "11300 Medlock Bridge Rd #300", addressLocality: "Johns Creek", addressRegion: "GA", postalCode: "30097", addressCountry: "US" } }, areaServed: { "@type": "City", name: config.area }, serviceType: ["Omega watch repair", "Omega movement service", "Omega watch restoration", "Omega water-resistance testing"], url: pageUrl },
       { "@type": "FAQPage", "@id": pageUrl + "#faq", mainEntity: faqs.map(([name, text]) => ({ "@type": "Question", name, acceptedAnswer: { "@type": "Answer", text } })) }
     ]
   };
@@ -657,7 +657,7 @@ function makeBrandAuthorizedDealerHubSchema(slug: "hamilton-watches-authorized-d
   const pageUrl = siteUrl + "/" + slug + "/";
   const graph: Record<string, unknown>[] = [
     { "@type": "WebPage", "@id": pageUrl + "#webpage", url: pageUrl, name: config.name, description: config.description, primaryImageOfPage: siteUrl + config.image, isPartOf: { "@id": siteUrl + "/#website" } },
-    { "@type": "Store", "@id": pageUrl + "#store", name: "It’s About Time Inc.", description: config.brand + " authorized watch dealer with a curated watch showroom in Johns Creek, GA.", telephone: "+1-770-442-9854", url: pageUrl, image: siteUrl + config.image, address: { "@type": "PostalAddress", streetAddress: "11300 Medlock Bridge Rd, Suite 300", addressLocality: "Johns Creek", addressRegion: "GA", postalCode: "30097", addressCountry: "US" }, areaServed: { "@type": "City", name: "Johns Creek" }, makesOffer: { "@type": "Offer", itemOffered: { "@type": "Product", category: "Watches", brand: { "@type": "Brand", name: config.brand } } } }
+    { "@type": "Store", "@id": pageUrl + "#store", name: "It’s About Time Inc.", description: config.brand + " authorized watch dealer with a curated watch showroom in Johns Creek, GA.", telephone: "+1-770-442-9854", url: pageUrl, image: siteUrl + config.image, address: { "@type": "PostalAddress", streetAddress: "11300 Medlock Bridge Rd #300", addressLocality: "Johns Creek", addressRegion: "GA", postalCode: "30097", addressCountry: "US" }, areaServed: { "@type": "City", name: "Johns Creek" }, makesOffer: { "@type": "Offer", itemOffered: { "@type": "Product", category: "Watches", brand: { "@type": "Brand", name: config.brand } } } }
   ];
   if (config.faqs.length) graph.push({ "@type": "FAQPage", "@id": pageUrl + "#faq", mainEntity: config.faqs.map(([name, text]) => ({ "@type": "Question", name, acceptedAnswer: { "@type": "Answer", text } })) });
   return { "@context": "https://schema.org", "@graph": graph };
@@ -675,8 +675,8 @@ function makeCoreWatchSalesSchema(slug: "brands-we-carry" | "buy-premium-watches
   const graph: Record<string, unknown>[] = [
     { "@type": "WebPage", "@id": pageUrl + "#webpage", url: pageUrl, name: config.name, description: config.description, primaryImageOfPage: siteUrl + config.image, isPartOf: { "@id": siteUrl + "/#website" } }
   ];
-  if (config.type === "store") graph.push({ "@type": "Store", "@id": pageUrl + "#store", name: "It’s About Time Inc.", description: "Curated watch showroom and authorized watch dealer in Johns Creek, GA.", telephone: "+1-770-442-9854", url: pageUrl, image: siteUrl + config.image, address: { "@type": "PostalAddress", streetAddress: "11300 Medlock Bridge Rd, Suite 300", addressLocality: "Johns Creek", addressRegion: "GA", postalCode: "30097", addressCountry: "US" }, areaServed: { "@type": "City", name: "Johns Creek" } });
-  if (config.type === "valuation") graph.push({ "@type": "Service", "@id": pageUrl + "#service", name: "Luxury Watch Valuation and Purchase", description: config.description, provider: { "@type": "ProfessionalService", name: "It’s About Time Inc.", telephone: "+1-770-442-9854", address: { "@type": "PostalAddress", streetAddress: "11300 Medlock Bridge Rd, Suite 300", addressLocality: "Johns Creek", addressRegion: "GA", postalCode: "30097", addressCountry: "US" } }, serviceType: ["Luxury watch valuation", "Luxury watch purchase"], areaServed: { "@type": "City", name: "Johns Creek" }, url: pageUrl });
+  if (config.type === "store") graph.push({ "@type": "Store", "@id": pageUrl + "#store", name: "It’s About Time Inc.", description: "Curated watch showroom and authorized watch dealer in Johns Creek, GA.", telephone: "+1-770-442-9854", url: pageUrl, image: siteUrl + config.image, address: { "@type": "PostalAddress", streetAddress: "11300 Medlock Bridge Rd #300", addressLocality: "Johns Creek", addressRegion: "GA", postalCode: "30097", addressCountry: "US" }, areaServed: { "@type": "City", name: "Johns Creek" } });
+  if (config.type === "valuation") graph.push({ "@type": "Service", "@id": pageUrl + "#service", name: "Luxury Watch Valuation and Purchase", description: config.description, provider: { "@type": "ProfessionalService", name: "It’s About Time Inc.", telephone: "+1-770-442-9854", address: { "@type": "PostalAddress", streetAddress: "11300 Medlock Bridge Rd #300", addressLocality: "Johns Creek", addressRegion: "GA", postalCode: "30097", addressCountry: "US" } }, serviceType: ["Luxury watch valuation", "Luxury watch purchase"], areaServed: { "@type": "City", name: "Johns Creek" }, url: pageUrl });
   if (config.faqs.length) graph.push({ "@type": "FAQPage", "@id": pageUrl + "#faq", mainEntity: config.faqs.map(([name, text]) => ({ "@type": "Question", name, acceptedAnswer: { "@type": "Answer", text } })) });
   return { "@context": "https://schema.org", "@graph": graph };
 }
@@ -692,8 +692,8 @@ function makeSpecialistBrandServiceSchema(slug: "panerai-certified-watchmakers" 
   const graph: Record<string, unknown>[] = [
     { "@type": "WebPage", "@id": pageUrl + "#webpage", url: pageUrl, name: config.name, description: config.description, primaryImageOfPage: siteUrl + config.image, isPartOf: { "@id": siteUrl + "/#website" } }
   ];
-  if (config.type === "service") graph.push({ "@type": "Service", "@id": pageUrl + "#service", name: config.name, description: config.description, provider: { "@type": "ProfessionalService", name: "It’s About Time Inc.", telephone: "+1-770-442-9854", address: { "@type": "PostalAddress", streetAddress: "11300 Medlock Bridge Rd, Suite 300", addressLocality: "Johns Creek", addressRegion: "GA", postalCode: "30097", addressCountry: "US" } }, areaServed: { "@type": "City", name: "Johns Creek" }, serviceType: config.serviceType, url: pageUrl });
-  if (config.type === "store") graph.push({ "@type": "Store", "@id": pageUrl + "#store", name: "It’s About Time Inc.", description: "Curated watch showroom and specialist watchmaking team in Johns Creek, GA.", telephone: "+1-770-442-9854", url: pageUrl, image: siteUrl + config.image, address: { "@type": "PostalAddress", streetAddress: "11300 Medlock Bridge Rd, Suite 300", addressLocality: "Johns Creek", addressRegion: "GA", postalCode: "30097", addressCountry: "US" }, areaServed: { "@type": "City", name: "Johns Creek" } });
+  if (config.type === "service") graph.push({ "@type": "Service", "@id": pageUrl + "#service", name: config.name, description: config.description, provider: { "@type": "ProfessionalService", name: "It’s About Time Inc.", telephone: "+1-770-442-9854", address: { "@type": "PostalAddress", streetAddress: "11300 Medlock Bridge Rd #300", addressLocality: "Johns Creek", addressRegion: "GA", postalCode: "30097", addressCountry: "US" } }, areaServed: { "@type": "City", name: "Johns Creek" }, serviceType: config.serviceType, url: pageUrl });
+  if (config.type === "store") graph.push({ "@type": "Store", "@id": pageUrl + "#store", name: "It’s About Time Inc.", description: "Curated watch showroom and specialist watchmaking team in Johns Creek, GA.", telephone: "+1-770-442-9854", url: pageUrl, image: siteUrl + config.image, address: { "@type": "PostalAddress", streetAddress: "11300 Medlock Bridge Rd #300", addressLocality: "Johns Creek", addressRegion: "GA", postalCode: "30097", addressCountry: "US" }, areaServed: { "@type": "City", name: "Johns Creek" } });
   return { "@context": "https://schema.org", "@graph": graph };
 }
 
@@ -710,7 +710,7 @@ function makeWatchSubmissionFormSchema() {
   const description = "Submit luxury watch details to begin an informed, no-obligation valuation and selling conversation with certified watchmakers at It’s About Time in Johns Creek.";
   return { "@context": "https://schema.org", "@graph": [
     { "@type": "WebPage", "@id": pageUrl + "#webpage", url: pageUrl, name: "Watch Submission Form | It’s About Time", description, primaryImageOfPage: siteUrl + "/assets/watchmaker-portrait.jpg", isPartOf: { "@id": siteUrl + "/#website" } },
-    { "@type": "Service", "@id": pageUrl + "#service", name: "Luxury Watch Valuation and Submission", description, provider: { "@type": "ProfessionalService", name: "It’s About Time Inc.", telephone: "+1-770-442-9854", address: { "@type": "PostalAddress", streetAddress: "11300 Medlock Bridge Rd, Suite 300", addressLocality: "Johns Creek", addressRegion: "GA", postalCode: "30097", addressCountry: "US" } }, serviceType: ["Luxury watch valuation", "Luxury watch purchase inquiry"], areaServed: { "@type": "City", name: "Johns Creek" }, url: pageUrl, potentialAction: { "@type": "ContactAction", target: pageUrl, name: "Submit watch details" } }
+    { "@type": "Service", "@id": pageUrl + "#service", name: "Luxury Watch Valuation and Submission", description, provider: { "@type": "ProfessionalService", name: "It’s About Time Inc.", telephone: "+1-770-442-9854", address: { "@type": "PostalAddress", streetAddress: "11300 Medlock Bridge Rd #300", addressLocality: "Johns Creek", addressRegion: "GA", postalCode: "30097", addressCountry: "US" } }, serviceType: ["Luxury watch valuation", "Luxury watch purchase inquiry"], areaServed: { "@type": "City", name: "Johns Creek" }, url: pageUrl, potentialAction: { "@type": "ContactAction", target: pageUrl, name: "Submit watch details" } }
   ] };
 }
 
@@ -726,7 +726,7 @@ function makeAtlantaBrandDealerSchema(slug: "hamilton-watches-at-its-about-time-
     "@context": "https://schema.org",
     "@graph": [
       { "@type": "WebPage", "@id": pageUrl + "#webpage", url: pageUrl, name: config.name, description: config.description, primaryImageOfPage: siteUrl + config.image, isPartOf: { "@id": siteUrl + "/#website" } },
-      { "@type": "Store", "@id": pageUrl + "#store", name: "It’s About Time Inc.", description: config.brand + " authorized watch dealer with a curated watch showroom in Johns Creek, GA.", telephone: "+1-770-442-9854", url: pageUrl, image: siteUrl + config.image, address: { "@type": "PostalAddress", streetAddress: "11300 Medlock Bridge Rd, Suite 300", addressLocality: "Johns Creek", addressRegion: "GA", postalCode: "30097", addressCountry: "US" }, areaServed: { "@type": "City", name: "Atlanta" }, makesOffer: { "@type": "Offer", itemOffered: { "@type": "Product", category: "Watches", brand: { "@type": "Brand", name: config.brand } } } }
+      { "@type": "Store", "@id": pageUrl + "#store", name: "It’s About Time Inc.", description: config.brand + " authorized watch dealer with a curated watch showroom in Johns Creek, GA.", telephone: "+1-770-442-9854", url: pageUrl, image: siteUrl + config.image, address: { "@type": "PostalAddress", streetAddress: "11300 Medlock Bridge Rd #300", addressLocality: "Johns Creek", addressRegion: "GA", postalCode: "30097", addressCountry: "US" }, areaServed: { "@type": "City", name: "Atlanta" }, makesOffer: { "@type": "Offer", itemOffered: { "@type": "Product", category: "Watches", brand: { "@type": "Brand", name: config.brand } } } }
     ]
   };
 }
@@ -743,7 +743,7 @@ function makeCitizenDealerSchema(slug: "citizen-watches-at-its-about-time-inc-au
     "@context": "https://schema.org",
     "@graph": [
       { "@type": "WebPage", "@id": pageUrl + "#webpage", url: pageUrl, name: config.name, description: config.description, primaryImageOfPage: siteUrl + config.image, isPartOf: { "@id": siteUrl + "/#website" } },
-      { "@type": "Store", "@id": pageUrl + "#store", name: "It’s About Time Inc.", description: "Authorized Citizen watch dealer with a curated watch showroom in Johns Creek, GA.", telephone: "+1-770-442-9854", url: pageUrl, image: siteUrl + config.image, address: { "@type": "PostalAddress", streetAddress: "11300 Medlock Bridge Rd, Suite 300", addressLocality: "Johns Creek", addressRegion: "GA", postalCode: "30097", addressCountry: "US" }, areaServed: { "@type": "City", name: config.area }, makesOffer: { "@type": "Offer", itemOffered: { "@type": "Product", category: "Watches", brand: { "@type": "Brand", name: "Citizen" } } } }
+      { "@type": "Store", "@id": pageUrl + "#store", name: "It’s About Time Inc.", description: "Authorized Citizen watch dealer with a curated watch showroom in Johns Creek, GA.", telephone: "+1-770-442-9854", url: pageUrl, image: siteUrl + config.image, address: { "@type": "PostalAddress", streetAddress: "11300 Medlock Bridge Rd #300", addressLocality: "Johns Creek", addressRegion: "GA", postalCode: "30097", addressCountry: "US" }, areaServed: { "@type": "City", name: config.area }, makesOffer: { "@type": "Offer", itemOffered: { "@type": "Product", category: "Watches", brand: { "@type": "Brand", name: "Citizen" } } } }
     ]
   };
 }
@@ -760,7 +760,7 @@ function makeBreitlingNomosRepairSchema(slug: "breitling-watch-repair-athens" | 
     "@context": "https://schema.org",
     "@graph": [
       { "@type": "WebPage", "@id": pageUrl + "#webpage", url: pageUrl, name: config.name, description: config.description, primaryImageOfPage: siteUrl + config.image, isPartOf: { "@id": siteUrl + "/#website" } },
-      { "@type": "Service", "@id": pageUrl + "#service", name: config.name, description: config.description, provider: { "@type": "ProfessionalService", name: "It’s About Time Inc.", telephone: "+1-770-442-9854", address: { "@type": "PostalAddress", streetAddress: "11300 Medlock Bridge Rd, Suite 300", addressLocality: "Johns Creek", addressRegion: "GA", postalCode: "30097", addressCountry: "US" } }, areaServed: config.area, serviceType: config.serviceType, url: pageUrl },
+      { "@type": "Service", "@id": pageUrl + "#service", name: config.name, description: config.description, provider: { "@type": "ProfessionalService", name: "It’s About Time Inc.", telephone: "+1-770-442-9854", address: { "@type": "PostalAddress", streetAddress: "11300 Medlock Bridge Rd #300", addressLocality: "Johns Creek", addressRegion: "GA", postalCode: "30097", addressCountry: "US" } }, areaServed: config.area, serviceType: config.serviceType, url: pageUrl },
       { "@type": "FAQPage", "@id": pageUrl + "#faq", mainEntity: config.faqs.map(([name, text]) => ({ "@type": "Question", name, acceptedAnswer: { "@type": "Answer", text } })) }
     ]
   };
@@ -778,7 +778,7 @@ function makeTagHeuerRepairSchema(slug: "tag-heuer-watch-repair-landing" | "tag-
     "@context": "https://schema.org",
     "@graph": [
       { "@type": "WebPage", "@id": pageUrl + "#webpage", url: pageUrl, name: config.name, description: config.description, primaryImageOfPage: siteUrl + config.image, isPartOf: { "@id": siteUrl + "/#website" } },
-      { "@type": "Service", "@id": pageUrl + "#service", name: config.name, description: config.description, provider: { "@type": "ProfessionalService", name: "It’s About Time Inc.", telephone: "+1-770-442-9854", address: { "@type": "PostalAddress", streetAddress: "11300 Medlock Bridge Rd, Suite 300", addressLocality: "Johns Creek", addressRegion: "GA", postalCode: "30097", addressCountry: "US" } }, areaServed: config.area, serviceType: ["Tag Heuer watch repair", "Tag Heuer movement overhaul", "Tag Heuer battery replacement", "Tag Heuer crystal replacement", "Tag Heuer water-resistance testing"], url: pageUrl },
+      { "@type": "Service", "@id": pageUrl + "#service", name: config.name, description: config.description, provider: { "@type": "ProfessionalService", name: "It’s About Time Inc.", telephone: "+1-770-442-9854", address: { "@type": "PostalAddress", streetAddress: "11300 Medlock Bridge Rd #300", addressLocality: "Johns Creek", addressRegion: "GA", postalCode: "30097", addressCountry: "US" } }, areaServed: config.area, serviceType: ["Tag Heuer watch repair", "Tag Heuer movement overhaul", "Tag Heuer battery replacement", "Tag Heuer crystal replacement", "Tag Heuer water-resistance testing"], url: pageUrl },
       { "@type": "FAQPage", "@id": pageUrl + "#faq", mainEntity: config.faqs.map(([name, text]) => ({ "@type": "Question", name, acceptedAnswer: { "@type": "Answer", text } })) }
     ]
   };
@@ -796,7 +796,7 @@ function makeHamiltonWatchRepairSchema(slug: "hamilton-watch-repair-athens" | "h
     "@context": "https://schema.org",
     "@graph": [
       { "@type": "WebPage", "@id": pageUrl + "#webpage", url: pageUrl, name: config.name, description: config.description, primaryImageOfPage: siteUrl + config.image, isPartOf: { "@id": siteUrl + "/#website" } },
-      { "@type": "Service", "@id": pageUrl + "#service", name: config.name, description: config.description, provider: { "@type": "ProfessionalService", name: "It’s About Time Inc.", telephone: "+1-770-442-9854", address: { "@type": "PostalAddress", streetAddress: "11300 Medlock Bridge Rd, Suite 300", addressLocality: "Johns Creek", addressRegion: "GA", postalCode: "30097", addressCountry: "US" } }, areaServed: { "@type": "City", name: config.area }, serviceType: ["Hamilton watch repair", "Hamilton movement overhaul", "Hamilton crystal replacement", "Hamilton water-resistance testing"], url: pageUrl },
+      { "@type": "Service", "@id": pageUrl + "#service", name: config.name, description: config.description, provider: { "@type": "ProfessionalService", name: "It’s About Time Inc.", telephone: "+1-770-442-9854", address: { "@type": "PostalAddress", streetAddress: "11300 Medlock Bridge Rd #300", addressLocality: "Johns Creek", addressRegion: "GA", postalCode: "30097", addressCountry: "US" } }, areaServed: { "@type": "City", name: config.area }, serviceType: ["Hamilton watch repair", "Hamilton movement overhaul", "Hamilton crystal replacement", "Hamilton water-resistance testing"], url: pageUrl },
       { "@type": "FAQPage", "@id": pageUrl + "#faq", mainEntity: config.faqs.map(([name, text]) => ({ "@type": "Question", name, acceptedAnswer: { "@type": "Answer", text } })) }
     ]
   };
@@ -814,7 +814,7 @@ function makeCartierServiceSchema(slug: "expert-cartier-watch-repair-in-atlanta"
     "@context": "https://schema.org",
     "@graph": [
       { "@type": "WebPage", "@id": pageUrl + "#webpage", url: pageUrl, name: config.name, description: config.description, primaryImageOfPage: siteUrl + config.image, isPartOf: { "@id": siteUrl + "/#website" } },
-      { "@type": "Service", "@id": pageUrl + "#service", name: config.name, description: config.description, provider: { "@type": "ProfessionalService", name: "It’s About Time Inc.", telephone: "+1-770-442-9854", address: { "@type": "PostalAddress", streetAddress: "11300 Medlock Bridge Rd, Suite 300", addressLocality: "Johns Creek", addressRegion: "GA", postalCode: "30097", addressCountry: "US" } }, areaServed: { "@type": "City", name: config.area }, serviceType: config.serviceType, url: pageUrl },
+      { "@type": "Service", "@id": pageUrl + "#service", name: config.name, description: config.description, provider: { "@type": "ProfessionalService", name: "It’s About Time Inc.", telephone: "+1-770-442-9854", address: { "@type": "PostalAddress", streetAddress: "11300 Medlock Bridge Rd #300", addressLocality: "Johns Creek", addressRegion: "GA", postalCode: "30097", addressCountry: "US" } }, areaServed: { "@type": "City", name: config.area }, serviceType: config.serviceType, url: pageUrl },
       { "@type": "FAQPage", "@id": pageUrl + "#faq", mainEntity: config.faqs.map(([name, text]) => ({ "@type": "Question", name, acceptedAnswer: { "@type": "Answer", text } })) }
     ]
   };
@@ -843,7 +843,7 @@ function makeFinalRepairWorkshopSchema(slug: "expert-rolex-watch-repair-buford" 
     "@context": "https://schema.org",
     "@graph": [
       { "@type": "WebPage", "@id": pageUrl + "#webpage", url: pageUrl, name: config.name, description: config.description, primaryImageOfPage: siteUrl + config.image, isPartOf: { "@id": siteUrl + "/#website" } },
-      { "@type": "Service", "@id": pageUrl + "#service", name: config.name, description: config.description, provider: { "@type": "ProfessionalService", name: "It’s About Time Inc.", telephone: "+1-770-442-9854", address: { "@type": "PostalAddress", streetAddress: "11300 Medlock Bridge Rd, Suite 300", addressLocality: "Johns Creek", addressRegion: "GA", postalCode: "30097", addressCountry: "US" } }, areaServed: { "@type": "City", name: config.area }, serviceType: config.serviceType, url: pageUrl }
+      { "@type": "Service", "@id": pageUrl + "#service", name: config.name, description: config.description, provider: { "@type": "ProfessionalService", name: "It’s About Time Inc.", telephone: "+1-770-442-9854", address: { "@type": "PostalAddress", streetAddress: "11300 Medlock Bridge Rd #300", addressLocality: "Johns Creek", addressRegion: "GA", postalCode: "30097", addressCountry: "US" } }, areaServed: { "@type": "City", name: config.area }, serviceType: config.serviceType, url: pageUrl }
     ]
   };
 }
@@ -862,7 +862,7 @@ function makeWatchServicesSchema() {
     "@context": "https://schema.org",
     "@graph": [
       { "@type": "WebPage", "@id": `${pageUrl}#webpage`, url: pageUrl, name: "Watch Services in Johns Creek, GA | It’s About Time", description, primaryImageOfPage: `${siteUrl}/assets/watchmaker-portrait.jpg`, isPartOf: { "@id": `${siteUrl}/#website` }, inLanguage: "en-US" },
-      { "@type": "Service", "@id": `${pageUrl}#service`, name: "Watch Services", description, provider: { "@type": "ProfessionalService", name: "It’s About Time Inc.", telephone: "+1-770-442-9854", address: { "@type": "PostalAddress", streetAddress: "11300 Medlock Bridge Rd, Suite 300", addressLocality: "Johns Creek", addressRegion: "GA", postalCode: "30097", addressCountry: "US" } }, areaServed: { "@type": "AdministrativeArea", name: "Atlanta Metropolitan Area" }, serviceType: ["Watch repair", "Watch maintenance", "Watch battery replacement", "Watch crystal service", "Watch restoration", "Luxury watch sales", "Watch valuation"], url: pageUrl },
+      { "@type": "Service", "@id": `${pageUrl}#service`, name: "Watch Services", description, provider: { "@type": "ProfessionalService", name: "It’s About Time Inc.", telephone: "+1-770-442-9854", address: { "@type": "PostalAddress", streetAddress: "11300 Medlock Bridge Rd #300", addressLocality: "Johns Creek", addressRegion: "GA", postalCode: "30097", addressCountry: "US" } }, areaServed: { "@type": "AdministrativeArea", name: "Atlanta Metropolitan Area" }, serviceType: ["Watch repair", "Watch maintenance", "Watch battery replacement", "Watch crystal service", "Watch restoration", "Luxury watch sales", "Watch valuation"], url: pageUrl },
       { "@type": "FAQPage", "@id": `${pageUrl}#faq`, mainEntity: faqs.map(([name, text]) => ({ "@type": "Question", name, acceptedAnswer: { "@type": "Answer", text } })) }
     ]
   };
@@ -995,7 +995,7 @@ function makeLocalWatchRepairSchema(slug: "watch-repair-atlanta" | "watch-repair
     "@context": "https://schema.org",
     "@graph": [
       { "@type": "WebPage", "@id": `${pageUrl}#webpage`, url: pageUrl, name: config.title, description: config.description, primaryImageOfPage: `${siteUrl}${config.image}`, isPartOf: { "@id": `${siteUrl}/#website` } },
-      { "@type": "Service", "@id": `${pageUrl}#service`, name: `Watch Repair for ${config.area}`, description: config.description, provider: { "@type": "ProfessionalService", name: "It’s About Time Inc.", telephone: "+1-770-442-9854", address: { "@type": "PostalAddress", streetAddress: "11300 Medlock Bridge Rd, Suite 300", addressLocality: "Johns Creek", addressRegion: "GA", postalCode: "30097", addressCountry: "US" } }, areaServed: { "@type": "City", name: config.area }, serviceType: config.serviceType, url: pageUrl },
+      { "@type": "Service", "@id": `${pageUrl}#service`, name: `Watch Repair for ${config.area}`, description: config.description, provider: { "@type": "ProfessionalService", name: "It’s About Time Inc.", telephone: "+1-770-442-9854", address: { "@type": "PostalAddress", streetAddress: "11300 Medlock Bridge Rd #300", addressLocality: "Johns Creek", addressRegion: "GA", postalCode: "30097", addressCountry: "US" } }, areaServed: { "@type": "City", name: config.area }, serviceType: config.serviceType, url: pageUrl },
       { "@type": "FAQPage", "@id": `${pageUrl}#faq`, mainEntity: config.faqs.map(([name, text]) => ({ "@type": "Question", name, acceptedAnswer: { "@type": "Answer", text } })) }
     ]
   };
@@ -1031,7 +1031,7 @@ function makeWatchBandServiceSchema(slug: "luxury-watch-strap-band-replacement" 
     "@context": "https://schema.org",
     "@graph": [
       { "@type": "WebPage", "@id": `${pageUrl}#webpage`, url: pageUrl, name: config.title, description: config.description, primaryImageOfPage: `${siteUrl}${config.image}`, isPartOf: { "@id": `${siteUrl}/#website` } },
-      { "@type": "Service", "@id": `${pageUrl}#service`, name: config.serviceType[0], description: config.description, provider: { "@type": "ProfessionalService", name: "It’s About Time Inc.", telephone: "+1-770-442-9854", address: { "@type": "PostalAddress", streetAddress: "11300 Medlock Bridge Rd, Suite 300", addressLocality: "Johns Creek", addressRegion: "GA", postalCode: "30097", addressCountry: "US" } }, areaServed: { "@type": "City", name: "Johns Creek" }, serviceType: config.serviceType, url: pageUrl },
+      { "@type": "Service", "@id": `${pageUrl}#service`, name: config.serviceType[0], description: config.description, provider: { "@type": "ProfessionalService", name: "It’s About Time Inc.", telephone: "+1-770-442-9854", address: { "@type": "PostalAddress", streetAddress: "11300 Medlock Bridge Rd #300", addressLocality: "Johns Creek", addressRegion: "GA", postalCode: "30097", addressCountry: "US" } }, areaServed: { "@type": "City", name: "Johns Creek" }, serviceType: config.serviceType, url: pageUrl },
       { "@type": "FAQPage", "@id": `${pageUrl}#faq`, mainEntity: config.questions.map(name => ({ "@type": "Question", name, acceptedAnswer: { "@type": "Answer", text: "Contact our Johns Creek workshop for a personalized evaluation, timing, and clear next-step guidance." } })) }
     ]
   };
@@ -1068,7 +1068,7 @@ function makeRolexBraceletStretchSchema() {
           "@type": "ProfessionalService",
           name: "It’s About Time Inc.",
           telephone: "+1-770-442-9854",
-          address: { "@type": "PostalAddress", streetAddress: "11300 Medlock Bridge Rd, Suite 300", addressLocality: "Johns Creek", addressRegion: "GA", postalCode: "30097", addressCountry: "US" }
+          address: { "@type": "PostalAddress", streetAddress: "11300 Medlock Bridge Rd #300", addressLocality: "Johns Creek", addressRegion: "GA", postalCode: "30097", addressCountry: "US" }
         },
         areaServed: { "@type": "City", name: "Johns Creek" },
         serviceType: ["Rolex bracelet repair", "Rolex bracelet stretch inspection", "Rolex clasp repair", "Rolex bracelet adjustment"],

@@ -15,7 +15,7 @@ const organizationSchema = {
       telephone: "+1-770-442-9854",
       address: {
         "@type": "PostalAddress",
-        streetAddress: "11300 Medlock Bridge Rd, Suite 300",
+        streetAddress: "11300 Medlock Bridge Rd #300",
         addressLocality: "Johns Creek",
         addressRegion: "GA",
         postalCode: "30097",
