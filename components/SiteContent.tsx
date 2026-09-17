@@ -196,6 +196,35 @@ export function SiteContent({ title, html, cta }: Props) {
       mobileNav.setAttribute("aria-label", "Mobile navigation");
       mobileNav.setAttribute("data-open", "false");
       mobileNav.innerHTML = desktopNav.innerHTML;
+      mobileNav.querySelectorAll<HTMLElement>(".site-nav-about").forEach((aboutMenu) => {
+        const aboutToggle = aboutMenu.querySelector<HTMLButtonElement>(".site-nav-about-toggle");
+        const aboutLinks = Array.from(aboutMenu.querySelectorAll<HTMLAnchorElement>(".site-nav-about-menu a"));
+        const aboutUsLink = aboutLinks.find((link) => link.getAttribute("href") === "/about/");
+        const workshopLink = aboutLinks.find((link) => link.getAttribute("href") === "/our-workshop/");
+        if (!aboutToggle || !aboutUsLink || !workshopLink) return;
+        const aboutUsMobileLink = aboutUsLink.cloneNode(true) as HTMLAnchorElement;
+        const workshopMobileLink = workshopLink.cloneNode(true) as HTMLAnchorElement;
+        aboutUsMobileLink.textContent = "About Us";
+        workshopMobileLink.textContent = "Our Workshop";
+        aboutMenu.replaceWith(aboutUsMobileLink, workshopMobileLink);
+      });
+
+      const aboutToggle = desktopNav.querySelector<HTMLButtonElement>(".site-nav-about-toggle");
+      const aboutMenu = desktopNav.querySelector<HTMLElement>(".site-nav-about");
+      const closeAboutMenu = () => aboutToggle?.setAttribute("aria-expanded", "false");
+      const toggleAboutMenu = (event: MouseEvent) => {
+        event.preventDefault();
+        event.stopPropagation();
+        aboutToggle?.setAttribute("aria-expanded", String(aboutToggle.getAttribute("aria-expanded") !== "true"));
+      };
+      aboutToggle?.addEventListener("click", toggleAboutMenu);
+      document.addEventListener("click", closeAboutMenu);
+      window.addEventListener("resize", closeAboutMenu, { passive: true });
+      aboutMenu?.addEventListener("mouseleave", closeAboutMenu);
+      cleanups.push(() => aboutToggle?.removeEventListener("click", toggleAboutMenu));
+      cleanups.push(() => document.removeEventListener("click", closeAboutMenu));
+      cleanups.push(() => window.removeEventListener("resize", closeAboutMenu));
+      cleanups.push(() => aboutMenu?.removeEventListener("mouseleave", closeAboutMenu));
 
       const toggle = document.createElement("button");
       toggle.type = "button";

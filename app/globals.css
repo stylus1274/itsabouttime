@@ -73,6 +73,87 @@ button, input { font: inherit; }
   }
 }
 
+/* The desktop About control retains a six-item header while exposing both company and workshop pages. */
+.site-nav-about {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.site-nav-about-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0;
+  padding: 6px 0;
+  border: 0;
+  background: transparent;
+  color: #1A1A1A;
+  font: inherit;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: .14em;
+  line-height: 1;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: color .3s ease;
+}
+
+.site-nav-about-toggle span {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 1;
+  transition: transform .2s ease;
+}
+
+.site-nav-about-toggle:hover,
+.site-nav-about-toggle:focus-visible { color: #B08D57; outline: none; }
+.site-nav-about-toggle[aria-expanded="true"] span { transform: rotate(180deg); }
+
+.site-nav-about-menu {
+  position: absolute;
+  top: calc(100% + 14px);
+  left: 50%;
+  display: grid;
+  min-width: 176px;
+  padding: 8px;
+  border: 1px solid #ded8cd;
+  background: #F7F5F1;
+  box-shadow: 0 14px 28px rgba(26, 26, 26, .12);
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -6px);
+  transition: opacity .2s ease, transform .2s ease;
+}
+
+.site-nav-about-toggle[aria-expanded="true"] + .site-nav-about-menu,
+.site-nav-about:hover .site-nav-about-menu,
+.site-nav-about:focus-within .site-nav-about-menu {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, 0);
+}
+
+.site-nav-about-menu a {
+  display: block;
+  padding: 12px 14px;
+  color: #1A1A1A;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .11em;
+  line-height: 1.2;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.site-nav-about-menu a:hover,
+.site-nav-about-menu a:focus-visible { background: #ebe6dc; color: #1A1A1A; outline: none; }
+
+@media (min-width: 1181px) and (max-width: 1320px) {
+  [data-hd] > div > nav > .site-nav-about > .site-nav-about-toggle { font-size: 13px !important; letter-spacing: .11em !important; }
+}
+
 .mobile-nav-toggle {
   display: none;
   position: relative;
