@@ -199,7 +199,7 @@ export function SiteContent({ title, html, cta }: Props) {
       mobileNav.querySelectorAll<HTMLElement>(".site-nav-about").forEach((aboutMenu) => {
         const aboutToggle = aboutMenu.querySelector<HTMLButtonElement>(".site-nav-about-toggle");
         const aboutLinks = Array.from(aboutMenu.querySelectorAll<HTMLAnchorElement>(".site-nav-about-menu a"));
-        const aboutUsLink = aboutLinks.find((link) => link.getAttribute("href") === "/about/");
+        const aboutUsLink = aboutLinks.find((link) => link.getAttribute("href") === "/atlanta-watch-service-center-workshop-duluth/");
         const workshopLink = aboutLinks.find((link) => link.getAttribute("href") === "/our-workshop/");
         if (!aboutToggle || !aboutUsLink || !workshopLink) return;
         const aboutUsMobileLink = aboutUsLink.cloneNode(true) as HTMLAnchorElement;
