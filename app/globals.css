@@ -112,7 +112,8 @@ button, input { font: inherit; }
 
 .site-nav-about-menu {
   position: absolute;
-  top: calc(100% + 14px);
+  /* Keep the menu physically connected to its trigger so pointer travel cannot close it. */
+  top: 100%;
   left: 50%;
   display: grid;
   min-width: 176px;

@@ -220,11 +220,9 @@ export function SiteContent({ title, html, cta }: Props) {
       aboutToggle?.addEventListener("click", toggleAboutMenu);
       document.addEventListener("click", closeAboutMenu);
       window.addEventListener("resize", closeAboutMenu, { passive: true });
-      aboutMenu?.addEventListener("mouseleave", closeAboutMenu);
       cleanups.push(() => aboutToggle?.removeEventListener("click", toggleAboutMenu));
       cleanups.push(() => document.removeEventListener("click", closeAboutMenu));
       cleanups.push(() => window.removeEventListener("resize", closeAboutMenu));
-      cleanups.push(() => aboutMenu?.removeEventListener("mouseleave", closeAboutMenu));
 
       const toggle = document.createElement("button");
       toggle.type = "button";
