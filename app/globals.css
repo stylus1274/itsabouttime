@@ -283,6 +283,16 @@ button, input { font: inherit; }
   .mobile-table-scroll { overflow: visible; }
 }
 
+/* Keep the review-only showroom actions clear and comfortably tappable on phones. */
+@media (max-width: 700px) {
+  [data-site-content] #showroom-discovery > div {
+    padding: 64px 20px !important;
+  }
+  [data-site-content] #showroom-discovery .showroom-preview-action {
+    width: 100%;
+  }
+}
+
 /* Shared CTA controls used inside migrated legacy page content. */
 a.btn-dark,
 a.btn-outline {
