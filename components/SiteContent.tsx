@@ -143,16 +143,33 @@ export function SiteContent({ title, html, cta }: Props) {
       root.querySelectorAll<HTMLElement>('section [style*="flex-wrap:nowrap"], main [style*="flex-wrap:nowrap"]').forEach((element) => setMobileStyle(element, "flex-wrap", "wrap"));
       const hero = root.querySelector<HTMLElement>("#top");
       if (hero) {
+        const isWorkshopHero = hero.hasAttribute("data-mobile-workshop-hero");
+        const isRepairFormHero = hero.hasAttribute("data-mobile-repair-form-hero");
         setMobileStyle(hero, "display", "block");
         setMobileStyle(hero, "min-height", "auto");
         const heroCopy = hero.firstElementChild as HTMLElement | null;
         const heroImage = hero.lastElementChild as HTMLElement | null;
-        if (heroCopy) {
+        if (heroCopy && !isWorkshopHero && !isRepairFormHero) {
           setMobileStyle(heroCopy, "padding", "44px 20px 28px");
           setMobileStyle(heroCopy, "align-items", "stretch");
         }
+        if (isWorkshopHero && heroCopy) {
+          setMobileStyle(hero, "padding", "36px 20px 64px");
+          setMobileStyle(heroCopy, "display", "grid");
+          setMobileStyle(heroCopy, "grid-template-columns", "minmax(0, 1fr)");
+          setMobileStyle(heroCopy, "gap", "30px");
+          setMobileStyle(heroCopy, "padding", "0");
+        }
+        if (isRepairFormHero) setMobileStyle(hero, "padding", "32px 20px 64px");
         if (heroImage && heroImage !== heroCopy) setMobileStyle(heroImage, "min-height", "320px");
-        hero.querySelectorAll<HTMLElement>("h1").forEach((heading) => setMobileStyle(heading, "font-size", "clamp(44px, calc(15vw - 4px), 64px)"));
+        hero.querySelectorAll<HTMLElement>("h1").forEach((heading) => {
+          const size = isRepairFormHero
+            ? "clamp(34px, 10vw, 40px)"
+            : isWorkshopHero
+              ? "clamp(42px, 12vw, 50px)"
+              : "clamp(44px, calc(15vw - 4px), 64px)";
+          setMobileStyle(heading, "font-size", size);
+        });
         hero.querySelectorAll<HTMLElement>("p").forEach((paragraph) => {
           setMobileStyle(paragraph, "font-size", "18px");
           setMobileStyle(paragraph, "line-height", "1.55");
