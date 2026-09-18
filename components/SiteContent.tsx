@@ -77,6 +77,16 @@ export function SiteContent({ title, html, cta }: Props) {
     if (!root) return;
     insertMidArticleCta(root, cta);
 
+    const instagramWidget = root.querySelector<HTMLElement>(".elfsight-app-336ffa00-a724-464f-83b5-d192ca5596cb");
+    const elfsightPlatformSrc = "https://static.elfsight.com/platform/platform.js";
+    if (instagramWidget && !document.querySelector(`script[src="${elfsightPlatformSrc}"]`)) {
+      const script = document.createElement("script");
+      script.src = elfsightPlatformSrc;
+      script.async = true;
+      script.dataset.elfsightPlatform = "true";
+      document.head.appendChild(script);
+    }
+
     const revealElements = Array.from(root.querySelectorAll<HTMLElement>("[data-reveal]"));
     const reveal = (element: HTMLElement) => {
       element.style.opacity = "1";
