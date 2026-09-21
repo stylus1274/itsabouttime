@@ -390,6 +390,21 @@ button, input { font: inherit; }
     font-size: clamp(34px, 10vw, 40px) !important;
     line-height: 1.04 !important;
   }
+
+  /* Preserve a readable full-width heading in the Tag Heuer service-options section. */
+  [data-site-content] [data-mobile-tag-service-heading] {
+    align-items: flex-start !important;
+    flex-direction: column !important;
+    gap: 16px !important;
+    margin-bottom: 30px !important;
+  }
+  [data-site-content] [data-mobile-tag-service-heading] > div,
+  [data-site-content] [data-mobile-tag-service-heading] > p {
+    max-width: none !important;
+  }
+  [data-site-content] [data-mobile-tag-service-heading] > p {
+    margin: 0 !important;
+  }
 }
 
 /* Shared CTA controls used inside migrated legacy page content. */
