@@ -721,8 +721,8 @@ a.btn-outline:focus-visible {
 /* Customer-review replacement for the former non-authentic Our Workshop image gallery. */
 .workshop-testimonials {
   padding: 104px 40px;
-  background: #211e1a;
-  color: #f7f5f1;
+  background: #e9e4d8;
+  color: #1f201e;
 }
 
 .workshop-testimonials__inner {
@@ -736,7 +736,7 @@ a.btn-outline:focus-visible {
   gap: 52px;
   align-items: end;
   padding-bottom: 40px;
-  border-bottom: 1px solid rgba(247, 245, 241, .2);
+  border-bottom: 1px solid #cfc5b6;
 }
 
 .workshop-testimonials__eyebrow {
@@ -744,7 +744,7 @@ a.btn-outline:focus-visible {
   align-items: center;
   gap: 14px;
   margin: 0;
-  color: #d6b55e;
+  color: #8a6a2f;
   font: 700 10px/1 Arial, sans-serif;
   letter-spacing: .2em;
   text-transform: uppercase;
@@ -759,7 +759,7 @@ a.btn-outline:focus-visible {
 .workshop-testimonials h2 {
   max-width: 690px;
   margin: 0;
-  color: #fffdf9;
+  color: #1f201e;
   font-family: Georgia, serif;
   font-size: clamp(34px, calc(4.5vw - 4px), 54px);
   font-weight: 500;
@@ -770,7 +770,7 @@ a.btn-outline:focus-visible {
 .workshop-testimonials__header > div > p {
   max-width: 480px;
   margin: 18px 0 0;
-  color: #cfc8bd;
+  color: #625d55;
   font-size: 16px;
   line-height: 1.65;
 }
@@ -788,23 +788,23 @@ a.btn-outline:focus-visible {
   min-height: 236px;
   flex-direction: column;
   padding: 26px 24px 24px;
-  border: 1px solid rgba(247, 245, 241, .16);
-  background: #2b2824;
-  box-shadow: 0 14px 30px rgba(0, 0, 0, .12);
+  border: 1px solid #d2cbbd;
+  background: #f7f5f1;
+  box-shadow: 0 14px 30px rgba(31, 32, 30, .08);
 }
 
 .workshop-testimonials__meta {
   display: flex;
   align-items: center;
   gap: 10px;
-  color: #d7d0c4;
+  color: #6c665d;
   font: 700 9px/1 Arial, sans-serif;
   letter-spacing: .14em;
   text-transform: uppercase;
 }
 
 .workshop-testimonials__stars {
-  color: #d6b55e;
+  color: #8a6a2f;
   font-size: 15px;
   letter-spacing: 2px;
 }
@@ -815,7 +815,7 @@ a.btn-outline:focus-visible {
 
 .workshop-testimonials__card blockquote p {
   margin: 0;
-  color: #fffdf9;
+  color: #1f201e;
   font-size: 15px;
   line-height: 1.66;
 }
