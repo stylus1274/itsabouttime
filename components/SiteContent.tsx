@@ -208,6 +208,54 @@ export function SiteContent({ title, html, cta }: Props) {
     cleanups.push(restoreMobileStyles);
     cleanups.push(restoreMobileTables);
 
+    root.querySelectorAll<HTMLElement>("[data-cert-carousel]").forEach((carousel) => {
+      const showcase = carousel.closest<HTMLElement>("[data-certification-showcase]") ?? root;
+      const cards = Array.from(carousel.querySelectorAll<HTMLElement>("[data-cert-card]"));
+      const previous = showcase.querySelector<HTMLButtonElement>("[data-cert-carousel-prev]");
+      const next = showcase.querySelector<HTMLButtonElement>("[data-cert-carousel-next]");
+      const status = showcase.querySelector<HTMLElement>("[data-cert-carousel-status]");
+      if (!cards.length) return;
+
+      const scrollToCard = (index: number) => {
+        const target = cards[Math.max(0, Math.min(index, cards.length - 1))];
+        carousel.scrollTo({ left: target.offsetLeft - carousel.offsetLeft, behavior: "smooth" });
+        target.focus({ preventScroll: true });
+      };
+      const activeIndex = () => cards.reduce((best, card, index) => {
+        const bestDistance = Math.abs(cards[best].offsetLeft - carousel.offsetLeft - carousel.scrollLeft);
+        const cardDistance = Math.abs(card.offsetLeft - carousel.offsetLeft - carousel.scrollLeft);
+        return cardDistance < bestDistance ? index : best;
+      }, 0);
+      const refresh = () => {
+        const active = activeIndex();
+        cards.forEach((card, index) => {
+          if (index === active) card.setAttribute("aria-current", "true");
+          else card.removeAttribute("aria-current");
+        });
+        if (status) status.textContent = `Certificate ${active + 1} of ${cards.length}`;
+        if (previous) previous.disabled = carousel.scrollLeft <= 4;
+        if (next) next.disabled = carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth - 4;
+      };
+      const onPrevious = () => scrollToCard(activeIndex() - 1);
+      const onNext = () => scrollToCard(activeIndex() + 1);
+      const onKeyDown = (event: KeyboardEvent) => {
+        if (event.key === "ArrowLeft") { event.preventDefault(); onPrevious(); }
+        if (event.key === "ArrowRight") { event.preventDefault(); onNext(); }
+      };
+      const onScroll = () => window.requestAnimationFrame(refresh);
+      previous?.addEventListener("click", onPrevious);
+      next?.addEventListener("click", onNext);
+      carousel.addEventListener("keydown", onKeyDown);
+      carousel.addEventListener("scroll", onScroll, { passive: true });
+      window.addEventListener("resize", refresh, { passive: true });
+      refresh();
+      cleanups.push(() => previous?.removeEventListener("click", onPrevious));
+      cleanups.push(() => next?.removeEventListener("click", onNext));
+      cleanups.push(() => carousel.removeEventListener("keydown", onKeyDown));
+      cleanups.push(() => carousel.removeEventListener("scroll", onScroll));
+      cleanups.push(() => window.removeEventListener("resize", refresh));
+    });
+
     const header = root.querySelector<HTMLElement>("[data-hd]");
     const updateHeaderScrollState = () => header?.setAttribute("data-scrolled", String(window.scrollY > 8));
     updateHeaderScrollState();

@@ -479,3 +479,241 @@ a.btn-outline:focus-visible {
     display: none !important;
   }
 }
+
+/* Documented training credentials on the About page. The native horizontal track remains usable with touch or a scrollbar; the paired buttons provide a clear desktop and keyboard control. */
+.certification-showcase {
+  padding: 104px 56px;
+  background: #e9e4d8;
+  color: #1f201e;
+}
+
+.certification-showcase__inner,
+.about-offerings__inner {
+  max-width: 1328px;
+  margin: 0 auto;
+}
+
+.certification-showcase__header {
+  display: grid;
+  grid-template-columns: minmax(0, .88fr) minmax(300px, .72fr);
+  gap: 72px;
+  align-items: end;
+  margin-bottom: 44px;
+}
+
+.certification-showcase__eyebrow {
+  margin: 0 0 18px;
+  color: #8a6a2f;
+  font: 700 10px/1 Arial, sans-serif;
+  letter-spacing: .18em;
+}
+
+.certification-showcase h2 {
+  max-width: 760px;
+  margin: 0;
+  font-family: Georgia, serif;
+  font-size: clamp(34px, calc(4vw - 4px), 56px);
+  font-weight: 500;
+  line-height: 1.03;
+  letter-spacing: -.045em;
+}
+
+.certification-showcase__intro > p {
+  max-width: 500px;
+  margin: 0;
+  color: #625d55;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.certification-showcase__controls {
+  display: flex;
+  gap: 9px;
+  margin-top: 24px;
+}
+
+.certification-showcase__controls button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  padding: 0;
+  border: 1px solid #1f201e;
+  border-radius: 50%;
+  background: transparent;
+  color: #1f201e;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  transition: background-color .2s ease, color .2s ease, opacity .2s ease;
+}
+
+.certification-showcase__controls button:hover,
+.certification-showcase__controls button:focus-visible {
+  background: #1f201e;
+  color: #fff;
+  outline: none;
+}
+
+.certification-showcase__controls button:disabled {
+  opacity: .35;
+  cursor: default;
+}
+
+.certification-showcase__controls button:disabled:hover {
+  background: transparent;
+  color: #1f201e;
+}
+
+.certification-carousel {
+  display: flex;
+  gap: 20px;
+  padding: 2px 2px 20px;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scrollbar-color: #b8954f transparent;
+  scrollbar-width: thin;
+}
+
+.certification-carousel:focus-visible {
+  outline: 3px solid #8a6a2f;
+  outline-offset: 6px;
+}
+
+.certification-card {
+  display: flex;
+  flex: 0 0 calc((100% - 40px) / 3);
+  min-width: 0;
+  flex-direction: column;
+  scroll-snap-align: start;
+  border: 1px solid #d2cbbd;
+  background: #f7f5f1;
+  box-shadow: 0 12px 30px rgba(31, 32, 30, .08);
+}
+
+.certification-card figure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 330px;
+  margin: 0;
+  padding: 18px;
+  border-bottom: 1px solid #ded8cd;
+  background: #dfdad0;
+}
+
+.certification-card img {
+  display: block;
+  width: 100%;
+  height: 294px;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 12px rgba(31, 32, 30, .15));
+}
+
+.certification-card > div {
+  display: flex;
+  min-height: 158px;
+  flex: 1;
+  flex-direction: column;
+  padding: 25px 24px 24px;
+}
+
+.certification-card p {
+  margin: 0 0 13px;
+  color: #8a6a2f;
+  font: 700 10px/1 Arial, sans-serif;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+
+.certification-card h3 {
+  margin: 0;
+  color: #1f201e;
+  font-family: Georgia, serif;
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 1.08;
+  letter-spacing: -.025em;
+}
+
+.certification-card span {
+  display: block;
+  margin-top: auto;
+  padding-top: 18px;
+  color: #6c665d;
+  font: 600 11px/1.35 Arial, sans-serif;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.certification-carousel__status {
+  margin: 18px 0 0;
+  color: #736c63;
+  font: 700 10px/1 Arial, sans-serif;
+  letter-spacing: .14em;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+.about-offerings {
+  padding: 100px 56px;
+  background: #f7f5f1;
+}
+
+.about-offerings__inner > .body-copy {
+  max-width: 760px;
+}
+
+.about-offerings__steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0;
+  margin-top: 36px;
+  border-top: 1px solid #d7d1c7;
+}
+
+.about-offerings__steps > div {
+  padding: 29px 26px 8px 0;
+  border-right: 1px solid #d7d1c7;
+}
+
+.about-offerings__steps > div + div {
+  padding-left: 26px;
+}
+
+.about-offerings__steps > div:last-child {
+  border-right: 0;
+}
+
+@media (max-width: 900px) {
+  .certification-showcase__header {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .certification-card { flex-basis: calc((100% - 20px) / 2); }
+}
+
+@media (max-width: 700px) {
+  .certification-showcase,
+  .about-offerings { padding: 68px 20px; }
+  .certification-showcase__header { margin-bottom: 34px; }
+  .certification-showcase h2 { font-size: clamp(36px, 11vw, 44px); }
+  .certification-showcase__intro > p { font-size: 15px; }
+  .certification-carousel { gap: 14px; padding-bottom: 17px; }
+  .certification-card { flex-basis: min(84vw, 360px); }
+  .certification-card figure { min-height: 350px; padding: 15px; }
+  .certification-card img { height: 318px; }
+  .certification-card > div { min-height: 148px; padding: 22px 20px; }
+  .certification-card h3 { font-size: 24px; }
+  .about-offerings__steps { grid-template-columns: 1fr; margin-top: 30px; }
+  .about-offerings__steps > div,
+  .about-offerings__steps > div + div {
+    padding: 24px 0;
+    border-right: 0;
+    border-bottom: 1px solid #d7d1c7;
+  }
+  .about-offerings__steps > div:last-child { border-bottom: 0; }
+}
