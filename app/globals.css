@@ -809,6 +809,19 @@ a.btn-outline:focus-visible {
   letter-spacing: 2px;
 }
 
+.workshop-testimonials__google {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.workshop-testimonials__google img {
+  display: block;
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
 .workshop-testimonials__card blockquote {
   margin: 28px 0 0;
 }
