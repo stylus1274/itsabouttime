@@ -717,3 +717,120 @@ a.btn-outline:focus-visible {
   }
   .about-offerings__steps > div:last-child { border-bottom: 0; }
 }
+
+/* Customer-review replacement for the former non-authentic Our Workshop image gallery. */
+.workshop-testimonials {
+  padding: 104px 40px;
+  background: #211e1a;
+  color: #f7f5f1;
+}
+
+.workshop-testimonials__inner {
+  max-width: 1328px;
+  margin: 0 auto;
+}
+
+.workshop-testimonials__header {
+  display: grid;
+  grid-template-columns: minmax(0, .68fr) minmax(280px, 1fr);
+  gap: 52px;
+  align-items: end;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(247, 245, 241, .2);
+}
+
+.workshop-testimonials__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  margin: 0;
+  color: #d6b55e;
+  font: 700 10px/1 Arial, sans-serif;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+}
+
+.workshop-testimonials__eyebrow span {
+  width: 26px;
+  height: 1px;
+  background: currentColor;
+}
+
+.workshop-testimonials h2 {
+  max-width: 690px;
+  margin: 0;
+  color: #fffdf9;
+  font-family: Georgia, serif;
+  font-size: clamp(34px, calc(4.5vw - 4px), 54px);
+  font-weight: 500;
+  line-height: 1.03;
+  letter-spacing: -.045em;
+}
+
+.workshop-testimonials__header > div > p {
+  max-width: 480px;
+  margin: 18px 0 0;
+  color: #cfc8bd;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.workshop-testimonials__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.workshop-testimonials__card {
+  display: flex;
+  min-width: 0;
+  min-height: 236px;
+  flex-direction: column;
+  padding: 26px 24px 24px;
+  border: 1px solid rgba(247, 245, 241, .16);
+  background: #2b2824;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, .12);
+}
+
+.workshop-testimonials__meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #d7d0c4;
+  font: 700 9px/1 Arial, sans-serif;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.workshop-testimonials__stars {
+  color: #d6b55e;
+  font-size: 15px;
+  letter-spacing: 2px;
+}
+
+.workshop-testimonials__card blockquote {
+  margin: 28px 0 0;
+}
+
+.workshop-testimonials__card blockquote p {
+  margin: 0;
+  color: #fffdf9;
+  font-size: 15px;
+  line-height: 1.66;
+}
+
+@media (max-width: 1060px) {
+  .workshop-testimonials__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .workshop-testimonials__card { min-height: 210px; }
+}
+
+@media (max-width: 700px) {
+  .workshop-testimonials { padding: 68px 20px; }
+  .workshop-testimonials__header { grid-template-columns: 1fr; gap: 24px; padding-bottom: 30px; }
+  .workshop-testimonials h2 { font-size: clamp(36px, 11vw, 44px); }
+  .workshop-testimonials__header > div > p { margin-top: 14px; font-size: 15px; }
+  .workshop-testimonials__grid { grid-template-columns: 1fr; gap: 12px; margin-top: 22px; }
+  .workshop-testimonials__card { min-height: 0; padding: 23px 20px; }
+  .workshop-testimonials__card blockquote { margin-top: 20px; }
+}
