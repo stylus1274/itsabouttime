@@ -63,7 +63,7 @@ function insertMidArticleCta(root: HTMLElement, cta?: ArticleCta) {
 
 function replyFor(message: string) {
   const input = message.toLowerCase();
-  if (/hour|open|close|when/.test(input)) return "We’re open Monday to Friday 10 to 6, Saturday 10 to 4, and closed Sunday. Walk-ins are always welcome.";
+  if (/hour|open|close|when/.test(input)) return "We’re open Monday through Saturday from 10 to 6, closed Sunday, and observe holidays. Walk-ins are always welcome.";
   if (/repair|fix|batter|servic|overhaul|crystal|seal/.test(input)) return "Most repairs are walk-in, no appointment needed. You can start one on our Watch Repairs page or call 770-442-9854.";
   if (/sell|valu|buy|worth|trade|price|offer/.test(input)) return "We’d be glad to value your watch, running or not. Bring it in or call 770-442-9854 and a certified watchmaker will help.";
   return "Thanks for your message. A specialist will be with you shortly. For the fastest answer, call 770-442-9854.";
