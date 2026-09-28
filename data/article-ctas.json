@@ -1359,5 +1359,21 @@
       "Certified Technicians",
       "Warranty Protection"
     ]
+  },
+  "vintage-omega-speedmaster-service": {
+    "type": "repair",
+    "placement": 0.45,
+    "eyebrow": "Vintage Speedmaster Service",
+    "headline": "Care for Your Vintage Omega",
+    "description": "Tell the workshop about your model and its condition. We will review the service needs and recommend a clear next step.",
+    "buttonLabel": "Start a Repair Request",
+    "secondaryLabel": "Call the Workshop",
+    "primaryHref": "/repair-form/",
+    "secondaryHref": "tel:+17704429854",
+    "benefits": [
+      "Respect for appropriate original components",
+      "Manufacturer-supplied replacement parts where needed",
+      "Clear service recommendations"
+    ]
   }
 }

@@ -3,6 +3,7 @@ import type { MetadataRoute } from "next";
 export const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://itsabouttime-psi.vercel.app").replace(/\/$/, "");
 
 export const articleDates: Record<string, string> = {
+  "/vintage-omega-speedmaster-service/": "2026-09-28T20:30:00+00:00",
   "/benrus-legacy/": "2026-08-25T00:00:00+00:00",
   "/benrus-ultra-deep/": "2026-08-25T00:00:00+00:00",
   "/bulova-repair/": "2026-08-25T00:00:00+00:00",
@@ -187,6 +188,7 @@ export const routes = [
   "/rado-authorized-workshop-and-watchmakers/",
   "/baume-and-mercier-watches/",
   "/watch-blogs/",
+  "/vintage-omega-speedmaster-service/",
   "/watch-submission-form/",
   "/disclaimer/",
   "/privacy-policy/",

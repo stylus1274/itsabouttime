@@ -13,6 +13,27 @@ type Faq = readonly [name: string, answer: string];
 type ArticleSeo = FallbackArticleSeo;
 
 const articleSeo: Record<string, ArticleSeo> = {
+  "vintage-omega-speedmaster-service": {
+    title: "Vintage Omega Speedmaster Service & Repair | It’s About Time",
+    headline: "Vintage Omega Speedmaster Service: Preserving History While Doing the Job Right",
+    description: "Learn when original vintage Omega Speedmaster parts can be preserved, when replacement is responsible, and how complete service protects a collectible chronograph.",
+    path: "/vintage-omega-speedmaster-service/",
+    image: "/assets/articles/vintage-omega-speedmaster-ck2915.jpg",
+    imageWidth: 2560,
+    imageHeight: 1920,
+    imageAlt: "1959 Omega Speedmaster CK2915 with broad-arrow hands and stainless-steel bezel",
+    publishedTime: "2026-09-28T00:00:00-04:00",
+    modifiedTime: "2026-09-28T20:30:00+00:00",
+    section: "Vintage Watch Service",
+    keywords: ["vintage Omega Speedmaster service", "Omega Speedmaster repair", "vintage Speedmaster restoration", "Omega chronograph service", "vintage Omega watch repair"],
+    faqs: [
+      ["Can a vintage Omega Speedmaster keep its original pushers and gaskets?", "Sometimes. If those components can be properly removed, remain within acceptable tolerances, and can be correctly serviced and reinstalled, there may be no reason to replace them. The decision depends on the condition of each part after inspection and disassembly."],
+      ["Why might a vintage Speedmaster need a replacement component?", "Pushers, gaskets, crystals, seals, crowns, and other components can become dry, hardened, worn, brittle, corroded, or otherwise unsuitable over time. Retaining a component that can no longer perform its intended function can compromise the integrity of the service."],
+      ["Will an Omega replacement part look exactly like the original?", "Not always. Manufacturers periodically update components to improve reliability, performance, durability, or manufacturing consistency. A replacement component may have a slightly different appearance while still being the appropriate component for the service."],
+      ["Can a watchmaker guarantee every original part will remain before service begins?", "No. A complete service requires complete disassembly, and the condition of every component cannot be confirmed from the outside of the watch. Appropriate components are preserved whenever reasonably possible, but replacement may be needed after inspection."],
+      ["What is the right approach to servicing a collectible vintage watch?", "Preserve what can be preserved, replace what must be replaced, follow the manufacturer’s service requirements, and make choices that allow the completed work to be performed and supported responsibly."]
+    ]
+  },
   "benrus-legacy": {
     title: "Benrus Watches: History, Collecting & Repair | It’s About Time",
     headline: "Exploring the Legacy and Craftsmanship of Benrus Watches",
