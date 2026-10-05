@@ -22,8 +22,8 @@ const articleSeo: Record<string, ArticleSeo> = {
     imageWidth: 1172,
     imageHeight: 983,
     imageAlt: "Close view of a mechanical chronograph movement with its column wheel and timing components",
-    publishedTime: "2026-10-05T00:00:00-04:00",
-    modifiedTime: "2026-10-05T20:55:00+00:00",
+    publishedTime: "2026-09-14T00:00:00-04:00",
+    modifiedTime: "2026-09-14T00:00:00+00:00",
     section: "Watch Repair",
     keywords: ["chronograph service", "chronograph repair", "chronograph reset problem", "watch stopwatch repair", "chronograph watch repair Johns Creek"],
     faqs: [
