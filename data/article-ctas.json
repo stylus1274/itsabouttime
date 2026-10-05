@@ -1375,5 +1375,21 @@
       "Manufacturer-supplied replacement parts where needed",
       "Clear service recommendations"
     ]
+  },
+  "when-does-a-chronograph-need-service": {
+    "type": "repair",
+    "placement": 0.45,
+    "eyebrow": "Chronograph Care",
+    "headline": "Get a Clear Assessment for Your Chronograph",
+    "description": "If your chronograph is not starting, stopping, or resetting correctly, start a repair request and our team will review its condition before work begins.",
+    "buttonLabel": "Start a Repair",
+    "secondaryLabel": "Call the Workshop",
+    "primaryHref": "/repair-form/",
+    "secondaryHref": "tel:+17704429854",
+    "benefits": [
+      "Evaluation based on your watch's condition",
+      "Careful review of the start, stop, and reset functions",
+      "Clear next-step recommendation before work begins"
+    ]
   }
 }

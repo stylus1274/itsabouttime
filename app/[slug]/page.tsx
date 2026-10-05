@@ -13,6 +13,29 @@ type Faq = readonly [name: string, answer: string];
 type ArticleSeo = FallbackArticleSeo;
 
 const articleSeo: Record<string, ArticleSeo> = {
+  "when-does-a-chronograph-need-service": {
+    title: "Chronograph Service Signs | It’s About Time",
+    headline: "When Does a Chronograph Need Service? Signs Your Stopwatch Watch Needs Attention",
+    description: "Learn the warning signs that a chronograph’s pushers, reset function, or timing mechanism may need professional attention.",
+    path: "/when-does-a-chronograph-need-service/",
+    image: "/assets/articles/chronograph-movement.jpg",
+    imageWidth: 1172,
+    imageHeight: 983,
+    imageAlt: "Close view of a mechanical chronograph movement with its column wheel and timing components",
+    publishedTime: "2026-10-05T00:00:00-04:00",
+    modifiedTime: "2026-10-05T20:55:00+00:00",
+    section: "Watch Repair",
+    keywords: ["chronograph service", "chronograph repair", "chronograph reset problem", "watch stopwatch repair", "chronograph watch repair Johns Creek"],
+    faqs: [
+      ["Can I still wear my chronograph if the stopwatch function does not work?", "It depends on the issue. A chronograph can sometimes continue keeping regular time while the stopwatch function is not operating correctly. However, avoid forcing the pushers or repeatedly testing a malfunctioning function. An inspection can help identify whether the issue is isolated or part of a broader concern."],
+      ["Why does my chronograph reset slightly off zero?", "A chronograph hand that does not return to its intended reset position may need adjustment or service. The cause depends on the watch and movement type, so it should be evaluated rather than corrected by force."],
+      ["Does a chronograph need different care than a standard watch?", "A chronograph has additional timing components, so its start, stop, and reset functions introduce more parts that need to work together correctly. Regular care depends on the specific watch, how it is used, and its condition."],
+      ["Can a water-resistant chronograph be used in water?", "Water resistance depends on the watch's rating, the condition of its seals, and the manufacturer's instructions for that specific model. A past water-resistance test does not guarantee permanent protection. If the watch has been exposed to water or shows condensation, have it checked before relying on it again."],
+      ["Should I press chronograph buttons underwater?", "Follow the manufacturer's instructions for your exact model. If the watch's water resistance is unknown or has not been evaluated recently, avoid pressing the pushers underwater."],
+      ["Is a chronograph problem always a sign of a full overhaul?", "No. The right recommendation depends on the individual watch and the source of the problem. A pusher concern, reset issue, moisture exposure, battery-related issue, or movement problem can require different steps. An inspection is the right starting point."],
+      ["Can a vintage chronograph be serviced while keeping original parts?", "In many cases, preserving original components is an important consideration. Whether a part can remain in service depends on its condition, the watch's function, and what is needed for reliable operation. A watchmaker can explain the options after evaluating the specific watch."]
+    ]
+  },
   "vintage-omega-speedmaster-service": {
     title: "Vintage Omega Speedmaster Service & Repair | It’s About Time",
     headline: "Vintage Omega Speedmaster Service: Preserving History While Doing the Job Right",
