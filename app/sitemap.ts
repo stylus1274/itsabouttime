@@ -124,7 +124,11 @@ export const articleDates: Record<string, string> = {
   "/distinctive-features-that-make-the-benrus-sky-chief-a-collectible/": "2026-08-25T00:00:00+00:00"
 };
 
-const defaultLastModified = new Date("2026-08-25T00:00:00+00:00");
+export const defaultLastModified = new Date("2026-08-25T00:00:00+00:00");
+export const pageSitemapLastModified = defaultLastModified.toISOString();
+export const postSitemapLastModified = new Date(
+  Math.max(...Object.values(articleDates).map((date) => new Date(date).getTime()))
+).toISOString();
 
 export const routes = [
   "",
