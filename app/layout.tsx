@@ -14,7 +14,9 @@ const organizationSchema = {
       name: "It’s About Time Inc.",
       url: `${siteUrl}/`,
       image: `${siteUrl}/assets/hero-watch.webp`,
+      logo: { "@type": "ImageObject", url: `${siteUrl}/icon.png`, width: 512, height: 512 },
       telephone: "+1-770-442-9854",
+      sameAs: ["https://www.instagram.com/itsabouttimenews/"],
       address: {
         "@type": "PostalAddress",
         streetAddress: "11300 Medlock Bridge Rd #300",
@@ -22,7 +24,15 @@ const organizationSchema = {
         addressRegion: "GA",
         postalCode: "30097",
         addressCountry: "US"
-      }
+      },
+      openingHoursSpecification: [
+        {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+          opens: "10:00",
+          closes: "18:00"
+        }
+      ]
     },
     {
       "@type": "WebSite",
