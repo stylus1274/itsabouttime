@@ -15,7 +15,9 @@ const nextConfig: NextConfig = {
       { source: "/bulova-repair.html", destination: "/bulova-repair/", permanent: true },
       { source: "/dial-refinishing-vs-replacement.html", destination: "/dial-refinishing-vs-dial-replacement/", permanent: true },
       { source: "/dial-refinishing-vs-replacement", destination: "/dial-refinishing-vs-dial-replacement/", permanent: true },
-      { source: "/dial-refinishing-vs-replacement/", destination: "/dial-refinishing-vs-dial-replacement/", permanent: true }
+      { source: "/dial-refinishing-vs-replacement/", destination: "/dial-refinishing-vs-dial-replacement/", permanent: true },
+      { source: "/luxury-watch-repair-atlanta", destination: "/watch-repair-atlanta/", permanent: true },
+      { source: "/luxury-watch-repair-atlanta/", destination: "/watch-repair-atlanta/", permanent: true }
     ];
   }
 };

@@ -13,6 +13,20 @@ type Faq = readonly [name: string, answer: string];
 type ArticleSeo = FallbackArticleSeo;
 
 const articleSeo: Record<string, ArticleSeo> = {
+  "watch-repair-or-replace-atlanta": {
+    title: "Repair or Replace a Watch? Atlanta Guide | It’s About Time",
+    headline: "Should You Repair or Replace a Watch? An Atlanta Owner’s Guide",
+    description: "Compare watch repair and replacement based on condition, value, cost, parts, and sentimental importance, with guidance from Atlanta-area watchmakers.",
+    path: "/watch-repair-or-replace-atlanta/",
+    image: "/assets/articles/source-hero-watch-repair-or-replace-atlanta.jpg",
+    imageWidth: 1179,
+    imageHeight: 654,
+    imageAlt: "IWC chronograph dial held during a workshop inspection",
+    publishedTime: "2025-10-22T14:20:59+00:00",
+    modifiedTime: "2026-10-18T00:00:00-04:00",
+    section: "Watch Care",
+    keywords: ["repair or replace a watch", "is watch repair worth it", "watch repair decision", "watch repair Atlanta"]
+  },
   "when-does-a-chronograph-need-service": {
     title: "Chronograph Service Signs | It’s About Time",
     headline: "When Does a Chronograph Need Service? Signs Your Stopwatch Watch Needs Attention",
@@ -897,8 +911,8 @@ function makeAboutPageSchema() {
 function makeLocalWatchRepairSchema(slug: "watch-repair-atlanta" | "watch-repair-in-dunwoody" | "watch-repair-buford" | "watch-repair-alpharetta" | "watch-repair-buckhead" | "watch-repair-suwanee" | "watch-repair-peachtree-corners" | "watch-repair-cumming" | "watch-repair-chamblee" | "watch-repair-brookhaven") {
   const configurations = {
     "watch-repair-atlanta": {
-      title: "Watch Repair in Atlanta, GA | It’s About Time",
-      description: "Professional watch repair serving Atlanta from the Johns Creek workshop for luxury, mechanical, quartz, vintage, and everyday watches.",
+      title: "Watch Repair Atlanta, GA | Certified Watchmakers",
+      description: "Certified watch repair for Atlanta from our Johns Creek workshop, including luxury, mechanical, quartz, vintage, battery, overhaul, and restoration service.",
       image: "/assets/pages/watch-repair-atlanta.jpg",
       area: "Atlanta",
       serviceType: ["Watch repair", "Luxury watch repair", "Watch restoration", "Water-damage repair"],
@@ -1227,24 +1241,45 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       twitter: { card: "summary", title: "Refund and Returns Policy | It’s About Time", description: "Refund, return, exchange, shipping, and watch-service policy information." }
     };
   }
+  if (slug === "watch-repairs") {
+    return {
+      title: { absolute: "Watch Repair Form & Battery Service | Johns Creek" },
+      description: "Start a repair and learn about professional watch battery replacement, gasket care, resealing, function checks, and pressure testing in Johns Creek.",
+      keywords: ["watch repair form", "watch battery replacement Johns Creek", "watch pressure testing", "watch gasket replacement", "watch repair Johns Creek"],
+      alternates: { canonical: "/watch-repairs/" },
+      robots: { index: true, follow: true },
+      openGraph: {
+        type: "website",
+        url: "/watch-repairs/",
+        siteName: "It’s About Time",
+        title: "Watch Repair Form & Battery Service | Johns Creek",
+        description: "Start a repair and learn about professional battery replacement, resealing, and pressure testing in Johns Creek."
+      },
+      twitter: {
+        card: "summary",
+        title: "Watch Repair Form & Battery Service | Johns Creek",
+        description: "Start a repair and learn about professional battery replacement, resealing, and pressure testing in Johns Creek."
+      }
+    };
+  }
   if (slug === "workshop") {
     return {
-      title: { absolute: "Watch Repairs & Our Workshop | It’s About Time" },
+      title: { absolute: "Our Johns Creek Watchmaking Workshop | It’s About Time" },
       description: "Explore It’s About Time’s Johns Creek watch repair workshop for diagnostics, movement service, restoration, water-resistance testing, and free repair estimates.",
-      keywords: ["watch repair workshop Johns Creek", "Atlanta watch repair", "watch restoration", "WOSTEP watchmaker", "mechanical watch service"],
+      keywords: ["watch repair workshop Johns Creek", "watchmaking workshop", "watch restoration workshop", "WOSTEP watchmaker", "mechanical watch service"],
       alternates: { canonical: "/workshop/" },
       robots: { index: true, follow: true },
       openGraph: {
         type: "website",
         url: "/workshop/",
         siteName: "It’s About Time",
-        title: "Watch Repairs & Our Workshop | It’s About Time",
+        title: "Our Johns Creek Watchmaking Workshop | It’s About Time",
         description: "Explore It’s About Time’s in-house Johns Creek workshop for watch repair, restoration, diagnostics, and service estimates.",
         images: [{ url: "/assets/pages/workshop-movement.jpg", width: 2028, height: 2048, alt: "Mechanical watch movement in progress at the It’s About Time workshop" }]
       },
       twitter: {
         card: "summary_large_image",
-        title: "Watch Repairs & Our Workshop | It’s About Time",
+        title: "Our Johns Creek Watchmaking Workshop | It’s About Time",
         description: "Explore It’s About Time’s in-house Johns Creek workshop for watch repair, restoration, diagnostics, and service estimates.",
         images: ["/assets/pages/workshop-movement.jpg"]
       }
@@ -1260,7 +1295,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     "atlanta-watch-service-center-workshop-duluth": { title: "About It’s About Time | Johns Creek Watchmakers", description: "Learn about It’s About Time Inc., a Johns Creek destination for expert watch repair, service, restoration, and curated watch sales.", keywords: ["About It’s About Time", "Johns Creek watchmakers", "Atlanta watch repair", "luxury watch service", "watch showroom Johns Creek"], image: "/assets/pages/atlanta-watch-service-center-workshop-duluth-hero.jpg", imageWidth: 2400, imageHeight: 1602, alt: "It’s About Time watchmaker completing precision service in Johns Creek" },
     "expert-rolex-watch-repair-buford": { title: "Professional Rolex Watch Repair in Buford, GA | It’s About Time", description: "Specialist Rolex watch repair for Buford owners from the Johns Creek workshop, including movement overhaul, polishing, water-resistance testing, crystal replacement, and crown or stem repair.", keywords: ["Rolex watch repair Buford", "Rolex service Buford", "Rolex movement overhaul", "Rolex water resistance testing"], image: "/assets/pages/expert-rolex-watch-repair-buford-hero.png", imageWidth: 1000, imageHeight: 691, alt: "Rolex watch from the legacy Buford Rolex repair page" },
     "watch-battery-replacement-in-suwanee-ga": { title: "Watch Battery Replacement in Suwanee, GA | It’s About Time", description: "Professional watch battery replacement for Suwanee owners from the Johns Creek workshop, with premium batteries and careful service for luxury, vintage, sport, digital, and everyday watches.", keywords: ["watch battery replacement Suwanee", "same day watch battery Suwanee", "luxury watch battery service", "watch repair Suwanee"], image: "/assets/pages/watch-battery-replacement-in-suwanee-ga-hero.jpg", imageWidth: 700, imageHeight: 467, alt: "Watchmaker replacing a battery from the legacy Suwanee battery-service page" },
-    "watch-repair-atlanta": { title: "Watch Repair in Atlanta, GA | It’s About Time", description: "Professional watch repair serving Atlanta from the Johns Creek workshop for luxury, mechanical, quartz, vintage, and everyday watches.", keywords: ["watch repair Atlanta", "luxury watch repair Atlanta", "watch restoration Atlanta", "watch repair Johns Creek"], image: "/assets/pages/watch-repair-atlanta.jpg", imageWidth: 2560, imageHeight: 1460, alt: "Tag Heuer Aquaracer watch worn on a wrist" },
+    "watch-repair-atlanta": { title: "Watch Repair Atlanta, GA | Certified Watchmakers", description: "Certified watch repair for Atlanta from our Johns Creek workshop, including luxury, mechanical, quartz, vintage, battery, overhaul, and restoration service.", keywords: ["watch repair Atlanta", "Atlanta watch repair", "watch repairs Atlanta", "watch repair Atlanta GA", "luxury watch repair Atlanta", "watch repair Johns Creek"], image: "/assets/pages/watch-repair-atlanta.jpg", imageWidth: 2560, imageHeight: 1460, alt: "Tag Heuer Aquaracer watch worn on a wrist" },
     "watch-repair-in-dunwoody": { title: "Watch Repair in Dunwoody, GA | It’s About Time", description: "Professional watch repair for Dunwoody customers, completed in the Johns Creek workshop for luxury, mechanical, quartz, vintage, and everyday watches.", keywords: ["watch repair Dunwoody", "luxury watch repair Dunwoody", "watch repair near Dunwoody", "watch restoration Johns Creek"], image: "/assets/pages/watch-repair-dunwoody.jpg", imageWidth: 1800, imageHeight: 1200, alt: "Rolex Explorer watch and bracelet on a black background" },
     "watch-repair-buford": { title: "Watch Repair in Buford, GA | It’s About Time", description: "Professional watch repair for Buford customers, completed in the Johns Creek workshop for luxury, mechanical, quartz, vintage, and everyday watches.", keywords: ["watch repair Buford", "luxury watch repair Buford", "watch repair near Buford", "watch restoration Johns Creek"], image: "/assets/pages/watch-repair-buford.jpg", imageWidth: 2400, imageHeight: 1602, alt: "Customer receiving watch service at the It’s About Time showroom counter" },
     "watch-repair-alpharetta": { title: "Watch Repair in Alpharetta, GA | It’s About Time", description: "Professional watch repair for Alpharetta customers, completed in the Johns Creek workshop for luxury, mechanical, quartz, vintage, and everyday watches.", keywords: ["watch repair Alpharetta", "luxury watch repair Alpharetta", "watch repair near Alpharetta", "watch restoration Johns Creek"], image: "/assets/pages/watch-repair-alpharetta.jpg", imageWidth: 450, imageHeight: 450, alt: "Close-up of a watch movement, balance assembly, gears, and precision service tools" },

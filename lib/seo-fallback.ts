@@ -168,7 +168,7 @@ export function makeGenericPageSchema(siteUrl: string, slug: string, page: Conte
 
 export function normalizeSeoHeadings(slug: string, html: string) {
   const formHeadings: Record<string, string> = {
-    "watch-repairs": "Watch Repair Form",
+    "watch-repairs": "Watch Repair Form & Battery Service",
     "repair-form": "Watch Repair Form",
     "watch-submission-form": "Sell Your Watch"
   };
