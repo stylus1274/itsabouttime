@@ -125,6 +125,9 @@ export const articleDates: Record<string, string> = {
 
 export const defaultLastModified = new Date("2026-08-25T00:00:00+00:00");
 export const pageSitemapLastModified = defaultLastModified.toISOString();
+export const pageDates: Record<string, string> = {
+  "/sell-your-luxury-watch/": "2026-10-19T00:00:00-04:00",
+};
 export const postSitemapLastModified = new Date(
   Math.max(...Object.values(articleDates).map((date) => new Date(date).getTime()))
 ).toISOString();
@@ -321,7 +324,7 @@ export const routes = [
 export default function sitemap(): MetadataRoute.Sitemap {
   return routes.map((route) => ({
     url: `${siteUrl}${route}`,
-    lastModified: new Date(articleDates[route] ?? defaultLastModified),
+    lastModified: new Date(articleDates[route] ?? pageDates[route] ?? defaultLastModified),
     changeFrequency: articleDates[route] ? "monthly" : "weekly",
     priority: route === "" ? 1 : articleDates[route] ? 0.8 : 0.7
   }));
