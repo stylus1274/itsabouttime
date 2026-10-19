@@ -54,7 +54,7 @@ function serviceLayout(content: string): string {
     const heading = section.match(/<h2>[\s\S]*?<\/h2>/)?.[0] ?? "";
     const copy = section.replace(heading, "");
     if (index === 1 || index === 2) {
-      const cards = copy.split(/(?=<h3>)/).filter(Boolean).map((card, number) =>
+      const cards = copy.split(/(?=<h3>)/).filter(part => part.trim()).map((card, number) =>
         `<div class="sell-card"><span class="sell-number">${String(number + 1).padStart(2, "0")}</span>${card.replace(/(<h3>)\d+\. /, "$1")}</div>`).join("");
       return `<section class="sell-band ${index === 1 ? "sell-dark" : "sell-stone"}"><div class="sell-wrap"><p class="sell-label">${index === 1 ? "A considered offer" : "The process"}</p>${heading}<div class="sell-cards">${cards}</div></div></section>`;
     }
@@ -63,7 +63,7 @@ function serviceLayout(content: string): string {
       return `<section class="sell-band"><div class="sell-wrap sell-split">${image}<div><p class="sell-label">Condition &amp; service</p>${heading}${copy.replace(image, "")}</div></div></section>`;
     }
     if (index === 6) {
-      const faqs = copy.split(/(?=<h3>)/).filter(Boolean).map(faq => faq.replace(/<h3>(.*?)<\/h3>([\s\S]*)/, '<details><summary>$1<span aria-hidden="true">+</span></summary>$2</details>')).join("");
+      const faqs = copy.split(/(?=<h3>)/).filter(part => part.trim()).map(faq => faq.replace(/<h3>(.*?)<\/h3>([\s\S]*)/, '<details><summary>$1<span aria-hidden="true">+</span></summary>$2</details>')).join("");
       return `<section class="sell-band"><div class="sell-wrap sell-faq"><p class="sell-label">Common questions</p>${heading}${faqs}</div></section>`;
     }
     if (index === 7) return `<section class="sell-band sell-gold"><div class="sell-wrap sell-close">${heading}${copy}</div></section>`;
