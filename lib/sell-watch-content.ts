@@ -1,5 +1,5 @@
 // Both photographs were already used on this website's selling page.
-export const sellWatchContent = `<main class="sell-guide">
+const articleContent = `<main class="sell-guide">
 <style>
 .sell-guide{background:#f6f5f1;color:#24251f;padding:64px 24px 80px}.sell-guide article{max-width:900px;margin:auto}.sell-guide h1{font-size:clamp(36px,6vw,60px);line-height:1.1;margin:12px 0 28px}.sell-guide h2{font-size:clamp(26px,4vw,36px);line-height:1.2;margin:52px 0 20px}.sell-guide h3{font-size:23px;line-height:1.3;margin:28px 0 12px}.sell-guide p,.sell-guide li{font-size:18px;line-height:1.8}.sell-guide p{margin:0 0 20px}.sell-guide a{color:#665024;text-decoration:underline;text-underline-offset:4px}.sell-guide a:focus-visible{outline:3px solid #665024;outline-offset:4px}.sell-guide figure{margin:28px 0}.sell-guide img{display:block;width:100%;height:auto;border-radius:8px}.sell-guide .support-photo{max-width:560px;margin:28px auto}.sell-guide figcaption{font-size:14px;line-height:1.5;color:#626257;margin-top:10px}.sell-guide ul{padding-left:24px}.sell-guide .sell-cta{display:inline-block;background:#252b25;color:#fff;padding:14px 22px;border-radius:4px;text-decoration:none}.sell-guide .eyebrow{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#665024}@media(max-width:600px){.sell-guide{padding:36px 20px 56px}.sell-guide p,.sell-guide li{font-size:17px}.sell-guide h2{margin-top:36px}}
 </style><article>
@@ -42,3 +42,60 @@ export const sellWatchContent = `<main class="sell-guide">
 <h3>How long does the assessment take?</h3><p>Our team follows up on submissions within one to five business days and aims to present an offer within one to five business days after receiving the watch. Confirm the expected timing when arranging your assessment.</p>
 <h2>Ready to Discuss Selling Your Watch?</h2><p>Whether your watch is regularly worn, sitting in a drawer or waiting for service, you can begin with a few details and photographs.</p><p>It’s About Time serves Atlanta-area watch owners from its Johns Creek workshop at <strong>11300 Medlock Bridge Road, Suite 300, Johns Creek, GA 30097</strong>.</p><p><a class="sell-cta" href="/watch-submission-form/">Start your watch-selling inquiry</a> or call <a href="tel:7704429854">770-442-9854</a>.</p>
 </article></main>`;
+
+// Keep the approved copy separate from the site's service-page presentation.
+function serviceLayout(content: string): string {
+  const article = content.match(/<article>([\s\S]*?)<\/article>/)?.[1];
+  if (!article) throw new Error("Selling guide article is missing");
+  const [intro, ...sections] = article.split(/(?=<h2>)/);
+  const photo = intro.match(/<figure>[\s\S]*?<\/figure>/)?.[0] ?? "";
+  const hero = intro.replace(photo, "");
+  const body = sections.map((section, index) => {
+    const heading = section.match(/<h2>[\s\S]*?<\/h2>/)?.[0] ?? "";
+    const copy = section.replace(heading, "");
+    if (index === 1 || index === 2) {
+      const cards = copy.split(/(?=<h3>)/).filter(Boolean).map((card, number) =>
+        `<div class="sell-card"><span class="sell-number">${String(number + 1).padStart(2, "0")}</span>${card.replace(/(<h3>)\d+\. /, "$1")}</div>`).join("");
+      return `<section class="sell-band ${index === 1 ? "sell-dark" : "sell-stone"}"><div class="sell-wrap"><p class="sell-label">${index === 1 ? "A considered offer" : "The process"}</p>${heading}<div class="sell-cards">${cards}</div></div></section>`;
+    }
+    if (index === 3) {
+      const image = copy.match(/<figure[\s\S]*?<\/figure>/)?.[0] ?? "";
+      return `<section class="sell-band"><div class="sell-wrap sell-split">${image}<div><p class="sell-label">Condition &amp; service</p>${heading}${copy.replace(image, "")}</div></div></section>`;
+    }
+    if (index === 6) {
+      const faqs = copy.split(/(?=<h3>)/).filter(Boolean).map(faq => faq.replace(/<h3>(.*?)<\/h3>([\s\S]*)/, '<details><summary>$1<span aria-hidden="true">+</span></summary>$2</details>')).join("");
+      return `<section class="sell-band"><div class="sell-wrap sell-faq"><p class="sell-label">Common questions</p>${heading}${faqs}</div></section>`;
+    }
+    if (index === 7) return `<section class="sell-band sell-gold"><div class="sell-wrap sell-close">${heading}${copy}</div></section>`;
+    return `<section class="sell-band ${index === 5 ? "sell-stone" : ""}"><div class="sell-wrap sell-editorial"><div><p class="sell-label">${index === 0 ? "Selling your watch" : index === 4 ? "Preparing your submission" : "Our workshop"}</p>${heading}</div><div>${copy}</div></div></section>`;
+  }).join("");
+  return `<main class="sell-service"><style>
+.sell-service{background:#f7f5f1;color:#292622;font-family:Arial,sans-serif}
+.sell-service *{box-sizing:border-box}.sell-service .sell-wrap{max-width:1360px;margin:auto;padding-left:56px;padding-right:56px}
+.sell-service .sell-band{padding:88px 0}.sell-service .sell-hero{padding-top:40px;padding-bottom:80px}
+.sell-service .sell-breadcrumb{display:flex;flex-wrap:wrap;gap:10px;font-size:10px;letter-spacing:.17em;margin-bottom:54px;text-transform:uppercase;color:#777068}
+.sell-service .sell-breadcrumb a{color:inherit;text-decoration:none}
+.sell-service .sell-split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:64px;align-items:center}
+.sell-service h1,.sell-service h2,.sell-service h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500}
+.sell-service h1{font-size:clamp(42px,5vw,70px);line-height:1.02;letter-spacing:-.035em;margin:0 0 26px}
+.sell-service h2{font-size:clamp(34px,4vw,54px);line-height:1.06;letter-spacing:-.025em;margin:0 0 28px;max-width:780px}
+.sell-service h3{font-size:27px;line-height:1.15;margin:16px 0}
+.sell-service p,.sell-service li{font-size:16px;line-height:1.75;color:#625c55}.sell-service p{margin:0 0 20px}
+.sell-service a{color:#755b2b;text-underline-offset:4px}.sell-service a:focus-visible,.sell-service summary:focus-visible{outline:3px solid #b08d57;outline-offset:5px}
+.sell-service .eyebrow,.sell-service .sell-label{color:#96733e;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.2em;margin-bottom:20px}
+.sell-service figure{margin:0}.sell-service img{display:block;width:100%;height:auto;object-fit:cover;border-radius:0}
+.sell-service .sell-hero img{aspect-ratio:1.05;object-fit:cover}.sell-service .support-photo img{aspect-ratio:1;object-fit:cover}
+.sell-service figcaption{font-size:12px;line-height:1.6;color:#777068;margin-top:12px}
+.sell-service .sell-cta{display:inline-block;background:#1a1a1a;color:#fff;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.12em;line-height:1.6;padding:17px 22px;text-decoration:none}
+.sell-service .sell-editorial{display:grid;grid-template-columns:.8fr 1.2fr;gap:80px}
+.sell-service .sell-dark{background:#1a1a1a;color:#f7f5f1}.sell-service .sell-dark p{color:#ccc5bc}.sell-service .sell-dark a{color:#dec28b}.sell-service .sell-dark .sell-label{color:#d8b678}
+.sell-service .sell-stone{background:#ece7df}.sell-service .sell-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;margin-top:40px;border-top:1px solid #a59c8d}
+.sell-service .sell-card{padding:28px 24px 18px 0;border-bottom:1px solid #a59c8d}.sell-service .sell-number{font-family:Georgia,serif;font-size:25px;color:#b08d57}
+.sell-service .sell-faq{max-width:1040px}.sell-service details{border-bottom:1px solid #d8d2c8;padding:22px 0}.sell-service summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:20px;font-family:Georgia,serif;font-size:21px;line-height:1.4}.sell-service summary::-webkit-details-marker{display:none}.sell-service details p{margin:18px 32px 0 0}.sell-service details[open] summary span{transform:rotate(45deg)}
+.sell-service .sell-gold{background:#b8954f}.sell-service .sell-close{max-width:980px;text-align:center}.sell-service .sell-close h2{margin-left:auto;margin-right:auto}.sell-service .sell-close p{color:#292622}.sell-service .sell-close a:not(.sell-cta){color:#292622}
+@media(max-width:1000px){.sell-service .sell-wrap{padding-left:32px;padding-right:32px}.sell-service .sell-split,.sell-service .sell-editorial{gap:36px}.sell-service .sell-cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:700px){.sell-service .sell-wrap{padding-left:22px;padding-right:22px}.sell-service .sell-band{padding:56px 0}.sell-service .sell-hero{padding-top:28px;padding-bottom:48px}.sell-service .sell-breadcrumb{margin-bottom:32px}.sell-service .sell-split,.sell-service .sell-editorial,.sell-service .sell-cards{grid-template-columns:1fr}.sell-service .sell-cards{margin-top:26px}.sell-service .sell-card{padding-right:0}.sell-service h1{font-size:44px}.sell-service .sell-cta{max-width:100%}}
+</style><section class="sell-wrap sell-hero"><nav class="sell-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/watch-sales/">Watch sales</a><span aria-hidden="true">/</span><span>Sell your watch</span></nav><div class="sell-split"><div>${hero}</div>${photo}</div></section>${body}</main>`;
+}
+
+export const sellWatchContent = serviceLayout(articleContent);
