@@ -5,7 +5,7 @@ import { SiteContent, type ArticleCta } from "@/components/SiteContent";
 import articleCtas from "@/data/article-ctas.json";
 import { getPage, slugs } from "@/lib/content";
 import { articleDates } from "@/app/sitemap";
-import { dedicatedSchemaSlugs, makeFallbackArticleSeo, makeFallbackPageMetadata, makeGenericPageSchema, normalizeSeoHeadings, type FallbackArticleSeo } from "@/lib/seo-fallback";
+import { dedicatedSchemaSlugs, makeFallbackArticleSeo, makeFallbackPageMetadata, makeGenericPageSchema, normalizeSeoHeadings, strengthenAtlantaRepairInternalLinks, type FallbackArticleSeo } from "@/lib/seo-fallback";
 
 const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://itsabouttime-psi.vercel.app").replace(/\/$/, "");
 
@@ -1454,7 +1454,7 @@ export default async function ConvertedPage({ params }: { params: Promise<{ slug
   if (!page) notFound();
   const cta = (articleCtas as Record<string, ArticleCta>)[slug];
   const article = articleSeo[slug] ?? (articleDates[`/${slug}/`] ? makeFallbackArticleSeo(slug, page, articleDates[`/${slug}/`]) : null);
-  const renderedHtml = normalizeSeoHeadings(slug, page.html);
+  const renderedHtml = strengthenAtlantaRepairInternalLinks(slug, normalizeSeoHeadings(slug, page.html));
 
   return (
     <>

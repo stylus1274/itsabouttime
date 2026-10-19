@@ -36,6 +36,15 @@ const fallbackPageDescriptions: Record<string, string> = {
   "blog": "Read watch repair guides, collecting insights, brand stories, and practical care notes from It’s About Time in Johns Creek."
 };
 
+const fallbackArticleOverrides: Record<string, Pick<FallbackArticleSeo, "title" | "headline" | "description" | "keywords">> = {
+  "watch-repair-services": {
+    title: "What Professional Watch Repair Service Includes | It’s About Time",
+    headline: "What Professional Watch Repair Service Includes",
+    description: "Learn what professional watch repair can include, from diagnostics and batteries to movement service, crystals, water resistance, and restoration.",
+    keywords: ["professional watch repair services", "what watch repair includes", "watch maintenance guide", "watch repair process"]
+  }
+};
+
 function decodeHtml(value: string) {
   return value
     .replace(/&nbsp;/gi, " ")
@@ -106,18 +115,103 @@ export function makeFallbackArticleSeo(slug: string, page: ContentPage, modified
   const path = `/${slug}/`;
   const image = sourceImage(page.html, page.title);
   const cleanedTitle = decodeHtml(page.title).replace(/\s*\|\s*It’s About Time\s*$/i, "");
+  const override = fallbackArticleOverrides[slug];
   return {
-    title: pageTitle(page.title),
-    headline: cleanedTitle,
-    description: contentDescription(page.html, `Read ${cleanedTitle} from It’s About Time in Johns Creek, Georgia.`),
+    title: override?.title ?? pageTitle(page.title),
+    headline: override?.headline ?? cleanedTitle,
+    description: override?.description ?? contentDescription(page.html, `Read ${cleanedTitle} from It’s About Time in Johns Creek, Georgia.`),
     path,
     image: image?.src,
     imageAlt: image?.alt ?? cleanedTitle,
     publishedTime: publishedDate(page.html, modifiedTime),
     modifiedTime,
     section: "Watch Journal",
-    keywords: [cleanedTitle, "watch repair", "Johns Creek"]
+    keywords: override?.keywords ?? [cleanedTitle, "watch repair", "Johns Creek"]
   };
+}
+
+function replaceAfterMarker(html: string, marker: string, search: string, replacement: string) {
+  const markerIndex = html.indexOf(marker);
+  if (markerIndex === -1) return html;
+  const tail = html.slice(markerIndex);
+  const searchIndex = tail.indexOf(search);
+  if (searchIndex === -1) return html;
+  const absoluteIndex = markerIndex + searchIndex;
+  return `${html.slice(0, absoluteIndex)}${replacement}${html.slice(absoluteIndex + search.length)}`;
+}
+
+export function strengthenAtlantaRepairInternalLinks(slug: string, html: string) {
+  let enhanced = html;
+
+  if (slug === "home") {
+    enhanced = replaceAfterMarker(enhanced, "Movement Service &amp; Overhaul", 'href="/watch-repairs/"', 'href="/watch-repair-atlanta/"');
+    enhanced = replaceAfterMarker(enhanced, "Movement Service &amp; Overhaul", ">Learn More ", ">Explore Atlanta Watch Repair ");
+  }
+
+  if (slug === "watch-repairs") {
+    enhanced = replaceAfterMarker(enhanced, "Related Services.", 'href="#quote"', 'href="/watch-repair-atlanta/"');
+    enhanced = replaceAfterMarker(enhanced, "Related Services.", ">Learn more ", ">Atlanta repair services ");
+  }
+
+  if (slug === "repair-form") {
+    enhanced = enhanced.replace(
+      "<h1 style=\"margin:0 0 22px;",
+      "<p style=\"margin:0 0 18px;font-size:16px;line-height:1.6;color:#6B6560;\">Need to review service options first? Visit our <a href=\"/watch-repair-atlanta/\" style=\"color:#8A6A2F;font-weight:600;\">Atlanta watch repair services</a>.</p><h1 style=\"margin:0 0 22px;"
+    );
+  }
+
+  if (slug === "workshop") {
+    enhanced = replaceAfterMarker(
+      enhanced,
+      "How Our Watch Repair Process Works.",
+      "</h2>",
+      "</h2><p style=\"margin:18px 0 0;max-width:720px;color:#68625B;font-size:17px;line-height:1.65;\">See the services available to local owners on our <a href=\"/watch-repair-atlanta/\" style=\"color:#8A6A2F;font-weight:600;\">Atlanta watch repair page</a>, then begin with a no-obligation estimate.</p>"
+    );
+  }
+
+  if (slug === "atlanta-watch-service-center-workshop-duluth") {
+    enhanced = enhanced.replace(
+      "In-house repairs and maintenance for mechanical, automatic, quartz, and vintage timepieces, including battery replacements and routine servicing.",
+      "In-house repairs and maintenance for mechanical, automatic, quartz, and vintage timepieces, including battery replacements and routine servicing. Explore our <a href=\"/watch-repair-atlanta/\" style=\"color:#c4a458;font-weight:700;\">Atlanta watch repair services</a>."
+    );
+  }
+
+  if (slug === "watch-services") {
+    enhanced = replaceAfterMarker(enhanced, "Repair and Restoration", 'href="/watch-repairs/"', 'href="/watch-repair-atlanta/"');
+    enhanced = replaceAfterMarker(enhanced, "Repair and Restoration", "Explore Watch Repairs →", "Explore Atlanta Watch Repair →");
+  }
+
+  if (slug === "where-to-get-watch-repaired-in-atlanta") {
+    enhanced = enhanced.replace(
+      "A great shop combines technical skill with excellent customer service.",
+      "A great shop combines technical skill with excellent customer service. Compare those qualities with our <a href=\"/watch-repair-atlanta/\">Atlanta watch repair services</a>, workshop process, and estimate options."
+    );
+  }
+
+  if (slug === "luxury-watch-repair-faqs-atlanta-ga") {
+    enhanced = enhanced.replace(
+      "With numerous watch repair options in Atlanta, choosing an authentic service provider is crucial.",
+      "With numerous watch repair options in Atlanta, choosing an authentic service provider is crucial. Our <a href=\"/watch-repair-atlanta/\">Atlanta watch repair page</a> explains the workshop, services, and estimate process in one place."
+    );
+  }
+
+  if (slug === "common-watch-problems-and-how-we-fix-them") {
+    enhanced = enhanced.replace(
+      "Our team is Atlanta’s most experienced, offering services that range from routine maintenance to specialized repairs.",
+      "Our team offers <a href=\"/watch-repair-atlanta/\">professional watch repair for Atlanta owners</a>, from routine maintenance to specialized repairs."
+    );
+  }
+
+  if (slug === "watch-repair-services") {
+    enhanced = enhanced
+      .replace("Watch Repair Service You Can Rely on in Atlanta", "What Professional Watch Repair Service Includes")
+      .replace(
+        "At Its About Time Inc, we help you take care of your investment and keep your watch in optimal condition so you can preserve it for a lifetime.",
+        "At Its About Time Inc, we help you take care of your investment and keep your watch in optimal condition so you can preserve it for a lifetime. For local service details and estimates, visit our <a href=\"/watch-repair-atlanta/\">Atlanta watch repair page</a>."
+      );
+  }
+
+  return enhanced;
 }
 
 export function makeFallbackPageMetadata(slug: string, page: ContentPage): Metadata {

@@ -15,7 +15,7 @@ export const articleDates: Record<string, string> = {
   "/cartier-watch-rep-and-services/": "2024-03-28T00:02:24+00:00",
   "/best-watch-jewellery-repair-near-me/": "2024-07-11T15:31:38+00:00",
   "/best-microbrand-watches/": "2024-05-16T05:12:08+00:00",
-  "/watch-repair-services/": "2024-05-16T04:15:07+00:00",
+  "/watch-repair-services/": "2026-10-19T00:00:00-04:00",
   "/bulova-watch-repair/": "2024-05-15T19:43:14+00:00",
   "/luminox-watch-repair/": "2024-05-15T19:18:09+00:00",
   "/becoming-an-authorized-jaeger-lecoultre-workshop/": "2024-12-10T17:39:43+00:00",
