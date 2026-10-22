@@ -42,7 +42,83 @@ export const plannedFaqs: Pick<FaqEntry, "slug" | "question" | "category" | "sta
   { slug: "does-polishing-a-vintage-watch-reduce-its-value", question: "Does Polishing a Vintage Watch Reduce Its Value?", category: "vintage-watches", status: "planned" }
 ];
 
-export const faqEntries: FaqEntry[] = [];
+export const faqEntries: FaqEntry[] = [
+  {
+    slug: "how-much-does-watch-repair-cost",
+    question: "How Much Does Watch Repair Cost?",
+    category: "watch-repair",
+    shortAnswer: "Watch repair costs vary by the type of service, the watch brand, its condition, required parts, and the complexity of the movement. Its About Time Inc. provides a free estimate after inspecting the watch so you can understand the recommended work and cost before service begins.",
+    bodyHtml: `
+      <p><strong>Watch repair can range from a relatively simple battery or bracelet service to several hundred dollars or more for a full mechanical overhaul, restoration, or water-damage repair.</strong> The right price depends on the watch itself and what the inspection shows.</p>
+
+      <p>Its About Time Inc. does not use one flat price for all repairs. The workshop evaluates the watch first, then explains the recommended work, required parts, timing, and estimate before service begins.</p>
+
+      <h2>Typical Watch Repair Cost Ranges</h2>
+      <p>Existing pricing published across the Its About Time Inc. website shows that costs can vary considerably by service and watch type. The ranges below are best treated as general examples rather than guaranteed quotes.</p>
+
+      <div class="post-table-wrapper">
+        <table class="post-table">
+          <thead>
+            <tr><th>Service</th><th>Published Example Range</th><th>What Can Affect the Price</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Battery replacement</td><td>About $20 to $150</td><td>Brand, battery type, resealing, gasket condition, and pressure testing</td></tr>
+            <tr><td>Bracelet or strap adjustment</td><td>About $30 to $100</td><td>Bracelet type, pins, links, clasp condition, and fitting work</td></tr>
+            <tr><td>Crystal or crown repair/replacement</td><td>About $150 to $500</td><td>Brand, material, part availability, and extent of damage</td></tr>
+            <tr><td>Full mechanical service</td><td>About $300 to $1,000+</td><td>Movement complexity, condition, brand, required parts, and restoration work</td></tr>
+            <tr><td>Water-damage restoration</td><td>Often $500+</td><td>How long moisture was present, corrosion, movement damage, seals, and parts needed</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p><strong>Pro Tip:</strong> Do not use an online price range as a substitute for an inspection. Two watches with the same symptom can require very different repairs once the case is opened and the movement is evaluated.</p>
+
+      <h2>Why Watch Repair Prices Vary</h2>
+
+      <h3>The Type of Watch</h3>
+      <p>A basic quartz watch, a mechanical watch, and a complicated luxury chronograph do not require the same amount of bench time or the same parts. Mechanical and automatic watches generally involve more disassembly, cleaning, lubrication, adjustment, and testing than a straightforward battery-powered watch.</p>
+
+      <h3>The Condition of the Watch</h3>
+      <p>A watch that simply needs routine service is different from one with moisture intrusion, corrosion, damaged components, or a history of previous repair. The workshop checks the case and movement for wear, damage, rust, moisture, and other issues before recommending work.</p>
+
+      <h3>Parts and Brand Requirements</h3>
+      <p>Parts availability can affect both cost and turnaround time. Certain brands, calibers, crystals, crowns, gaskets, bracelets, and movement components may require specific parts or additional service procedures.</p>
+
+      <h3>The Scope of Service</h3>
+      <p>A complete mechanical service involves more than fixing the symptom that brought the watch in. The movement may be disassembled, cleaned, inspected, lubricated, reassembled, adjusted, and tested. Exterior components may also need cleaning, refinishing by request, resealing, or functional checks.</p>
+
+      <h2>Do You Get an Estimate Before the Repair?</h2>
+      <p><strong>Yes. Its About Time Inc. provides a free estimate before repair work begins.</strong> The watch is assessed first so the team can explain the recommended service, parts, timing, and cost before you commit to the repair.</p>
+
+      <p>This is especially important for vintage and luxury watches, where originality, condition, previous service, and parts availability can materially change the best repair path.</p>
+
+      <h2>What If the Watch Cannot Be Repaired?</h2>
+      <p><strong>Its About Time Inc. states that it operates on a no-fix, no-fee basis for repairs it cannot complete.</strong> If the workshop determines that the watch cannot be repaired, you are not charged for that service.</p>
+
+      <h2>Is It Worth Paying to Repair a Watch?</h2>
+      <p>The answer depends on the watch's financial value, sentimental value, condition, and the cost of the repair. A low-cost fashion watch may not justify an expensive movement repair, while a luxury, vintage, collectible, or sentimental watch may be well worth servicing even when the repair cost is substantial.</p>
+
+      <p>That decision is easier after an inspection because you can compare the estimated repair cost with the watch's condition and what preserving the watch means to you.</p>
+
+      <div class="pro-tip">
+        <p><strong>Pro Tip:</strong> Ask for the estimate before authorizing work, especially when the watch has water damage, movement problems, or hard-to-source parts.</p>
+      </div>
+
+      <h2>How to Get an Accurate Watch Repair Price</h2>
+      <p>The most reliable way to know what your watch will cost to repair is to have it inspected. Walk-ins are welcome at the Johns Creek workshop, or you can start with the repair request form if you are outside the area or want to begin the process online.</p>
+
+      <p>Its About Time Inc. services mechanical, automatic, quartz, vintage, luxury, sport, and everyday watches. The appropriate repair and final estimate depend on the individual watch.</p>
+    `,
+    relatedServiceHref: "/watch-repairs/",
+    relatedServiceLabel: "Request a Free Watch Repair Estimate",
+    relatedFaqSlugs: [
+      "what-is-included-in-a-full-watch-service",
+      "how-much-does-watch-battery-replacement-cost",
+      "can-a-broken-watch-crown-be-repaired-or-replaced"
+    ],
+    status: "published"
+  }
+];
 
 const escapeHtml = (value: string) =>
   value.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
