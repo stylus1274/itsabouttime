@@ -209,6 +209,8 @@ export const routes = [
   "/faqs/does-replacing-a-watch-battery-affect-water-resistance/",
   "/faqs/how-much-does-watch-battery-replacement-cost/",
   "/faqs/why-did-my-watch-stop-after-battery-replacement/",
+  "/faqs/why-is-my-automatic-watch-running-fast-or-slow/",
+  "/faqs/why-does-my-automatic-watch-stop-overnight/",
   "/benrus-legacy/",
   "/benrus-ultra-deep/",
   "/bulova-repair/",
