@@ -213,6 +213,7 @@ export const routes = [
   "/faqs/why-does-my-automatic-watch-stop-overnight/",
   "/faqs/can-a-scratched-sapphire-watch-crystal-be-repaired/",
   "/faqs/can-a-broken-watch-crown-be-repaired-or-replaced/",
+  "/faqs/does-polishing-a-vintage-watch-reduce-its-value/",
   "/benrus-legacy/",
   "/benrus-ultra-deep/",
   "/bulova-repair/",
