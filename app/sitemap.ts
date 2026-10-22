@@ -207,6 +207,8 @@ export const routes = [
   "/faqs/how-much-does-watch-repair-cost/",
   "/faqs/what-is-included-in-a-full-watch-service/",
   "/faqs/does-replacing-a-watch-battery-affect-water-resistance/",
+  "/faqs/how-much-does-watch-battery-replacement-cost/",
+  "/faqs/why-did-my-watch-stop-after-battery-replacement/",
   "/benrus-legacy/",
   "/benrus-ultra-deep/",
   "/bulova-repair/",
