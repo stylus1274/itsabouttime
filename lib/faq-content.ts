@@ -34,8 +34,8 @@ export const plannedFaqs: Pick<FaqEntry, "slug" | "question" | "category" | "sta
   { slug: "how-much-does-watch-repair-cost", question: "How Much Does Watch Repair Cost?", category: "watch-repair", status: "planned" },
   { slug: "what-is-included-in-a-full-watch-service", question: "What Is Included in a Full Watch Service?", category: "watch-repair", status: "published" },
   { slug: "does-replacing-a-watch-battery-affect-water-resistance", question: "Does Replacing a Watch Battery Affect Water Resistance?", category: "batteries-quartz", status: "published" },
-  { slug: "how-much-does-watch-battery-replacement-cost", question: "How Much Does Watch Battery Replacement Cost?", category: "batteries-quartz", status: "planned" },
-  { slug: "why-did-my-watch-stop-after-battery-replacement", question: "Why Did My Watch Stop Again After a Battery Replacement?", category: "batteries-quartz", status: "planned" },
+  { slug: "how-much-does-watch-battery-replacement-cost", question: "How Much Does Watch Battery Replacement Cost?", category: "batteries-quartz", status: "published" },
+  { slug: "why-did-my-watch-stop-after-battery-replacement", question: "Why Did My Watch Stop Again After a Battery Replacement?", category: "batteries-quartz", status: "published" },
   { slug: "why-is-my-automatic-watch-running-fast-or-slow", question: "Why Is My Automatic Watch Running Fast or Slow?", category: "mechanical-service", status: "planned" },
   { slug: "why-does-my-automatic-watch-stop-overnight", question: "Why Does My Automatic Watch Stop Overnight?", category: "mechanical-service", status: "planned" },
   { slug: "can-a-scratched-sapphire-watch-crystal-be-repaired", question: "Can a Scratched Sapphire Watch Crystal Be Repaired?", category: "watch-repair", status: "planned" },
@@ -310,6 +310,171 @@ export const faqEntries: FaqEntry[] = [
       { href: "/watch-battery-replacement-atlanta/", label: "Watch Battery Replacement", description: "Learn about professional battery service for everyday and luxury watches." },
       { href: "/cartier-watch-battery-replacement/", label: "Cartier Battery Service", description: "See how gasket inspection, resealing, and testing apply to a luxury quartz watch." },
       { href: "/watch-repairs/", label: "Watch Repair Services", description: "Start a repair request when the battery may not be the only issue." }
+    ],
+    status: "published"
+  },
+  {
+    slug: "how-much-does-watch-battery-replacement-cost",
+    question: "How Much Does Watch Battery Replacement Cost?",
+    category: "batteries-quartz",
+    shortAnswer: "Its About Time Inc. currently publishes standard watch battery replacement prices starting around $10, with many standard replacements around $15 to $25. Waterproof and luxury watches that require resealing or pressure testing are commonly listed around $20 to $50, depending on the watch and service needed.",
+    bodyHtml: `
+      <div class="faq-answer-card">
+        <p class="faq-answer-card__label">Quick Answer</p>
+        <p><strong>Watch battery replacement is usually inexpensive, but the final cost depends on the watch.</strong> Its About Time Inc. currently publishes standard battery replacement pricing starting around $10, with many standard replacements around $15 to $25.</p>
+        <p>Waterproof or luxury watches that need additional gasket attention, resealing, or pressure testing are commonly listed around $20 to $50.</p>
+      </div>
+
+      <h2>Typical Watch Battery Replacement Cost</h2>
+      <p>The site currently publishes several battery-service price examples. Because different watch types require different levels of handling, those numbers are best treated as general ranges rather than one fixed shop price.</p>
+
+      <div class="post-table-wrapper">
+        <table class="post-table">
+          <thead>
+            <tr><th>Battery Service</th><th>Published Range</th><th>What Can Change the Price</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Standard watch battery</td><td>Starts around $10</td><td>Watch design, battery type, case access, and brand</td></tr>
+            <tr><td>Typical standard replacement</td><td>About $15 to $25</td><td>Battery type and the amount of service required</td></tr>
+            <tr><td>Waterproof or luxury watch</td><td>About $20 to $50</td><td>Resealing, gasket condition, pressure testing, brand, and case complexity</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="pro-tip">
+        <p><strong>Pro Tip:</strong> If the watch is water resistant, ask whether the quoted battery price includes gasket inspection, resealing, and pressure testing. A low battery-change price may only cover the cell itself.</p>
+      </div>
+
+      <h2>Why Does Battery Replacement Cost More on Some Watches?</h2>
+
+      <div class="faq-factor-grid">
+        <section class="faq-factor-card">
+          <span class="faq-factor-card__number">01</span>
+          <h3>Battery Type</h3>
+          <p>Different movements use different cells. The correct battery matters for reliable operation and should match the movement requirements.</p>
+        </section>
+        <section class="faq-factor-card">
+          <span class="faq-factor-card__number">02</span>
+          <h3>Case Construction</h3>
+          <p>Some case backs are simple to access, while others require specific tools and more careful handling to avoid damage.</p>
+        </section>
+        <section class="faq-factor-card">
+          <span class="faq-factor-card__number">03</span>
+          <h3>Gaskets & Resealing</h3>
+          <p>A water-resistant watch may need its gasket inspected or replaced before the case is resealed.</p>
+        </section>
+        <section class="faq-factor-card">
+          <span class="faq-factor-card__number">04</span>
+          <h3>Pressure Testing</h3>
+          <p>If the watch is expected to remain water resistant, testing may be needed after the case has been opened.</p>
+        </section>
+      </div>
+
+      <h2>Does the Cheapest Battery Replacement Include Water-Resistance Testing?</h2>
+      <p>Not necessarily. A basic battery replacement can be different from a complete battery service for a water-resistant or luxury watch. Its About Time Inc.'s own guidance explains that opening the case can disturb the gasket, which is why <a href="/watch-pressure-test/">pressure testing</a> matters when water resistance is important.</p>
+
+      <p>The separate FAQ on <a href="/faqs/does-replacing-a-watch-battery-affect-water-resistance/">battery replacement and water resistance</a> explains why the prior water-resistance rating should not simply be assumed after the case has been opened.</p>
+
+      <h2>Why Can Luxury Watch Battery Service Cost More?</h2>
+      <p>Luxury watches can require more careful case handling, brand-specific tools, gasket attention, and testing. The <a href="/cartier-watch-battery-replacement/">Cartier battery replacement</a> page, for example, describes a process that includes inspection, the correct battery, gasket evaluation, resealing, and pressure testing when appropriate.</p>
+
+      <h2>Can a Battery Replacement Turn Into a Repair?</h2>
+      <p>Yes. A stopped quartz watch does not always need only a battery. If a new battery does not restore normal operation, the watch may have corroded contacts, moisture damage, a failing quartz movement or electronic module, or another internal problem that needs diagnosis.</p>
+
+      <p>That is why Its About Time Inc. recommends inspection rather than assuming every stopped quartz watch has a dead battery. If the battery is not the only issue, the broader <a href="/watch-repairs/">watch repair process</a> is the appropriate next step.</p>
+
+      <h2>How Do You Get an Exact Battery Replacement Price?</h2>
+      <p>Bring the watch to the Johns Creek workshop or start a repair request. The exact price depends on the watch, battery type, gasket condition, water-resistance needs, and whether any additional problem is found during inspection.</p>
+    `,
+    relatedServiceHref: "/watch-battery-replacement-atlanta/",
+    relatedServiceLabel: "Explore Watch Battery Service",
+    relatedFaqSlugs: [
+      "does-replacing-a-watch-battery-affect-water-resistance",
+      "why-did-my-watch-stop-after-battery-replacement",
+      "how-much-does-watch-repair-cost"
+    ],
+    internalLinks: [
+      { href: "/watch-battery-replacement-atlanta/", label: "Watch Battery Replacement", description: "See the site's main battery replacement service and current service guidance." },
+      { href: "/watch-pressure-test/", label: "Watch Pressure Testing", description: "Learn when testing and resealing may be part of battery service." },
+      { href: "/cartier-watch-battery-replacement/", label: "Cartier Battery Replacement", description: "See how battery service differs for a luxury watch." },
+      { href: "/watch-repairs/", label: "Watch Repair Services", description: "Start a diagnosis if a battery replacement does not solve the problem." }
+    ],
+    status: "published"
+  },
+  {
+    slug: "why-did-my-watch-stop-after-battery-replacement",
+    question: "Why Did My Watch Stop Again After a Battery Replacement?",
+    category: "batteries-quartz",
+    shortAnswer: "If a watch stops again after a battery replacement, the battery may not be the real problem. Its About Time Inc. notes that quartz watches can also stop because of corroded battery contacts, leakage from an old battery, moisture damage, a failing electronic module or movement, or another internal issue that needs diagnosis.",
+    bodyHtml: `
+      <div class="faq-answer-card">
+        <p class="faq-answer-card__label">Quick Answer</p>
+        <p><strong>A new battery should restore a healthy quartz watch, so if it stops again, the watch needs diagnosis rather than another automatic battery swap.</strong></p>
+        <p>Its About Time Inc. identifies several possible causes beyond the battery itself, including corroded contacts, battery leakage, moisture, a failing quartz movement or electronic module, and other internal movement problems.</p>
+      </div>
+
+      <h2>Common Reasons a Watch Stops After a New Battery</h2>
+
+      <div class="faq-factor-grid">
+        <section class="faq-factor-card">
+          <span class="faq-factor-card__number">01</span>
+          <h3>Corroded Battery Contacts</h3>
+          <p>Even with a fresh battery installed, corrosion at the contacts can interrupt power delivery to the movement.</p>
+        </section>
+        <section class="faq-factor-card">
+          <span class="faq-factor-card__number">02</span>
+          <h3>Old Battery Leakage</h3>
+          <p>A battery left in too long can leak and damage nearby components. The new battery may be fine while the movement still cannot operate reliably.</p>
+        </section>
+        <section class="faq-factor-card">
+          <span class="faq-factor-card__number">03</span>
+          <h3>Quartz Movement Failure</h3>
+          <p>The electronic module or movement itself can fail. In that situation, replacing the cell does not address the underlying problem.</p>
+        </section>
+        <section class="faq-factor-card">
+          <span class="faq-factor-card__number">04</span>
+          <h3>Moisture or Internal Damage</h3>
+          <p>Water intrusion, corrosion, or other internal damage can stop the watch even when the battery has adequate power.</p>
+        </section>
+      </div>
+
+      <h2>Does a Stopped Watch Always Mean the Battery Is Dead?</h2>
+      <p><strong>No.</strong> The site's <a href="/cartier-watch-battery-replacement/">Cartier battery service</a> page explicitly notes that a stopped watch does not always mean the battery is the only issue. The watch should be inspected before the service recommendation is made.</p>
+
+      <p>This is especially important if the battery was replaced recently, the watch has had moisture exposure, or the watch has a history of intermittent stopping.</p>
+
+      <div class="pro-tip">
+        <p><strong>Pro Tip:</strong> If a watch stops soon after a battery replacement, do not keep replacing batteries without diagnosis. Repeated battery swaps can delay finding corrosion, moisture damage, or a failing quartz movement.</p>
+      </div>
+
+      <h2>Can a New Battery Be Installed Correctly and the Watch Still Not Work?</h2>
+      <p>Yes. The battery can be correct and fully charged while another part of the electrical or mechanical system is preventing the watch from running. Its About Time Inc.'s existing quartz-related content notes that corroded contacts and a failing electronic module can interrupt power delivery even when the battery is not depleted.</p>
+
+      <h2>Can an Old Battery Damage the Watch?</h2>
+      <p>Yes. The site's Bulova repair guidance warns that batteries left in too long can leak and cause corrosion that spreads to surrounding components. That can turn a simple battery service into a more involved repair.</p>
+
+      <p>If a watch has been sitting stopped for a long time, inspection is particularly important before assuming that a fresh battery is all it needs.</p>
+
+      <h2>Could Water Damage Be the Reason?</h2>
+      <p>Yes. Moisture can damage the movement and electrical components. If there is fogging or condensation under the crystal, stop wearing the watch and have it inspected. The <a href="/watch-pressure-test/">watch pressure-testing page</a> explains how compromised seals and gaskets can allow moisture into the case.</p>
+
+      <h2>What Should You Do If the Watch Stops Again?</h2>
+      <p>Have the watch diagnosed rather than simply installing another battery. Its About Time Inc.'s <a href="/workshop/">Johns Creek workshop</a> evaluates stopped watches and provides a free diagnosis and estimate so the actual cause can be identified.</p>
+
+      <p>If repair is needed, you can also start through the <a href="/watch-repairs/">watch repair service</a> page. The right next step depends on whether the issue is the battery connection, corrosion, moisture, the movement, or another internal component.</p>
+    `,
+    relatedServiceHref: "/watch-repairs/",
+    relatedServiceLabel: "Request a Watch Diagnosis",
+    relatedFaqSlugs: [
+      "how-much-does-watch-battery-replacement-cost",
+      "does-replacing-a-watch-battery-affect-water-resistance",
+      "what-is-included-in-a-full-watch-service"
+    ],
+    internalLinks: [
+      { href: "/workshop/", label: "Our Watchmaking Workshop", description: "Get a professional diagnosis when the battery is not the full explanation." },
+      { href: "/watch-repairs/", label: "Watch Repair Services", description: "Start a repair request for a quartz watch that still will not run." },
+      { href: "/watch-pressure-test/", label: "Watch Pressure Testing", description: "Check whether moisture or compromised seals may be contributing to the problem." },
+      { href: "/cartier-watch-battery-replacement/", label: "Cartier Battery Service", description: "See why professional battery service starts with diagnosis, not assumptions." }
     ],
     status: "published"
   }
