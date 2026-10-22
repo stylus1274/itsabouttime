@@ -49,9 +49,11 @@ export const faqEntries: FaqEntry[] = [
     category: "watch-repair",
     shortAnswer: "Watch repair costs vary by the type of service, the watch brand, its condition, required parts, and the complexity of the movement. Its About Time Inc. provides a free estimate after inspecting the watch so you can understand the recommended work and cost before service begins.",
     bodyHtml: `
-      <p><strong>Watch repair can range from a relatively simple battery or bracelet service to several hundred dollars or more for a full mechanical overhaul, restoration, or water-damage repair.</strong> The right price depends on the watch itself and what the inspection shows.</p>
-
-      <p>Its About Time Inc. does not use one flat price for all repairs. The workshop evaluates the watch first, then explains the recommended work, required parts, timing, and estimate before service begins.</p>
+      <div class="faq-answer-card">
+        <p class="faq-answer-card__label">Quick Answer</p>
+        <p><strong>Watch repair can range from a relatively simple battery or bracelet service to several hundred dollars or more for a full mechanical overhaul, restoration, or water-damage repair.</strong> The right price depends on the watch itself and what the inspection shows.</p>
+        <p>Its About Time Inc. does not use one flat price for all repairs. The workshop evaluates the watch first, then explains the recommended work, required parts, timing, and estimate before service begins.</p>
+      </div>
 
       <h2>Typical Watch Repair Cost Ranges</h2>
       <p>Existing pricing published across the Its About Time Inc. website shows that costs can vary considerably by service and watch type. The ranges below are best treated as general examples rather than guaranteed quotes.</p>
@@ -71,21 +73,37 @@ export const faqEntries: FaqEntry[] = [
         </table>
       </div>
 
-      <p><strong>Pro Tip:</strong> Do not use an online price range as a substitute for an inspection. Two watches with the same symptom can require very different repairs once the case is opened and the movement is evaluated.</p>
+      <div class="pro-tip">
+        <p><strong>Pro Tip:</strong> Do not use an online price range as a substitute for an inspection. Two watches with the same symptom can require very different repairs once the case is opened and the movement is evaluated.</p>
+      </div>
 
       <h2>Why Watch Repair Prices Vary</h2>
 
-      <h3>The Type of Watch</h3>
-      <p>A basic quartz watch, a mechanical watch, and a complicated luxury chronograph do not require the same amount of bench time or the same parts. Mechanical and automatic watches generally involve more disassembly, cleaning, lubrication, adjustment, and testing than a straightforward battery-powered watch.</p>
+      <div class="faq-factor-grid">
+        <section class="faq-factor-card">
+          <span class="faq-factor-card__number">01</span>
+          <h3>The Type of Watch</h3>
+          <p>A basic quartz watch, a mechanical watch, and a complicated luxury chronograph do not require the same amount of bench time or the same parts. Mechanical and automatic watches generally involve more disassembly, cleaning, lubrication, adjustment, and testing than a straightforward battery-powered watch.</p>
+        </section>
 
-      <h3>The Condition of the Watch</h3>
-      <p>A watch that simply needs routine service is different from one with moisture intrusion, corrosion, damaged components, or a history of previous repair. The workshop checks the case and movement for wear, damage, rust, moisture, and other issues before recommending work.</p>
+        <section class="faq-factor-card">
+          <span class="faq-factor-card__number">02</span>
+          <h3>The Condition of the Watch</h3>
+          <p>A watch that simply needs routine service is different from one with moisture intrusion, corrosion, damaged components, or a history of previous repair. The workshop checks the case and movement for wear, damage, rust, moisture, and other issues before recommending work.</p>
+        </section>
 
-      <h3>Parts and Brand Requirements</h3>
-      <p>Parts availability can affect both cost and turnaround time. Certain brands, calibers, crystals, crowns, gaskets, bracelets, and movement components may require specific parts or additional service procedures.</p>
+        <section class="faq-factor-card">
+          <span class="faq-factor-card__number">03</span>
+          <h3>Parts and Brand Requirements</h3>
+          <p>Parts availability can affect both cost and turnaround time. Certain brands, calibers, crystals, crowns, gaskets, bracelets, and movement components may require specific parts or additional service procedures.</p>
+        </section>
 
-      <h3>The Scope of Service</h3>
-      <p>A complete mechanical service involves more than fixing the symptom that brought the watch in. The movement may be disassembled, cleaned, inspected, lubricated, reassembled, adjusted, and tested. Exterior components may also need cleaning, refinishing by request, resealing, or functional checks.</p>
+        <section class="faq-factor-card">
+          <span class="faq-factor-card__number">04</span>
+          <h3>The Scope of Service</h3>
+          <p>A complete mechanical service involves more than fixing the symptom that brought the watch in. The movement may be disassembled, cleaned, inspected, lubricated, reassembled, adjusted, and tested. Exterior components may also need cleaning, refinishing by request, resealing, or functional checks.</p>
+        </section>
+      </div>
 
       <h2>Do You Get an Estimate Before the Repair?</h2>
       <p><strong>Yes. Its About Time Inc. provides a free estimate before repair work begins.</strong> The watch is assessed first so the team can explain the recommended service, parts, timing, and cost before you commit to the repair.</p>
@@ -183,23 +201,33 @@ export function buildFaqHubHtml() {
 export function buildFaqDetailHtml(entry: FaqEntry) {
   const category = faqCategories.find((item) => item.slug === entry.category);
   return `
-    <main>
-      <section style="background:#1B262C;padding:64px 24px;color:#fff;">
-        <div style="max-width:960px;margin:0 auto;">
-          <p style="margin:0 0 12px;color:#BFA353;font:700 12px/1.2 Arial,sans-serif;letter-spacing:2px;text-transform:uppercase;">${escapeHtml(category?.name ?? "Watch FAQ")}</p>
-          <h1 style="margin:0 0 20px;color:#fff;font-size:clamp(36px,5vw,58px);line-height:1.08;">${escapeHtml(entry.question)}</h1>
-          <p style="margin:0;max-width:800px;font-size:20px;line-height:1.65;color:#edf0f1;"><strong>${escapeHtml(entry.shortAnswer)}</strong></p>
+    <main class="faq-detail">
+      <section class="faq-detail__hero">
+        <div class="faq-detail__hero-inner">
+          <a class="faq-detail__back" href="/faqs/">← Back to Watch FAQs</a>
+          <p class="faq-detail__eyebrow">${escapeHtml(category?.name ?? "Watch FAQ")}</p>
+          <h1>${escapeHtml(entry.question)}</h1>
+          <p class="faq-detail__lead">${escapeHtml(entry.shortAnswer)}</p>
+          <div class="faq-detail__trust">
+            <span>Free Repair Estimate</span>
+            <span>In-House Workshop</span>
+            <span>Johns Creek, GA</span>
+          </div>
         </div>
       </section>
-      <section style="padding:56px 24px;background:#fff;">
-        <div style="max-width:860px;margin:0 auto;">
-          <article>
+
+      <section class="faq-detail__content">
+        <div class="faq-detail__content-inner">
+          <article class="faq-detail__article">
             ${entry.bodyHtml}
-            <div style="margin-top:36px;padding:26px;border-radius:12px;background:#f7f5f1;border-left:4px solid #BFA353;">
-              <h2 style="margin-top:0;">Need Help With Your Watch?</h2>
-              <p>If the answer depends on your watch's condition, movement, age, or previous service, an inspection is the safest next step.</p>
-              <a href="${entry.relatedServiceHref}" style="font-weight:700;color:#1B262C;">${escapeHtml(entry.relatedServiceLabel)}</a>
-            </div>
+            <section class="faq-detail__cta">
+              <div>
+                <p class="faq-detail__cta-label">Need an Exact Price?</p>
+                <h2>Let the Workshop Inspect Your Watch</h2>
+                <p>If the answer depends on your watch's condition, movement, age, or previous service, an inspection is the safest way to get an accurate recommendation and estimate.</p>
+              </div>
+              <a href="${entry.relatedServiceHref}">${escapeHtml(entry.relatedServiceLabel)}</a>
+            </section>
           </article>
         </div>
       </section>
