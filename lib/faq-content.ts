@@ -40,7 +40,7 @@ export const plannedFaqs: Pick<FaqEntry, "slug" | "question" | "category" | "sta
   { slug: "why-does-my-automatic-watch-stop-overnight", question: "Why Does My Automatic Watch Stop Overnight?", category: "mechanical-service", status: "published" },
   { slug: "can-a-scratched-sapphire-watch-crystal-be-repaired", question: "Can a Scratched Sapphire Watch Crystal Be Repaired?", category: "watch-repair", status: "published" },
   { slug: "can-a-broken-watch-crown-be-repaired-or-replaced", question: "Can a Broken Watch Crown Be Repaired or Replaced?", category: "watch-repair", status: "published" },
-  { slug: "does-polishing-a-vintage-watch-reduce-its-value", question: "Does Polishing a Vintage Watch Reduce Its Value?", category: "vintage-watches", status: "planned" }
+  { slug: "does-polishing-a-vintage-watch-reduce-its-value", question: "Does Polishing a Vintage Watch Reduce Its Value?", category: "vintage-watches", status: "published" }
 ];
 
 export const faqEntries: FaqEntry[] = [
@@ -798,6 +798,93 @@ export const faqEntries: FaqEntry[] = [
       { href: "/watch-repair-services/", label: "Watch Repair Services", description: "Review common repair types including crown and stem replacement." },
       { href: "/watch-pressure-test/", label: "Watch Pressure Testing", description: "Learn how crown seals and other sealing points affect water resistance." },
       { href: "/workshop/", label: "Our Watchmaking Workshop", description: "See the in-house repair capabilities for crown, stem, crystal, and movement work." }
+    ],
+    status: "published"
+  },
+  {
+    slug: "does-polishing-a-vintage-watch-reduce-its-value",
+    question: "Does Polishing a Vintage Watch Reduce Its Value?",
+    category: "vintage-watches",
+    shortAnswer: "Yes, polishing can reduce the value of a vintage or collectible watch if it removes original case lines, factory finishing, or other details collectors care about. Its About Time Inc. recommends a conservative approach and performs exterior polishing by request rather than treating it as an automatic part of service.",
+    bodyHtml: `
+      <div class="faq-answer-card">
+        <p class="faq-answer-card__label">Quick Answer</p>
+        <p><strong>Polishing can reduce the value of a vintage watch when originality is important to collectors.</strong> The biggest risk is not that the watch becomes shiny. It is that aggressive refinishing can soften case edges, alter factory finishes, and remove original wear that helps document the watch's history.</p>
+        <p>Its About Time Inc. takes a conservative approach to vintage restoration and states that case and bracelet polishing are performed by request, not automatically.</p>
+      </div>
+
+      <h2>Why Can Polishing Reduce Vintage Watch Value?</h2>
+      <p>Collectors often place a premium on originality. Its About Time Inc.'s existing content repeatedly makes that point when discussing vintage dials, crystals, cases, and restoration decisions.</p>
+
+      <div class="faq-factor-grid">
+        <section class="faq-factor-card">
+          <span class="faq-factor-card__number">01</span>
+          <h3>Case Geometry Can Change</h3>
+          <p>Aggressive polishing can soften sharp lugs, bevels, edges, and transitions that were part of the original case design.</p>
+        </section>
+        <section class="faq-factor-card">
+          <span class="faq-factor-card__number">02</span>
+          <h3>Factory Finishes Can Be Altered</h3>
+          <p>Brushed, polished, and directional finishes are part of the original appearance. Poor refinishing can blur or replace those distinctions.</p>
+        </section>
+        <section class="faq-factor-card">
+          <span class="faq-factor-card__number">03</span>
+          <h3>Originality Matters to Collectors</h3>
+          <p>Its About Time Inc.'s vintage content emphasizes that original condition can be more desirable than cosmetically restored condition, especially on collectible pieces.</p>
+        </section>
+        <section class="faq-factor-card">
+          <span class="faq-factor-card__number">04</span>
+          <h3>Over-Polishing Can Be Permanent</h3>
+          <p>Once metal has been removed, the original case shape cannot simply be put back. That makes aggressive refinishing a decision worth considering carefully.</p>
+        </section>
+      </div>
+
+      <h2>Does Every Vintage Watch Lose Value If It Is Polished?</h2>
+      <p><strong>No.</strong> The impact depends on the watch, its collectibility, condition, rarity, originality, and intended use. Not every older watch carries a strong collector premium, and some owners care more about appearance and daily wear than preserving untouched condition.</p>
+
+      <p>The site's <a href="/dial-refinishing-vs-dial-replacement/">dial refinishing guide</a> makes the same distinction with vintage dials: originality is usually more important for collectible pieces, while cosmetic restoration can be a reasonable choice for watches worn primarily for personal enjoyment.</p>
+
+      <div class="pro-tip">
+        <p><strong>Pro Tip:</strong> If the watch may have meaningful collector value, ask the watchmaker to preserve the case finish and avoid polishing until you have discussed how refinishing could affect originality.</p>
+      </div>
+
+      <h2>What Is the Difference Between Cleaning and Polishing?</h2>
+      <p>Cleaning removes dirt, oils, and buildup without intentionally changing the case shape. Polishing or refinishing changes the surface finish and can remove a small amount of metal.</p>
+
+      <p>Its About Time Inc.'s <a href="/workshop/">workshop page</a> separates exterior care from the movement service and specifically states that case, bracelet, and clasp components are polished by request only.</p>
+
+      <h2>Can Light Polishing Still Affect Value?</h2>
+      <p>It can. Even careful refinishing changes the surface of the watch. For a common daily-wear watch, that may not matter much to the owner. For a collectible vintage watch, buyers may care about whether the original finish, case lines, and signs of age remain intact.</p>
+
+      <p>The site's <a href="/distinctive-features-that-make-the-benrus-sky-chief-a-collectible/">Benrus Sky Chief collector guide</a> specifically notes that examples with original condition tend to be valued more highly than watches with refinished dials, replacement parts, or cases that have been polished aggressively.</p>
+
+      <h2>Should You Polish a Vintage Watch Before Selling It?</h2>
+      <p>Usually, it is better to have the watch evaluated before making irreversible cosmetic changes. Its About Time Inc. states on its <a href="/sell-your-luxury-watch/">luxury watch valuation page</a> that condition, originality, service needs, brand, reference, and completeness all contribute to an offer.</p>
+
+      <p>That means polishing before an evaluation can remove information a specialist or collector would have preferred to see in original condition.</p>
+
+      <h2>What Should You Do If the Watch Is Scratched?</h2>
+      <p>Scratches alone do not automatically mean the case should be polished. Honest wear can be acceptable on a vintage piece, and cosmetic restoration should be weighed against originality.</p>
+
+      <p>If the watch is primarily a daily wearer and appearance matters more than collector value, professional refinishing may still be a reasonable choice. The important step is making that decision deliberately rather than treating polishing as routine maintenance.</p>
+
+      <h2>How Does Its About Time Inc. Handle Vintage Restoration?</h2>
+      <p>The workshop describes its approach as preserving original parts when they can remain safely in service and avoiding unnecessary replacement. That same philosophy applies to exterior restoration: service the watch appropriately, preserve what matters, and discuss optional cosmetic work before it is performed.</p>
+
+      <p>If you are unsure whether polishing makes sense for your watch, start with an inspection through the <a href="/watch-repairs/">watch repair service</a> or bring the watch to the Johns Creek workshop for an evaluation before authorizing refinishing.</p>
+    `,
+    relatedServiceHref: "/watch-repairs/",
+    relatedServiceLabel: "Request a Vintage Watch Evaluation",
+    relatedFaqSlugs: [
+      "can-a-scratched-sapphire-watch-crystal-be-repaired",
+      "what-is-included-in-a-full-watch-service",
+      "how-much-does-watch-repair-cost"
+    ],
+    internalLinks: [
+      { href: "/dial-refinishing-vs-dial-replacement/", label: "Dial Refinishing vs. Replacement", description: "See why originality often matters more than cosmetic perfection on collectible watches." },
+      { href: "/workshop/", label: "Our Watchmaking Workshop", description: "Review the workshop's conservative approach to repair, polishing, and vintage restoration." },
+      { href: "/distinctive-features-that-make-the-benrus-sky-chief-a-collectible/", label: "Benrus Sky Chief Collector Guide", description: "See how original condition and aggressive polishing can affect collector appeal." },
+      { href: "/sell-your-luxury-watch/", label: "Luxury Watch Valuation", description: "Learn how condition, originality, reference, and completeness factor into a watch assessment." }
     ],
     status: "published"
   }
