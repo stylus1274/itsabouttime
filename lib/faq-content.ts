@@ -133,9 +133,9 @@ export function buildFaqHubHtml() {
         <p style="margin:0 0 20px;color:#555;line-height:1.65;">${escapeHtml(category.description)}</p>
         ${questions.length ? `
           <ul style="margin:0;padding-left:20px;display:grid;gap:10px;">
-            ${questions.map((faq) => `<li><span style="color:#2d2d2d;">${escapeHtml(faq.question)}</span></li>`).join("")}
+            ${questions.map((faq) => { const published = faqEntries.find((entry) => entry.slug === faq.slug && entry.status === "published"); return published ? `<li><a href="/faqs/${faq.slug}/" style="color:#1B262C;font-weight:700;text-decoration:underline;text-decoration-color:#BFA353;text-underline-offset:3px;">${escapeHtml(faq.question)}</a></li>` : `<li><span style="color:#2d2d2d;">${escapeHtml(faq.question)}</span></li>`; }).join("")}
           </ul>
-          <p style="margin:18px 0 0;font-size:13px;color:#777;">These standalone answers are planned for the first publishing phase.</p>
+          <p style="margin:18px 0 0;font-size:13px;color:#777;">Published answers are linked above. Remaining questions are planned for the next publishing phase.</p>
         ` : `<p style="margin:0;color:#777;">Additional questions will be added as the library expands.</p>`}
       </section>
     `;
