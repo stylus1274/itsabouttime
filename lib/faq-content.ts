@@ -13,6 +13,7 @@ export type FaqEntry = {
   relatedServiceHref: string;
   relatedServiceLabel: string;
   relatedFaqSlugs?: string[];
+  internalLinks: { href: string; label: string; description?: string }[];
   status: "planned" | "published";
 };
 
@@ -134,6 +135,12 @@ export const faqEntries: FaqEntry[] = [
       "how-much-does-watch-battery-replacement-cost",
       "can-a-broken-watch-crown-be-repaired-or-replaced"
     ],
+    internalLinks: [
+      { href: "/watch-repairs/", label: "Watch Repair Services", description: "See the repair process and available service options." },
+      { href: "/workshop/", label: "Our Watchmaking Workshop", description: "Learn how watches are inspected, serviced, and tested in-house." },
+      { href: "/watch-repair-or-replace-johns-creek-ga/", label: "Repair or Replace a Watch?", description: "Compare repair cost, condition, value, and sentimental importance before deciding." },
+      { href: "/watch-pressure-test/", label: "Watch Pressure Testing", description: "Understand when pressure testing and resealing may affect the final service cost." }
+    ],
     status: "published"
   }
 ];
@@ -220,6 +227,20 @@ export function buildFaqDetailHtml(entry: FaqEntry) {
         <div class="faq-detail__content-inner">
           <article class="faq-detail__article">
             ${entry.bodyHtml}
+
+            <section class="faq-detail__related">
+              <p class="faq-detail__related-label">Related Resources</p>
+              <h2>Helpful Pages From Its About Time Inc.</h2>
+              <div class="faq-detail__related-grid">
+                ${entry.internalLinks.map((link) => `
+                  <a href="${link.href}" class="faq-detail__related-card">
+                    <strong>${escapeHtml(link.label)}</strong>
+                    ${link.description ? `<span>${escapeHtml(link.description)}</span>` : ""}
+                  </a>
+                `).join("")}
+              </div>
+            </section>
+
             <section class="faq-detail__cta">
               <div>
                 <p class="faq-detail__cta-label">Need an Exact Price?</p>
