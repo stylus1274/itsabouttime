@@ -264,6 +264,17 @@ export function SiteContent({ title, html, cta }: Props) {
 
     const desktopNav = header?.querySelector<HTMLElement>(":scope > div > nav");
     const headerActions = header?.querySelector<HTMLElement>(":scope > div > div:last-child");
+
+    if (desktopNav) {
+      const aboutDropdown = desktopNav.querySelector<HTMLElement>(".site-nav-about-menu");
+      if (aboutDropdown && !aboutDropdown.querySelector('a[href="/faqs/"]')) {
+        const faqLink = document.createElement("a");
+        faqLink.href = "/faqs/";
+        faqLink.textContent = "FAQs";
+        aboutDropdown.appendChild(faqLink);
+      }
+    }
+
     if (header && desktopNav && headerActions && !header.querySelector(".mobile-nav-toggle")) {
       const mobileNav = document.createElement("nav");
       mobileNav.className = "mobile-site-nav";
@@ -276,12 +287,15 @@ export function SiteContent({ title, html, cta }: Props) {
         const aboutLinks = Array.from(aboutMenu.querySelectorAll<HTMLAnchorElement>(".site-nav-about-menu a"));
         const aboutUsLink = aboutLinks.find((link) => link.getAttribute("href") === "/atlanta-watch-service-center-workshop-duluth/");
         const workshopLink = aboutLinks.find((link) => link.getAttribute("href") === "/our-workshop/");
-        if (!aboutToggle || !aboutUsLink || !workshopLink) return;
+        const faqLink = aboutLinks.find((link) => link.getAttribute("href") === "/faqs/");
+        if (!aboutToggle || !aboutUsLink || !workshopLink || !faqLink) return;
         const aboutUsMobileLink = aboutUsLink.cloneNode(true) as HTMLAnchorElement;
         const workshopMobileLink = workshopLink.cloneNode(true) as HTMLAnchorElement;
+        const faqMobileLink = faqLink.cloneNode(true) as HTMLAnchorElement;
         aboutUsMobileLink.textContent = "About Us";
         workshopMobileLink.textContent = "Our Workshop";
-        aboutMenu.replaceWith(aboutUsMobileLink, workshopMobileLink);
+        faqMobileLink.textContent = "FAQs";
+        aboutMenu.replaceWith(aboutUsMobileLink, workshopMobileLink, faqMobileLink);
       });
 
       const aboutToggle = desktopNav.querySelector<HTMLButtonElement>(".site-nav-about-toggle");
