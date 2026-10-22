@@ -211,6 +211,8 @@ export const routes = [
   "/faqs/why-did-my-watch-stop-after-battery-replacement/",
   "/faqs/why-is-my-automatic-watch-running-fast-or-slow/",
   "/faqs/why-does-my-automatic-watch-stop-overnight/",
+  "/faqs/can-a-scratched-sapphire-watch-crystal-be-repaired/",
+  "/faqs/can-a-broken-watch-crown-be-repaired-or-replaced/",
   "/benrus-legacy/",
   "/benrus-ultra-deep/",
   "/bulova-repair/",
