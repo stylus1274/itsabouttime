@@ -203,6 +203,7 @@ export const routes = [
   "/refund_returns/",
   "/our-workshop/",
   "/blog/",
+  "/faqs/",
   "/benrus-legacy/",
   "/benrus-ultra-deep/",
   "/bulova-repair/",
