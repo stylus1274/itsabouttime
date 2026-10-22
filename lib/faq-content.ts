@@ -38,8 +38,8 @@ export const plannedFaqs: Pick<FaqEntry, "slug" | "question" | "category" | "sta
   { slug: "why-did-my-watch-stop-after-battery-replacement", question: "Why Did My Watch Stop Again After a Battery Replacement?", category: "batteries-quartz", status: "published" },
   { slug: "why-is-my-automatic-watch-running-fast-or-slow", question: "Why Is My Automatic Watch Running Fast or Slow?", category: "mechanical-service", status: "published" },
   { slug: "why-does-my-automatic-watch-stop-overnight", question: "Why Does My Automatic Watch Stop Overnight?", category: "mechanical-service", status: "published" },
-  { slug: "can-a-scratched-sapphire-watch-crystal-be-repaired", question: "Can a Scratched Sapphire Watch Crystal Be Repaired?", category: "watch-repair", status: "planned" },
-  { slug: "can-a-broken-watch-crown-be-repaired-or-replaced", question: "Can a Broken Watch Crown Be Repaired or Replaced?", category: "watch-repair", status: "planned" },
+  { slug: "can-a-scratched-sapphire-watch-crystal-be-repaired", question: "Can a Scratched Sapphire Watch Crystal Be Repaired?", category: "watch-repair", status: "published" },
+  { slug: "can-a-broken-watch-crown-be-repaired-or-replaced", question: "Can a Broken Watch Crown Be Repaired or Replaced?", category: "watch-repair", status: "published" },
   { slug: "does-polishing-a-vintage-watch-reduce-its-value", question: "Does Polishing a Vintage Watch Reduce Its Value?", category: "vintage-watches", status: "planned" }
 ];
 
@@ -645,6 +645,159 @@ export const faqEntries: FaqEntry[] = [
       { href: "/best-38mm-watches/", label: "Mechanical Power Reserve Examples", description: "Compare published reserve figures across several automatic and hand-wound movements." },
       { href: "/workshop/", label: "Our Watchmaking Workshop", description: "Have a shortened or inconsistent power reserve professionally evaluated." },
       { href: "/watch-repairs/", label: "Watch Repair Services", description: "Start a repair request when an automatic watch stops sooner than expected." }
+    ],
+    status: "published"
+  },
+  {
+    slug: "can-a-scratched-sapphire-watch-crystal-be-repaired",
+    question: "Can a Scratched Sapphire Watch Crystal Be Repaired?",
+    category: "watch-repair",
+    shortAnswer: "A true scratch in a sapphire watch crystal is difficult to remove because sapphire is extremely hard. Its About Time Inc. notes that acrylic scratches can often be polished, but scratched sapphire usually requires professional evaluation and, in many cases, crystal replacement.",
+    bodyHtml: `
+      <div class="faq-answer-card">
+        <p class="faq-answer-card__label">Quick Answer</p>
+        <p><strong>A scratched sapphire crystal usually cannot be treated the same way as acrylic.</strong> Its About Time Inc.'s dedicated guidance on scratched Rolex glass states that sapphire scratches are much more difficult to repair because of the material's hardness and that replacement is often the practical solution.</p>
+        <p>The crystal should still be inspected first so the watchmaker can determine whether replacement is actually necessary and what part is appropriate for the watch.</p>
+      </div>
+
+      <h2>Why Is Sapphire Crystal Hard to Repair?</h2>
+      <p>Sapphire is used on many luxury and modern watches because of its high scratch resistance. That same hardness makes true scratches difficult to polish out safely once they occur.</p>
+
+      <p>Its About Time Inc.'s <a href="/can-rolex-glass-be-scratched/">Rolex crystal guide</a> distinguishes sapphire from acrylic: acrylic scratches can often be polished, while sapphire damage more commonly leads to replacement.</p>
+
+      <div class="faq-factor-grid">
+        <section class="faq-factor-card">
+          <span class="faq-factor-card__number">01</span>
+          <h3>Confirm the Crystal Type</h3>
+          <p>Acrylic, mineral glass, and sapphire do not respond to damage the same way, so the material matters before any repair decision is made.</p>
+        </section>
+        <section class="faq-factor-card">
+          <span class="faq-factor-card__number">02</span>
+          <h3>Check the Depth of Damage</h3>
+          <p>Deep scratches, chips, or cracks are more likely to justify replacement than minor surface marks.</p>
+        </section>
+        <section class="faq-factor-card">
+          <span class="faq-factor-card__number">03</span>
+          <h3>Inspect the Case & Seal</h3>
+          <p>Crystal damage can affect more than appearance. Cracks or impact damage can compromise the watch's protection from dirt and moisture.</p>
+        </section>
+        <section class="faq-factor-card">
+          <span class="faq-factor-card__number">04</span>
+          <h3>Match the Correct Replacement</h3>
+          <p>Luxury watches may require brand-specific or factory-grade crystal parts to preserve fit, appearance, and function.</p>
+        </section>
+      </div>
+
+      <h2>Can a Sapphire Crystal Be Polished?</h2>
+      <p>Its About Time Inc.'s site contains older content suggesting that some minor sapphire or mineral scratches may sometimes be polished. However, its dedicated sapphire guidance is more conservative and states that true sapphire scratches are difficult to repair and usually point toward replacement.</p>
+
+      <p>For that reason, professional inspection is the safest starting point rather than assuming the scratch can simply be buffed out.</p>
+
+      <div class="pro-tip">
+        <p><strong>Pro Tip:</strong> Do not use acrylic polishing methods on a sapphire crystal. The crystal type should be confirmed before anyone attempts polishing or replacement.</p>
+      </div>
+
+      <h2>When Should a Scratched Crystal Be Replaced?</h2>
+      <p>Replacement becomes more likely when the scratch is deep, the crystal is chipped or cracked, visibility is affected, or the damage could compromise the watch's protection from dirt and moisture. Its About Time Inc.'s <a href="/common-watch-problems-and-how-we-fix-them/">common watch problems guide</a> specifically warns that damaged crystals can allow dirt and moisture into the case.</p>
+
+      <h2>Does Crystal Replacement Affect Water Resistance?</h2>
+      <p>Crystal replacement can involve the sealing system of the case, so the watch should be checked and tested as appropriate after the work is completed. The <a href="/watch-pressure-test/">watch pressure testing</a> page explains why water resistance should be verified after case components or seals are disturbed.</p>
+
+      <h2>Can Its About Time Inc. Replace Sapphire Crystals?</h2>
+      <p>Yes. The current workshop page lists crystal replacement as an in-house service for modern, vintage, and luxury watches. Its About Time Inc. also publishes crystal replacement guidance for multiple brands and states that sapphire, mineral, and acrylic crystal replacement is available.</p>
+
+      <p>If your watch has a scratched, chipped, or cracked crystal, start with the <a href="/watch-repairs/">watch repair service</a> so the crystal type, damage, parts availability, and sealing requirements can be evaluated.</p>
+    `,
+    relatedServiceHref: "/watch-repairs/",
+    relatedServiceLabel: "Request a Crystal Repair Estimate",
+    relatedFaqSlugs: [
+      "can-a-broken-watch-crown-be-repaired-or-replaced",
+      "does-replacing-a-watch-battery-affect-water-resistance",
+      "how-much-does-watch-repair-cost"
+    ],
+    internalLinks: [
+      { href: "/can-rolex-glass-be-scratched/", label: "Can Rolex Glass Be Scratched?", description: "See the site's specific guidance on acrylic and sapphire crystal damage." },
+      { href: "/common-watch-problems-and-how-we-fix-them/", label: "Common Watch Problems", description: "Learn why cracked or scratched crystals should be addressed before dirt or moisture gets inside." },
+      { href: "/watch-pressure-test/", label: "Watch Pressure Testing", description: "Understand why sealing and water resistance should be checked after crystal work." },
+      { href: "/watch-repairs/", label: "Watch Repair Services", description: "Start a professional evaluation for crystal replacement or related damage." }
+    ],
+    status: "published"
+  },
+  {
+    slug: "can-a-broken-watch-crown-be-repaired-or-replaced",
+    question: "Can a Broken Watch Crown Be Repaired or Replaced?",
+    category: "watch-repair",
+    shortAnswer: "Yes. A broken or worn watch crown can often be repaired or replaced. Its About Time Inc. notes that crown service may involve checking the stem connection, replacing worn gaskets, correcting alignment, or replacing the crown and stem when needed.",
+    bodyHtml: `
+      <div class="faq-answer-card">
+        <p class="faq-answer-card__label">Quick Answer</p>
+        <p><strong>A damaged watch crown does not automatically mean the watch is beyond repair.</strong> Depending on the problem, a watchmaker may be able to correct the crown or stem, replace worn gaskets, realign the assembly, or replace the crown and stem completely.</p>
+        <p>Its About Time Inc. evaluates the crown, stem, case, movement connection, and sealing needs before recommending the repair path.</p>
+      </div>
+
+      <h2>What Can Go Wrong With a Watch Crown?</h2>
+
+      <div class="faq-factor-grid">
+        <section class="faq-factor-card">
+          <span class="faq-factor-card__number">01</span>
+          <h3>Worn or Damaged Crown</h3>
+          <p>The crown itself can become worn, bent, stripped, damaged, or difficult to grip and operate.</p>
+        </section>
+        <section class="faq-factor-card">
+          <span class="faq-factor-card__number">02</span>
+          <h3>Stem Problems</h3>
+          <p>The stem connects the crown to the movement. If it bends, breaks, or becomes disconnected, winding and time-setting can stop working correctly.</p>
+        </section>
+        <section class="faq-factor-card">
+          <span class="faq-factor-card__number">03</span>
+          <h3>Alignment Issues</h3>
+          <p>A crown that does not sit or engage correctly may need adjustment before deciding whether replacement is necessary.</p>
+        </section>
+        <section class="faq-factor-card">
+          <span class="faq-factor-card__number">04</span>
+          <h3>Gasket or Seal Wear</h3>
+          <p>The crown is part of the case sealing system on many watches, so worn crown gaskets can affect water resistance.</p>
+        </section>
+      </div>
+
+      <h2>How Is a Broken Crown Repaired?</h2>
+      <p>Its About Time Inc.'s <a href="/understanding-dial-crown-and-crystal-repairs/">dial, crown, and crystal repair guide</a> explains that crown service typically starts by checking the stem connection, gasket condition, and alignment. The watchmaker then determines whether adjustment is enough or whether the crown, stem, or related parts need replacement.</p>
+
+      <div class="pro-tip">
+        <p><strong>Pro Tip:</strong> If the crown feels loose, will not engage, will not screw down, or suddenly becomes difficult to turn, avoid forcing it. Forcing the crown can turn a manageable crown or stem issue into additional movement damage.</p>
+      </div>
+
+      <h2>When Does a Crown Need to Be Replaced?</h2>
+      <p>Replacement is more likely when the crown is physically damaged, worn beyond reliable use, no longer sealing correctly, or cannot be restored through adjustment. Its About Time Inc. also lists crown and stem replacement among common watch repairs on its <a href="/watch-repair-services/">watch repair services page</a>.</p>
+
+      <h2>Can the Stem Be Repaired or Replaced Too?</h2>
+      <p>Yes. The crown and stem work together, so a crown problem can actually be a stem problem or involve both components. Its About Time Inc.'s workshop lists crown and stem-related work among its repair capabilities, including vintage restoration where appropriate.</p>
+
+      <h2>Can a Broken Crown Affect Water Resistance?</h2>
+      <p>Yes. On watches designed to resist water, the crown and crown gasket are part of the sealing system. A damaged crown, worn gasket, or poor fit can allow moisture into the case.</p>
+
+      <p>After crown work, water resistance should be checked when appropriate for the model. The <a href="/watch-pressure-test/">watch pressure testing guide</a> explains how crown seals, case-back gaskets, and other sealing points are evaluated.</p>
+
+      <h2>Can a Vintage Watch Crown Be Repaired Without Losing Originality?</h2>
+      <p>Sometimes. Its About Time Inc. states that vintage crown and stem work should be approached carefully and that the repair path depends on condition and parts availability. When an original component can remain safely in service, preservation may be preferable; when it can no longer function reliably, replacement may be necessary.</p>
+
+      <h2>What Should You Do If Your Crown Breaks?</h2>
+      <p>Stop forcing or repeatedly turning the crown and have the watch inspected. Its About Time Inc.'s <a href="/workshop/">Johns Creek workshop</a> handles crown and stem diagnosis, crystal care, movement service, and water-resistance work in-house.</p>
+
+      <p>You can also begin through the <a href="/watch-repairs/">watch repair service</a> to receive a diagnosis and estimate before repair work begins.</p>
+    `,
+    relatedServiceHref: "/watch-repairs/",
+    relatedServiceLabel: "Request a Crown Repair Estimate",
+    relatedFaqSlugs: [
+      "can-a-scratched-sapphire-watch-crystal-be-repaired",
+      "what-is-included-in-a-full-watch-service",
+      "how-much-does-watch-repair-cost"
+    ],
+    internalLinks: [
+      { href: "/understanding-dial-crown-and-crystal-repairs/", label: "Dial, Crown & Crystal Repairs", description: "See the site's detailed guidance on crown, stem, gasket, and crystal work." },
+      { href: "/watch-repair-services/", label: "Watch Repair Services", description: "Review common repair types including crown and stem replacement." },
+      { href: "/watch-pressure-test/", label: "Watch Pressure Testing", description: "Learn how crown seals and other sealing points affect water resistance." },
+      { href: "/workshop/", label: "Our Watchmaking Workshop", description: "See the in-house repair capabilities for crown, stem, crystal, and movement work." }
     ],
     status: "published"
   }
