@@ -36,8 +36,8 @@ export const plannedFaqs: Pick<FaqEntry, "slug" | "question" | "category" | "sta
   { slug: "does-replacing-a-watch-battery-affect-water-resistance", question: "Does Replacing a Watch Battery Affect Water Resistance?", category: "batteries-quartz", status: "published" },
   { slug: "how-much-does-watch-battery-replacement-cost", question: "How Much Does Watch Battery Replacement Cost?", category: "batteries-quartz", status: "published" },
   { slug: "why-did-my-watch-stop-after-battery-replacement", question: "Why Did My Watch Stop Again After a Battery Replacement?", category: "batteries-quartz", status: "published" },
-  { slug: "why-is-my-automatic-watch-running-fast-or-slow", question: "Why Is My Automatic Watch Running Fast or Slow?", category: "mechanical-service", status: "planned" },
-  { slug: "why-does-my-automatic-watch-stop-overnight", question: "Why Does My Automatic Watch Stop Overnight?", category: "mechanical-service", status: "planned" },
+  { slug: "why-is-my-automatic-watch-running-fast-or-slow", question: "Why Is My Automatic Watch Running Fast or Slow?", category: "mechanical-service", status: "published" },
+  { slug: "why-does-my-automatic-watch-stop-overnight", question: "Why Does My Automatic Watch Stop Overnight?", category: "mechanical-service", status: "published" },
   { slug: "can-a-scratched-sapphire-watch-crystal-be-repaired", question: "Can a Scratched Sapphire Watch Crystal Be Repaired?", category: "watch-repair", status: "planned" },
   { slug: "can-a-broken-watch-crown-be-repaired-or-replaced", question: "Can a Broken Watch Crown Be Repaired or Replaced?", category: "watch-repair", status: "planned" },
   { slug: "does-polishing-a-vintage-watch-reduce-its-value", question: "Does Polishing a Vintage Watch Reduce Its Value?", category: "vintage-watches", status: "planned" }
@@ -475,6 +475,176 @@ export const faqEntries: FaqEntry[] = [
       { href: "/watch-repairs/", label: "Watch Repair Services", description: "Start a repair request for a quartz watch that still will not run." },
       { href: "/watch-pressure-test/", label: "Watch Pressure Testing", description: "Check whether moisture or compromised seals may be contributing to the problem." },
       { href: "/cartier-watch-battery-replacement/", label: "Cartier Battery Service", description: "See why professional battery service starts with diagnosis, not assumptions." }
+    ],
+    status: "published"
+  },
+  {
+    slug: "why-is-my-automatic-watch-running-fast-or-slow",
+    question: "Why Is My Automatic Watch Running Fast or Slow?",
+    category: "mechanical-service",
+    shortAnswer: "An automatic watch can run fast or slow because of magnetism, worn or degraded lubrication, mechanical wear, moisture or corrosion, or a movement that needs regulation or service. Its About Time Inc. recommends professional evaluation when the change is persistent or significant.",
+    bodyHtml: `
+      <div class="faq-answer-card">
+        <p class="faq-answer-card__label">Quick Answer</p>
+        <p><strong>If an automatic watch suddenly starts gaining or losing noticeable time, the movement may need more than a simple adjustment.</strong> Its About Time Inc. identifies magnetism, internal wear, lubricant breakdown, and moisture-related damage as common reasons mechanical watches develop accuracy problems.</p>
+        <p>The right fix can range from regulation or demagnetization to a complete movement service, depending on what the inspection finds.</p>
+      </div>
+
+      <h2>Common Reasons an Automatic Watch Runs Fast or Slow</h2>
+
+      <div class="faq-factor-grid">
+        <section class="faq-factor-card">
+          <span class="faq-factor-card__number">01</span>
+          <h3>Magnetism</h3>
+          <p>Its About Time Inc. specifically lists magnetism as a common reason a mechanical watch can begin running fast or slow. A magnetized movement may need professional demagnetization and regulation.</p>
+        </section>
+        <section class="faq-factor-card">
+          <span class="faq-factor-card__number">02</span>
+          <h3>Lubricant Breakdown</h3>
+          <p>Mechanical movements depend on proper lubrication. As lubricants age or deteriorate, friction and movement performance can change, affecting timekeeping.</p>
+        </section>
+        <section class="faq-factor-card">
+          <span class="faq-factor-card__number">03</span>
+          <h3>Mechanical Wear</h3>
+          <p>Worn internal components can affect how consistently the movement runs. The site's repair content lists internal wear as another reason a watch may gain or lose time.</p>
+        </section>
+        <section class="faq-factor-card">
+          <span class="faq-factor-card__number">04</span>
+          <h3>Moisture or Corrosion</h3>
+          <p>Its About Time Inc.'s moisture-damage guidance notes that internal corrosion can cause irregular timekeeping, including a watch running fast, slow, or stopping altogether.</p>
+        </section>
+      </div>
+
+      <h2>Can Magnetism Make an Automatic Watch Run Fast?</h2>
+      <p><strong>Yes.</strong> The site repeatedly identifies magnetism as a possible cause of fast or slow timekeeping in mechanical watches. Magnetism can affect movement components and change the way the watch keeps time.</p>
+
+      <p>If the problem appeared suddenly and the watch has been near strong magnetic sources, professional evaluation can determine whether demagnetization is appropriate. The <a href="/workshop/">Its About Time Inc. workshop</a> handles diagnostics, regulation, and mechanical movement service in-house.</p>
+
+      <div class="pro-tip">
+        <p><strong>Pro Tip:</strong> A persistent accuracy change is more useful diagnostically than a single observation. If the watch has suddenly started gaining or losing much more time than usual, have it checked rather than repeatedly resetting it.</p>
+      </div>
+
+      <h2>Can a Watch Run Fast or Slow Because It Needs Service?</h2>
+      <p>Yes. Its About Time Inc. notes that worn lubricants, internal wear, and broader movement fatigue can affect accuracy. A complete service may be appropriate when the problem is not solved by regulation alone or when the watch has other symptoms.</p>
+
+      <p>The FAQ on <a href="/faqs/what-is-included-in-a-full-watch-service/">what is included in a full watch service</a> explains the inspection, disassembly, cleaning, lubrication, reassembly, regulation, and testing process in more detail.</p>
+
+      <h2>Can Moisture Make an Automatic Watch Lose Accuracy?</h2>
+      <p>Yes. The site's <a href="/humidity-watch-damage-signs/">moisture-damage guide</a> specifically lists irregular timekeeping as a possible sign that internal corrosion is affecting the movement. Fogging or condensation under the crystal is an especially strong reason to stop wearing the watch and have it inspected.</p>
+
+      <h2>Does Running Fast or Slow Always Mean the Watch Needs a Full Overhaul?</h2>
+      <p>No. Some watches may only need regulation or demagnetization, while others have wear, lubrication, corrosion, or movement issues that justify a broader service. The correct recommendation depends on diagnosis rather than the symptom alone.</p>
+
+      <h2>What Should You Do If Your Automatic Watch Is Losing or Gaining Time?</h2>
+      <p>Bring or send the watch in for evaluation. Its About Time Inc. states on its <a href="/watch-repairs/">watch repair page</a> that watches running slow or fast can be submitted for a free diagnosis and estimate.</p>
+
+      <p>The workshop can determine whether the watch needs regulation, demagnetization, cleaning and lubrication, component repair, or a complete service.</p>
+    `,
+    relatedServiceHref: "/watch-repairs/",
+    relatedServiceLabel: "Request an Accuracy Diagnosis",
+    relatedFaqSlugs: [
+      "what-is-included-in-a-full-watch-service",
+      "why-does-my-automatic-watch-stop-overnight",
+      "how-much-does-watch-repair-cost"
+    ],
+    internalLinks: [
+      { href: "/watch-repairs/", label: "Watch Repair Services", description: "Get a diagnosis when an automatic watch is consistently gaining or losing time." },
+      { href: "/workshop/", label: "Our Watchmaking Workshop", description: "See how mechanical watches are diagnosed, regulated, serviced, and tested." },
+      { href: "/humidity-watch-damage-signs/", label: "Signs of Moisture Damage", description: "Learn how moisture and corrosion can affect watch accuracy and movement health." },
+      { href: "/how-to-find-a-rolex-watch-service-center-near-you/", label: "Mechanical Watch Service Issues", description: "See examples of magnetism, worn lubricants, shortened power reserve, and service needs." }
+    ],
+    status: "published"
+  },
+  {
+    slug: "why-does-my-automatic-watch-stop-overnight",
+    question: "Why Does My Automatic Watch Stop Overnight?",
+    category: "mechanical-service",
+    shortAnswer: "An automatic watch may stop overnight because it was not fully wound, its normal power reserve has been used up, it has not received enough wrist movement, or the movement is no longer holding its expected reserve. A shortened power reserve can also be a sign that the watch needs service.",
+    bodyHtml: `
+      <div class="faq-answer-card">
+        <p class="faq-answer-card__label">Quick Answer</p>
+        <p><strong>An automatic watch only keeps running while it has stored energy in its mainspring.</strong> If it was not fully wound or did not receive enough wrist movement during the day, it may simply run out of power overnight.</p>
+        <p>If the watch used to last much longer and now stops unusually quickly, Its About Time Inc. notes that a shortened power reserve can point to a movement that needs service or overhaul.</p>
+      </div>
+
+      <h2>How Long Should an Automatic Watch Run When You Take It Off?</h2>
+      <p>There is no single answer because power reserve varies by movement. Its About Time Inc.'s existing watch content gives several examples: some automatic movements run for roughly 38 to 42 hours, while others provide 55, 72, or even 80 hours of reserve.</p>
+
+      <div class="post-table-wrapper">
+        <table class="post-table">
+          <thead>
+            <tr><th>Example Movement or Watch</th><th>Published Power Reserve</th><th>What It Means</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>ETA 2671 automatic</td><td>About 38 hours</td><td>A watch can reasonably stop after roughly a day and a half off the wrist.</td></tr>
+            <tr><td>Seiko 4R36</td><td>About 41 hours</td><td>Shorter reserves may require more frequent winding or resetting when watches are rotated.</td></tr>
+            <tr><td>Omega Calibre 8800</td><td>About 55 hours</td><td>More than two days of stored running time when fully wound.</td></tr>
+            <tr><td>Hamilton H-10</td><td>About 80 hours</td><td>Long enough for many watches to sit through a weekend and remain running.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>The site's <a href="/best-field-watches-everyday-wear/">field-watch guide</a> specifically explains that automatic watches depend on regular wear or a watch winder and that shorter-reserve movements need more frequent resetting if you rotate between watches.</p>
+
+      <h2>Why Would an Automatic Watch Stop After Only One Night?</h2>
+
+      <div class="faq-factor-grid">
+        <section class="faq-factor-card">
+          <span class="faq-factor-card__number">01</span>
+          <h3>It Was Not Fully Wound</h3>
+          <p>If the mainspring did not begin the night with enough stored energy, the watch may exhaust its reserve before morning.</p>
+        </section>
+        <section class="faq-factor-card">
+          <span class="faq-factor-card__number">02</span>
+          <h3>Not Enough Wrist Movement</h3>
+          <p>Automatic watches wind through wrist motion. A low-activity day may not add enough energy to reach the movement's full reserve.</p>
+        </section>
+        <section class="faq-factor-card">
+          <span class="faq-factor-card__number">03</span>
+          <h3>The Movement Has a Shorter Normal Reserve</h3>
+          <p>Some automatic movements are designed around roughly 38 to 42 hours rather than the longer 70- to 80-hour reserves found in certain newer calibers.</p>
+        </section>
+        <section class="faq-factor-card">
+          <span class="faq-factor-card__number">04</span>
+          <h3>The Power Reserve Has Shortened</h3>
+          <p>If the watch once ran much longer and now dies quickly, the site's service guidance says shortened power reserve can indicate that maintenance or overhaul is due.</p>
+        </section>
+      </div>
+
+      <div class="pro-tip">
+        <p><strong>Pro Tip:</strong> Compare the watch's current overnight performance with its known movement specification and with how it behaved previously. A 40-hour movement stopping after a long period off the wrist may be normal; a watch that suddenly drops from two days of reserve to only a few hours deserves inspection.</p>
+      </div>
+
+      <h2>Does an Automatic Watch Need to Be Worn Every Day?</h2>
+      <p>Not necessarily. The site explains that automatic watches are best suited to regular wear or use with a watch winder. If you rotate among several watches, a shorter-reserve automatic may stop between wears and need to be wound and reset.</p>
+
+      <p>The <a href="/best-38mm-watches/">38mm watch guide</a> shows how widely power reserves can vary across mechanical watches, from roughly 38 hours to 80 hours in the examples published there.</p>
+
+      <h2>When Is Overnight Stopping a Sign of a Service Problem?</h2>
+      <p>The concern is stronger when the watch is fully wound but still stops much sooner than its expected reserve, or when its running time has become noticeably shorter than it used to be. Its About Time Inc.'s Rolex service guidance states that shortened power reserve can be a sign that a full service or overhaul is due.</p>
+
+      <p>Other symptoms such as inaccurate timekeeping, unusual winding resistance, moisture, or inconsistent operation make professional evaluation even more appropriate.</p>
+
+      <h2>Can a Watchmaker Test Power Reserve?</h2>
+      <p>Yes. A watchmaker can evaluate how the movement is winding and running and whether service is needed. The <a href="/workshop/">Johns Creek workshop</a> handles mechanical watch diagnosis and service in-house.</p>
+
+      <h2>What Should You Do If Your Automatic Watch Keeps Stopping?</h2>
+      <p>First, make sure the watch is adequately wound and compare its actual running time with the expected reserve for that movement. If it still stops too quickly, submit it for evaluation through the <a href="/watch-repairs/">watch repair service</a>.</p>
+
+      <p>The goal is to determine whether the behavior is normal for that movement or whether the mainspring, lubrication, winding system, or broader movement condition needs attention.</p>
+    `,
+    relatedServiceHref: "/watch-repairs/",
+    relatedServiceLabel: "Request a Power Reserve Diagnosis",
+    relatedFaqSlugs: [
+      "why-is-my-automatic-watch-running-fast-or-slow",
+      "what-is-included-in-a-full-watch-service",
+      "how-much-does-watch-repair-cost"
+    ],
+    internalLinks: [
+      { href: "/best-field-watches-everyday-wear/", label: "Automatic Watch Power Reserve Guide", description: "See why regular wear and movement-specific power reserve affect how long an automatic watch runs." },
+      { href: "/best-38mm-watches/", label: "Mechanical Power Reserve Examples", description: "Compare published reserve figures across several automatic and hand-wound movements." },
+      { href: "/workshop/", label: "Our Watchmaking Workshop", description: "Have a shortened or inconsistent power reserve professionally evaluated." },
+      { href: "/watch-repairs/", label: "Watch Repair Services", description: "Start a repair request when an automatic watch stops sooner than expected." }
     ],
     status: "published"
   }
