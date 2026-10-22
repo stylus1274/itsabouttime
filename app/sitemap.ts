@@ -204,6 +204,7 @@ export const routes = [
   "/our-workshop/",
   "/blog/",
   "/faqs/",
+  "/faqs/how-much-does-watch-repair-cost/",
   "/benrus-legacy/",
   "/benrus-ultra-deep/",
   "/bulova-repair/",
