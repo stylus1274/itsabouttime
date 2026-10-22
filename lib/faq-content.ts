@@ -32,8 +32,8 @@ export const faqCategories: FaqCategory[] = [
 
 export const plannedFaqs: Pick<FaqEntry, "slug" | "question" | "category" | "status">[] = [
   { slug: "how-much-does-watch-repair-cost", question: "How Much Does Watch Repair Cost?", category: "watch-repair", status: "planned" },
-  { slug: "what-is-included-in-a-full-watch-service", question: "What Is Included in a Full Watch Service?", category: "watch-repair", status: "planned" },
-  { slug: "does-replacing-a-watch-battery-affect-water-resistance", question: "Does Replacing a Watch Battery Affect Water Resistance?", category: "batteries-quartz", status: "planned" },
+  { slug: "what-is-included-in-a-full-watch-service", question: "What Is Included in a Full Watch Service?", category: "watch-repair", status: "published" },
+  { slug: "does-replacing-a-watch-battery-affect-water-resistance", question: "Does Replacing a Watch Battery Affect Water Resistance?", category: "batteries-quartz", status: "published" },
   { slug: "how-much-does-watch-battery-replacement-cost", question: "How Much Does Watch Battery Replacement Cost?", category: "batteries-quartz", status: "planned" },
   { slug: "why-did-my-watch-stop-after-battery-replacement", question: "Why Did My Watch Stop Again After a Battery Replacement?", category: "batteries-quartz", status: "planned" },
   { slug: "why-is-my-automatic-watch-running-fast-or-slow", question: "Why Is My Automatic Watch Running Fast or Slow?", category: "mechanical-service", status: "planned" },
@@ -140,6 +140,176 @@ export const faqEntries: FaqEntry[] = [
       { href: "/workshop/", label: "Our Watchmaking Workshop", description: "Learn how watches are inspected, serviced, and tested in-house." },
       { href: "/watch-repair-or-replace-johns-creek-ga/", label: "Repair or Replace a Watch?", description: "Compare repair cost, condition, value, and sentimental importance before deciding." },
       { href: "/watch-pressure-test/", label: "Watch Pressure Testing", description: "Understand when pressure testing and resealing may affect the final service cost." }
+    ],
+    status: "published"
+  },
+  {
+    slug: "what-is-included-in-a-full-watch-service",
+    question: "What Is Included in a Full Watch Service?",
+    category: "watch-repair",
+    shortAnswer: "A full watch service typically includes inspection and diagnosis, movement disassembly, cleaning, inspection of components, lubrication, reassembly, timing or regulation, and final testing. Water-resistance testing and exterior work may also be included when appropriate for the watch and the approved service.",
+    bodyHtml: `
+      <div class="faq-answer-card">
+        <p class="faq-answer-card__label">Quick Answer</p>
+        <p><strong>A full watch service is a complete movement service, not just a quick repair of the symptom you noticed.</strong> The watch is evaluated, the movement is taken apart, components are cleaned and inspected, appropriate lubrication is applied, the movement is reassembled and regulated, and the watch is tested before it is returned.</p>
+        <p>At Its About Time Inc., the exact work depends on the movement, condition, brand requirements, water-resistance needs, and what the inspection finds.</p>
+      </div>
+
+      <h2>What Happens During a Full Watch Service?</h2>
+      <p>The process starts with inspection and diagnosis. Its About Time Inc. examines the watch before work begins and provides an estimate so the recommended service can be reviewed first. You can learn more about how work is handled in the <a href="/workshop/">Its About Time Inc. workshop</a>.</p>
+
+      <div class="faq-factor-grid">
+        <section class="faq-factor-card">
+          <span class="faq-factor-card__number">01</span>
+          <h3>Inspection & Diagnosis</h3>
+          <p>The case, movement, crown, crystal, seals, bracelet or strap, and visible condition are assessed to identify the actual service needs before repair work begins.</p>
+        </section>
+        <section class="faq-factor-card">
+          <span class="faq-factor-card__number">02</span>
+          <h3>Movement Disassembly</h3>
+          <p>For a complete mechanical service, the movement is removed and disassembled so internal components can be cleaned and evaluated individually.</p>
+        </section>
+        <section class="faq-factor-card">
+          <span class="faq-factor-card__number">03</span>
+          <h3>Cleaning & Inspection</h3>
+          <p>Movement components are cleaned and checked for wear, damage, corrosion, or parts that may need repair or replacement.</p>
+        </section>
+        <section class="faq-factor-card">
+          <span class="faq-factor-card__number">04</span>
+          <h3>Lubrication & Reassembly</h3>
+          <p>Appropriate lubricants are applied where required, then the movement is carefully reassembled for adjustment and testing.</p>
+        </section>
+        <section class="faq-factor-card">
+          <span class="faq-factor-card__number">05</span>
+          <h3>Regulation & Accuracy Testing</h3>
+          <p>The movement is adjusted and tested so the watch can be evaluated for proper operation and timekeeping after service.</p>
+        </section>
+        <section class="faq-factor-card">
+          <span class="faq-factor-card__number">06</span>
+          <h3>Sealing & Final Testing</h3>
+          <p>Where applicable, gaskets and sealing points are evaluated and the watch may be pressure tested before final inspection and return.</p>
+        </section>
+      </div>
+
+      <h2>Does a Full Service Include New Parts?</h2>
+      <p><strong>Not automatically.</strong> A full service includes inspection of the movement and its components, but parts should only be replaced when their condition or the service requirements make replacement necessary. The workshop emphasizes preserving serviceable original components when possible.</p>
+
+      <p>If a part is worn, damaged, corroded, or no longer capable of reliable operation, the estimate can reflect the additional work or replacement required. This is one reason a complete inspection matters before a final service recommendation is made.</p>
+
+      <div class="pro-tip">
+        <p><strong>Pro Tip:</strong> Ask whether the estimate is for a complete movement service or only a specific repair. A full service usually involves significantly more disassembly, cleaning, adjustment, and testing than correcting one isolated problem.</p>
+      </div>
+
+      <h2>Is Water-Resistance Testing Part of a Full Service?</h2>
+      <p>For watches designed to be water resistant, pressure testing is an important part of service after the case has been opened. The site specifically notes that gaskets and seals can be disturbed during service and that water resistance should be verified before the watch is relied on around water. See the detailed guide to <a href="/watch-pressure-test/">watch pressure testing</a>.</p>
+
+      <p>Very low-rated dress watches and watches not intended for meaningful water exposure may be handled differently. The appropriate test depends on the watch and its construction.</p>
+
+      <h2>Does Full Service Include Polishing or Refinishing?</h2>
+      <p>Exterior cleaning, polishing, bracelet work, or refinishing can be part of some services, but those steps should not be assumed for every watch. Vintage and collectible watches in particular may require a more conservative approach because originality and case condition can affect value.</p>
+
+      <p>If the exterior is part of your concern, discuss it during the estimate rather than assuming cosmetic work is automatically included.</p>
+
+      <h2>How Is a Full Service Different From a Simple Repair?</h2>
+      <p>A simple repair may address one specific issue, such as a battery, crown, crystal, bracelet, or gasket. A full mechanical service addresses the movement as a complete system. That can make sense when the watch has not been serviced for years, has multiple symptoms, is running poorly, or needs broader preventive maintenance.</p>
+
+      <p>If you are unsure which path makes sense, start with the <a href="/watch-repairs/">watch repair service</a> page or review the existing guidance on <a href="/watch-repair-or-replace-johns-creek-ga/">whether to repair or replace a watch</a>.</p>
+
+      <h2>How Do You Know What Your Watch Actually Needs?</h2>
+      <p>The answer comes from inspection. Age alone does not tell the whole story. Usage, water exposure, previous repairs, movement condition, lubrication, worn parts, and how the watch is currently performing all affect the recommendation.</p>
+
+      <p>Its About Time Inc. evaluates the watch first and provides an estimate before the approved service begins.</p>
+    `,
+    relatedServiceHref: "/watch-repairs/",
+    relatedServiceLabel: "Request a Watch Service Estimate",
+    relatedFaqSlugs: [
+      "how-much-does-watch-repair-cost",
+      "does-replacing-a-watch-battery-affect-water-resistance",
+      "why-is-my-automatic-watch-running-fast-or-slow"
+    ],
+    internalLinks: [
+      { href: "/watch-repairs/", label: "Watch Repair Services", description: "Start with an inspection and learn about available repair options." },
+      { href: "/workshop/", label: "Our Watchmaking Workshop", description: "See how the in-house workshop approaches repair and restoration." },
+      { href: "/watch-pressure-test/", label: "Watch Pressure Testing", description: "Learn why seals and water resistance should be verified after case opening." },
+      { href: "/watch-repair-or-replace-johns-creek-ga/", label: "Repair or Replace a Watch?", description: "Use condition, value, repair scope, and sentiment to make the right decision." }
+    ],
+    status: "published"
+  },
+  {
+    slug: "does-replacing-a-watch-battery-affect-water-resistance",
+    question: "Does Replacing a Watch Battery Affect Water Resistance?",
+    category: "batteries-quartz",
+    shortAnswer: "Replacing the battery itself does not reduce a watch's water resistance, but opening the case can disturb the gasket or seal. After battery service, a water-resistant watch should be properly resealed and pressure tested before you rely on its previous water-resistance rating.",
+    bodyHtml: `
+      <div class="faq-answer-card">
+        <p class="faq-answer-card__label">Quick Answer</p>
+        <p><strong>The battery is not what protects a watch from water. The case, crown, crystal, case back, gaskets, and seals do that.</strong> The important issue is that a battery replacement requires opening the case, which can disturb a gasket or expose an aging seal.</p>
+        <p>Until the watch is properly resealed and tested, its previous water-resistance rating should not be treated as confirmed.</p>
+      </div>
+
+      <h2>Why Can Battery Replacement Affect Water Resistance?</h2>
+      <p>A battery replacement usually requires removing the case back. The gasket that seals that opening may be compressed, dry, worn, damaged, or simply disturbed when the case is opened. Its About Time Inc.'s <a href="/watch-pressure-test/">pressure-testing guide</a> specifically notes that water resistance becomes unverified after case opening until the watch is tested again.</p>
+
+      <div class="faq-factor-grid">
+        <section class="faq-factor-card">
+          <span class="faq-factor-card__number">01</span>
+          <h3>The Case Is Opened</h3>
+          <p>The battery cannot usually be changed without opening the case, which means the case-back seal is disturbed during service.</p>
+        </section>
+        <section class="faq-factor-card">
+          <span class="faq-factor-card__number">02</span>
+          <h3>The Gasket Is Inspected</h3>
+          <p>A watchmaker checks whether the gasket is seated correctly and whether age, dryness, compression, or damage means it should be replaced.</p>
+        </section>
+        <section class="faq-factor-card">
+          <span class="faq-factor-card__number">03</span>
+          <h3>The Case Is Resealed</h3>
+          <p>The case back is closed using the appropriate tools and sealing procedure for the watch.</p>
+        </section>
+        <section class="faq-factor-card">
+          <span class="faq-factor-card__number">04</span>
+          <h3>Water Resistance Is Verified</h3>
+          <p>For applicable water-resistant watches, pressure testing verifies whether the sealing system is still functioning before the watch is exposed to water.</p>
+        </section>
+      </div>
+
+      <h2>Should Every Watch Be Pressure Tested After a Battery Change?</h2>
+      <p>Pressure testing is most important when the watch is water resistant and you intend to rely on that protection. Dive watches, sport watches, luxury watches, and watches regularly exposed to swimming, rain, humidity, or other moisture deserve particular attention.</p>
+
+      <p>The site notes that not every low-rated dress watch is necessarily tested in the same way, so the appropriate service depends on the model and how the watch is used.</p>
+
+      <div class="pro-tip">
+        <p><strong>Pro Tip:</strong> If you plan to swim, shower, dive, or regularly expose the watch to water, ask specifically whether pressure testing is included with the battery service. Do not assume a closed case automatically means the original rating has been restored.</p>
+      </div>
+
+      <h2>What Does a Watchmaker Check During Battery Service?</h2>
+      <p>Its About Time Inc.'s battery-service pages describe checking the case condition, old battery, gasket and seals, correct replacement battery, and watch function. Higher-end and water-resistant watches may also need resealing and pressure testing. The <a href="/cartier-watch-battery-replacement/">Cartier battery service</a> page shows the same basic sequence for a luxury watch: inspect, open with proper tools, check the old battery, install the correct battery, inspect the gasket, reseal, and test as appropriate.</p>
+
+      <h2>What Happens If the Watch Fails the Pressure Test?</h2>
+      <p>A failed test means the sealing system is not currently providing the protection expected. Common causes listed on the site include worn or dried gaskets, a case back that is not sealing correctly, or a compromised crown seal.</p>
+
+      <p>The problem can then be identified and corrected before water exposure causes condensation, corrosion, dial damage, or movement damage.</p>
+
+      <h2>Can You Skip Pressure Testing If You Never Get the Watch Wet?</h2>
+      <p>The risk is lower if the watch is never intentionally exposed to water, but moisture can still come from rain, hand washing, humidity, or accidental exposure. More importantly, you should not assume the original water-resistance rating remains valid after a case opening unless it has been verified.</p>
+
+      <h2>What Is the Safest Way to Replace a Watch Battery?</h2>
+      <p>Use a watch repair shop that does more than simply swap the cell. The safest service checks the old battery, uses the correct replacement, evaluates the gasket, closes the case correctly, and addresses water-resistance testing when appropriate.</p>
+
+      <p>You can review the broader <a href="/watch-battery-replacement-atlanta/">watch battery replacement service</a> or start with the <a href="/watch-repairs/">watch repair process</a> if you are unsure what your watch needs.</p>
+    `,
+    relatedServiceHref: "/watch-battery-replacement-atlanta/",
+    relatedServiceLabel: "Explore Watch Battery Service",
+    relatedFaqSlugs: [
+      "how-much-does-watch-battery-replacement-cost",
+      "why-did-my-watch-stop-after-battery-replacement",
+      "what-is-included-in-a-full-watch-service"
+    ],
+    internalLinks: [
+      { href: "/watch-pressure-test/", label: "Watch Pressure Testing", description: "See when and why water resistance should be verified after a case is opened." },
+      { href: "/watch-battery-replacement-atlanta/", label: "Watch Battery Replacement", description: "Learn about professional battery service for everyday and luxury watches." },
+      { href: "/cartier-watch-battery-replacement/", label: "Cartier Battery Service", description: "See how gasket inspection, resealing, and testing apply to a luxury quartz watch." },
+      { href: "/watch-repairs/", label: "Watch Repair Services", description: "Start a repair request when the battery may not be the only issue." }
     ],
     status: "published"
   }
