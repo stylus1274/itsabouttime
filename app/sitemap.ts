@@ -126,6 +126,7 @@ export const articleDates: Record<string, string> = {
 export const defaultLastModified = new Date("2026-08-25T00:00:00+00:00");
 export const pageSitemapLastModified = defaultLastModified.toISOString();
 export const pageDates: Record<string, string> = {
+  "/watch-crystal-replacement/": "2026-11-05T00:00:00-05:00",
   "/sell-your-luxury-watch/": "2026-10-19T00:00:00-04:00",
 };
 export const postSitemapLastModified = new Date(
@@ -136,6 +137,7 @@ export const routes = [
   "",
   "/watch-repairs/",
   "/watch-services/",
+  "/watch-crystal-replacement/",
   "/watch-sales/",
   "/contact/",
   "/repair-form/",
