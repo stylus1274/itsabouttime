@@ -1,7 +1,9 @@
 export const inheritedWatchSlug = "inherited-vintage-watch-guide";
 export const inheritedWatchTitle = "Inherited a Vintage Watch? What to Do Before Wearing or Repairing It";
 export const inheritedWatchDescription = "Inherited a vintage watch? Learn what to document, what not to change, and how to arrange a careful assessment before wearing, repairing, or selling it.";
-export const inheritedWatchImage = "/assets/articles/source-hero-expert-luxury-watch-repair-and-restoration-for-vintage-timepieces-optimized.webp";
+export const inheritedWatchImage = "/assets/articles/vintage-omega-speedmaster-ck2915-optimized.webp";
+const workshopImage = "/assets/articles/source-hero-expert-luxury-watch-repair-and-restoration-for-vintage-timepieces-optimized.webp";
+const photoCredit = `Photo: <a href="https://commons.wikimedia.org/wiki/File:OMEGA_Speedmaster_CK2915.JPG">Superspido~commonswiki / Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by/2.5/">CC BY 2.5</a>. Optimized for web display.`;
 
 const cta = (heading: string, copy: string) => `<section aria-label="Inherited watch assessment" style="margin:36px 0;padding:28px;background:#211E1A;border-radius:8px;color:#F7F5F1;"><h2 style="margin:0 0 14px;color:#F7F5F1;">${heading}</h2><p style="color:#E4E0D9;font-size:18px;">${copy}</p><div style="display:flex;flex-wrap:wrap;gap:16px;align-items:center;"><a href="/repair-form/" style="display:inline-block;padding:14px 20px;background:#B08D57;color:#1A1A1A;border-radius:4px;text-decoration:none;font-size:16px;font-weight:600;">Request a Watch Assessment →</a><a href="tel:+17704429854" style="color:#F7F5F1;font-size:16px;">Call 770-442-9854</a></div></section>`;
 
@@ -51,12 +53,13 @@ export function makeInheritedWatchPage(template: string) {
   const article = /(<article\b[^>]*>\s*<style>[\s\S]*?<\/style>)[\s\S]*?(<\/article>)/;
   if (!article.test(template)) throw new Error("Inherited watch article template not found");
   const html = template
+    .replace(/<!-- ===== HERO IMAGE ===== -->[\s\S]*?(?=<!-- ===== BYLINE ===== -->)/, `<!-- ===== HERO IMAGE ===== --><section style="max-width:1240px;margin:0 auto;padding:clamp(28px,4vw,40px) 40px 0;"><figure style="margin:0;"><div style="border-radius:8px;overflow:hidden;background:#D6D8D5;"><img src="${inheritedWatchImage}" width="2560" height="1920" alt="1959 Omega Speedmaster CK2915 with an aged dial and green fabric strap" style="display:block;width:100%;height:clamp(260px,42vw,560px);object-fit:contain;"/></div><figcaption style="margin:12px 0 0;font-size:12px;line-height:1.6;color:#6B6560;">A vintage Omega Speedmaster—an example of the older timepieces discussed in this guide. ${photoCredit}</figcaption></figure></section>`)
     .replace(article, (_match, start, end) => `${start}${body}${end}`)
     .replace(/(<h1\b[^>]*>)[\s\S]*?(<\/h1>)/, `$1${inheritedWatchTitle}$2`)
     .replace('2022-09-30  ·  8 min read', 'November 11, 2026  ·  9 min read')
     .replace('A comprehensive guide to the complexities of vintage luxury watch restoration, covering specialized techniques, authenticity preservation, and essential maintenance tips to protect your horological investment.', inheritedWatchDescription)
     .replace("Expert guidance on certified watch repairs versus local jewelers from It's About Time", "Watchmaker working on a watch component at the workshop bench")
-    .replace('/assets/articles/dial-removal-workshop-cta.jpg', inheritedWatchImage)
+    .replace('/assets/articles/dial-removal-workshop-cta.jpg', workshopImage)
     .replace('Watch repair tools in a professional workshop', 'Watchmaker at the workshop bench')
     .replace('href="/what-happens-inside-watch-dial-comes-off/"', 'href="/expert-luxury-watch-repair-and-restoration-for-vintage-timepieces/"')
     .replace('What Happens When a Dial Comes Off', 'Vintage Watch Repair & Restoration');
@@ -67,5 +70,8 @@ export function addInheritedWatchBlogFeature(html: string): string {
   const marker = '<section data-vintage-omega-speedmaster-post';
   if (!html.includes(marker)) throw new Error("Journal feature insertion point not found");
   const feature = `<section data-inherited-watch-post style="background:#F7F5F1;padding:40px 24px;"><div style="max-width:1180px;margin:auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px;align-items:center;"><a href="/${inheritedWatchSlug}/"><img src="${inheritedWatchImage}" alt="Watchmaker working at the workshop bench" width="2400" height="1602" loading="lazy" style="width:100%;height:auto;display:block;border-radius:8px;"/></a><div><p style="color:#8A6A2F;letter-spacing:.12em;text-transform:uppercase;font-size:12px;">New from the Journal · November 11, 2026</p><h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(30px,4vw,48px);line-height:1.1;"><a href="/${inheritedWatchSlug}/" style="color:#1A1A1A;text-decoration:none;">${inheritedWatchTitle}</a></h2><p style="font-size:18px;line-height:1.65;">A practical first-step guide to documenting, protecting, and assessing a family timepiece.</p><a href="/${inheritedWatchSlug}/" style="color:#8A6A2F;font-weight:600;">Read the Inherited-Watch Guide →</a></div></div></section>`;
-  return html.replace(marker, feature + marker).replace('Newest from the Journal · September 28, 2026', 'From the Journal · September 28, 2026');
+  const creditedFeature = feature
+    .replace('alt="Watchmaker working at the workshop bench" width="2400" height="1602"', 'alt="Vintage Omega Speedmaster CK2915 with a green fabric strap" width="2560" height="1920"')
+    .replace('</div></div></section>', `<p style="font-size:12px;line-height:1.6;color:#6B6560;">${photoCredit}</p></div></div></section>`);
+  return html.replace(marker, creditedFeature + marker).replace('Newest from the Journal · September 28, 2026', 'From the Journal · September 28, 2026');
 }
