@@ -3,12 +3,15 @@ import { sellWatchContent } from "./sell-watch-content";
 import { updateWatchValueArticle } from "./watch-value-content";
 import { addCrystalServiceLinks } from "./crystal-internal-links";
 import { refreshVintageRepairArticle } from "./vintage-repair-refresh";
+import { addInheritedWatchBlogFeature, inheritedWatchSlug, makeInheritedWatchPage } from "./inherited-watch-content";
 
 export type PageKey = keyof typeof pages;
-export const slugs = Object.keys(pages).filter((key) => key !== "home");
+export const slugs = [...Object.keys(pages).filter((key) => key !== "home"), inheritedWatchSlug];
 
 export function getPage(key: string) {
+  if (key === inheritedWatchSlug) return makeInheritedWatchPage(pages["expert-luxury-watch-repair-and-restoration-for-vintage-timepieces"].html);
   const page = (pages as Record<string, { title: string; html: string; source: string }>)[key];
+  if (key === "blog" && page) return { ...page, html: addInheritedWatchBlogFeature(page.html) };
   if (key === "expert-luxury-watch-repair-and-restoration-for-vintage-timepieces" && page) {
     return { ...page, html: refreshVintageRepairArticle(page.html) };
   }

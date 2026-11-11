@@ -1,6 +1,7 @@
 const refreshedBody = `
 <p>A vintage luxury watch can be a daily companion, a family heirloom, or a collectible whose history matters as much as its performance. Repair should begin with a clear goal: make the watch reliable while preserving the characteristics its owner values.</p>
 <p>Modern luxury watches also need specialist care, but the decisions are not always the same. This guide explains how age, movement, materials, brand requirements, and intended use shape a sensible repair plan.</p>
+<p>If a family timepiece has recently come into your care, start with our <a href="/inherited-vintage-watch-guide/">checklist for what to do with an inherited vintage watch</a> before deciding on repairs or cosmetic changes.</p>
 <h2>Specialist Repair: Protecting Function, Originality, and History</h2>
 <p>A watchmaker needs to assess more than whether a watch runs. Wear, previous repairs, replacement parts, moisture exposure, and the condition of the case and dial all influence what should happen next. On a collectible watch, an original dial or distinctive case finish may be worth preserving even when it shows its age.</p>
 <p>Repair and cosmetic restoration are separate decisions. Servicing a movement does not automatically require polishing the case, refinishing the dial, or replacing the hands. Agree on those choices before work begins, and ask that any proposed changes be documented. No repair can guarantee an increase in resale value.</p>

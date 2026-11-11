@@ -5,6 +5,7 @@ import { SiteContent, type ArticleCta } from "@/components/SiteContent";
 import articleCtas from "@/data/article-ctas.json";
 import { getPage, slugs } from "@/lib/content";
 import { articleDates } from "@/app/sitemap";
+import { inheritedWatchTitle, inheritedWatchDescription, inheritedWatchImage } from "@/lib/inherited-watch-content";
 import { dedicatedSchemaSlugs, makeFallbackArticleSeo, makeFallbackPageMetadata, makeGenericPageSchema, normalizeSeoHeadings, strengthenAtlantaRepairInternalLinks, type FallbackArticleSeo } from "@/lib/seo-fallback";
 
 const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://itsabouttime-psi.vercel.app").replace(/\/$/, "");
@@ -13,6 +14,20 @@ type Faq = readonly [name: string, answer: string];
 type ArticleSeo = FallbackArticleSeo;
 
 const articleSeo: Record<string, ArticleSeo> = {
+  "inherited-vintage-watch-guide": {
+    title: "Inherited a Vintage Watch? First Steps | It’s About Time",
+    headline: inheritedWatchTitle,
+    description: inheritedWatchDescription,
+    path: "/inherited-vintage-watch-guide/",
+    image: inheritedWatchImage,
+    imageWidth: 2400,
+    imageHeight: 1602,
+    imageAlt: "Watchmaker working on a watch component at the workshop bench",
+    publishedTime: "2026-11-11T00:00:00-05:00",
+    modifiedTime: "2026-11-11T00:00:00-05:00",
+    section: "Vintage Watch Care",
+    keywords: ["inherited vintage watch", "what to do with an inherited watch", "family watch repair", "heirloom watch care"]
+  },
   "watch-repair-or-replace-atlanta": {
     title: "Repair or Replace a Watch? Atlanta Guide | It’s About Time",
     headline: "Should You Repair or Replace a Watch? An Atlanta Owner’s Guide",
