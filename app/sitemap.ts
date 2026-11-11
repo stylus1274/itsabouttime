@@ -56,7 +56,8 @@ export const articleDates: Record<string, string> = {
   "/humidity-watch-damage-signs/": "2025-10-09T08:21:55+00:00",
   "/can-baume-mercier-watches-be-repaired/": "2025-10-02T19:20:27+00:00",
   "/expert-luxury-watch-repair-and-restoration-for-vintage-timepieces/": "2025-09-30T10:56:47+00:00",
-  "/luxury-watch-repair-preserving-value/": "2025-09-30T10:47:04+00:00",
+  // Significant editorial update: added guidance for owners preparing to sell.
+  "/luxury-watch-repair-preserving-value/": "2026-10-19T00:00:00-04:00",
   "/where-to-buy-genuine-luminox-watches-in-atlanta-a-shoppers-guide/": "2025-10-14T20:50:11+00:00",
   "/common-repairs-for-hamilton-watches/": "2025-10-14T20:41:41+00:00",
   "/nomos-authorized-watch-repair-atlanta/": "2025-10-14T20:00:36+00:00",
