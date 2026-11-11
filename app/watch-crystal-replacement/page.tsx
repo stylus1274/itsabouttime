@@ -6,7 +6,7 @@ import { watchCrystalContent } from "@/lib/watch-crystal-content";
 const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://itsabouttimeinc.com").replace(/\/$/, "");
 
 export const metadata: Metadata = {
-  title: "Watch Crystal Replacement Johns Creek, GA | It’s About Time",
+  title: "Watch Crystal Replacement Johns Creek, GA",
   description: "Replace cracked, scratched, or damaged watch crystals in Johns Creek. Sapphire, mineral, and acrylic crystal service available.",
   alternates: { canonical: "/watch-crystal-replacement/" },
   robots: { index: true, follow: true },
