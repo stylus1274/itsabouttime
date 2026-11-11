@@ -11,6 +11,14 @@ const refreshedBody = `
 <h3>Modern watches: model-specific procedures</h3>
 <p>A newer watch may require current technical documentation, dedicated tools, movement-specific lubricants, or electronic diagnostics. Warranty status and access to appropriate parts also matter. Water resistance should be assessed and tested as appropriate after work affecting the case or seals; a replacement gasket alone is not proof that the watch is ready for swimming.</p>
 <p>For a closer comparison, read our guide to <a href="/choose-vintage-rolex-restoration-vs-modern-servicing/">choosing vintage Rolex restoration versus modern servicing</a>. Age is only one factor: the exact model, condition, and intended use determine the work.</p>
+<h2>Common Challenges Encountered in Luxury Watch Repair for Vintage Models</h2>
+<p>Preserving an older watch means working around limitations that may not arise with a current model. Four challenges deserve particular attention:</p>
+<ul>
+<li><strong>Scarcity of Original Components:</strong> Authentic replacement parts for discontinued movements can be difficult to source. Depending on the watch, a specialist may consider suitable donor components or a custom-made replacement. These are not interchangeable with new original parts: availability, compatibility, and any effect on originality should be explained before you approve the work.</li>
+<li><strong>Fragile Internal Mechanisms:</strong> Hairsprings, balance assemblies, and escapement components demand precise handling. Wear or damage to these delicate parts can affect timekeeping or stop the movement. Inspection helps a watchmaker distinguish components that can be adjusted or repaired from those that need replacement.</li>
+<li><strong>Material Degradation Over Time:</strong> Aging dial finishes, luminous paint, seals, and other materials can become fragile or deteriorate. Cleaning methods suitable for one component may damage another. Original luminous material should be assessed by an appropriately equipped specialist, and any proposed dial treatment or replacement should be discussed with the owner first.</li>
+<li><strong>Water Damage and Corrosion:</strong> Moisture can corrode movement components and damage the dial or hands. The extent may only become clear after inspection and disassembly. Repair can involve careful cleaning and selective replacement, but severe corrosion may limit what can be recovered. Suspected water entry calls for prompt professional assessment, not continued use.</li>
+</ul>
 <h2>What a Careful Repair Process Should Include</h2>
 <h3>Inspection and an agreed scope</h3>
 <p>Provide the model or reference if known, symptoms, available service records, and any history of impact or water exposure. Explain whether you want a wearable everyday watch or a preservation-focused restoration. Obtain an estimate describing the proposed work, parts, cosmetic options, and how additional findings will be approved.</p>
