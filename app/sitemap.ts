@@ -3,6 +3,7 @@ import type { MetadataRoute } from "next";
 export const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://itsabouttime-psi.vercel.app").replace(/\/$/, "");
 
 export const articleDates: Record<string, string> = {
+  "/does-citizen-eco-drive-need-a-battery/": "2026-11-18T00:00:00-05:00",
   "/inherited-vintage-watch-guide/": "2026-11-11T00:00:00-05:00",
   "/when-does-a-chronograph-need-service/": "2026-09-14T00:00:00+00:00",
   "/vintage-omega-speedmaster-service/": "2026-09-28T20:30:00+00:00",
@@ -136,6 +137,7 @@ export const postSitemapLastModified = new Date(
 ).toISOString();
 
 export const routes = [
+  "/does-citizen-eco-drive-need-a-battery/",
   "/inherited-vintage-watch-guide/",
   "",
   "/watch-repairs/",

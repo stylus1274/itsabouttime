@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { citizenBatteryTitle, citizenBatteryDescription, citizenBatteryImage } from "@/lib/citizen-eco-drive-content";
 import Script from "next/script";
 import { notFound } from "next/navigation";
 import { SiteContent, type ArticleCta } from "@/components/SiteContent";
@@ -14,6 +15,20 @@ type Faq = readonly [name: string, answer: string];
 type ArticleSeo = FallbackArticleSeo;
 
 const articleSeo: Record<string, ArticleSeo> = {
+  "does-citizen-eco-drive-need-a-battery": {
+    title: "Does Citizen Eco-Drive Need a Battery? | It’s About Time",
+    headline: citizenBatteryTitle,
+    description: citizenBatteryDescription,
+    path: "/does-citizen-eco-drive-need-a-battery/",
+    image: citizenBatteryImage,
+    imageWidth: 1000,
+    imageHeight: 565,
+    imageAlt: "Citizen Attesa watch with world-time markings and a blue dial",
+    publishedTime: "2026-11-18T00:00:00-05:00",
+    modifiedTime: "2026-11-18T00:00:00-05:00",
+    section: "Citizen Watch Care",
+    keywords: ["Citizen Eco-Drive battery", "Eco-Drive stopped working", "Citizen rechargeable cell", "Eco-Drive charging"]
+  },
   "inherited-vintage-watch-guide": {
     title: "Inherited a Vintage Watch? First Steps | It’s About Time",
     headline: inheritedWatchTitle,
