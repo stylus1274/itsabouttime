@@ -37,6 +37,12 @@ const fallbackPageDescriptions: Record<string, string> = {
 };
 
 const fallbackArticleOverrides: Record<string, Pick<FallbackArticleSeo, "title" | "headline" | "description" | "keywords">> = {
+  "g-shock-watch-repair": {
+    title: "G-Shock Watch Repair in Johns Creek & Atlanta | It’s About Time",
+    headline: "G-Shock Watch Repair in Johns Creek, Serving Atlanta",
+    description: "Need G-Shock watch repair? Explore battery, solar, display, button, and strap concerns, plus repair assessment options in Johns Creek serving Atlanta.",
+    keywords: ["G-Shock watch repair", "Casio G-Shock repair", "G-Shock repair Johns Creek"]
+  },
   "luminox-watch-repair": {
     title: "Luminox Watch Repair in Johns Creek & Atlanta | It’s About Time",
     headline: "Luminox Watch Repair in Johns Creek, Serving Atlanta",
