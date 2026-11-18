@@ -1,4 +1,5 @@
 import pages from "@/data/pages.json";
+import { refreshLuminoxRepair, addLuminoxRepairLinks } from "./luminox-repair-refresh";
 import { sellWatchContent } from "./sell-watch-content";
 import { updateWatchValueArticle } from "./watch-value-content";
 import { addCrystalServiceLinks } from "./crystal-internal-links";
@@ -11,6 +12,7 @@ export const slugs = [...Object.keys(pages).filter((key) => key !== "home"), inh
 export function getPage(key: string) {
   if (key === inheritedWatchSlug) return makeInheritedWatchPage(pages["expert-luxury-watch-repair-and-restoration-for-vintage-timepieces"].html);
   const page = (pages as Record<string, { title: string; html: string; source: string }>)[key];
+  if (key === "luminox-watch-repair" && page) return { ...page, html: refreshLuminoxRepair(page.html) };
   if (key === "blog" && page) return { ...page, html: addInheritedWatchBlogFeature(page.html) };
   if (key === "expert-luxury-watch-repair-and-restoration-for-vintage-timepieces" && page) {
     return { ...page, html: refreshVintageRepairArticle(page.html) };
@@ -20,5 +22,5 @@ export function getPage(key: string) {
   }
   return key === "sell-your-luxury-watch" && page
     ? { ...page, title: "Sell Your Luxury Watch in Atlanta", html: page.html.replace(/<main\b[^>]*>[\s\S]*?<\/main>/, () => sellWatchContent) }
-    : page ? { ...page, html: addCrystalServiceLinks(key, page.html) } : page;
+    : page ? { ...page, html: addLuminoxRepairLinks(key, addCrystalServiceLinks(key, page.html)) } : page;
 }

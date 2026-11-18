@@ -18,7 +18,7 @@ export const articleDates: Record<string, string> = {
   "/best-microbrand-watches/": "2024-05-16T05:12:08+00:00",
   "/watch-repair-services/": "2026-10-19T00:00:00-04:00",
   "/bulova-watch-repair/": "2024-05-15T19:43:14+00:00",
-  "/luminox-watch-repair/": "2024-05-15T19:18:09+00:00",
+  "/luminox-watch-repair/": "2026-11-18T00:00:00+00:00",
   "/becoming-an-authorized-jaeger-lecoultre-workshop/": "2024-12-10T17:39:43+00:00",
   "/why-winter-is-the-perfect-time-to-get-your-watch-repaired/": "2024-12-03T13:21:57+00:00",
   "/understanding-dial-crown-and-crystal-repairs/": "2024-11-27T15:45:26+00:00",

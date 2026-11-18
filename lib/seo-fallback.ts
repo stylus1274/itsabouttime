@@ -37,6 +37,12 @@ const fallbackPageDescriptions: Record<string, string> = {
 };
 
 const fallbackArticleOverrides: Record<string, Pick<FallbackArticleSeo, "title" | "headline" | "description" | "keywords">> = {
+  "luminox-watch-repair": {
+    title: "Luminox Watch Repair in Johns Creek & Atlanta | It’s About Time",
+    headline: "Luminox Watch Repair in Johns Creek, Serving Atlanta",
+    description: "Need Luminox watch repair? Explore battery concerns, water resistance, repair costs, and assessment options in Johns Creek, serving Atlanta-area owners.",
+    keywords: ["Luminox watch repair", "repair Luminox watch", "Luminox repair Johns Creek"]
+  },
   "watch-repair-services": {
     title: "What Professional Watch Repair Service Includes | It’s About Time",
     headline: "What Professional Watch Repair Service Includes",
