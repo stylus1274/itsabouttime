@@ -16,7 +16,7 @@ type ArticleSeo = FallbackArticleSeo;
 
 const articleSeo: Record<string, ArticleSeo> = {
   "does-citizen-eco-drive-need-a-battery": {
-    title: "Does Citizen Eco-Drive Need a Battery? | It’s About Time",
+    title: "Citizen Eco-Drive Battery Replacement Guide | It’s About Time",
     headline: citizenBatteryTitle,
     description: citizenBatteryDescription,
     path: "/does-citizen-eco-drive-need-a-battery/",
@@ -27,7 +27,7 @@ const articleSeo: Record<string, ArticleSeo> = {
     publishedTime: "2026-11-18T00:00:00-05:00",
     modifiedTime: "2026-11-18T00:00:00-05:00",
     section: "Citizen Watch Care",
-    keywords: ["Citizen Eco-Drive battery", "Eco-Drive stopped working", "Citizen rechargeable cell", "Eco-Drive charging"]
+    keywords: ["Citizen Eco-Drive battery replacement", "Eco-Drive stopped working", "Citizen rechargeable cell", "Eco-Drive charging"]
   },
   "inherited-vintage-watch-guide": {
     title: "Inherited a Vintage Watch? First Steps | It’s About Time",
