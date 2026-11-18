@@ -76,8 +76,23 @@ const body = `
 export function makeCitizenBatteryPage(template: string) {
   const article = /(<article\b[^>]*>\s*<style>[\s\S]*?<\/style>)[\s\S]*?(<\/article>)/;
   if (!article.test(template)) throw new Error("Citizen article template not found");
+  // Match the existing Bulova article's native, keyboard-accessible FAQ accordion.
+  const accordionBody = body.replace(
+    /<h2 id="eco-drive-faqs">[\s\S]*?<\/h2>([\s\S]*?)(?=<h2>Get the Cause)/,
+    (_match, questions: string) => {
+      const entries = [...questions.matchAll(/<h3>\d+\. (.*?)<\/h3><p>([\s\S]*?)<\/p>/g)];
+      if (entries.length !== 8) throw new Error("Expected eight Citizen FAQs");
+      return `<section class="citizen-faq" aria-labelledby="eco-drive-faqs"><style>
+        .citizen-faq summary { cursor:pointer;list-style:none; }
+        .citizen-faq summary::-webkit-details-marker { display:none; }
+        .citizen-faq details[open] .iat-faq-plus { transform:rotate(45deg); }
+        .citizen-faq summary:focus-visible { outline:2px solid #B08D57;outline-offset:4px; }
+        #eco-drive-faqs { scroll-margin-top:120px; }
+      </style><h2 id="eco-drive-faqs">Frequently Asked Questions</h2><div style="border-bottom:1px solid #E4E0D9;">${entries.map(([, question, answer]) => `<details style="border-top:1px solid #E4E0D9;padding:4px 0;"><summary style="display:flex;align-items:center;justify-content:space-between;gap:20px;padding:16px 0;font-size:17.5px;font-weight:600;color:#1A1A1A;">${question}<span class="iat-faq-plus" aria-hidden="true" style="flex-shrink:0;font-size:23px;color:#B08D57;line-height:1;transition:transform .3s ease;">+</span></summary><p style="margin:0 0 18px;font-size:16.5px;line-height:1.65;color:#6B6560;">${answer}</p></details>`).join('')}</div></section>`;
+    }
+  );
   const html = template
-    .replace(article, (_match, start, end) => `${start}${body}${end}`)
+    .replace(article, (_match, start, end) => `${start}${accordionBody}${end}`)
     .replace(/(<h1\b[^>]*>)[\s\S]*?(<\/h1>)/, `$1${citizenBatteryTitle}$2`)
     .replace('2022-09-30  ·  8 min read', 'November 18, 2026  ·  10 min read')
     .replace('A comprehensive guide to the complexities of vintage luxury watch restoration, covering specialized techniques, authenticity preservation, and essential maintenance tips to protect your horological investment.', citizenBatteryDescription)
