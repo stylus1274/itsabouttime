@@ -961,16 +961,16 @@
   "g-shock-watch-repair": {
     "placement": 0.4,
     "eyebrow": "G-Shock Repair Specialists",
-    "headline": "Restore the Resilience of Your G-Shock",
-    "description": "Professional repair and maintenance for your rugged timepiece. Our certified watchmakers ensure your G-Shock continues to withstand any impact.",
-    "buttonLabel": "View Repair Services",
+    "headline": "Discuss Your G-Shock Repair",
+    "description": "Share your model number and symptoms so our team can discuss an assessment and the appropriate service route.",
+    "buttonLabel": "Start a Repair Enquiry",
     "secondaryLabel": "Call Us",
-    "primaryHref": "/watch-repairs/",
+    "primaryHref": "/repair-form/",
     "secondaryHref": "tel:+17704429854",
     "benefits": [
-      "Certified WOSTEP Watchmakers",
-      "Free Professional Diagnosis",
-      "100% Guaranteed Workmanship"
+      "Model-Specific Assessment",
+      "Discuss Costs Before Approval",
+      "Johns Creek Showroom"
     ],
     "type": "repair"
   },
