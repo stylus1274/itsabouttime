@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { kineticSlug, kineticTitle, kineticDescription, kineticImage, kineticImageAlt } from "@/lib/seiko-kinetic-content";
 import { citizenBatteryTitle, citizenBatteryDescription, citizenBatteryImage } from "@/lib/citizen-eco-drive-content";
 import Script from "next/script";
 import { notFound } from "next/navigation";
@@ -15,6 +16,20 @@ type Faq = readonly [name: string, answer: string];
 type ArticleSeo = FallbackArticleSeo;
 
 const articleSeo: Record<string, ArticleSeo> = {
+  [kineticSlug]: {
+    title: "Seiko Kinetic Watch Repair & Charging Guide | It’s About Time",
+    headline: kineticTitle,
+    description: kineticDescription,
+    path: `/${kineticSlug}/`,
+    image: kineticImage,
+    imageWidth: 2400,
+    imageHeight: 1602,
+    imageAlt: kineticImageAlt,
+    publishedTime: "2026-11-27T00:00:00-05:00",
+    modifiedTime: "2026-11-27T00:00:00-05:00",
+    section: "Seiko Watch Care",
+    keywords: ["Seiko Kinetic watch repair", "Seiko Kinetic not holding charge", "Seiko Kinetic rechargeable cell"]
+  },
   "does-citizen-eco-drive-need-a-battery": {
     title: "Citizen Eco-Drive Battery Replacement Guide | It’s About Time",
     headline: citizenBatteryTitle,
