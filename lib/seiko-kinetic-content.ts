@@ -1,8 +1,8 @@
 export const kineticSlug = "seiko-kinetic-watch-not-holding-charge";
 export const kineticTitle = "Seiko Kinetic Watch Not Holding a Charge? Causes and Repair Options";
 export const kineticDescription = "Seiko Kinetic watch repair explained: charging checks, rechargeable-cell problems, repair cost factors, and when to request a professional assessment.";
-export const kineticImage = "/assets/pages/atlanta-watch-service-center-workshop-duluth-hero-optimized.webp";
-export const kineticImageAlt = "Watchmaker inspecting a movement at the workbench";
+export const kineticImage = "/assets/articles/seiko-kinetic-seppvei.jpg";
+export const kineticImageAlt = "Seiko Kinetic watch with a dark dial and stainless-steel bracelet on a wrist";
 const manual = "https://www.seikowatches.com/us-en/-/media/Files/Common/Seiko/instructions/English/5/5M62/5M62_2.pdf";
 const guidance = "https://support.seiko.in/portal/en/kb/articles/kinetic-watches";
 
@@ -85,6 +85,8 @@ export function makeKineticPage(template: string) {
     .replace('A comprehensive guide to the complexities of vintage luxury watch restoration, covering specialized techniques, authenticity preservation, and essential maintenance tips to protect your horological investment.', kineticDescription)
     .replace('/assets/articles/source-hero-expert-luxury-watch-repair-and-restoration-for-vintage-timepieces-optimized.webp', kineticImage)
     .replace("Expert guidance on certified watch repairs versus local jewelers from It's About Time", kineticImageAlt)
+    .replace('object-position:center;', 'object-position:center 70%;')
+    .replace('<!-- ===== BYLINE ===== -->', '<p style="max-width:1240px;margin:10px auto 0;padding:0 40px;font-size:12px;line-height:1.6;color:#6B6560;">Featured photo: <a href="https://commons.wikimedia.org/wiki/File:Seiko_Kinetic.JPG">SeppVei / Wikimedia Commons</a> · Public domain · Resized for the web.</p><!-- ===== BYLINE ===== -->')
     .replace('href="/dial-refinishing-vs-dial-replacement/"', 'href="/seiko-watch-repair-in-atlanta/"')
     .replace('Dial Refinishing vs. Replacement', 'Seiko Watch Repair')
     .replace('href="/what-happens-inside-watch-dial-comes-off/"', 'href="/watch-pressure-test/"')
@@ -98,7 +100,7 @@ export function addKineticBlogFeature(html: string) {
   const feature = existing.replace('data-citizen-battery-post', 'data-seiko-kinetic-post')
     .replaceAll('/does-citizen-eco-drive-need-a-battery/', `/${kineticSlug}/`)
     .replace(/src="[^"]+"/, `src="${kineticImage}"`)
-    .replace(/alt="[^"]+" width="1000" height="565"/, `alt="${kineticImageAlt}" width="2400" height="1602"`)
+    .replace(/alt="[^"]+" width="1000" height="565"/, `alt="${kineticImageAlt}" width="1600" height="1200"`)
     .replace('November 18, 2026', 'November 27, 2026')
     .replace('Does a Citizen Eco-Drive Watch Need a Battery?', kineticTitle)
     .replace('Understand Citizen Eco-Drive battery replacement: charging checks, rechargeable-cell lifespan, professional service steps, cost factors, and warranty guidance.', kineticDescription)
