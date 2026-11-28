@@ -1,5 +1,5 @@
 export const windingSlug = "how-to-wind-a-manual-watch";
-export const windingTitle = "How to Wind a Mechanical Watch—and When to Stop";
+export const windingTitle = "How to Wind a Mechanical Watch and When to Stop";
 export const windingMetaTitle = "How to Wind a Manual Watch | It’s About Time";
 export const windingDescription = "Learn how to wind a manual watch, when to stop, how automatic winding differs, and which crown problems call for a professional watch inspection.";
 export const windingImage = "/assets/blog-hamilton-field.png";
@@ -18,16 +18,16 @@ export const windingFaqs = [
 const body = `
 <p>Knowing how to wind a manual watch starts with knowing its movement. Use the correct crown position, turn gently in the direction specified by the manufacturer, and never force the crown past a firm stopping point. There is no universal number of turns that applies to every mechanical watch.</p>
 <p>Whether you wear your watch daily or have recently inherited a vintage piece, a little care makes winding a straightforward routine. The important distinction is between normal winding resistance and a crown that feels stuck, gritty, or unusually difficult to turn.</p>
-<section class="iat-key-takeaways" aria-label="Key takeaways"><p>Key Takeaways</p><ul><li><span aria-hidden="true">✓</span>Identify your movement first: manual, automatic, quartz, and Kinetic watches do not all wind or charge the same way.</li><li><span aria-hidden="true">✓</span>Use the crown position and winding direction specified in your watch’s manual, turning gently with your fingers.</li><li><span aria-hidden="true">✓</span>There is no universal turn count. Never force a crown past a firm stop or through unexpected resistance.</li><li><span aria-hidden="true">✓</span>Grinding, a loose crown, or a short running time after correct winding calls for an inspection—not more force.</li></ul></section>
+<section class="iat-key-takeaways" aria-label="Key takeaways"><p>Key Takeaways</p><ul><li><span aria-hidden="true">✓</span>Identify your movement first: manual, automatic, quartz, and Kinetic watches do not all wind or charge the same way.</li><li><span aria-hidden="true">✓</span>Use the crown position and winding direction specified in your watch’s manual, turning gently with your fingers.</li><li><span aria-hidden="true">✓</span>There is no universal turn count. Never force a crown past a firm stop or through unexpected resistance.</li><li><span aria-hidden="true">✓</span>Grinding, a loose crown, or a short running time after correct winding calls for an inspection, not more force.</li></ul></section>
 <h2>First, Identify Your Watch’s Movement</h2>
 <p>A watch’s appearance does not reliably tell you how it is powered. Before turning the crown, find the model or movement reference and consult its instructions.</p>
-<ul><li><strong>Manual-wind mechanical watches</strong> store energy in a mainspring that you wind by hand.</li><li><strong>Automatic mechanical watches</strong> use a moving rotor to wind the mainspring as you wear them. Many—but not all—also allow hand-winding.</li><li><strong>Conventional quartz watches</strong> use a battery; turning their crown is not a way to recharge it.</li><li><strong>Solar and Kinetic watches</strong> use different energy systems and require their own charging instructions.</li></ul>
+<ul><li><strong>Manual-wind mechanical watches</strong> store energy in a mainspring that you wind by hand.</li><li><strong>Automatic mechanical watches</strong> use a moving rotor to wind the mainspring as you wear them. Many, but not all, also allow hand-winding.</li><li><strong>Conventional quartz watches</strong> use a battery; turning their crown is not a way to recharge it.</li><li><strong>Solar and Kinetic watches</strong> use different energy systems and require their own charging instructions.</li></ul>
 <p>For example, Seiko’s instructions give different starting procedures for its automatic-only 7S26 movement and its hand-winding-capable 4R35. The brand name alone is not enough to choose the procedure. See <a href="https://www.seikowatches.com/us-en/-/media/Files/Common/Seiko/instructions/English/7/7S26/7S26.pdf">Seiko’s movement instructions</a>.</p>
 <p>If your watch says “Kinetic,” read our guide to <a href="/seiko-kinetic-watch-not-holding-charge/">Seiko Kinetic charging problems</a> instead of treating it as a conventional mechanical watch.</p>
 <h2>How to Wind a Manual Watch</h2>
 <h3>1. Remove the watch from your wrist</h3>
 <p>Work over a clean, soft surface and hold the case securely. This gives you a comfortable grip and makes it easier to turn the crown without pulling it sideways.</p>
-<p>Use your fingers—not pliers or another tool. If you cannot operate the crown comfortably, pause before applying more force.</p>
+<p>Use your fingers, not pliers or another tool. If you cannot operate the crown comfortably, pause before applying more force.</p>
 <h3>2. Find the correct crown position</h3>
 <p>Winding and setting the time are usually separate operations.</p>
 <p>Many watches wind with the crown in its normal, pushed-in position. A screw-down crown must first be unlocked according to the watch’s instructions. Do not automatically pull the crown outward: that may engage time-setting or another function.</p>
@@ -38,7 +38,7 @@ const body = `
 <h3>4. Know when to stop</h3>
 <p>Many manual-wind watches reach a firm stopping point when fully wound. Do not force the crown beyond it.</p>
 <p>However, not every manual movement behaves this way. Grand Seiko’s 9S63 and 9S64, for example, allow continued crown rotation after full winding. Their instructions still discourage excessive operation. That exception is why the <a href="https://www.grand-seiko.com/instructions/html/GS_9S_en/AGFISYcttdhtbn.html">specific movement’s guidance</a> matters more than a universal rule.</p>
-<p>A sudden jam, scraping sensation, or unexpected change in resistance is a reason to stop—not an invitation to turn harder.</p>
+<p>A sudden jam, scraping sensation, or unexpected change in resistance is a reason to stop, not an invitation to turn harder.</p>
 <h3>5. Return the crown to its proper position</h3>
 <p>After winding and any necessary setting, restore the crown as directed. If it screws down, engage it gently without forcing the threads.</p>
 <p>Do not operate the crown underwater. A correctly closed crown also does not prove that an older watch’s seals remain effective; <a href="/watch-pressure-test/">watch pressure testing</a> addresses a different question.</p>
@@ -50,7 +50,7 @@ const body = `
 <p>Protection against overwinding is not permission to ignore grinding, stiffness, or a damaged crown.</p>
 <p>If your automatic repeatedly stops after you take it off, see <a href="/faqs/why-does-my-automatic-watch-stop-overnight/">why an automatic watch may stop overnight</a>.</p>
 <h2>How Often Should You Wind Your Watch?</h2>
-<p>Base your routine on the manufacturer’s instructions and the watch’s power reserve—the time it can run on stored energy.</p>
+<p>Base your routine on the manufacturer’s instructions and the watch’s power reserve, which is the time it can run on stored energy.</p>
 <p>A consistent daily routine suits many manual-wind watches, while others have longer reserves. You do not need to wait until a watch stops before winding it. Hamilton explains the relationship between winding and reserve in its <a href="https://www.hamiltonwatch.com/en-ch/faq">watch ownership FAQs</a>.</p>
 <p>For an automatic, simply wearing it does not tell you exactly how much energy it has accumulated. Keep track of when it was last wound, how it was worn, and how long it subsequently ran.</p>
 <p>Our guide to <a href="/caring-for-your-watch-between-repairs/">caring for your watch between services</a> covers the broader habits that support everyday ownership.</p>
@@ -61,13 +61,13 @@ const body = `
 <p>For an inherited piece, bring any service records and explain how long it has been stored. Our approach to <a href="/expert-luxury-watch-repair-and-restoration-for-vintage-timepieces/">vintage watch repair and restoration</a> considers the watch’s condition alongside its originality.</p>
 <div class="iat-pro-tip"><p class="iat-pro-tip-label">Unsure whether the resistance you feel is normal?</p><p><a href="/repair-form/">Request a watch inspection</a> before trying to force the crown.</p></div>
 <h2>Common Winding Mistakes to Avoid</h2>
-<p><strong>Assuming all watches work alike.</strong> Instructions for one movement may be wrong for another—even within the same brand.</p>
+<p><strong>Assuming all watches work alike.</strong> Instructions for one movement may be wrong for another, even within the same brand.</p>
 <p><strong>Chasing a fixed number of turns.</strong> A partially wound watch does not start from the same condition as one that has stopped.</p>
 <p><strong>Confusing winding with setting.</strong> Pulling the crown into another position may change what turning it does.</p>
 <p><strong>Trying to overcome a fault with force.</strong> A stuck crown needs investigation, not a stronger grip.</p>
 <p><strong>Testing an unfamiliar vintage watch repeatedly.</strong> If you are unsure of its condition, an assessment is more useful than repeated attempts to make it run.</p>
 <section class="winding-faq" aria-labelledby="winding-faqs"><style>.winding-faq summary{cursor:pointer;list-style:none}.winding-faq summary::-webkit-details-marker{display:none}.winding-faq details[open] .iat-faq-plus{transform:rotate(45deg)}.winding-faq summary:focus-visible{outline:2px solid #B08D57;outline-offset:4px}#winding-faqs{scroll-margin-top:120px}</style><h2 id="winding-faqs">Frequently Asked Questions</h2><div style="border-bottom:1px solid #E4E0D9;">${windingFaqs.map(([q,a])=>`<details style="border-top:1px solid #E4E0D9;padding:4px 0;"><summary style="display:flex;align-items:center;justify-content:space-between;gap:20px;padding:16px 0;font-size:17.5px;font-weight:600;color:#1A1A1A;">${q}<span class="iat-faq-plus" aria-hidden="true" style="flex-shrink:0;font-size:23px;color:#B08D57;line-height:1;transition:transform .3s ease;">+</span></summary><p style="margin:0 0 18px;font-size:16.5px;line-height:1.65;color:#6B6560;">${a}</p></details>`).join("")}</div></section>
-<h2>Keep Winding Simple—and Know When to Ask for Help</h2>
+<h2>Keep Winding Simple and Know When to Ask for Help</h2>
 <p>Winding should be a familiar routine, not a struggle. Identify the movement, follow its instructions, and pay attention when the crown behaves differently.</p>
 <p>If your watch will not wind normally or will not keep running, explore our <a href="/watch-repairs/">professional watch repair services</a> or <a href="/repair-form/">start a repair request</a>. Tell us what you have noticed so we can help you take the next step.</p>
 `;
