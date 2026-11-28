@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { windingSlug, windingTitle, windingMetaTitle, windingDescription, windingImage, windingImageAlt } from "@/lib/manual-winding-content";
 import { kineticSlug, kineticTitle, kineticDescription, kineticImage, kineticImageAlt } from "@/lib/seiko-kinetic-content";
 import { citizenBatteryTitle, citizenBatteryDescription, citizenBatteryImage } from "@/lib/citizen-eco-drive-content";
 import Script from "next/script";
@@ -16,6 +17,20 @@ type Faq = readonly [name: string, answer: string];
 type ArticleSeo = FallbackArticleSeo;
 
 const articleSeo: Record<string, ArticleSeo> = {
+  [windingSlug]: {
+    title: windingMetaTitle,
+    headline: windingTitle,
+    description: windingDescription,
+    path: `/${windingSlug}/`,
+    image: windingImage,
+    imageWidth: 1300,
+    imageHeight: 600,
+    imageAlt: windingImageAlt,
+    publishedTime: "2026-11-28T00:00:00-05:00",
+    modifiedTime: "2026-11-28T00:00:00-05:00",
+    section: "Mechanical Watch Care",
+    keywords: ["how to wind a manual watch", "mechanical watch winding", "hand winding an automatic watch"]
+  },
   [kineticSlug]: {
     title: "Seiko Kinetic Watch Repair & Charging Guide | It’s About Time",
     headline: kineticTitle,
